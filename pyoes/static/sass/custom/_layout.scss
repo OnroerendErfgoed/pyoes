@@ -1,0 +1,282 @@
+@import "compass/typography/text/replacement";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+
+// colors
+$mainpink: #a44697;
+$black: #000;
+$white: #FFF;
+$softgray: #e5e5e5;
+$softblue: #86abbe;
+// ------
+
+// links en header; din-condensed-web | 400
+// main; museo-sans | 300 & 700
+
+// --------
+
+.header{
+	margin-top: 30px;
+
+	h1{
+		@include squish-text();
+		width: 177px;
+		height: 194px;
+		margin: 20px auto 0 auto;
+		background: url('../img/logo.png') no-repeat;
+		a{
+			height: 194px;
+		}
+	}
+
+	.inline-list{
+		a{
+			font-size: emCalc(16px);
+			color: $black;
+			margin-right: 30px;
+			&.last{
+				margin-right:0;
+			}
+		}
+	}
+
+	.top-nav{
+		@include clearfix;
+		margin-bottom: 40px;
+		margin-right: 40px;
+
+		ul {
+			@include inline-list;
+			a{
+				font-size: emCalc(16px);
+				color: $black;
+				margin-right: 30px;
+				&.last{
+					margin-right:0;
+				}
+			}
+		}
+	}
+
+	.language-switch{
+		li{
+			width: 35px;
+
+		}
+		a{
+			margin-right: 0;
+			padding: 5px 10px;
+		}
+		.active, li:hover{
+			background-color: $mainpink;
+			@include border-radius(25px);
+
+			a, a:hover{
+				font-weight: 700;
+				color: #FFF;
+			}
+		}
+	}
+
+	.main-nav{
+			
+		background-color: $black;
+		padding: 15px 20px 10px 15px;
+
+		ul {
+			@include inline-list;
+			margin: 0;
+
+			li{
+				padding-left: 10px;
+				margin-bottom: 5px;
+				width: 120px;
+			}
+		}
+
+		a{
+			color: #b9d1dc;
+			font-size: emCalc(20px);
+			font-family: 'din-condensed-web';
+			margin-right: 30px;
+			&.last{
+				margin-right:0;
+			}
+		}
+
+		.active, li:hover{
+			a{
+				color: $mainpink;
+			}
+		}
+	}
+
+	.searchfield	{
+		background: $softblue;
+		.search-input{
+			margin: 9px;
+			height:20px;
+			border:none;
+			@include box-shadow(none);
+			@include border-radius(0);
+		}
+	}
+
+	input[type="submit"]{
+		border:none;
+		width: 40px;
+		height: 40px;
+		background: url('../img/icons/magnifier.png') no-repeat center center;
+		margin-left: 10px;
+	}
+
+	.main-nav-wrapper{
+		padding-right: 0;
+	}
+
+	.searchfield-wrapper{
+		padding-right: 0 !important;
+	}
+
+	.broodkruimel-wrapper{
+		background: #e5e5e5;
+		position: absolute;
+		right: 20px;
+		bottom: 0px;
+
+
+		ul.broodkruimel {
+			@include crumb-container;
+			@include radius(0);
+			padding: 0;
+			border:none;
+
+			li {
+				@include crumbs;
+				color: #585858;
+				line-height: 1;
+				padding: 0 10px 0 0;
+				font-size: inherit;
+				a {
+					text-transform: none;
+					font-size: emCalc(14px);
+				}
+			}
+
+			li:before {
+				content: ">";
+				color: #585858;
+			}
+
+			padding: 3px;
+			border:none;
+			background: none;
+			@include border-radius(0);
+			margin-bottom: 0;
+
+			li:nth-child(2):before{
+				content: " ";
+			}
+
+		}
+	}
+
+}
+
+.upper-header{
+	position:relative;
+	z-index:1;
+}
+
+.lower-header{
+	background: $softgray;
+	position:relative;
+	top: -75px;
+	z-index: 0;
+}
+
+.overlay-sub{
+	position:static;
+}
+
+.footer{
+	background-color: #edeeff;
+
+	border-top: 20px solid #fff;
+
+	.columns{
+		padding-right: 0;
+		padding-left: 0;
+
+
+		&.last{
+			padding-right: 60px;
+		}
+	}
+
+	.small-footer{
+		padding: 20px 20px 0 20px;
+		background-color: #2893ba;
+		border-right: 22px solid #000;
+		margin-top: -20px;
+
+		.footer-nav{
+
+			ul{
+				@include inline-list;
+
+				li{
+					a{
+						text-transform: none;
+						font-size: emCalc(14px);
+						font-weight: 700;
+						color: #fff;
+					}
+					&>*{
+						display: inline;
+					}
+				}
+
+
+				li:before{
+					color: #fff;
+					content: "/";
+					margin-right: 12px;
+				}
+
+				li:first-child:before{
+					content:"";
+					margin-right: 0px;
+				}
+
+			}
+		}
+
+		p{
+			margin-bottom: 0;
+		}
+
+		p, li a{
+			color: #fff;		
+		}
+
+		.info{
+			float:left;
+			margin-left: 20px;
+		}
+
+		.icons-overheid{
+			float:left;
+		}
+	}
+}
+// icon shizzle
+
+$icons-sprite-dimensions: true;
+// This returns width/height for each image
+@import "icons/*.png";
+@include all-icons-sprites;
+.icon {
+  @include squish-text();
+  @include inline-block();
+}

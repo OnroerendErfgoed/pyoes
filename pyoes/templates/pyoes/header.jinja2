@@ -1,0 +1,67 @@
+<header class="header">
+	<div class="row upper-header">
+		<div class="small-3 columns">
+			<hgroup>
+			<h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
+			</hgroup>
+		</div>
+		<div class="small-9 columns">
+			<nav class="top-nav">
+				{% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
+				{% set top_nav = top_nav|default(default_top_nav) %}
+				<ul>
+					{% for caption, href in top_nav %}
+					<li><a href="{{ href }}">{{ caption }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<div class="row">
+				<div class="small-8 columns main-nav-wrapper">
+					<nav class="main-nav">
+						{% set active_main_nav = active_main_nav|default('home') -%}
+						{% set default_main_nav = [
+							('home', 'Home', '/over-deze-site'), 
+							('zoeken', 'Zoeken', '/zoeken'),
+							('vinden', 'Vinden', '/vinden')
+							]
+						-%}
+						{% set main_nav = main_nav|default(default_main_nav) -%}
+						<ul>
+							{% for id, caption, href in main_nav %}
+							<li{% if id == active_main_nav %} class="active"{% endif 
+							%}><a href="{{ href }}">{{ caption }}</a></li>
+							{% endfor %}
+						</ul>
+					</nav>
+				</div>
+				<div class="small-4 columns searchfield-wrapper">
+					<form method="get" action="{{ zoeken_action|default('#') }}">
+						<div class="row collapse searchfield">
+							<div class="small-9 columns">
+								<input type="search" class="search-input" id="query" name="query" placeholder="{{ zoeken_placeholder|default('Zoek op deze site...') }}" />
+							</div>
+							<div class="small-3 columns">
+								<input type="submit" class="icon postfix" value="">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<nav class="broodkruimel-wrapper">
+			{% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
+			{% set crumbs = crumbs|default(default_crumbs) %}
+			<ul class="broodkruimel">
+				{% for caption, href, state in crumbs %}
+					<li{% if state != ''%} class="{{state}}"{% endif %}>
+					<a href="{{ href }}">{{ caption }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+	<div class="lower-header">
+		<div class="row relative">
+			<img class="overlay-sub" src="{{request.static_path('pyoes:static/img/light-banner.png')}}" />
+		</div>
+	</div>
+</header>
