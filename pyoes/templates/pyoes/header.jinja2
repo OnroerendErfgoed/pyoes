@@ -17,6 +17,7 @@
 			</nav>
 			<div class="row">
 				<div class="small-8 columns main-nav-wrapper">
+					{% block main_nav %}
 					<nav class="main-nav">
 						{% set active_main_nav = active_main_nav|default('home') -%}
 						{% set default_main_nav = [
@@ -33,6 +34,7 @@
 							{% endfor %}
 						</ul>
 					</nav>
+					{% endblock %}
 				</div>
 				<div class="small-4 columns searchfield-wrapper">
 					<form method="get" action="{{ zoeken_action|default('#') }}">
