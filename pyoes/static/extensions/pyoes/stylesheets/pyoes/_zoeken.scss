@@ -1,0 +1,14 @@
+@import "compass/utilities/general/clearfix";
+@import "pyoes/settings";
+
+.zoekresultaat {
+
+	@include panel;
+	@include clearfix;
+
+	.th {
+		margin-right: emCalc(20);
+		float: left;
+	}
+
+}
