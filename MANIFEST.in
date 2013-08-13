@@ -1,4 +1,6 @@
 include *.txt *.ini *.cfg *.rst
 recursive-include pyoes *.ico *.png *.css *.gif *.jpg 
 recursive-include pyoes *.jinja2 *.pt *.txt *.mak *.mako *.js *.html *.xml
-recursive-include pyoes/static *.rb *.scss
+recursive-include pyoes/scaffolds *
+recursive-include pyoes/static *
+recursive-exclude pyoes/static/.sass-cache *
