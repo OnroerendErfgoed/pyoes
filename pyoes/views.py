@@ -8,3 +8,7 @@ def home(request):
 @view_config(route_name='vinden', renderer='templates/vinden.jinja2')
 def vinden(request):
     return {}
+
+@view_config(route_name='pinpoints', renderer='templates/pinpoints.jinja2')
+def pinpoints(request):
+    return {}
