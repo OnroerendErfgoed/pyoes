@@ -7662,10 +7662,10 @@ a.th {
 .zoekresultaat {
   border-style: solid;
   border-width: 1px;
-  border-color: #d9d9d9;
+  border-color: #cccccc;
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #f2f2f2;
+  background: #e5e5e5;
   overflow: hidden;
   *zoom: 1;
 }
@@ -7694,6 +7694,27 @@ a.th {
 .zoekresultaat .th {
   margin-right: 1.25em;
   float: left;
+}
+/* line 14, ../extensions/pyoes/stylesheets/pyoes/_zoeken.scss */
+.zoekresultaat .pinpointholder {
+  float: right;
+}
+/* line 18, ../extensions/pyoes/stylesheets/pyoes/_zoeken.scss */
+.zoekresultaat h2 {
+  color: #a44697;
+  font-size: 1.75em;
+  font-weight: 400;
+  margin-bottom: 0.625em;
+}
+/* line 25, ../extensions/pyoes/stylesheets/pyoes/_zoeken.scss */
+.zoekresultaat h4 {
+  color: black;
+  font-size: 1.375em;
+  font-weight: 100;
+}
+/* line 31, ../extensions/pyoes/stylesheets/pyoes/_zoeken.scss */
+.zoekresultaat .preview {
+  font-style: italic;
 }
 
 /* line 178, pinpoints/archeologietruweel/*.png */
