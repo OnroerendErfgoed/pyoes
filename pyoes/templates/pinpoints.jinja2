@@ -2,6 +2,14 @@
 
 {% set active_main_nav = 'pinpoints' %}
 
+{% set crumbs = [
+	('Je bent hier:', '#', 'unavailable'), 
+	('Home', '/', ''), 
+	('Pinpoints', request.route_url('pinpoints'), 'current'),
+]
+-%}
+
+
 {% set pinpoints = [
 	'archeologietruweel', 'archeologievlag', 'boek', 'bouwkundig', 
 	'heraldiek', 'info', 'landschap', 'maritiem', 
