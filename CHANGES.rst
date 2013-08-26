@@ -1,3 +1,9 @@
+0.1.0a2
+=======
+
+* Zorgend dat jquery protocol onafhankelijk kan geladen worden. Gaf problemen 
+  op https sites.
+
 0.1.0a1
 =======
 
