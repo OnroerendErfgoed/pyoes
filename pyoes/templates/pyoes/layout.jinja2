@@ -19,9 +19,17 @@
 
 	<link rel="stylesheet" href="{% block app_css %}{{request.static_path('pyoes:static/css/app.css')}}{% endblock %}">
 
-	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-
-	<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	{% block javascript -%}
+	{% set default_js_files = [
+		'//code.jquery.com/jquery-1.9.1.js',
+		'//code.jquery.com/ui/1.10.3/jquery-ui.js'
+	]
+	-%}
+	{% set js_files = js_files|default(default_js_files) -%}
+	{% for js in js_files -%}
+	<script type="text/javascript" src="{{ js }}"></script>
+	{% endfor -%}
+	{% endblock -%}
 
 	{% block ga_tracker %}
 	{% set ga_key=ga_key|default('UA-XXXXX-X') %}
@@ -32,7 +40,7 @@
 		_gaq.push(['_setDomainName', 'onroerenderfgoed.be']);
 		_gaq.push(['_trackPageview']);
 
-		(function() {
+		-(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
