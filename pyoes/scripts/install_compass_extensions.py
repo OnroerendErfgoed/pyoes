@@ -31,7 +31,7 @@ def main(argv=sys.argv):
 
     dst = os.path.join(settings['compass.extensions_dir'],'pyoes')
 
-    shutil.rmtree(dst)
+    shutil.rmtree(dst, True)
 
     shutil.copytree(pyoes_ext, dst)
 
