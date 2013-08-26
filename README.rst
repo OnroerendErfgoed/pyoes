@@ -12,10 +12,10 @@ Installeren
 - Zorg dat je compass hebt geïnstalleerd op je systeem (is een ruby package)
 - Installeer de compass extension in je static dir
 
-```
+.. code-block:: bash
+
     $ cd static
     $ compass install pyoes
-```
 
 Een overzicht van de stijl krijgen
 ----------------------------------
@@ -23,17 +23,18 @@ Een overzicht van de stijl krijgen
 - Maak een git clone van deze repository
 - Maak een virtualenv
 
-```
+.. code-block:: bash
+    
     $ mkvirtualenv pyoes
-```
+
 - Installeer de dependencies
 
-```
+.. code-block:: bash
+
     $ python setup.py install
-```
+
 - Start pyramid
 
-```
+.. code-block:: bash
+    
     $ pserve development.ini
-```
-
