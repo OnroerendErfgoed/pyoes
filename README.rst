@@ -17,6 +17,23 @@ Installeren
     $ cd static
     $ compass install pyoes
 
+- Als je aan css werkt is het best om compass je files te laten monitoren zodat 
+  deze wanneer nodig kan hercompileren.
+
+.. code-block:: bash
+    
+    $ cd static
+    $ compass watch .
+    # je kunt ook gewoon eenmalig compileren
+    $ compass compile
+
+- Er zijn een aantal statische files nodig die meegeleverd worden met pyoes. Om 
+  deze te kunnen gebruiken moeten je een static view registeren.
+
+.. code-block:: python
+
+    config.add_static_view('pyoes_static', 'pyoes:static')
+
 Een overzicht van de stijl krijgen
 ----------------------------------
 
