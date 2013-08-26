@@ -140,14 +140,14 @@
 		ul.broodkruimel {
 			@include crumb-container;
 			@include radius(0);
-			padding: 0;
+			padding: 3px 10px;
 			border:none;
 
 			li {
 				@include crumbs;
 				color: #585858;
 				line-height: 1;
-				padding: 0 10px 0 0;
+				padding: 0px;
 				font-size: inherit;
 				a {
 					text-transform: none;
@@ -158,9 +158,9 @@
 			li:before {
 				content: ">";
 				color: #585858;
+				margin: 0px emCalc(5px);
 			}
 
-			padding: 3px;
 			border:none;
 			background: none;
 			@include border-radius(0);
@@ -168,6 +168,7 @@
 
 			li:nth-child(2):before{
 				content: " ";
+				margin-left: emCalc(10px);
 			}
 
 		}

@@ -7407,9 +7407,8 @@ a.th {
   border-color: gainsboro;
   -webkit-border-radius: 0;
   border-radius: 0;
-  padding: 0;
+  padding: 3px 10px;
   border: none;
-  padding: 3px;
   border: none;
   background: none;
   -webkit-border-radius: 0;
@@ -7427,7 +7426,7 @@ a.th {
   text-transform: uppercase;
   color: #585858;
   line-height: 1;
-  padding: 0 10px 0 0;
+  padding: 0px;
   font-size: inherit;
 }
 /* line 60, ../../../../../../../../var/lib/gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_breadcrumbs.scss */
@@ -7491,19 +7490,21 @@ a.th {
 .header .broodkruimel-wrapper ul.broodkruimel li:before {
   content: ">";
   color: #585858;
+  margin: 0px 0.3125em;
 }
 /* line 169, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .header .broodkruimel-wrapper ul.broodkruimel li:nth-child(2):before {
   content: " ";
+  margin-left: 0.625em;
 }
 
-/* line 178, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 179, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .upper-header {
   position: relative;
   z-index: 1;
 }
 
-/* line 183, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 184, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .lower-header {
   background: #e5e5e5;
   position: relative;
@@ -7511,33 +7512,33 @@ a.th {
   z-index: 0;
 }
 
-/* line 190, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 191, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .overlay-sub {
   position: static;
 }
 
-/* line 194, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 195, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer {
   background-color: #edeeff;
   border-top: 20px solid white;
 }
-/* line 199, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 200, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .columns {
   padding-right: 0;
   padding-left: 0;
 }
-/* line 204, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 205, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .columns.last {
   padding-right: 60px;
 }
-/* line 209, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 210, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer {
   padding: 20px 20px 0 20px;
   background-color: #2893ba;
   border-right: 22px solid #000;
   margin-top: -20px;
 }
-/* line 217, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 218, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .footer-nav ul {
   margin: 0 auto 1.0625em auto;
   margin-left: -1.375em;
@@ -7557,43 +7558,43 @@ a.th {
 .footer .small-footer .footer-nav ul > li > * {
   display: block;
 }
-/* line 221, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 222, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .footer-nav ul li a {
   text-transform: none;
   font-size: 0.875em;
   font-weight: 700;
   color: #fff;
 }
-/* line 227, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 228, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .footer-nav ul li > * {
   display: inline;
 }
-/* line 233, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 234, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .footer-nav ul li:before {
   color: #fff;
   content: "/";
   margin-right: 12px;
 }
-/* line 239, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 240, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .footer-nav ul li:first-child:before {
   content: "";
   margin-right: 0px;
 }
-/* line 248, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 249, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer p, .footer .small-footer li {
   margin-bottom: 0;
   color: white;
 }
-/* line 253, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 254, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer a.agentschap {
   color: white;
 }
-/* line 257, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 258, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .info {
   float: left;
   margin-left: 20px;
 }
-/* line 262, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 263, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .footer .small-footer .icons-overheid {
   float: left;
 }
@@ -7645,7 +7646,7 @@ a.th {
   width: 33px;
 }
 
-/* line 273, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
+/* line 274, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
 .icon {
   font: 0/0 serif;
   text-shadow: none;
