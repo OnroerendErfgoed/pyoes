@@ -89,7 +89,7 @@
 		a{
 			color: #b9d1dc;
 			font-size: emCalc(20px);
-			font-family: 'din-condensed-web';
+			font-family: $accent-font-family;
 			margin-right: 30px;
 			&.last{
 				margin-right:0;

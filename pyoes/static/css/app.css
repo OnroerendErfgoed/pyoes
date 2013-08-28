@@ -434,8 +434,8 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "museo-sans", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
   font-style: normal;
   line-height: 1;
   position: relative;
@@ -2038,7 +2038,7 @@ p aside {
 /* Default header styles */
 /* line 181, ../../../../../../../../var/lib/gems/1.8/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "museo-sans", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-style: normal;
   color: black;
@@ -7342,7 +7342,7 @@ a.th {
 .header .main-nav a {
   color: #b9d1dc;
   font-size: 1.25em;
-  font-family: 'din-condensed-web';
+  font-family: "din-condensed-web", "Cabin", sans-serif;
   margin-right: 30px;
 }
 /* line 94, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
