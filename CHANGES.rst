@@ -1,3 +1,13 @@
+0.1.0b1
+=======
+
+* Extra documentatie met sphinx. (#5)
+* Static files zoals favicon en robots.txt kunnen geleverd worden door pyoes. (#6)
+* Niet meer nodig om pyoes:static view te includen. Vanaf nu moet pyoes zelf 
+  wel geinclude worden, deze handelt dan de rest af.
+* De scaffold zal meteen een sass bestand voor de applicatie specifieke css
+  aanmaken.
+
 0.1.0a3
 =======
 
