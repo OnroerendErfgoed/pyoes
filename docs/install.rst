@@ -94,11 +94,16 @@ Installeer nu de compass extension in je static dir.
     $ compass install pyoes
 
 Er zijn een aantal statische files nodig die meegeleverd worden met :mod:`pyoes`. 
-Om deze te kunnen gebruiken moeten je een static view registeren.
+Om deze te kunnen gebruiken moeten je een static view registeren. Je kunt dit
+manueel
+
+Tenslotten moet je :mod:`pyoes` toevoegen aan je main functie. Dit zorgt er voor
+dat de correcte static dir wordt toegevoegd en dat een aantal static views 
+geregistreerd worden.
 
 .. code-block:: python
 
-    config.add_static_view('pyoes_static', 'pyoes:static')
+    config.include('pyoes')
 
 Update
 ======
