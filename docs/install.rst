@@ -45,10 +45,13 @@ je de code builden tot een sdist met via het :file:`setup.py` script van
     $ pip install dist/pyoes-0.1.0.tar.gz
 
 Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de 
-standaard bestanden die nodig zijn toevoegen een static dir. i
+standaard bestanden die nodig zijn toevoegen aan een static dir. Op zich is dit
+geen volledige pyramid scaffold. Deze maakt dus geen models, views en andere aan. 
+Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
 
 .. code-block:: bash
 
+    $ pcreate -s alchemy <package_naam>
     $ pcreate -s pyoes <package_naam>
 
 Vooraleer verder te gaan, moet je zorgen dat compass en best ook foundation 
@@ -56,9 +59,9 @@ aanwezig zijn op je systeem.
 
 .. code-block:: bash
 
-    $ TODO: heeft iets met ruby te maken
-    $ gem install foundation 
-    $ gem install compass
+    $ [sudo] apt-get install rubygems   
+    $ [sudo] gem install zurb-foundation 
+    $ [sudo] gem install compass
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
@@ -108,6 +111,13 @@ zijn aangebracht.
 .. code-block:: bash
 
     $ pcreate -s pyoes <package_name> --simulate
+
+Indien er relevante wijzigingen zijn, kun je bestand per bestand beslissen wat
+er gedaan moet worden.
+
+.. code-block:: bash
+
+    $ pcreate -s pyoes <package_name> --interactive
 
 De :term:`Jinja2` templates zijn automatisch beschikbaar. Als er nieuwe filters zijn 
 toegevoegd, moet je deze wel nog toevoegen aan je `.ini` bestand.
