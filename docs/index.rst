@@ -9,14 +9,15 @@ pyoes: PYramid Onroerend Erfgoed Style
 Pyoes is een package om het makkelijker te maken om layout te delen 
 tussen de verschillende OE sites.
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
 
    install
+   gebruik
+   development
    api
    changes
+   glossary
 
 
 Indices and tables

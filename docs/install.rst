@@ -2,6 +2,9 @@
 Installatie
 ===========
 
+Installatie
+===========
+
 Om :mod:`pyoes` te installeren, zijn er twee mogelijkheden. Ofwel installeer
 je rechtstreeks vanaf :term:`Github`, ofwel doe je eerst een lokale checkout
 en installeer je vanaf deze checkout.
@@ -41,29 +44,77 @@ je de code builden tot een sdist met via het :file:`setup.py` script van
     $ // activeer nu de virtual env van de pyramid app
     $ pip install dist/pyoes-0.1.0.tar.gz
 
-- De compass extension lokaal kopieren: install_compass_extensions
-- Voeg de pyoes:templates dir toe aan je jinja2.directories
-- Zorg dat je compass hebt geïnstalleerd op je systeem (is een ruby package)
-- Installeer de compass extension in je static dir
+Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de 
+standaard bestanden die nodig zijn toevoegen een static dir. i
+
+.. code-block:: bash
+
+    $ pcreate -s pyoes <package_naam>
+
+Vooraleer verder te gaan, moet je zorgen dat compass en best ook foundation 
+aanwezig zijn op je systeem.
+
+.. code-block:: bash
+
+    $ TODO: heeft iets met ruby te maken
+    $ gem install foundation 
+    $ gem install compass
+
+:mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
+moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
+zijn er ook nog filters die je kunt toevoegen aan je project.
+
+Tenslotte moet je ook aangeven waar je compass extensions dir staat.
+
+.. code-block:: ini
+
+    jinja2.directories = 
+        <package_name>:templates
+        pyoes:templates
+    jinja2.filters = 
+        setattr = pyoes.utils.set_attr_filter
+
+    # Is nodig voor het install_compass_extension script
+    compass.extensions_dir = %(here)s/<package_name>/static/extensions
+
+Kopieer nu een aantal bestanden uit de pyoes package naar je lokale omgeving.
+
+.. code-block:: bash
+
+    $ install_compass_extensions development.ini
+
+Installeer nu de compass extension in je static dir.
 
 .. code-block:: bash
 
     $ cd static
     $ compass install pyoes
 
-- Als je aan css werkt is het best om compass je files te laten monitoren zodat 
-  deze wanneer nodig kan hercompileren.
-
-.. code-block:: bash
-    
-    $ cd static
-    $ compass watch .
-    # je kunt ook gewoon eenmalig compileren
-    $ compass compile
-
-- Er zijn een aantal statische files nodig die meegeleverd worden met pyoes. Om 
-  deze te kunnen gebruiken moeten je een static view registeren.
+Er zijn een aantal statische files nodig die meegeleverd worden met :mod:`pyoes`. 
+Om deze te kunnen gebruiken moeten je een static view registeren.
 
 .. code-block:: python
 
     config.add_static_view('pyoes_static', 'pyoes:static')
+
+Update
+======
+
+Als er nieuwe versies van :mod:`pyoes` zijn, moet je niet alle bovenstaande 
+stappen terug uitvoeren. Zo is het normaal niet nodig om de scaffold nogmaals 
+uit te voeren. Je kunt wel eens controleren of er wijzigingen in de scaffold 
+zijn aangebracht.
+
+.. code-block:: bash
+
+    $ pcreate -s pyoes <package_name> --simulate
+
+De :term:`Jinja2` templates zijn automatisch beschikbaar. Als er nieuwe filters zijn 
+toegevoegd, moet je deze wel nog toevoegen aan je `.ini` bestand.
+
+Wat je zeker niet mag vergeten is om de compass extension uit de virtualenv te
+kopiëren naar je compass extensions dir.
+
+.. code-block:: bash
+
+    $ install_compass_extensions development.ini
