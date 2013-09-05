@@ -7342,7 +7342,7 @@ a.th {
 .header .main-nav a {
   color: #b9d1dc;
   font-size: 1.25em;
-  font-family: "din-condensed-web", "Cabin", sans-serif;
+  font-family: "din-condensed-web", sans-serif;
   margin-right: 30px;
 }
 /* line 94, ../extensions/pyoes/stylesheets/pyoes/_layout.scss */
