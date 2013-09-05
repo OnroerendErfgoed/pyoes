@@ -1,3 +1,9 @@
+0.1.0b2
+=======
+
+* Terug naar TypeKit. Voorlopig gebruiken we de account van Glue. Op een bepaald
+  moment zal iemand wel eens voor onze eigen accout moeten betalen.
+
 0.1.0b1
 =======
 
