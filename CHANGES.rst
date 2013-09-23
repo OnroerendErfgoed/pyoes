@@ -1,3 +1,9 @@
+0.1.0
+=====
+
+* Eerste stabiele release.
+* Maakt nu gebruik van onze eigen typekit code.
+
 0.1.0b2
 =======
 
