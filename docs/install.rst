@@ -62,6 +62,7 @@ aanwezig zijn op je systeem.
     $ [sudo] apt-get install rubygems   
     $ [sudo] gem install zurb-foundation 
     $ [sudo] gem install compass
+    $ [sudo] gem install font-icons --pre
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
