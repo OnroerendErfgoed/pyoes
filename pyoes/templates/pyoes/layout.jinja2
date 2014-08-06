@@ -1,199 +1,221 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-	
-	<meta name="viewport" content="width=device-width">
-	
-	<title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
+    <meta charset="utf-8">
 
-	<script src="{{request.static_path('pyoes:static/js/vendor/custom.modernizr.js')}}"></script>
+    <meta name="viewport" content="width=device-width">
 
-  	<script type="text/javascript" src="//use.typekit.net/znn6biy.js"></script>
+    <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
 
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="{{ request.static_path('pyoes:static/js/vendor/custom.modernizr.js') }}"></script>
 
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="//use.typekit.net/znn6biy.js"></script>
 
-	<link rel="stylesheet" href="{% block app_css %}{{request.static_path('pyoes:static/css/app.css')}}{% endblock %}">
+    <script type="text/javascript">try {
+        Typekit.load();
+    } catch (e) {
+    }</script>
 
-	{% block javascript -%}
-	{% set default_js_files = [
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+
+    <link rel="stylesheet"
+          href="{% block app_css %}{{ request.static_path('pyoes:static/css/app.css') }}{% endblock %}">
+
+
+    {% block css -%}
+        {% set default_css_files = []-%}
+
+        {% set css_files = css_files|default(default_css_files) -%}
+        {% for  css in css_files %}
+            <link rel="stylesheet" href={{ css }}/>
+        {% endfor %}
+
+    {% endblock -%}
+
+
+    {% block javascript -%}
+        {% set default_js_files = [
 		'//code.jquery.com/jquery-1.9.1.js',
 		'//code.jquery.com/ui/1.10.3/jquery-ui.js'
-	]
-	-%}
-	{% set js_files = js_files|default(default_js_files) -%}
-	{% for js in js_files -%}
-	<script type="text/javascript" src="{{ js }}"></script>
-	{% endfor -%}
-	{% endblock -%}
+	] -%}
+        {% set js_files = js_files|default(default_js_files) -%}
+        {% for js in js_files -%}
+            <script type="text/javascript" src="{{ js }}"></script>
+        {% endfor -%}
+    {% endblock -%}
 
-	{% block ga_tracker %}
-	{% set ga_key=ga_key|default('UA-XXXXX-X') %}
-	<script type="text/javascript">
+    {% block ga_tracker %}
+        {% set ga_key=ga_key|default('UA-XXXXX-X') %}
+        <script type="text/javascript">
 
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', '{{ ga_key }}']);
-		_gaq.push(['_setDomainName', 'onroerenderfgoed.be']);
-		_gaq.push(['_trackPageview']);
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '{{ ga_key }}']);
+            _gaq.push(['_setDomainName', 'onroerenderfgoed.be']);
+            _gaq.push(['_trackPageview']);
 
-		-(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+            -(function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
 
-	</script>
-	{% endblock %}
+        </script>
+    {% endblock %}
 </head>
 
 <body>
 
-	<div class="container">
-		{% block header scoped %}
-		<header class="header">
-			<div class="row upper-header">
-				<div class="small-3 columns">
-					<hgroup class="site-title">
-					<h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
-					</hgroup>
-				</div>
-				<div class="small-9 columns">
-					<nav class="top-nav">
-						{% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
-						{% set top_nav = top_nav|default(default_top_nav) %}
-						<ul>
-							{% for caption, href in top_nav %}
-							<li><a href="{{ href }}">{{ caption }}</a></li>
-							{% endfor %}
-						</ul>
-					</nav>
-					<div class="row">
-						<div class="small-8 columns main-nav-wrapper">
-							{% block main_nav %}
-							<nav class="main-nav">
-								{% set active_main_nav = active_main_nav|default('home') -%}
-								{% set default_main_nav = [
+<div class="container">
+    {% block header scoped %}
+        <header class="header">
+            <div class="row upper-header">
+                <div class="small-3 columns">
+                    <hgroup class="site-title">
+                        <h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
+                    </hgroup>
+                </div>
+                <div class="small-9 columns">
+                    <nav class="top-nav">
+                        {% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
+                        {% set top_nav = top_nav|default(default_top_nav) %}
+                        <ul>
+                            {% for caption, href in top_nav %}
+                                <li><a href="{{ href }}">{{ caption }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                    <div class="row">
+                        <div class="small-8 columns main-nav-wrapper">
+                            {% block main_nav %}
+                                <nav class="main-nav">
+                                    {% set active_main_nav = active_main_nav|default('home') -%}
+                                    {% set default_main_nav = [
 									('home', 'Home', '/over-deze-site'), 
 									('zoeken', 'Zoeken', '/zoeken'),
 									('vinden', 'Vinden', '/vinden')
-									]
-								-%}
-								{% set main_nav = main_nav|default(default_main_nav) -%}
-								<ul>
-									{% for id, caption, href in main_nav %}
-									<li{% if id == active_main_nav %} class="active"{% endif 
-									%}><a href="{{ href }}">{{ caption }}</a></li>
-									{% endfor %}
-								</ul>
-							</nav>
-							{% endblock %}
-						</div>
-						<div class="small-4 columns searchfield-wrapper">
-							<form method="get" action="{{ zoeken_action|default('#') }}">
-								<div class="row collapse searchfield">
-									<div class="small-9 columns">
-										<input type="search" class="search-input" id="query" name="query" placeholder="{{ zoeken_placeholder|default('Zoek op deze site...') }}" />
-									</div>
-									<div class="small-3 columns">
-										<input type="submit" class="icon postfix" value="">
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<nav class="broodkruimel-wrapper">
-					{% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
-					{% set crumbs = crumbs|default(default_crumbs) %}
-					<ul class="broodkruimel">
-						{% for caption, href, state in crumbs %}
-							<li{% if state != ''%} class="{{state}}"{% endif %}>
-							<a href="{{ href }}">{{ caption }}</a></li>
-						{% endfor %}
-					</ul>
-				</nav>
-			</div>
-			<div class="lower-header">
-				<div class="row relative">
-					<img class="overlay-sub" src="{{request.static_path('pyoes:static/img/light-banner.png')}}" />
-				</div>
-			</div>
-		</header>
-		{% endblock %}
+									] -%}
+                                    {% set main_nav = main_nav|default(default_main_nav) -%}
+                                    <ul>
+                                        {% for id, caption, href in main_nav %}
+                                            <li{% if id == active_main_nav %} class="active"{% endif %}><a
+                                                    href="{{ href }}">{{ caption }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </nav>
+                            {% endblock %}
+                        </div>
+                        <div class="small-4 columns searchfield-wrapper">
+                            <form method="get" action="{{ zoeken_action|default('#') }}">
+                                <div class="row collapse searchfield">
+                                    <div class="small-9 columns">
+                                        <input type="search" class="search-input" id="query" name="query"
+                                               placeholder="{{ zoeken_placeholder|default('Zoek op deze site...') }}"/>
+                                    </div>
+                                    <div class="small-3 columns">
+                                        <input type="submit" class="icon postfix" value="">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <nav class="broodkruimel-wrapper">
+                    {% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
+                    {% set crumbs = crumbs|default(default_crumbs) %}
+                    <ul class="broodkruimel">
+                        {% for caption, href, state in crumbs %}
+                            <li{% if state != '' %} class="{{ state }}"{% endif %}>
+                                <a href="{{ href }}">{{ caption }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="lower-header">
+                <div class="row relative">
+                    <img class="overlay-sub" src="{{ request.static_path('pyoes:static/img/light-banner.png') }}"/>
+                </div>
+            </div>
+        </header>
+    {% endblock %}
 
-		{% block content scoped %}
-		{% endblock %}
+    {% block content scoped %}
+    {% endblock %}
 
-		{% block footer %}
-		<footer class="footer">
-			<div class="row">
-				<div class="small-8 columns small-footer">
-					<span class="icon icons-overheid"></span>
-					<div class="info">
-						<p>&copy; {%block datum_copyright %}2013{%endblock %} <a class="agentschap" href="https://www.onroerenderfgoed.be">Onroerend Erfgoed</a></p>
-						{% set default_footer_nav = [('Toegankelijkheid', '/toegankelijkheid'), ('Juridische Informatie', '/juridische-informatie')] %}
-						{% set footer_nav = footer_nav|default(default_footer_nav) %}
-						<nav class="footer-nav">
-							<ul>
-							{% for nav in footer_nav %}
-								<li><a href="{{ nav.1 }}">{{ nav.0 }}</a></li>
-							{% endfor %}
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<div class="small-4 columns">
-				</div>
-			</div>
-		</footer>
-		{% endblock %}
-	</div>
+    {% block footer %}
+        <footer class="footer">
+            <div class="row">
+                <div class="small-8 columns small-footer">
+                    <span class="icon icons-overheid"></span>
 
-  <script>
-  document.write('<script src=' +
-	('__proto__' in {} ? '{{request.static_path("pyoes:static/js/vendor/zepto")}}' : '{{request.static_path("pyoes:static/js/vendor/jquery")}}') +
-  '.js><\/script>')
-  </script>
-  
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.placeholder.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.interchange.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.dropdown.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.forms.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.magellan.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.tooltips.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.abide.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.topbar.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.orbit.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.cookie.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.clearing.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.alerts.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.section.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.joyride.js')}}"></script>
-	
-  <script src="{{request.static_path('pyoes:static/js/foundation/foundation.reveal.js')}}"></script>
-	
-  
-  <script>
+                    <div class="info">
+                        <p>&copy; {% block datum_copyright %}2013{% endblock %} <a class="agentschap"
+                                                                                   href="https://www.onroerenderfgoed.be">Onroerend
+                            Erfgoed</a></p>
+                        {% set default_footer_nav = [('Toegankelijkheid', '/toegankelijkheid'), ('Juridische Informatie', '/juridische-informatie')] %}
+                        {% set footer_nav = footer_nav|default(default_footer_nav) %}
+                        <nav class="footer-nav">
+                            <ul>
+                                {% for nav in footer_nav %}
+                                    <li><a href="{{ nav.1 }}">{{ nav.0 }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="small-4 columns">
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+</div>
+
+<script>
+    document.write('<script src=' +
+            ('__proto__' in {} ? '{{request.static_path("pyoes:static/js/vendor/zepto")}}' : '{{request.static_path("pyoes:static/js/vendor/jquery")}}') +
+            '.js><\/script>')
+</script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.placeholder.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.interchange.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.dropdown.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.forms.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.magellan.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.tooltips.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.abide.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.topbar.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.orbit.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.cookie.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.clearing.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.alerts.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.section.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.joyride.js') }}"></script>
+
+<script src="{{ request.static_path('pyoes:static/js/foundation/foundation.reveal.js') }}"></script>
+
+
+<script>
     $(document).foundation();
-  </script>
+</script>
 </body>
 </html>
