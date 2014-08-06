@@ -1,8 +1,9 @@
-volgende versie
-===============
+0.1.1 (06-08-2014)
+==================
 
 * Toevoegen van een mogelijkheid om css_files in de html header te injecteren. (#7) [JonathanGeosolutions]
 * Toevoegen van een mogelijkheid om de HTML header te overriden in een template.
+* Testen ook laten uitvoeren op py33 en py34.
 
 0.1.0
 =====
