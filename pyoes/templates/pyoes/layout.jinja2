@@ -14,10 +14,13 @@
 
     <script type="text/javascript" src="//use.typekit.net/znn6biy.js"></script>
 
-    <script type="text/javascript">try {
-        Typekit.load();
-    } catch (e) {
-    }</script>
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {
+            console.log(e);
+        }
+    </script>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
 
@@ -29,8 +32,8 @@
         {% set default_css_files = []-%}
 
         {% set css_files = css_files|default(default_css_files) -%}
-        {% for  css in css_files %}
-            <link rel="stylesheet" href={{ css }}/>
+        {% for css in css_files -%}
+        <link rel="stylesheet" href="{{ css }}"/>
         {% endfor %}
 
     {% endblock -%}
@@ -38,9 +41,9 @@
 
     {% block javascript -%}
         {% set default_js_files = [
-		'//code.jquery.com/jquery-1.9.1.js',
-		'//code.jquery.com/ui/1.10.3/jquery-ui.js'
-	] -%}
+			'//code.jquery.com/jquery-1.9.1.js',
+			'//code.jquery.com/ui/1.10.3/jquery-ui.js'
+		] -%}
         {% set js_files = js_files|default(default_js_files) -%}
         {% for js in js_files -%}
             <script type="text/javascript" src="{{ js }}"></script>
