@@ -1,3 +1,8 @@
+next version
+============
+
+* Toevoegen van een mogelijkheid om css_files in de html header te injecteren. (#7) [JonathanGeosolutions]
+
 0.1.0
 =====
 
