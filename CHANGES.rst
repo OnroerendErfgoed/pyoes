@@ -1,7 +1,8 @@
-next version
-============
+volgende versie
+===============
 
 * Toevoegen van een mogelijkheid om css_files in de html header te injecteren. (#7) [JonathanGeosolutions]
+* Toevoegen van een mogelijkheid om de HTML header te overriden in een template.
 
 0.1.0
 =====

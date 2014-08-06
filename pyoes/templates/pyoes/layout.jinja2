@@ -4,6 +4,7 @@
 <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
+	{% block html_header scoped %}
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width">
@@ -69,6 +70,7 @@
             })();
 
         </script>
+	{% endblock %}
     {% endblock %}
 </head>
 
