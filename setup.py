@@ -14,7 +14,7 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.1.1',
+      version='0.2.0a1',
       description='Algemene onroerenderfgoed stijl voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
