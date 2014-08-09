@@ -13,7 +13,7 @@
 @import "pyoes/layout";
 
 // De layout van deze toepassing
-@import "+package+/+package+";
+@import "{{package}}";
 
 // Or selectively include components
 // @import
