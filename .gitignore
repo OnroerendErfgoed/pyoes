@@ -43,5 +43,6 @@ nosetests.xml
 #Eclipse
 .settings
 
-#sass
+#public front end
 *.sass-cache
+bower_components/*
