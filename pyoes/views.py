@@ -12,3 +12,7 @@ def vinden(request):
 @view_config(route_name='pinpoints', renderer='templates/pinpoints.jinja2')
 def pinpoints(request):
     return {}
+
+@view_config(route_name='icons', renderer='templates/icons.jinja2')
+def icons(request):
+    return {}

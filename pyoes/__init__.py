@@ -9,6 +9,7 @@ def main(global_config, **settings):
     config.add_route('home', '/')
     config.add_route('vinden', '/vinden')
     config.add_route('pinpoints', '/pinpoints')
+    config.add_route('icons', '/icons')
 
     includeme(config)
 
