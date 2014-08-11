@@ -7,3 +7,11 @@ pyramid_debugtoolbar==2.1
 
 #Sphinx
 sphinx==1.2.2
+
+# Testing
+pytest==2.5.1
+py==1.4.19
+pytest-cov==1.6
+
+# Linting
+pep8==1.4.6
