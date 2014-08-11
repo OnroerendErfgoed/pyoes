@@ -8945,9 +8945,9 @@ th.hide-for-touch {
 /* line 123, ../scss/pyoes/_layout.scss */
 .header .searchfield input[type="submit"] {
   display: block;
-  border: none;
   width: 100%;
-  background: url("../img/icons/magnifier.png") no-repeat center center;
+  border: none;
+  background: url("../img/icons/magnifier_wb.png") no-repeat center center;
 }
 /* line 132, ../scss/pyoes/_layout.scss */
 .header .main-nav-wrapper {
