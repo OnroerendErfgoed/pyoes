@@ -1,48 +1,48 @@
 
 $archeologietruweel-layout: smart;
 $archeologietruweel-sprite-dimensions: true;
-@import "pinpoints/archeologietruweel/*.png";
+@import "pyoes/pinpoints/archeologietruweel/*.png";
 @include all-archeologietruweel-sprites;
 
 $archeologievlag-layout: smart;
 $archeologievlag-sprite-dimensions: true;
-@import "pinpoints/archeologievlag/*.png";
+@import "pyoes/pinpoints/archeologievlag/*.png";
 @include all-archeologievlag-sprites;
 
 $boek-layout: smart;
 $boek-sprite-dimensions: true;
-@import "pinpoints/boek/*.png";
+@import "pyoes/pinpoints/boek/*.png";
 @include all-boek-sprites;
 
 $bouwkundig-layout: smart;
 $bouwkundig-sprite-dimensions: true;
-@import "pinpoints/bouwkundig/*.png";
+@import "pyoes/pinpoints/bouwkundig/*.png";
 @include all-bouwkundig-sprites;
 
 $heraldiek-layout: smart;
 $heraldiek-sprite-dimensions: true;
-@import "pinpoints/heraldiek/*.png";
+@import "pyoes/pinpoints/heraldiek/*.png";
 @include all-heraldiek-sprites;
 
 $info-layout: smart;
 $info-sprite-dimensions: true;
-@import "pinpoints/info/*.png";
+@import "pyoes/pinpoints/info/*.png";
 @include all-info-sprites;
 
 $landschap-layout: smart;
 $landschap-sprite-dimensions: true;
-@import "pinpoints/landschap/*.png";
+@import "pyoes/pinpoints/landschap/*.png";
 @include all-landschap-sprites;
 
 $maritiem-layout: smart;
 $maritiem-sprite-dimensions: true;
-@import "pinpoints/maritiem/*.png";
+@import "pyoes/pinpoints/maritiem/*.png";
 @include all-maritiem-sprites;
 
 
 $oorlog-layout: smart;
 $oorlog-sprite-dimensions: true;
-@import "pinpoints/oorlog/*.png";
+@import "pyoes/pinpoints/oorlog/*.png";
 @include all-oorlog-sprites;
 
 .pinpoint {

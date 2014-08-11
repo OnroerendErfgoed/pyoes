@@ -1,0 +1,12 @@
+{% extends "pyoes/layout.jinja2" %}
+
+{% set app_package = '{{package}}' %}
+
+{% set main_nav = [
+	('home', 'Home', '/'), 
+]-%}
+
+{% set css_files =
+[
+
+]-%}

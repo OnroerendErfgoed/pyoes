@@ -1,6 +1,9 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
+{% set default_app_package = 'pyoes' -%}
+{% set app_package = app_package|default(default_app_package, true) -%}
+
 <head>
 	{% block html_header scoped %}
     <meta charset="utf-8">
@@ -17,13 +20,12 @@
         } catch (e) {
             console.log(e);
         }
-    </script>
+	</script>
 
     <link rel="stylesheet"
-		  href="{% block app_css %}{{ request.static_path('pyoes:static/css/app.css') }}{% endblock %}"/>
+		  href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
 	
-	<script src="{{ request.static_path('pyoes:static/bower_components/modernizr/modernizr.js') }}"></script>
-
+	<script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
 
     {% block css -%}
         {% set default_css_files = []-%}
@@ -34,9 +36,9 @@
         {% endfor %}
     {% endblock -%}
 
-    {% block javascript -%}
+    {% block javascript scoped -%}
         {% set default_js_files = [
-			request.static_path('pyoes:static/bower_components/jquery/dist/jquery.min.js'),
+			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js'),
 		] -%}
         {% set js_files = js_files|default(default_js_files) -%}
         {% for js in js_files -%}
@@ -136,7 +138,7 @@
             </div>
             <div class="lower-header">
                 <div class="row relative">
-                    <img class="overlay-sub" src="{{ request.static_path('pyoes:static/img/pyoes/light-banner.png') }}"/>
+                    <img class="overlay-sub" src="{{ request.static_path(app_package + ':static/img/pyoes/light-banner.png') }}"/>
                 </div>
             </div>
         </header>
@@ -173,8 +175,8 @@
     {% endblock %}
 </div>
 
-<script src="{{ request.static_path('pyoes:static/bower_components/foundation/js/foundation.js') }}"></script>
-<script src="{{ request.static_path('pyoes:static/js/app.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
 
 </body>
 </html>
