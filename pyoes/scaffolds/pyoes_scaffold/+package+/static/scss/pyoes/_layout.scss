@@ -34,10 +34,13 @@
 	.top-nav{
 		@include clearfix;
 		margin-bottom: 40px;
-		margin-right: 40px;
 
 		ul {
 			@include inline-list;
+			margin: 0;
+			li {
+				margin-left: 0;
+			}
 			a{
 				font-size: rem-calc(16px);
 				color: $black;
@@ -105,21 +108,26 @@
 	.searchfield	{
 		background: $softblue;
 		.search-input{
-			margin: 9px;
-			height:20px;
+			margin: 0;
 			border:none;
-			@include box-shadow(none);
 			@include radius(0);
+		}
+		.small-9 {
+			padding: rem-calc(9);
+			padding-right: 0;
+		}
+		.small-3 {
+			padding: rem-calc(9);
+			padding-left: 0;
+		}
+		input[type="submit"]{
+			display: block;
+			border:none;
+			width: 100%;
+			background: url('../img/icons/magnifier.png') no-repeat center center;
 		}
 	}
 
-	input[type="submit"]{
-		border:none;
-		width: 40px;
-		height: 40px;
-		background: url('../img/icons/magnifier.png') no-repeat center center;
-		margin-left: 10px;
-	}
 
 	.main-nav-wrapper{
 		padding-right: 0;

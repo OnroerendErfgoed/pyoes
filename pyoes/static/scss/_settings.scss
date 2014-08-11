@@ -33,7 +33,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: rem-calc(1140);
 // $total-columns: 12;
 
 // Global
@@ -76,7 +76,7 @@ $primary-color: #008CBA;
 // $shiny-edge-color: rgba(#fff, .5);
 // $shiny-edge-active-color: rgba(#000, .2);
 
-// $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(40);
 
 // Media Query Ranges
 // $small-range: (0em, 40em);
