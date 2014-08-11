@@ -32,12 +32,14 @@ Jinja2 templates
 vooral een algemene header en footer levert. In deze layout zijn er een aantal
 blocks gedefinieerd die in andere templates kunnen overschreven worden.
 
-Idealiter maak je een eigen :file:`layout.jinja2` aan waarin je een aantal 
+De scaffold maakt voor je een eigen :file:`layout.jinja2` aan waarin je een aantal 
 zaken instelt die voor de ganse site van tel zijn. 
 
 .. code-block:: jinja
 
     {% extends "pyoes/layout.jinja2" %}
+
+    {% set app_package = 'pyoes' %}
 
     {% set ga_key = request.registry.settings["ga.tracker_key"] %}
 
@@ -101,7 +103,8 @@ mogelijkheden wil krijgen, kun je best de demo toepassing installeren.
     $ git clone https://github.com/OnroerendErfgoed/pyoes pyoes_demo
     $ cd pyoes_demo
     $ mkvirtualenv pyoes_demo
-    $ python setup.py install
+    $ python setup.py develop
+    $ pip install -r requirements-dev.txt
 
 Om het makkelijk te maken om de demo-toepassing te draaien naast een toepassing
 die je aan het ontwikkelen bent, draait deze op poort `6555` en niet op poort 
@@ -116,5 +119,4 @@ inspiratie kunnen dienen. De templates kun je vinden in :file:`pyoes/templates`,
 dit in tegenstelling tot de algemene pyoes templates die door een andere 
 applicatie worden overgenomen. Deze kun je vinden in :file:`pyoes/templates/pyoes`.
 
-De :file:`pyoes/static` folder bevat de scss bestanden van deze toepassing en 
-nog een aantal oude referentiebestanden van glue en andere pogingen.
+De :file:`pyoes/static` folder bevat de scss bestanden van deze demo toepassing.

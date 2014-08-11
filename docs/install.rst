@@ -42,7 +42,7 @@ je de code builden tot een sdist met via het :file:`setup.py` script van
     $ cd pyoes
     $ python setup.py sdist
     $ // activeer nu de virtual env van de pyramid app
-    $ pip install dist/pyoes-0.1.0.tar.gz
+    $ pip install dist/pyoes-0.2.0.tar.gz
 
 Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de 
 standaard bestanden die nodig zijn toevoegen aan een static dir. Op zich is dit
@@ -54,21 +54,19 @@ Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
     $ pcreate -s alchemy <package_naam>
     $ pcreate -s pyoes <package_naam>
 
-Vooraleer verder te gaan, moet je zorgen dat compass en best ook foundation 
+Vooraleer verder te gaan, moet je zorgen dat compass en eventueel ook foundation 
 aanwezig zijn op je systeem.
 
 .. code-block:: bash
 
-    $ [sudo] apt-get install rubygems   
-    $ [sudo] gem install zurb-foundation 
+    $ [sudo] apt-get install rubygems
     $ [sudo] gem install compass
-    $ [sudo] gem install font-icons --pre
+    # optioneel
+    $ [sudo] gem install foundation 
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
 zijn er ook nog filters die je kunt toevoegen aan je project.
-
-Tenslotte moet je ook aangeven waar je compass extensions dir staat.
 
 .. code-block:: ini
 
@@ -78,25 +76,12 @@ Tenslotte moet je ook aangeven waar je compass extensions dir staat.
     jinja2.filters = 
         setattr = pyoes.utils.set_attr_filter
 
-    # Is nodig voor het install_compass_extension script
-    compass.extensions_dir = %(here)s/<package_name>/static/extensions
-
-Kopieer nu een aantal bestanden uit de pyoes package naar je lokale omgeving.
-
-.. code-block:: bash
-
-    $ install_compass_extensions development.ini
-
-Installeer nu de compass extension in je static dir.
+Installeer foundation nu lokaal via bower.
 
 .. code-block:: bash
 
     $ cd static
-    $ compass install pyoes
-
-Er zijn een aantal statische files nodig die meegeleverd worden met :mod:`pyoes`. 
-Om deze te kunnen gebruiken moeten je een static view registeren. Je kunt dit
-manueel
+    $ bower install
 
 Tenslotten moet je :mod:`pyoes` toevoegen aan je main functie. Dit zorgt er voor
 dat de correcte static dir wordt toegevoegd en dat een aantal static views 
@@ -109,10 +94,19 @@ geregistreerd worden.
 Update
 ======
 
+.. warning::
+
+   Voer deze commando's niet uit van in de folder waarin je code staat, maar 
+   vanuit de bovenliggende folder. Dus, als je je git repository hebt 
+   uitgecheckt naar :file:`/home/me/projects/my_app`, voer het commando dan
+   uit in de folder :file:`/home/me/projects`.
+
 Als er nieuwe versies van :mod:`pyoes` zijn, moet je niet alle bovenstaande 
-stappen terug uitvoeren. Zo is het normaal niet nodig om de scaffold nogmaals 
-uit te voeren. Je kunt wel eens controleren of er wijzigingen in de scaffold 
-zijn aangebracht.
+stappen terug uitvoeren. Je kunt gewoon de scaffold terug uitvoeren en deze
+zal de nodige bestanden terug kopiëren.
+
+Je kunt op voorhand nagaan wat de wijzigingen zullen zijn door het commando
+te simuleren.
 
 .. code-block:: bash
 
@@ -127,10 +121,3 @@ er gedaan moet worden.
 
 De :term:`Jinja2` templates zijn automatisch beschikbaar. Als er nieuwe filters zijn 
 toegevoegd, moet je deze wel nog toevoegen aan je `.ini` bestand.
-
-Wat je zeker niet mag vergeten is om de compass extension uit de virtualenv te
-kopiëren naar je compass extensions dir.
-
-.. code-block:: bash
-
-    $ install_compass_extensions development.ini
