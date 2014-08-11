@@ -8,8 +8,6 @@ CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 
 requires = [
     'pyramid',
-    'pyramid_debugtoolbar',
-    'waitress',
     'pyramid_jinja2',
     ]
 
@@ -47,7 +45,5 @@ setup(name='pyoes',
       main = pyoes:main
       [pyramid.scaffold]
       pyoes=pyoes.scaffolds:PyoesTemplate
-      [console_scripts]
-      install_compass_extensions = pyoes.scripts.install_compass_extensions:main
       """,
       )

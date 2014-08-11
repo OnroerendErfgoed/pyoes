@@ -1,0 +1,9 @@
+# Runtime requirements
+--requirement requirements.txt
+
+# Development server
+waitress==0.8.9
+pyramid_debugtoolbar==2.1
+
+#Sphinx
+sphinx==1.2.2
