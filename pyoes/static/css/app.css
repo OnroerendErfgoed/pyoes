@@ -11501,3 +11501,1292 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+/* line 3, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #e5e5e5;
+}
+/* line 52, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.zoekresultaat > :first-child {
+  margin-top: 0;
+}
+/* line 53, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.zoekresultaat > :last-child {
+  margin-bottom: 0;
+}
+/* line 58, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.zoekresultaat h1, .zoekresultaat h2, .zoekresultaat h3, .zoekresultaat h4, .zoekresultaat h5, .zoekresultaat h6, .zoekresultaat p, .zoekresultaat li, .zoekresultaat dl {
+  color: #333333;
+}
+/* line 65, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.zoekresultaat h1, .zoekresultaat h2, .zoekresultaat h3, .zoekresultaat h4, .zoekresultaat h5, .zoekresultaat h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+/* line 67, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+.zoekresultaat h1.subheader, .zoekresultaat h2.subheader, .zoekresultaat h3.subheader, .zoekresultaat h4.subheader, .zoekresultaat h5.subheader, .zoekresultaat h6.subheader {
+  line-height: 1.4;
+}
+/* line 168, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.zoekresultaat:before, .zoekresultaat:after {
+  content: " ";
+  display: table;
+}
+/* line 169, ../bower_components/foundation/scss/foundation/components/_global.scss */
+.zoekresultaat:after {
+  clear: both;
+}
+/* line 8, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat .th {
+  margin-right: 1.25rem;
+  float: left;
+}
+/* line 13, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat .pinpointholder {
+  float: right;
+}
+/* line 17, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat h2 {
+  color: #a44697;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+}
+/* line 24, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat h4 {
+  color: black;
+  font-size: 1.375rem;
+  font-weight: 100;
+}
+/* line 30, ../scss/pyoes/_zoeken.scss */
+.zoekresultaat .preview {
+  font-style: italic;
+}
+
+/* line 36, ../scss/pyoes/_zoeken.scss */
+ul.pagination li.unavailable a:hover {
+  cursor: default;
+  color: #999;
+}
+/* line 40, ../scss/pyoes/_zoeken.scss */
+ul.pagination .left a, ul.pagination .right a {
+  font-weight: bold;
+}
+/* line 43, ../scss/pyoes/_zoeken.scss */
+ul.pagination li {
+  min-width: 1.5rem;
+}
+/* line 46, ../scss/pyoes/_zoeken.scss */
+ul.pagination li:hover, ul.pagination li.current {
+  background: none;
+}
+/* line 48, ../scss/pyoes/_zoeken.scss */
+ul.pagination li:hover a, ul.pagination li.current a {
+  background: #a44697;
+  color: white;
+  border-radius: 1.5rem;
+}
+/* line 54, ../scss/pyoes/_zoeken.scss */
+ul.pagination .left {
+  float: left;
+}
+/* line 57, ../scss/pyoes/_zoeken.scss */
+ul.pagination .right {
+  float: right;
+}
+
+/* line 178, pyoes/pinpoints/archeologietruweel/*.png */
+.archeologietruweel-sprite, .archeologietruweel-appelblauw-zeegroen-half, .archeologietruweel-appelblauw-zeegroen-quarter, .archeologietruweel-appelblauw-zeegroen, .archeologietruweel-blauw-half, .archeologietruweel-blauw-quarter, .archeologietruweel-blauw, .archeologietruweel-geel-half, .archeologietruweel-geel-quarter, .archeologietruweel-geel, .archeologietruweel-groen-half, .archeologietruweel-groen-quarter, .archeologietruweel-groen, .archeologietruweel-oranje-half, .archeologietruweel-oranje-quarter, .archeologietruweel-oranje, .archeologietruweel-paars-half, .archeologietruweel-paars-quarter, .archeologietruweel-paars {
+  background: url('../img/pyoes/pinpoints/archeologietruweel-scb985fbcf4.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologietruweel-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/archeologievlag/*.png */
+.archeologievlag-sprite, .archeologievlag-appelblauw-zeegroen-half, .archeologievlag-appelblauw-zeegroen-quarter, .archeologievlag-appelblauw-zeegroen, .archeologievlag-blauw-half, .archeologievlag-blauw-quarter, .archeologievlag-blauw, .archeologievlag-geel-half, .archeologievlag-geel-quarter, .archeologievlag-geel, .archeologievlag-groen-half, .archeologievlag-groen-quarter, .archeologievlag-groen, .archeologievlag-oranje-half, .archeologievlag-oranje-quarter, .archeologievlag-oranje, .archeologievlag-paars-half, .archeologievlag-paars-quarter, .archeologievlag-paars {
+  background: url('../img/pyoes/pinpoints/archeologievlag-s2788335eab.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.archeologievlag-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/boek/*.png */
+.boek-sprite, .boek-appelblauw-zeegroen-half, .boek-appelblauw-zeegroen-quarter, .boek-appelblauw-zeegroen, .boek-blauw-half, .boek-blauw-quarter, .boek-blauw, .boek-geel-half, .boek-geel-quarter, .boek-geel, .boek-groen-half, .boek-groen-quarter, .boek-groen, .boek-oranje-half, .boek-oranje-quarter, .boek-oranje, .boek-paars-half, .boek-paars-quarter, .boek-paars {
+  background: url('../img/pyoes/pinpoints/boek-s323d184f0f.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.boek-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/bouwkundig/*.png */
+.bouwkundig-sprite, .bouwkundig-appelblauw-zeegroen-half, .bouwkundig-appelblauw-zeegroen-quarter, .bouwkundig-appelblauw-zeegroen, .bouwkundig-blauw-half, .bouwkundig-blauw-quarter, .bouwkundig-blauw, .bouwkundig-geel-half, .bouwkundig-geel-quarter, .bouwkundig-geel, .bouwkundig-groen-half, .bouwkundig-groen-quarter, .bouwkundig-groen, .bouwkundig-oranje-half, .bouwkundig-oranje-quarter, .bouwkundig-oranje, .bouwkundig-paars-half, .bouwkundig-paars-quarter, .bouwkundig-paars {
+  background: url('../img/pyoes/pinpoints/bouwkundig-sd8fa2bee80.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.bouwkundig-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/heraldiek/*.png */
+.heraldiek-sprite, .heraldiek-appelblauw-zeegroen-half, .heraldiek-appelblauw-zeegroen-quarter, .heraldiek-appelblauw-zeegroen, .heraldiek-blauw-half, .heraldiek-blauw-quarter, .heraldiek-blauw, .heraldiek-geel-half, .heraldiek-geel-quarter, .heraldiek-geel, .heraldiek-groen-half, .heraldiek-groen-quarter, .heraldiek-groen, .heraldiek-oranje-half, .heraldiek-oranje-quarter, .heraldiek-oranje, .heraldiek-paars-half, .heraldiek-paars-quarter, .heraldiek-paars {
+  background: url('../img/pyoes/pinpoints/heraldiek-s262098f354.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.heraldiek-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/info/*.png */
+.info-sprite, .info-appelblauw-zeegroen-half, .info-appelblauw-zeegroen-quarter, .info-appelblauw-zeegroen, .info-blauw-half, .info-blauw-quarter, .info-blauw, .info-geel-half, .info-geel-quarter, .info-geel, .info-groen-half, .info-groen-quarter, .info-groen, .info-oranje-half, .info-oranje-quarter, .info-oranje, .info-paars-half, .info-paars-quarter, .info-paars {
+  background: url('../img/pyoes/pinpoints/info-s63f369349e.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.info-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/landschap/*.png */
+.landschap-sprite, .landschap-appelblauw-zeegroen-half, .landschap-appelblauw-zeegroen-quarter, .landschap-appelblauw-zeegroen, .landschap-blauw-half, .landschap-blauw-quarter, .landschap-blauw, .landschap-geel-half, .landschap-geel-quarter, .landschap-geel, .landschap-groen-half, .landschap-groen-quarter, .landschap-groen, .landschap-oranje-half, .landschap-oranje-quarter, .landschap-oranje, .landschap-paars-half, .landschap-paars-quarter, .landschap-paars {
+  background: url('../img/pyoes/pinpoints/landschap-s66875f4d9b.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-appelblauw-zeegroen-half {
+  background-position: 0 -664px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-appelblauw-zeegroen-quarter {
+  background-position: 0 -66px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-appelblauw-zeegroen {
+  background-position: 0 -1990px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-blauw-half {
+  background-position: 0 -398px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-blauw-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-blauw {
+  background-position: 0 -1725px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-geel-half {
+  background-position: 0 -265px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-geel-quarter {
+  background-position: -114px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-geel {
+  background-position: 0 -1195px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-groen-half {
+  background-position: 0 -797px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-groen-quarter {
+  background-position: -114px -132px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-groen {
+  background-position: 0 -930px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-oranje-half {
+  background-position: 0 -531px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-oranje-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-oranje {
+  background-position: 0 -1460px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-paars-half {
+  background-position: 0 -132px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-paars-quarter {
+  background-position: -57px -66px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.landschap-paars {
+  background-position: 0 -2255px;
+  height: 265px;
+  width: 227px;
+}
+
+/* line 178, pyoes/pinpoints/maritiem/*.png */
+.maritiem-sprite, .maritiem-appelblauw-zeegroen-half, .maritiem-appelblauw-zeegroen-quarter, .maritiem-appelblauw-zeegroen, .maritiem-blauw-half, .maritiem-blauw-quarter, .maritiem-blauw, .maritiem-geel-half, .maritiem-geel-quarter, .maritiem-geel, .maritiem-groen-half, .maritiem-groen-quarter, .maritiem-groen, .maritiem-oranje-half, .maritiem-oranje-quarter, .maritiem-oranje, .maritiem-paars-half, .maritiem-paars-quarter, .maritiem-paars {
+  background: url('../img/pyoes/pinpoints/maritiem-s5da35e740d.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.maritiem-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 178, pyoes/pinpoints/oorlog/*.png */
+.oorlog-sprite, .oorlog-appelblauw-zeegroen-half, .oorlog-appelblauw-zeegroen-quarter, .oorlog-appelblauw-zeegroen, .oorlog-blauw-half, .oorlog-blauw-quarter, .oorlog-blauw, .oorlog-geel-half, .oorlog-geel-quarter, .oorlog-geel, .oorlog-groen-half, .oorlog-groen-quarter, .oorlog-groen, .oorlog-oranje-half, .oorlog-oranje-quarter, .oorlog-oranje, .oorlog-paars-half, .oorlog-paars-quarter, .oorlog-paars {
+  background: url('../img/pyoes/pinpoints/oorlog-sac5710e141.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-appelblauw-zeegroen-half {
+  background-position: -114px -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-appelblauw-zeegroen-quarter {
+  background-position: 0 -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-appelblauw-zeegroen {
+  background-position: 0 -1658px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-blauw-half {
+  background-position: 0 -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-blauw-quarter {
+  background-position: 0 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-blauw {
+  background-position: 0 -1393px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-geel-half {
+  background-position: -114px -133px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-geel-quarter {
+  background-position: -57px 0;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-geel {
+  background-position: 0 -863px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-groen-half {
+  background-position: -114px -399px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-groen-quarter {
+  background-position: 0 -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-groen {
+  background-position: 0 -598px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-oranje-half {
+  background-position: 0 -266px;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-oranje-quarter {
+  background-position: -57px -532px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-oranje {
+  background-position: 0 -1128px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-paars-half {
+  background-position: -114px 0;
+  height: 133px;
+  width: 114px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-paars-quarter {
+  background-position: -57px -133px;
+  height: 66px;
+  width: 57px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.oorlog-paars {
+  background-position: 0 -1923px;
+  height: 265px;
+  width: 228px;
+}
+
+/* line 48, ../scss/pyoes/_pinpoints.scss */
+.pinpoint {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}

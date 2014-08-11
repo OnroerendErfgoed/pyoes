@@ -31,3 +31,30 @@
 		font-style: italic;
 	}
 }
+
+ul.pagination {
+	li.unavailable a:hover {
+		cursor: default;
+		color: #999;
+	}
+	.left a, .right a {
+		font-weight: bold;
+	}
+	li {
+		min-width: rem-calc(24);
+	}
+	li:hover, li.current {
+		background: none;
+		a {
+			background: $mainpink;
+			color: $white;
+			@include radius(rem-calc(24));
+		}
+	}
+	.left {
+		float: left;
+	}
+	.right {
+		float: right;
+	}
+}
