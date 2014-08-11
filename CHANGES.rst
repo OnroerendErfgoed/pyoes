@@ -1,3 +1,13 @@
+0.2.0 (??-08-2014)
+==================
+
+* Andere manier van omgaan met Foundation dependency. Gaat nu via bower.
+* Meteen upgraden naar Foundation 5.3
+* Unit tests naar py.test ipv nose.
+* Een aantal minder gebruikte aspecten werden verwijderd. Eerst wordt de 
+  omschakeling naar bower en Foundation 5 bekeken en dan kunnen hier terug
+  oplossingen voor gezocht worden.
+
 0.1.1 (06-08-2014)
 ==================
 
