@@ -66,15 +66,17 @@ Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
     $ pcreate -s alchemy <package_naam>
     $ pcreate -s pyoes <package_naam>
 
-Vooraleer verder te gaan, moet je zorgen dat compass en eventueel ook foundation 
+Vooraleer verder te gaan, moet je zorgen dat compassi, bower en eventueel ook foundation 
 aanwezig zijn op je systeem.
 
 .. code-block:: bash
-
-    $ [sudo] apt-get install rubygems
+    
+    # ruby 1.9+
+    $ [sudo] apt-get install ruby
     $ [sudo] gem install compass
     # optioneel
-    $ [sudo] gem install foundation 
+    $ [sudo] gem install foundation
+    # [sudo] npm install -g bower grunt-cli
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
@@ -92,7 +94,7 @@ Installeer foundation nu lokaal via bower.
 
 .. code-block:: bash
 
-    $ cd static
+    $ cd pyoes/static
     $ bower install
 
 Tenslotten moet je :mod:`pyoes` toevoegen aan je main functie. Dit zorgt er voor
