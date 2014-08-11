@@ -5,9 +5,21 @@ Installatie
 Installatie
 ===========
 
-Om :mod:`pyoes` te installeren, zijn er twee mogelijkheden. Ofwel installeer
-je rechtstreeks vanaf :term:`Github`, ofwel doe je eerst een lokale checkout
+Om :mod:`pyoes` te installeren, zijn er drie mogelijkheden. Ofwel installeer
+je vanuit de OE python package manager, ofwel installeer je rechtstreeks 
+vanaf :term:`Github`, ofwel doe je eerst een lokale checkout
 en installeer je vanaf deze checkout.
+
+Om te installeren vanaf de OE package manager moet je eenvoudigweg een 
+dependency op pyoes declareren in :file:`setup.py` en zorgen dat de
+package manager bereikbaar is.
+
+.. code-block:: python
+
+    requires = [                                                                    
+        'pyramid',
+        'pyoes'
+    ]
 
 Om rechtstreeks te installeren van Github moet je de :file:`setup.py` van
 je toepassing aanpassen. Enerzijds moet je :mod:`pyoes` toevoegen 
@@ -20,13 +32,13 @@ de gebruiker *IndustrieelErfgoed*, deze heeft enkel leesrechten op de code.
 
     requires = [                                                                    
         'pyramid',
-        'pyoes>=0.1.0'
+        'pyoes'
     ]
 
     setup(
         ...,
         dependency_links = [                                                      
-            'https://IndustrieelErfgoed:<<PWD>>@github.com/OnroerendErfgoed/pyoes/tarball/0.1.0#egg=pyoes-0.1.0'
+            'https://IndustrieelErfgoed:<<PWD>>@github.com/OnroerendErfgoed/pyoes/tarball/0.2.0#egg=pyoes-0.2.0'
         ]
      )   
 
