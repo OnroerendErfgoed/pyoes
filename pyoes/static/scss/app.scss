@@ -12,8 +12,11 @@
 // Importeren van algemene OE layout
 @import "pyoes/layout";
 
+$fi-path: "../bower_components/foundation-icon-fonts";
+@import "foundation-icons";
+
 // De layout van deze toepassing
-@import "demo";
+@import "pyoes";
 
 // Or selectively include components
 // @import
