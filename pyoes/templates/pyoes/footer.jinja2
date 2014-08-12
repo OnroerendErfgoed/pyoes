@@ -1,21 +1,20 @@
 <footer class="footer">
 	<div class="row">
-		<div class="small-8 columns small-footer">
+		<div class="small-12 columns small-footer">
 			<span class="icon icons-overheid"></span>
+
 			<div class="info">
-				<p>&copy; {%block datum_copyright %}2013{%endblock %} Onroerend Erfgoed</p>
-				{% set default_footer_nav = [('Toegankelijkheid', '/toegankelijkheid'), ('Juridische Informatie', '/juridische-informatie')] %}
-				{% set footer_nav = footer_nav|default(default_footer_nav) %}
+				<p>&copy; {% block datum_copyright %}2013{% endblock %} <a class="agentschap"
+																		   href="https://www.onroerenderfgoed.be">Onroerend
+					Erfgoed</a></p>
 				<nav class="footer-nav">
 					<ul>
-					{% for nav in footer_nav %}
-						<li><a href="{{ nav.1 }}">{{ nav.0 }}</a></li>
-					{% endfor %}
+						{% for nav in footer_nav %}
+							<li><a href="{{ nav.1 }}">{{ nav.0 }}</a></li>
+						{% endfor %}
 					</ul>
 				</nav>
 			</div>
-		</div>
-		<div class="small-4 columns">
 		</div>
 	</div>
 </footer>

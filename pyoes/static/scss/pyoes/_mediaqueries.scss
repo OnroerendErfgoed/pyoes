@@ -1,0 +1,46 @@
+@media only screen and (max-width: 40em) {
+	.header {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.site-title {
+			h1{
+				height: 100px;
+				width: 100px;
+				margin: 0 auto;
+				background: url('../img/pyoes/logo-small.png') no-repeat;
+				a {
+					height: 100%;
+				}
+			}
+		}
+		.mobile-menu {
+			display: block;
+		}
+		.top-nav {
+			margin-bottom: 10px;
+		}
+		.main-nav {
+			display: none;
+		}
+		.searchfield-wrapper{
+			padding-left: 0 !important;
+		}
+		.searchfield {
+			padding-left: rem-calc(14px);
+		}
+		.broodkruimel-wrapper{
+			position: static;
+
+			ul.broodkruimel {
+				padding: rem-calc(14px);
+			}
+		}
+		.lower-header {
+			position: static;
+			margin-top: 0px;
+		}
+		.overlay-sub {
+			display: none;
+		}
+	}
+}

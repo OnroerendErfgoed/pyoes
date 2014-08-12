@@ -4,6 +4,12 @@
 {% set default_app_package = 'pyoes' -%}
 {% set app_package = app_package|default(default_app_package, true) -%}
 
+{% set default_footer_nav = [
+	('Toegankelijkheid', '/toegankelijkheid'),
+	('Juridische Informatie', '/juridische-informatie')
+] -%}
+{% set footer_nav = footer_nav|default(default_footer_nav) %}
+
 <head>
 	{% block html_header scoped %}
     <meta charset="utf-8">
@@ -75,12 +81,12 @@
     {% block header scoped %}
         <header class="header">
             <div class="row upper-header">
-                <div class="small-3 columns">
+                <div class="large-3 columns">
                     <hgroup class="site-title">
                         <h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
                     </hgroup>
                 </div>
-                <div class="small-9 columns">
+                <div class="large-9 columns">
                     <nav class="top-nav">
                         {% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
                         {% set top_nav = top_nav|default(default_top_nav) %}
@@ -90,16 +96,28 @@
                             {% endfor %}
                         </ul>
                     </nav>
-                    <div class="row">
-                        <div class="small-8 columns main-nav-wrapper">
+					<div class="row">
+						<div class="small-12 columns">
+							<div class="mobile-menu">
+								{% set active_main_nav = active_main_nav|default('home') -%}
+								{% set default_main_nav = [] -%}
+								{% set main_nav = main_nav|default(default_main_nav) -%}
+								<select>
+									{% for id, caption, href in main_nav %}
+									<option{% if id == active_main_nav %} 
+										selected="selected"{% endif %}
+										value="{{ href }}">
+										{{ caption }}
+									</option>
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+                        <div class="large-8 columns main-nav-wrapper">
                             {% block main_nav %}
                                 <nav class="main-nav">
                                     {% set active_main_nav = active_main_nav|default('home') -%}
-                                    {% set default_main_nav = [
-									('home', 'Home', '/over-deze-site'), 
-									('zoeken', 'Zoeken', '/zoeken'),
-									('vinden', 'Vinden', '/vinden')
-									] -%}
+                                    {% set default_main_nav = [] -%}
                                     {% set main_nav = main_nav|default(default_main_nav) -%}
                                     <ul>
                                         {% for id, caption, href in main_nav %}
@@ -110,7 +128,7 @@
                                 </nav>
                             {% endblock %}
                         </div>
-                        <div class="small-4 columns searchfield-wrapper">
+                        <div class="large-4 columns searchfield-wrapper">
                             <form method="get" action="{{ zoeken_action|default('#') }}">
                                 <div class="row collapse searchfield">
                                     <div class="small-9 columns">
@@ -125,53 +143,32 @@
                         </div>
                     </div>
                 </div>
-                <nav class="broodkruimel-wrapper">
-                    {% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
-                    {% set crumbs = crumbs|default(default_crumbs) %}
-                    <ul class="broodkruimel">
-                        {% for caption, href, state in crumbs %}
-                            <li{% if state != '' %} class="{{ state }}"{% endif %}>
-                                <a href="{{ href }}">{{ caption }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </nav>
             </div>
             <div class="lower-header">
                 <div class="row relative">
-                    <img class="overlay-sub" src="{{ request.static_path(app_package + ':static/img/pyoes/light-banner.png') }}"/>
+					<img class="overlay-sub" src="{{ request.static_path(app_package + ':static/img/pyoes/light-banner.png') }}"/>
+					<div class="small-12 columns">
+						<nav class="broodkruimel-wrapper">
+							{% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
+							{% set crumbs = crumbs|default(default_crumbs) %}
+							<ul class="broodkruimel">
+								{% for caption, href, state in crumbs %}
+									<li{% if state != '' %} class="{{ state }}"{% endif %}>
+										<a href="{{ href }}">{{ caption }}</a></li>
+								{% endfor %}
+							</ul>
+						</nav>
+					</div>
                 </div>
             </div>
         </header>
     {% endblock %}
 
     {% block content scoped %}
-    {% endblock %}
+	{% endblock %}
 
-    {% block footer %}
-        <footer class="footer">
-            <div class="row">
-                <div class="small-8 columns small-footer">
-                    <span class="icon icons-overheid"></span>
-
-                    <div class="info">
-                        <p>&copy; {% block datum_copyright %}2013{% endblock %} <a class="agentschap"
-                                                                                   href="https://www.onroerenderfgoed.be">Onroerend
-                            Erfgoed</a></p>
-                        {% set default_footer_nav = [('Toegankelijkheid', '/toegankelijkheid'), ('Juridische Informatie', '/juridische-informatie')] %}
-                        {% set footer_nav = footer_nav|default(default_footer_nav) %}
-                        <nav class="footer-nav">
-                            <ul>
-                                {% for nav in footer_nav %}
-                                    <li><a href="{{ nav.1 }}">{{ nav.0 }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="small-4 columns">
-                </div>
-            </div>
-        </footer>
+	{% block footer scoped %}
+		{% include "pyoes/footer.jinja2" %}
     {% endblock %}
 </div>
 

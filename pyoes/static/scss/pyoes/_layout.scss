@@ -3,9 +3,20 @@
 
 @import "pyoes/settings";
 
+.mobile-menu {
+	display:none;
+	select {
+		display: inline-block;
+		border: 1px solid $softgray;
+		padding: 4px;
+		color: #4d4d4d;
+	}
+}
+
 
 .header{
 	margin-top: 30px;
+	margin-bottom: -75px;
 
 	.site-title {
 		h1{
@@ -141,7 +152,7 @@
 		background: #e5e5e5;
 		position: absolute;
 		right: 20px;
-		bottom: 0px;
+		bottom: 20px;
 
 
 		ul.broodkruimel {
@@ -199,6 +210,10 @@
 	position:static;
 }
 
+.content {
+	margin-top: 30px;
+}
+
 .footer{
 	background-color: #edeeff;
 
@@ -217,7 +232,6 @@
 	.small-footer{
 		padding: 20px 20px 0 20px;
 		background-color: #2893ba;
-		border-right: 22px solid #000;
 		margin-top: -20px;
 
 		.footer-nav{
@@ -269,6 +283,7 @@
 
 		.icons-overheid{
 			float:left;
+			margin-top: rem-calc(6px);
 		}
 	}
 }
