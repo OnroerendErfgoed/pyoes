@@ -66,7 +66,7 @@ Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
     $ pcreate -s alchemy <package_naam>
     $ pcreate -s pyoes <package_naam>
 
-Vooraleer verder te gaan, moet je zorgen dat compassi, bower en eventueel ook foundation 
+Vooraleer verder te gaan, moet je zorgen dat compass, bower en eventueel ook foundation 
 aanwezig zijn op je systeem.
 
 .. code-block:: bash
@@ -150,8 +150,9 @@ Van versie 1.x naar 2.x
 
 Volgende bestanden zullen gewijzigd worden.
 
- * :file:`static/css/app.css`: Is sowieso het resultaat van een compass compile operatie
-   en moet dus gehergenereerd worden op basis van je eigen sass code.
+ * :file:`static/css/app.css`: Is sowieso het resultaat van een 
+   :command:`compass compile` operatie en moet dus gehergenereerd worden op 
+   basis van je eigen sass code.
  * :file:`static/config.rb`: Mag gewoon vervangen worden en kan geen kwaad.
  * :file:`templates/layout.jinja2`: Er wordt een starttemplate meegeleverd voor
    nieuwe scaffolds. Bij een update is het meestal best deze te laten zoals
