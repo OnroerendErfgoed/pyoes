@@ -4,11 +4,16 @@
 {% set default_app_package = 'pyoes' -%}
 {% set app_package = app_package|default(default_app_package, true) -%}
 
+{% set active_main_nav = active_main_nav|default('home') -%}
+{% set default_main_nav = [] -%}
+{% set main_nav = main_nav|default(default_main_nav) -%}
+
 {% set default_footer_nav = [
 	('Toegankelijkheid', '/toegankelijkheid'),
 	('Juridische Informatie', '/juridische-informatie')
 ] -%}
 {% set footer_nav = footer_nav|default(default_footer_nav) %}
+
 
 <head>
 	{% block html_header scoped %}
@@ -99,10 +104,7 @@
 					<div class="row">
 						<div class="small-12 columns">
 							<div class="mobile-menu">
-								{% set active_main_nav = active_main_nav|default('home') -%}
-								{% set default_main_nav = [] -%}
-								{% set main_nav = main_nav|default(default_main_nav) -%}
-								<select>
+								<select id="mobile-menu-select">
 									{% for id, caption, href in main_nav %}
 									<option{% if id == active_main_nav %} 
 										selected="selected"{% endif %}
@@ -116,9 +118,6 @@
                         <div class="large-8 columns main-nav-wrapper">
                             {% block main_nav %}
                                 <nav class="main-nav">
-                                    {% set active_main_nav = active_main_nav|default('home') -%}
-                                    {% set default_main_nav = [] -%}
-                                    {% set main_nav = main_nav|default(default_main_nav) -%}
                                     <ul>
                                         {% for id, caption, href in main_nav %}
                                             <li{% if id == active_main_nav %} class="active"{% endif %}><a
