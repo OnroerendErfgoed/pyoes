@@ -155,7 +155,8 @@ Volgende bestanden zullen gewijzigd worden.
  * :file:`static/config.rb`: Mag gewoon vervangen worden en kan geen kwaad.
  * :file:`templates/layout.jinja2`: Er wordt een starttemplate meegeleverd voor
    nieuwe scaffolds. Bij een update is het meestal best deze te laten zoals
-   ze is.
+   ze is. Je moet wel zorgen dat de declaratie van een `app_package` correct
+   wordt ingesteld in je eigen :file:`templates/layout.jinja2`.
 
 Na de update mogen volgende bestanden in de :file:`static` folder verwijderd worden:
 
