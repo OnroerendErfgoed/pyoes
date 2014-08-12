@@ -86,12 +86,12 @@
     {% block header scoped %}
         <header class="header">
             <div class="row upper-header">
-                <div class="large-3 columns">
+                <div class="medium-3 columns">
                     <hgroup class="site-title">
                         <h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
                     </hgroup>
                 </div>
-                <div class="large-9 columns">
+                <div class="medium-9 columns">
                     <nav class="top-nav">
                         {% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
                         {% set top_nav = top_nav|default(default_top_nav) %}
@@ -115,7 +115,7 @@
 								</select>
 							</div>
 						</div>
-                        <div class="large-8 columns main-nav-wrapper">
+                        <div class="medium-8 columns main-nav-wrapper">
                             {% block main_nav %}
                                 <nav class="main-nav">
                                     <ul>
@@ -127,7 +127,7 @@
                                 </nav>
                             {% endblock %}
                         </div>
-                        <div class="large-4 columns searchfield-wrapper">
+                        <div class="medium-4 columns searchfield-wrapper">
                             <form method="get" action="{{ zoeken_action|default('#') }}">
                                 <div class="row collapse searchfield">
                                     <div class="small-9 columns">

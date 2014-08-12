@@ -1,4 +1,4 @@
-@media only screen and (max-width: 40em) {
+@media #{$small-only} {
 	.header {
 		margin-top: 10px;
 		margin-bottom: 10px;
@@ -16,11 +16,11 @@
 		.mobile-menu {
 			display: block;
 		}
-		.top-nav {
-			margin-bottom: 10px;
-		}
 		.main-nav {
 			display: none;
+		}
+		.top-nav {
+			margin-bottom: 10px;
 		}
 		.searchfield-wrapper{
 			padding-left: 0 !important;

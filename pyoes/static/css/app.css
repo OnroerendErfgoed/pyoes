@@ -9269,12 +9269,12 @@ th.hide-for-touch {
     display: block;
   }
   /* line 19, ../scss/pyoes/_mediaqueries.scss */
-  .header .top-nav {
-    margin-bottom: 10px;
-  }
-  /* line 22, ../scss/pyoes/_mediaqueries.scss */
   .header .main-nav {
     display: none;
+  }
+  /* line 22, ../scss/pyoes/_mediaqueries.scss */
+  .header .top-nav {
+    margin-bottom: 10px;
   }
   /* line 25, ../scss/pyoes/_mediaqueries.scss */
   .header .searchfield-wrapper {
