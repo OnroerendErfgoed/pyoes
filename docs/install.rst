@@ -135,3 +135,39 @@ er gedaan moet worden.
 
 De :term:`Jinja2` templates zijn automatisch beschikbaar. Als er nieuwe filters zijn 
 toegevoegd, moet je deze wel nog toevoegen aan je `.ini` bestand.
+
+Van versie 1.x naar 2.x
+-----------------------
+
+
+.. waring::
+
+    Bij de update van 1.x naar 2.x zijn er vrij significante wijzigingen doorgevoerd
+    in de organisatie van de bestanden. Het is dus best erg voorzichtig te zijn
+    bij deze update. Indien er zware wijzigingen zijn doorgevoerd, zullen er conflicten
+    optreden. Het is best deze update op voorhand goed te simuleren en interactief
+    uit te voeren.
+
+Volgende bestanden zullen gewijzigd worden.
+
+ * :file:`static/css/app.css`: Is sowieso het resultaat van een compass compile operatie
+   en moet dus gehergenereerd worden op basis van je eigen sass code.
+ * :file:`static/config.rb`: Mag gewoon vervangen worden en kan geen kwaad.
+ * :file:`templates/layout.jinja2`: Er wordt een starttemplate meegeleverd voor
+   nieuwe scaffolds. Bij een update is het meestal best deze te laten zoals
+   ze is.
+
+Na de update mogen volgende bestanden in de :file:`static` folder verwijderd worden:
+
+ * :file:`css/fonts`: We maken nu gebruik van de foundation icon fonts.
+ * :file:`js/foundation` en :file:`js/vendor`: Worden nu uit 
+   :file:`bower_components` geladen. Indien nodig kan je hier libraries toevoegen.
+ * :file:`sass`: Deze volledige folder wordt vervangen door een :file:`scss`
+   folder. Voor je deze folder verwijderd, controleer je best of je hier in
+   :file:`sass/{+package+}/_{+package+}.scss` eigen wijzigingen hebt aangebracht.
+   Indien dat zo is, dien je deze over te brengen naar 
+   :file:`scss/_{+package+}.scss`.
+ * :file:`extensions`: Werd aangemaakt door :command:`compass` en is nu overbodig.
+ * :file:`img/icons`, :file:`img/pinpoints` en andere bestanden: Alle bestanden
+   werden verplaatst naar :file:`img/pyoes`. Alles buiten deze folder dat je niet
+   zelf hebt toegevoegd, mag weg.
