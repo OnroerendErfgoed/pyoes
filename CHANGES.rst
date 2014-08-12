@@ -7,6 +7,9 @@
 * Een aantal minder gebruikte aspecten werden verwijderd. Eerst wordt de 
   omschakeling naar bower en Foundation 5 bekeken en dan kunnen hier terug
   oplossingen voor gezocht worden.
+* Basistemplate is nu meer responsive dan vroeger.
+* Standaard breedte van de css grid werd nu gelijk geschakeld met die van de
+  corporate site.
 
 0.1.1 (06-08-2014)
 ==================
