@@ -11,6 +11,8 @@
 @import "pyoes/settings";
 // Importeren van algemene OE layout
 @import "pyoes/layout";
+// Media queries voor afwijkende schermen
+@import "pyoes/mediaqueries";
 
 $fi-path: "../bower_components/foundation-icon-fonts";
 @import "foundation-icons";

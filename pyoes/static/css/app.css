@@ -9180,30 +9180,37 @@ th.hide-for-touch {
   margin-top: 0.375rem;
 }
 
-/* line 82, pyoes/icons/*.png */
-.icons-sprite, .icons-book, .icons-exit, .icons-magnifier, .icons-note, .icons-overheid, .icons-school {
-  background: url('../img/pyoes/icons-s1d62df23db.png') no-repeat;
+/* line 90, pyoes/icons/*.png */
+.icons-sprite, .icons-book, .icons-exit, .icons-magnifier, .icons-magnifier_wb, .icons-note, .icons-overheid, .icons-school {
+  background: url('../img/pyoes/icons-s03af707f86.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-book {
-  background-position: 0 -164px;
+  background-position: 0 -197px;
   height: 38px;
   width: 30px;
 }
 
 /* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-exit {
-  background-position: 0 -112px;
+  background-position: 0 -145px;
   height: 33px;
   width: 34px;
 }
 
 /* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-magnifier {
-  background-position: 0 -145px;
+  background-position: 0 -178px;
   height: 19px;
   width: 18px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-magnifier_wb {
+  background-position: 0 -112px;
+  height: 33px;
+  width: 33px;
 }
 
 /* line 60, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
