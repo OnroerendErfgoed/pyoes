@@ -8976,7 +8976,7 @@ th.hide-for-touch {
   background: #e5e5e5;
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 0px;
 }
 /* line 159, ../scss/pyoes/_layout.scss */
 .header .broodkruimel-wrapper ul.broodkruimel {
