@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup, find_packages
+from setuptools import setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
@@ -31,9 +31,9 @@ setup(name='pyoes',
         ],
       author='Koen Van Daele',
       author_email='koen.vandael@rwo.vlaanderen.be',
-      url='',
+      url='https://doc.onroerenderfgoed.be/docs/pyramid-onroerend-erfgoed-style/en/latest/',
       keywords='pyramid sass compass style css jinja2 templates',
-      packages=find_packages(),
+      packages=['pyoes'],
       include_package_data=True,
       zip_safe=False,
       install_requires=requires,
