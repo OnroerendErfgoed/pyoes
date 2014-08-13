@@ -8961,7 +8961,7 @@ th.hide-for-touch {
   display: block;
   width: 100%;
   border: none;
-  background: url("../img/icons/magnifier_wb.png") no-repeat center center;
+  background: url("../img/pyoes/icons/magnifier_wb.png") no-repeat center center;
 }
 /* line 144, ../scss/pyoes/_layout.scss */
 .header .main-nav-wrapper {
