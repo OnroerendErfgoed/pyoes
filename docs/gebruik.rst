@@ -15,7 +15,7 @@ deze wanneer nodig kan hercompileren.
     # je kunt ook gewoon eenmalig compileren
     $ compass compile
 
-Maak je eigen .scss file aan in :file:`/<package_name>/static/sass/<package_name>/_<package_name>.scss`. 
+Maak je eigen .scss file aan in :file:`/<package_name>/static/sacss/_<package_name>.scss`. 
 De underscore aan het begint zorgt er voor dat dit bestand als een plugin
 gezien wordt en niet afzonderlijk gecompileerd wordt.
 

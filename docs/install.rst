@@ -74,9 +74,9 @@ aanwezig zijn op je systeem.
     # ruby 1.9+
     $ [sudo] apt-get install ruby
     $ [sudo] gem install compass
+    $ [sudo] npm install -g bower grunt-cli
     # optioneel
     $ [sudo] gem install foundation
-    # [sudo] npm install -g bower grunt-cli
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
