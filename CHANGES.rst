@@ -1,15 +1,15 @@
-0.2.0 (??-08-2014)
+0.2.0 (14-08-2014)
 ==================
 
 * Andere manier van omgaan met Foundation dependency. Gaat nu via bower.
-* Meteen upgraden naar Foundation 5.3
+* Upgraden naar Foundation 5.3.x. Bower zal steeds de laatste versie in de 5.3
+  reeks proberen aan te houden.
+* Toevoegen van Foundation Icon Fonts 3
 * Unit tests naar py.test ipv nose.
-* Een aantal minder gebruikte aspecten werden verwijderd. Eerst wordt de 
-  omschakeling naar bower en Foundation 5 bekeken en dan kunnen hier terug
-  oplossingen voor gezocht worden.
 * Basistemplate is nu meer responsive dan vroeger.
 * Standaard breedte van de css grid werd nu gelijk geschakeld met die van de
   corporate site.
+* Footer werd gewijzigd zodat er blauw over de ganse breedte is.
 
 0.1.1 (06-08-2014)
 ==================
