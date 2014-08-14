@@ -98,6 +98,11 @@ demonstratie
 Als je gewoon eens de nieuwe stijl wenst te bekijken en een overzicht van de 
 mogelijkheden wil krijgen, kun je best de demo toepassing installeren.
 
+.. warning::
+
+   De demo toepassing zit in de pyoes repository, maar wordt niet verdeeld
+   in de pyoes package via de package server.
+
 .. code-block:: bash
 
     $ git clone https://github.com/OnroerendErfgoed/pyoes pyoes_demo

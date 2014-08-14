@@ -140,7 +140,7 @@ Van versie 1.x naar 2.x
 -----------------------
 
 
-.. waring::
+.. warning::
 
     Bij de update van 1.x naar 2.x zijn er vrij significante wijzigingen doorgevoerd
     in de organisatie van de bestanden. Het is dus best erg voorzichtig te zijn
