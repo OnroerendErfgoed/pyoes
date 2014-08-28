@@ -1,8 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
-{% set default_app_package = 'pyoes' -%}
-{% set app_package = app_package|default(default_app_package, true) -%}
+{% set app_package = app_package|default('pyoes', true) -%}
 
 {% set active_main_nav = active_main_nav|default('home') -%}
 {% set default_main_nav = [] -%}
@@ -12,8 +11,8 @@
 	('Toegankelijkheid', '/toegankelijkheid'),
 	('Juridische Informatie', '/juridische-informatie')
 ] -%}
-{% set footer_nav = footer_nav|default(default_footer_nav) %}
-
+{% set footer_nav = footer_nav|default(default_footer_nav) -%}
+{% set datum_copyright = datum_copyright|default('2017') -%}
 
 <head>
 	{% block html_header scoped %}

@@ -1,3 +1,9 @@
+0.2.1 (??-??-2014)
+==================
+
+* Datum copyright kan terug gewijzigd worden. Werkt nu wel met een variabele
+  in plaats van met een block.
+
 0.2.0 (14-08-2014)
 ==================
 
