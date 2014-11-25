@@ -101,7 +101,7 @@ mogelijkheden wil krijgen, kun je best de demo toepassing installeren.
 .. warning::
 
    De demo toepassing zit in de pyoes repository, maar wordt niet verdeeld
-   in de pyoes package via de package server.
+   in de pyoes package.
 
 .. code-block:: bash
 
