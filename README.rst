@@ -1,6 +1,13 @@
 pyoes: Pyramid OE style
 =======================
 
+.. image:: https://travis-ci.org/OnroerendErfgoed/pyoes.png
+        :target: https://travis-ci.org/OnroerendErfgoed/pyoes
+.. image:: https://coveralls.io/repos/OnroerendErfgoed/pyoes/badge.png?branch=master
+        :target: https://coveralls.io/r/OnroerendErfgoed/pyoes
+.. image:: https://badge.fury.io/py/pyoes.png
+        :target: http://badge.fury.io/py/pyoes
+
 Pyoes is een package om het makkelijker te maken om layout te delen tussen de verschillende OE sites.
 
 Informatie over het werken met deze bibliotheek kun je vinden in de :file:`docs` 
