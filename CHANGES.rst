@@ -1,8 +1,9 @@
-0.2.1 (??-??-2014)
+0.2.1 (25-11-2014)
 ==================
 
-* Datum copyright kan terug gewijzigd worden. Werkt nu wel met een variabele
-  in plaats van met een block.
+* Released as open source on PyPI.
+* Copyright date can be changed again. Now works with a variable instead of 
+  a block.
 
 0.2.0 (14-08-2014)
 ==================
