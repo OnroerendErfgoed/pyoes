@@ -1,0 +1,85 @@
+<html>
+{% set app_package = app_package|default('pyoes', true) -%}
+<head>
+    <link rel="stylesheet"
+      href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
+</head>
+<body>
+
+{% block content %} 
+
+
+<div class="wrapper clearfix">
+<div class="main-navigation-inner clearfix inner">
+
+
+<!-- logo -->
+
+<div class="logo-block">
+
+<a href="/">
+<h1>Styleguide</h1>
+
+<img src="/static/img/pyoes/OE-vlaanderen-logo.png" width="65">
+
+<h2>Vlaanderen</h2>
+<h4>is Onroerend Erfgoed</h4>
+</a>
+</div>
+
+<!-- end logo -->
+
+
+
+</div>
+</div>
+
+
+
+ <!-- end header -->
+
+
+    <div class="row">
+
+      <div class="large-12 columns">
+
+
+        <div class="panel">
+
+
+
+    <ul>
+      <li><a href="header-footer">header / footer</a></li>
+      <li><a href="grids">content grids</a></li>
+     
+      <li><a href="">blokken</a></li>
+      <li><a href="">elementen</a></li>
+    </ul>
+
+<hr>
+
+    <ul>
+      <li><a href="beeldbank">beeldbank</a></li>
+      <li><a href="inventaris">inventaris</a></li>
+
+    </ul>  
+    
+
+     
+      </div>
+
+   
+
+       </div>
+        </div>
+
+
+     
+
+
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

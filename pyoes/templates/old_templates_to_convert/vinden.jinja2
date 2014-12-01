@@ -1,0 +1,123 @@
+{% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'vinden' %}
+
+{% set crumbs = [
+	('Je bent hier:', '#', 'unavailable'), 
+	('Home', '/', ''), 
+	('Vinden', '/vinden', 'current'),
+]
+-%}
+
+{% block content %}
+<section class="row content">
+
+	<div class="pagination-centered">
+		<div class="pagination-info">Je zoekopdracht leverde 440 resulaten op.</div>
+		<ul class="pagination">
+			<li class="arrow unavailable left"><a href="#">&laquo;</a></li>
+			<li class="current"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li class="unavailable"><a href="#">&hellip;</a></li>
+			<li><a href="#">12</a></li>
+			<li><a href="#">33</a></li>
+			<li><a href="#">44</a></li>
+			<li class="arrow right"><a href="#">&raquo;</a></li>
+		</ul>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/128x85&text=[breed_small]" /></a>
+		<div class="beschrijving">
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/81x128&text=[hoog_small]" /></a>
+		<div class="beschrijving">
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/256x170&text=[breed_medium]" /></a>
+		<div class="beschrijving">
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/162x256&text=[hoog_medium]" /></a>
+		<div class="beschrijving">
+			<div style="float:right; margin-right: 0px; margin-bottom: 0px;">
+				<i class="pinpoint archeologietruweel-blauw-quarter"></i>
+			</div>
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<div style="float:left; margin-right: 10px;">
+			<i class="pinpoint archeologietruweel-blauw-quarter"></i>
+		</div>
+		<a class="th" style="float: right" href="#"><img src="http://placehold.it/162x256&text=[hoog_medium]" /></a>
+		<div class="beschrijving">
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/81x53&text=[breed_aangepast]" /></a>
+		<div class="beschrijving">
+			<div style="float:right; margin-right: 0px; margin-bottom: 0px;">
+				<i class="pinpoint archeologietruweel-blauw-quarter"></i>
+			</div>
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/81x128&text=[hoog_aangepast]" /></a>
+		<div class="beschrijving">
+			<div style="float:right; margin-right: 0px; margin-bottom: 0px;">
+				<i class="pinpoint archeologietruweel-blauw-quarter"></i>
+			</div>
+			<h4>Mijn resultaat</h4>
+			<p>Lorem ipsum bla bla bla ...</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/162x108&text=[aangepast_medium]" /></a>
+		<div class="beschrijving">
+			<div class="pinpointholder">
+				<i class="pinpoint bouwkundig-oranje-quarter"></i>
+			</div>
+			<h2>Abdij van Steenbrugge</h2>
+			<h4>Baron Ruzettelaan 433-435, Brugge (West-Vlaanderen)</h4>
+			<p>Baron Ruzettelaan nr. 435. Abdij van Steenbrugge. Abdijsite, in hoofdzaak gevormd door de abdijgebouwen uit 1875-1896 en 1955-1956. De abdij is gekend voor zijn religieuze uitgaven en uitgebreide bibliotheek.Reeds in 1133 is er sprake van een parochie Odegem, verbonden met het klooster van Sint-Trudo (cf. Sint-Trudostraat). De huidige wijk, Steenbrugge, overlapt grotendeels het oude Odegem</p>
+		</div>
+	</div>
+
+	<div class="zoekresultaat">
+		<a class="th" href="#"><img src="http://placehold.it/162x256&text=[aangepast_medium]" /></a>
+		<div class="beschrijving">
+			<div class="pinpointholder">
+				<i class="pinpoint oorlog-blauw-quarter"></i>
+			</div>
+			<h2>Oud kerkhof</h2>
+			<h4>Zevende Artilleriestraat zonder nummer, Houthulst (West-Vlaanderen)</h4>
+			<p class="preview">7e-Artilleriestraat z.nr. '<italic>Oud kerkhof</italic>' als restant van de vooroorlogse inplanting van de Sint-Jan Baptistkerk (cf. 4e-Liniestraat z.nr., zie ook onder straatinleiding).Enkele bewaarde arduinen grafmonumenten van voor de Eerste Wereldoorlog, o.m. het familiegraf Debruyne (begin 20ste eeuw) met tombe met bekronende gotische nis en het pinakelvormig grafmonument van de famil</p>
+		</div>
+	</div>
+</section>
+{% endblock %}
