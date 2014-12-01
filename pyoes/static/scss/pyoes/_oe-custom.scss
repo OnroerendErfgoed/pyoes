@@ -1,0 +1,29 @@
+
+//
+// OE custom CLASSES
+//
+
+li {list-style-type:none}
+b, strong {font-family: $font-family-bold-serif;font-weight:700;}
+
+
+
+dl.caption-info  {}
+.caption-info dt {color:$steel;font-size:0.9em;padding-top:7px;height:30px;min-height:30px}
+.caption-info dd {margin:-26px 0 0 170px;line-height:1.3em;}
+
+
+
+.bb-imagelarge {margin:0 0 30px 0;padding:0}
+
+
+ul.tag-label  {margin:10px 0 0 0;}
+.tag-label li {float:$default-float;background-color:$light-gray;margin:0 15px 10px 0;display:block;padding:4px 10px}
+.tag-label li:first-child {background:none;}
+.tag-label li a  {text-decoration:none !important;color:$black}
+.tag-label li a span  {margin:2px 0 0 10px;color:$alert-color;}
+
+
+
+
+.top-bar {margin-bottom:20px}

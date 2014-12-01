@@ -1,0 +1,56 @@
+
+
+
+
+	.Searchbox {
+		border-top:5px solid $dark-purple
+			}
+
+
+    .searchBox {
+        position: relative;
+        padding: 0px;
+    }
+
+
+    .searchBox input {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .searchBox button {
+        padding:12px 30px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        text-transform: uppercase; 
+      }
+
+   .searchBox button:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 44px;
+        top: 0px;
+        left: 0px;
+        width: 0;
+    }
+
+   .searchBox small {
+      font-size:0.8em;
+      float:$opposite-direction;
+      margin-bottom:20px;
+    }
+
+  
+
+
+
+
+
+
+
+
+
+

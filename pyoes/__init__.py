@@ -6,10 +6,12 @@ def main(global_config, **settings):
     """
     config = Configurator(settings=settings)
     config.add_static_view('static', 'static', cache_max_age=3600)
-    config.add_route('home', '/')
-    config.add_route('vinden', '/vinden')
-    config.add_route('pinpoints', '/pinpoints')
-    config.add_route('icons', '/icons')
+    config.add_route('index', '/')
+    config.add_route('header-footer', '/header-footer')
+    config.add_route('grids', '/grids')
+    config.add_route('beeldbank', '/beeldbank')
+    config.add_route('beeldbank-detail', '/beeldbank-detail')
+    config.add_route('inventaris', '/inventaris')
 
     includeme(config)
 

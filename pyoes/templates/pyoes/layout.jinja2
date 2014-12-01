@@ -2,16 +2,18 @@
 <html class="no-js" lang="en">
 
 {% set app_package = app_package|default('pyoes', true) -%}
+{% set active_title = active_title -%}
 
-{% set active_main_nav = active_main_nav|default('home') -%}
-{% set default_main_nav = [] -%}
-{% set main_nav = main_nav|default(default_main_nav) -%}
+{% set service_nav = service_nav -%}
+{% set main_nav = main_nav -%}
+{% set active_main_nav = active_main_nav -%}
 
 {% set default_footer_nav = [
 	('Toegankelijkheid', '/toegankelijkheid'),
 	('Juridische Informatie', '/juridische-informatie')
 ] -%}
 {% set footer_nav = footer_nav|default(default_footer_nav) -%}
+
 {% set datum_copyright = datum_copyright|default('2017') -%}
 
 <head>
@@ -83,88 +85,13 @@
 
 <div class="container">
     {% block header scoped %}
-        <header class="header">
-            <div class="row upper-header">
-                <div class="medium-3 columns">
-                    <hgroup class="site-title">
-                        <h1><a class="block" href="/">{% block header_title %}Onroerend erfgoed{% endblock %}</a></h1>
-                    </hgroup>
-                </div>
-                <div class="medium-9 columns">
-                    <nav class="top-nav">
-                        {% set default_top_nav = [('Over deze site', '/over-deze-site'), ('Nieuws', '/nieuws'),('Veelgestelde vragen', '/faq'),('Contact', '/contact')] %}
-                        {% set top_nav = top_nav|default(default_top_nav) %}
-                        <ul>
-                            {% for caption, href in top_nav %}
-                                <li><a href="{{ href }}">{{ caption }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-					<div class="row">
-						<div class="small-12 columns">
-							<div class="mobile-menu">
-								<select id="mobile-menu-select">
-									{% for id, caption, href in main_nav %}
-									<option{% if id == active_main_nav %} 
-										selected="selected"{% endif %}
-										value="{{ href }}">
-										{{ caption }}
-									</option>
-									{% endfor %}
-								</select>
-							</div>
-						</div>
-                        <div class="medium-8 columns main-nav-wrapper">
-                            {% block main_nav %}
-                                <nav class="main-nav">
-                                    <ul>
-                                        {% for id, caption, href in main_nav %}
-                                            <li{% if id == active_main_nav %} class="active"{% endif %}><a
-                                                    href="{{ href }}">{{ caption }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </nav>
-                            {% endblock %}
-                        </div>
-                        <div class="medium-4 columns searchfield-wrapper">
-                            <form method="get" action="{{ zoeken_action|default('#') }}">
-                                <div class="row collapse searchfield">
-                                    <div class="small-9 columns">
-                                        <input type="search" class="search-input" id="query" name="query"
-                                               placeholder="{{ zoeken_placeholder|default('Zoek op deze site...') }}"/>
-                                    </div>
-                                    <div class="small-3 columns">
-                                        <input type="submit" class="icon postfix" value="">
-                                    </div>
-                                </div>
-                            </form>
-						</div>
-                    </div>
-				</div>
-				<nav class="broodkruimel-wrapper">
-					{% set default_crumbs = [('Je bent hier:', '#', 'unavailable'), ('Home', '/', 'current')] %}
-					{% set crumbs = crumbs|default(default_crumbs) %}
-					<ul class="broodkruimel">
-						{% for caption, href, state in crumbs %}
-							<li{% if state != '' %} class="{{ state }}"{% endif %}>
-								<a href="{{ href }}">{{ caption }}</a></li>
-						{% endfor %}
-					</ul>
-				</nav>
-            </div>
-            <div class="lower-header">
-                <div class="row relative">
-					<img class="overlay-sub" src="{{ request.static_path(app_package + ':static/img/pyoes/light-banner.png') }}"/>
-                </div>
-            </div>
-        </header>
+        {% include "pyoes/header.jinja2" %}
     {% endblock %}
 
     {% block content scoped %}
 	{% endblock %}
 
 	{% block footer scoped %}
-		{% include "pyoes/footer.jinja2" %}
     {% endblock %}
 </div>
 

@@ -1,59 +1,10 @@
-// Global Foundation Settings
-@import "settings";
-
-// Comment out this import if you don't want to use normalize
-@import "normalize";
-
-// Comment out this import if you are customizing you imports below
-@import "foundation";
-
-// Importeren van Pyoes settings
 @import "pyoes/settings";
-// Importeren van algemene OE layout
-@import "pyoes/layout";
-// Media queries voor afwijkende schermen
-@import "pyoes/mediaqueries";
+@import "foundation";
+@import "pyoes/oe-header";
+@import "pyoes/oe-footer";
+@import "pyoes/oe-type";
+@import "pyoes/oe-topbar";
+@import "pyoes/oe-search";
+@import "pyoes/oe-custom";
+@import "pyoes/oe-blokken";
 
-$fi-path: "../bower_components/foundation-icon-fonts";
-@import "foundation-icons";
-
-// De layout van deze toepassing
-@import "demo";
-
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switch",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
