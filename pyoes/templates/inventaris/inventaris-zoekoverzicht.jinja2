@@ -1,0 +1,144 @@
+{% extends "inventaris-layout.jinja2" %}
+{% block content %}
+
+
+
+<!-- content -->
+
+<div class="row">
+ <div class="large-12 columns">
+	<div data-alert class="alert-box alert ">
+	  Er werd geen dibe relict gevonden met ID: . Probeer het eens via het zoekformulier.
+	  <a href="#" class="close">&times;</a>
+	</div>
+</div>
+</div>
+
+<div class="row">
+
+  <div class="large-8 columns">
+
+       <div class="panel">
+
+        <h2>De Inventaris van het Bouwkundig Erfgoed</h2>
+        <h1>Een relict zoeken</h1>
+
+
+<form action="" method="get" id="" class="clearfix" >
+
+<div class="row">
+   <div class="columns">
+
+        <fieldset>
+        <legend>Snel zoeken</legend>
+          <label><!-- Naam  -->
+          <input type="text" placeholder="Naam...">
+          </label>
+        </fieldset>
+
+
+
+       <fieldset>
+        <legend>Geografisch zoeken</legend>
+
+
+            <select name="" id="">
+                <option value="">Provincie : Maak uw keuze</option>
+                <option value="10000">Antwerpen</option>
+                <option value="20001">Vlaams-Brabant</option>
+                <option value="30000">West-Vlaanderen</option>
+                <option value="40000">Oost-Vlaanderen</option>
+                <option value="70000">Limburg</option>
+            </select>
+
+
+
+            <select name="" id="" placeholder="Gemeente" > </select>
+            <input type="text" name="" id="" placeholder="Deelgemeente"  />
+            <input type="text" name="straat_naam" id="kzlStraat" title="" placeholder="Straat" />
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Thematisch-typologisch zoeken</legend>
+
+            <input type="text" name="" id="" placeholder="Typologie" />
+            <input type="text" name="context" id="context" placeholder="Context" />
+            <input type="text" name="" id=""  placeholder="Datering" />
+            <input type="text" name="" id="" placeholder="Stijl en/of Cultuur" />
+            <input type="text" name="persoon_naam" id="" title="" placeholder="Persoon of Groepering" />
+
+        </fieldset>
+
+
+
+    </div>
+</div>
+
+
+
+<button type="submit" value="zoeken" name="zoeken" id="" class="button [tiny small large] right">Zoeken</button>
+
+</form>
+
+
+<div data-alert class="alert-box custom ">
+<i class="fa fa-warning" style="font-size:2em;float:left;margin:6px 10px 0 0"></i>
+Dit zoekformulier werkt mogelijk niet optimaal met Internet Explorer 6 of 7. Gebruik bij voorkeur <a href="http://www.microsoft.com/netherlands/windows/internet-explorer/default.aspx">Internet Explorer 8</a>. U kunt ook een andere, geijkte browser zoals <a href="http://www.mozilla-europe.org/nl/firefox">Mozilla Firefox</a>, <a href="http://www.google.com/chrome">Google Chrome</a> of <a href="http://www.apple.com/nl/safari">Apple Safari</a> gebruiken.
+</div>
+
+
+
+      </div>
+
+  </div>
+
+
+<div class="large-4 columns">
+
+
+
+{% include "includes/blokken/search-5.jinja2" %}
+
+
+<div class="panel Searchbox">
+
+<h4>Ik zoek een ...</h4>
+ <ul class="disk">
+        <li><a href="/dibe/relict/zoeken" title="Zoeken naar gebouwen, beelden, waterpompen, ...">bouwkundig relict</a></li>
+        <li><a href="/dibe/gehelen/zoeken" title="Zoeken naar straten, gemeentes, plaatsen, begijnhoven, ...">(bouwkundig) geheel</a></li>
+        <li><a href="/ile/park/zoeken" title="Zoeken naar tuinen en parken">tuin of park</a></li>
+        <li><a href="/ile/boom/zoeken" title="Zoeken naar bomen, struiken, boomgaarden, bossen, ...">boom of struik</a></li>
+        <li><a href="/ivm/varend/zoeken" title="Zoeken naar varend erfgoed">vaartuig</a></li>
+        <li><a href="/woi/relict/zoeken" title="Zoeken naar bunkers, loopgraven, gedenktekens, ...">oorlogsrelict</a></li>
+        <li><a href="/dibe/orgels/zoeken" title="Zoeken naar orgels met erfgoedwaarde">orgel</a></li>
+        <li><a href="/dibe/personen/zoeken" title="Zoeken naar (tuin)architecten, bouwmeesters, orgelbouwers, ...">persoon of collectief</a></li>
+    </ul>
+
+    </div>
+
+
+
+
+{% include "includes/blokken/nieuws-2.jinja2" %}
+{% include "includes/blokken/social-1.jinja2" %}
+
+
+
+  </div>
+
+</div>
+
+
+<!-- end content -->
+
+
+
+
+<!-- footer -->
+{% include "pyoes/footer.jinja2" %}
+<!-- end footer -->
+
+
+
+{% endblock %}

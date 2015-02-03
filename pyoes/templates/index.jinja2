@@ -1,42 +1,10 @@
-<html>
-{% set app_package = app_package|default('pyoes', true) -%}
-<head>
-    <link rel="stylesheet"
-      href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
-</head>
-<body>
+{% extends "layout.jinja2" %}
 
-{% block content %} 
-
-
-<div class="wrapper clearfix">
-<div class="main-navigation-inner clearfix inner">
-
-
-<!-- logo -->
-
-<div class="logo-block">
-
-<a href="/">
-<h1>Styleguide</h1>
-
-<img src="/static/img/pyoes/OE-vlaanderen-logo.png" width="65">
-
-<h2>Vlaanderen</h2>
-<h4>is Onroerend Erfgoed</h4>
-</a>
-</div>
-
-<!-- end logo -->
+{% block content %}
 
 
 
-</div>
-</div>
-
-
-
- <!-- end header -->
+<br>
 
 
     <div class="row">
@@ -44,42 +12,63 @@
       <div class="large-12 columns">
 
 
-        <div class="panel">
-
-
+   <div class="panel">
 
     <ul>
-      <li><a href="header-footer">header / footer</a></li>
-      <li><a href="grids">content grids</a></li>
-     
-      <li><a href="">blokken</a></li>
-      <li><a href="">elementen</a></li>
+      <li><a href="grids">Grids</a></li>
+      <li><a href="blokken">Blokken</a></li>
+      <li><a href="typo">Typo / Headings / Iconlist</a></li>
+      <li><a href="navigation">Navigatie types</a></li>
+      <li><a href="colors">Colors</a></li>
+      <li><a href="elements">Elementen</a></li>
+      <li><a href="images">Images</a></li>
+      <li>Media</li>
     </ul>
 
-<hr>
+    <hr>
+
+      <ul>
+      <li><a href="article">Basic article page 8/4</a></li>
+      <li><a href="article9-3">Basic article page 9/3</a></li>
+      </ul>
+
+    <hr>
 
     <ul>
-      <li><a href="beeldbank">beeldbank</a></li>
-      <li><a href="inventaris">inventaris</a></li>
+      <li><a href="beeldbank">Theme Beeldbank</a></li>
+      <li><a href="beeldbank-zoeken">Theme Beeldbank uitgebreid zoeken</a></li>
+      <li><a href="beeldbank-detail">Theme Beeldbank detail</a></li>
+    </ul>
 
-    </ul>  
-    
+    <hr>
+    <ul>
+      <li><a href="inventaris">Theme Inventaris</a></li>
+      <li><a href="inventaris-article">Theme Inventaris base article <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleID">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDv2">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfull">Theme Inventaris article ID full width <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfullv2">Theme Inventaris article ID full v2 width <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfullv3">Theme Inventaris article ID full v3 width <small>(schets)</small></a></li>
+      <li><a href="inventaris-zoekoverzicht">Theme Inventaris zoekoverzicht 2 col <small>(schets)</small></a></li>
+      <li>Theme Inventaris print article</li>
+    </ul>
 
-     
-      </div>
+      <hr>
 
-   
+    <ul>
+      <li><a href="geoportaal">Theme Geoportaal</a></li>
+    </ul>
+
+  </div>
+
+
 
        </div>
-        </div>
-
-
-     
-
-
+   </div>
     </div>
 
 {% endblock %}
 
-</body>
-</html>
+{% block footer %}
+    {% include "pyoes/footer.jinja2" %}
+{% endblock %}

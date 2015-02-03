@@ -1,0 +1,41 @@
+{% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'icons' %}
+
+{% set crumbs = [
+	('Je bent hier:', '#', 'unavailable'), 
+	('Home', '/', ''), 
+	('Icons', request.route_url('icons'), 'current'),
+]
+-%}
+
+{% block content %}
+	<section class="row content">
+		<div class="row">
+			<div class="small-6 medium-8 columns">
+				<h2>Icons</h2>
+				<p>Er is een grote set iconen beschikbaar via <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet/" title="Font Awesome">Font Awesome</a>. Interessant hierbij is dat deze zeer makkelijk kunnen gestijld worden via <a href="http://fortawesome.github.io/Font-Awesome/examples/" title="Voorbeelden van fontawesome icons gestijld met css">css</a>.</p>
+
+			</div>
+			<div class="small-6 medium-4 columns">
+				<div class="panel callout">
+					<h4 class="subheader">Enkele voorbeelden</h4>
+					<ul>
+						<li><i class="fa fa-check"></i> fa-check</li>
+						<li><i class="fa fa-remove"></i> fa-remove</li>
+						<li><i class="fa fa-download"></i> fa-download</li>
+						<li><i class="fa fa-globe"></i> fa-globe</li>
+					</ul>
+				
+					<h4 class="subheader">Enkele voorbeelden met extra css</h4>
+					<ul>
+						<li><i class="fa fa-check" style="border: 2px solid silver;"> fa-check</i></li>
+						<li><i class="fa fa-remove" style="font-size: 2em;"> fa-remove</i></li>
+						<li><i class="fa fa-download" style="color: purple;"> fa-download</i></li>
+						<li><i class="fa fa-globe" style="font-size: 2em; color: teal; font-weight: bold;"> fa-globe</i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

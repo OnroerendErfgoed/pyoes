@@ -1,0 +1,38 @@
+
+//
+// OE custom LISTS
+//
+
+
+// li colored disk
+ul.disk {margin:10px 0;padding-left: 1em;}
+ul.disk li {list-style: disc outside none; color: $light-purple;}
+ul.disk li span {color: $dark-gray;}
+ul.disk li a {color:$fresh-blue !important; text-decoration:underline;margin-bottom:8px;}
+ul.disk li a:hover {text-decoration:none} 
+
+// li no disk
+ul.nodisk {margin-left: 0em;}
+ul.nodisk li {list-style: inside none;}
+
+// source list
+ul.source li {list-style-type: none;}
+ul.source {margin:20px 0;padding-left: 0;font-size:0.8em;}
+
+
+// reactions list
+ul.reactions {margin:0;font-size:0.9em}
+.reactions li {list-style-type:none;padding:5px 10px;}
+.reactions li:nth-child(2) {background-color:$light-gray}
+.reactions cite {font-family: $font-family-bold-serif;font-size:1em}
+.reactions blockquote {border:none;color:$dark-gray;padding-left:0;margin:0 0 5px 0}
+
+
+//ordered list
+ol > li {list-style-type: decimal;} 
+
+// ordered list no number
+ol.nonumbers {margin-left:0} 
+ol.nonumbers > li {list-style-type: none;} 
+
+

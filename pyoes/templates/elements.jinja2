@@ -1,0 +1,108 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+
+
+<br>
+<h1 class="text-center">Elements</h1>
+
+
+
+<div class="row">
+
+	<div class="large-12 columns">
+
+
+
+<!-- buttons -->
+<p class="text-center">Buttons</p>
+{% include "includes/elements/buttons.jinja2" %}
+
+
+<!-- tooltips -->
+<hr>
+<p class="text-center">Tooltips</p>
+
+<span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!">link met tooltip</span>
+
+
+<!-- Lists -->
+<hr>
+
+<h1 class="text-center">Lists</h1>
+
+<p class="text-center">List 1</p>
+{% include "includes/elements/list-1.jinja2" %}
+
+<p class="text-center">List 2</p>
+{% include "includes/elements/list-2.jinja2" %}
+
+<p class="text-center">List 3</p>
+{% include "includes/elements/list-3.jinja2" %}
+
+<p class="text-center">List 4</p>
+{% include "includes/elements/list-4.jinja2" %}
+
+<p class="text-center">List 5</p>
+{% include "includes/elements/list-5.jinja2" %}
+
+
+
+
+<!-- Tables -->
+<hr>
+<h1 class="text-center">Tables</h1>
+
+<p class="text-center">Table 1</p>
+{% include "includes/elements/table-1.jinja2" %}
+
+<hr>
+<p class="text-center">Table 2</p>
+{% include "includes/elements/table-2.jinja2" %}
+
+
+
+<!-- Utilities -->
+
+<hr>
+
+<h1 class="text-center">Utilities</h1>
+
+<h2 class="text-center">Forms</h2>
+
+<!-- Form-->
+
+<p class="text-center">form + error</p>
+{% include "includes/elements/form-1.jinja2" %}
+
+<p class="text-center">form 2</p>
+{% include "includes/elements/form-2.jinja2" %}
+
+<p class="text-center">form reaction</p>
+{% include "includes/elements/form-2react.jinja2" %}
+
+
+<hr>
+<h1 class="text-center">statistieken</h1>
+{% include "includes/elements/statistieken-1.jinja2" %}
+
+
+<hr>
+<h1 class="text-center">social 2</h1>
+{% include "includes/blokken/social-2.jinja2" %}
+
+
+<hr>
+<h1 class="text-center">alerts</h1>
+{% include "includes/elements/alerts.jinja2" %}
+
+
+
+	</div>
+
+</div>
+
+
+
+
+
+{% endblock %}
