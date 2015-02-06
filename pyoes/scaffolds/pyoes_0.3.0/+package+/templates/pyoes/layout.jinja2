@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{% set app_package = app_package|default('pyoes', true) -%}
+{% set active_title = active_title -%}
+
+{% set service_nav = service_nav -%}
+{% set main_nav = main_nav -%}
+{% set active_main_nav = active_main_nav -%}
+
+{% set default_footer_nav = [
+	('Toegankelijkheid', '/toegankelijkheid'),
+	('Juridische Informatie', '/juridische-informatie')
+] -%}
+{% set footer_nav = footer_nav|default(default_footer_nav) -%}
+
+{% set datum_copyright = datum_copyright|default('2017') -%}
+
+<head>
+	{% block html_header scoped %}
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
+
+    <script type="text/javascript" src="//use.typekit.net/znn6biy.js"></script>
+
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {
+            console.log(e);
+        }
+	</script>
+
+    <link rel="stylesheet"
+		  href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
+	
+	<script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
+
+    {% block css -%}
+        {% set default_css_files = []-%}
+
+        {% set css_files = css_files|default(default_css_files) -%}
+        {% for css in css_files -%}
+        <link rel="stylesheet" href="{{ css }}"/>
+        {% endfor %}
+    {% endblock -%}
+
+    {% block javascript scoped -%}
+        {% set default_js_files = [
+			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js'),
+		] -%}
+        {% set js_files = js_files|default(default_js_files) -%}
+        {% for js in js_files -%}
+            <script type="text/javascript" src="{{ js }}"></script>
+        {% endfor -%}
+    {% endblock -%}
+
+    {% block ga_tracker %}
+        {% set ga_key=ga_key|default('UA-XXXXX-X') %}
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', '{{ ga_key }}']);
+            _gaq.push(['_setDomainName', 'onroerenderfgoed.be']);
+            _gaq.push(['_trackPageview']);
+
+            -(function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+	{% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+
+<div class="container">
+    {% block header scoped %}
+        {% include "pyoes/header.jinja2" %}
+    {% endblock %}
+
+    {% block content scoped %}
+	{% endblock %}
+
+	{% block footer scoped %}
+    {% endblock %}
+</div>
+
+<script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
+
+</body>
+</html>
