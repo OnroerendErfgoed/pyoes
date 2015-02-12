@@ -1,3 +1,9 @@
+0.3.0 (12-02-2014)
+==================
+
+* Erfgoedstijl aangepast aan vereisten van de nieuwe Vlaamse Huisstijl
+
+
 0.2.1 (25-11-2014)
 ==================
 
