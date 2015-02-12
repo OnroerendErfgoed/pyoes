@@ -2,8 +2,14 @@
 
 {% set app_package = '{{package}}' %}
 
+{% set datum_copyright = '2013-2014' %}
+
 {% set main_nav = [
-	('home', 'Home', '/'), 
+	('home', 'Home', '#'), 
+	('zoeken', 'Zoeken', '#'),
+	('vinden', 'Vinden', '#'),
+	('pinpoints', 'Pinpoints', 'pinpoints'),
+	('icons', 'Icons', 'icons')
 ]-%}
 
 {% set css_files =
