@@ -1,0 +1,70 @@
+
+<!-- header -->
+
+<!-- embed -->
+<div class="temp-embed"></div>
+
+<!-- large header bg image -->
+<div class="bgimage"></div>
+
+<!-- wrapper & responsive navigation -->
+<div class="wrapper clearfix">
+  <div class="main-navigation-inner clearfix inner">
+
+<!-- service-navigation vlaanderen-->
+<ul id="service-navigation" class="clearfix">
+  {% set default_service_nav = [
+    ('home', 'home onroerend erfgoed', '/')
+    ]
+  -%}
+  {% set service_nav = service_nav|default(default_service_nav) -%}
+  {% for id, caption, href in service_nav %}
+    <li><a href="{{ href }}">{{ caption }}</a></li>
+  {% endfor %}
+</ul>
+
+<!-- logo -->
+<div class="logo-block">
+  <a href="/">
+    {% set active_title= active_title|default('Erfgoedstijl') -%}
+    <h1>{{active_title}}</h1>
+    <img src="static/img/pyoes/OE-vlaanderen-logo.png" width="65">
+    <h2>Vlaanderen</h2>
+    <h4>is Onroerend Erfgoed</h4>
+  </a>
+</div>
+
+  </div>
+</div>
+
+
+<!-- navigation -->
+{% block main_nav %}
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">  
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+    <section class="top-bar-section inner-nav">
+      {% set active_main_nav = active_main_nav|default('home') -%}
+      {% set default_main_nav = [
+        ('home', 'Home', '/'), 
+        ('zoeken', 'Zoeken', '/'),
+        ('vinden', 'Vinden', '/')
+        ]
+      -%}
+      {% set main_nav = main_nav|default(default_main_nav) -%}
+      <ul>
+        {% for id, caption, href in main_nav %}
+        <li{% if id == active_main_nav %} class="active"{% endif 
+        %}><a href="{{ href }}">{{ caption }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
+{% endblock %}
+
+<!-- end header -->
+
+

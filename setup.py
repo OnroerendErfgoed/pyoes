@@ -12,8 +12,9 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.2.1',
-      description='Algemene Onroerend Erfgoed stijl voor pyramid',
+
+      version='0.3.0a',
+      description='Algemene onroerenderfgoed stijl (gebaseerd op de Vlaamse huisstijl) voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -32,7 +33,7 @@ setup(name='pyoes',
       author='Koen Van Daele',
       author_email='koen.vandael@rwo.vlaanderen.be',
       url='https://pyoes.readthedocs.org/en/latest/',
-      keywords='pyramid oe onroeren erfgoed sass compass style css jinja2 templates',
+      keywords='pyramid oe onroerend erfgoed sass compass style css jinja2 templates',
       packages=['pyoes'],
       include_package_data=True,
       zip_safe=False,
@@ -44,5 +45,6 @@ setup(name='pyoes',
       main = pyoes:main
       [pyramid.scaffold]
       pyoes=pyoes.scaffolds:PyoesTemplate
+      pyoes030=pyoes.scaffolds:Pyoes030Template
       """,
       )

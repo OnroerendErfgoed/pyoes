@@ -1,0 +1,53 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+
+
+<br>
+<h1 class="text-center">Navigation</h1>
+<div class="row">
+<div class="large-12 columns">
+
+
+<!-- navigation type 1-->
+<p class="text-center">type 1</p>
+{% include "includes/navigation/navtype-1.jinja2" %}
+
+
+<!-- navigation type 2-->
+<p class="text-center">type 2</p>
+{% include "includes/navigation/navtype-2.jinja2" %}
+
+
+<!-- navigation type 2-->
+<p class="text-center">type 3</p>
+{% include "includes/navigation/navtype-3.jinja2" %}
+
+
+<!-- sub navigation -->
+<p class="text-center">subnavigation type 1</p>
+{% include "includes/navigation/subnavtype-1.jinja2" %}
+
+
+<!-- breadcrumbs -->
+<p class="text-center">subnavigation type 2 breadcrumbs</p>
+{% include "includes/navigation/subnavtype-2.jinja2" %}
+
+
+<!-- page navigation 1 -->
+<p class="text-center">subnavigation type 3 page navigation</p>
+{% include "includes/navigation/subnavtype-3.jinja2" %}
+
+
+<!-- page navigation 2 -->
+<p class="text-center">subnavigation type 4 page navigation numbers</p>
+{% include "includes/navigation/subnavtype-4.jinja2" %}
+
+<!-- tab navigation  -->
+<p class="text-center">subnavigation type 5 tab navigation</p>
+{% include "includes/navigation/subnavtype-5.jinja2" %}
+
+
+</div>
+</div>
+
+{% endblock %}
