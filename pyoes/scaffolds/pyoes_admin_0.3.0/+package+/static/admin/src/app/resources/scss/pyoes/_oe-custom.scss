@@ -1,0 +1,59 @@
+
+//
+// OE custom CLASSES form and articles
+//
+
+
+// form custom
+
+// all buttons text uppercase
+.button {text-transform:uppercase}
+
+// legend /fieldset
+legend {text-transform:uppercase;font-size:0.8em}
+
+// errors
+.error {background: none !important}
+input.error {border: 1px solid $alert-color}
+
+// select optionform beeldbank
+select {height:42px}
+
+
+// articles
+
+dt, b, strong {font-family: $font-family-bold-serif;font-weight:700;}
+h4 > em {padding:5px 0 10px 0;display:block;font-size:1.3em;line-height:1.3em}
+article > h1 {padding-bottom:18px;}
+article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
+article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
+
+
+ul.tag-label  {margin:10px 0 0 0;}
+.tag-label li {float:$default-float;background-color:$light-gray;margin:0 15px 10px 0;display:block;padding:4px 10px;font-size:0.9em}
+.tag-label li:first-child {background:none;padding-left:0}
+.tag-label li:last-child {background-color:$aluminum;}
+.tag-label li a  {text-decoration:none !important;color:$black}
+.tag-label li a span  {margin:2px 0 0 10px;color:$alert-color}
+
+
+// img panel header ( home page )
+
+h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
+
+
+// temp
+
+/* inventaris article margin */
+
+.articlemargin {width:70%;margin:0 auto}
+
+@media only screen and (max-width:578px) {
+   .articlemargin  {width:100%}
+
+}
+
+.color-cube {height:100px;width:100px;color:#fff;float:left;padding:5px}
+
+
+
