@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-
-from math import ceil
+'''
+Contains utility methods.
+'''
 
 
 def set_attr_filter(target, key, value):
     '''
-    Jinja2 filter om een attr in te stellen.
+    Jinja2 filter that sets an attribute of an object.
     '''
     target[key] = value
     return target
