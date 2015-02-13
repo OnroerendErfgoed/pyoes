@@ -2,7 +2,7 @@
 
 {% set app_package = '{{package}}' %}
 
-{% set datum_copyright = '2013-2014' %}
+{% set datum_copyright = '2014-2015' %}
 
 {% set main_nav = [
 	('home', 'Home', '#'), 
