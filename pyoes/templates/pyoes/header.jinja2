@@ -37,7 +37,6 @@
   </div>
 </div>
 
-
 <!-- navigation -->
 {% block main_nav %}
   <nav class="top-bar" data-topbar role="navigation">
@@ -54,13 +53,41 @@
         ('vinden', 'Vinden', '/')
         ]
       -%}
+
+      {% set default_login_nav = [('Aanmelden', '/')] %}
+      {% set default_login_sub_nav = [('Profiel', '/'), ('Afmelden', '/')] %}
+
       {% set main_nav = main_nav|default(default_main_nav) -%}
-      <ul>
+
+      <ul class="left">
         {% for id, caption, href in main_nav %}
-        <li{% if id == active_main_nav %} class="active"{% endif 
-        %}><a href="{{ href }}">{{ caption }}</a></li>
+            <li{% if id == active_main_nav %} class="active"{% endif
+            %}><a href="{{ href }}">{{ caption }}</a></li>
         {% endfor %}
       </ul>
+
+      {% set login_nav = login_nav|default(default_login_nav) -%}
+      {% set login_sub_nav = login_sub_nav|default(default_login_sub_nav) -%}
+
+      {% if not request.user %}
+      <ul class="right">
+           {% for caption, href in login_nav %}
+            <li><a href="{{ href }}">{{ caption }}</a></li>
+           {% endfor %}
+      </ul>
+
+      {% else %}
+      <ul class="right">
+        <li class="has-dropdown">
+            <a href="#">{{ request.user.userId }}</a>
+            <ul class="dropdown">
+               {% for caption, href in login_sub_nav %}
+                <li><a href="{{ href }}">{{ caption }}</a></li>
+               {% endfor %}
+            </ul>
+        </li>
+      </ul>
+      {% endif %}
     </section>
   </nav>
 {% endblock %}
