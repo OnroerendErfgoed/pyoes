@@ -117,6 +117,8 @@ $body-font-style: normal;
 // We use this to control font-smoothing
 $font-smoothing: antialiased;
 
+// Overwrite font-awesome font dir
+$fa-font-path: "../src/font-awesome/fonts";
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
