@@ -79,7 +79,7 @@
       {% else %}
       <ul class="right">
         <li class="has-dropdown">
-            <a href="#">{{ request.user.userId }}</a>
+            <a href="#">{{ request.user.userid }}</a>
             <ul class="dropdown">
                {% for caption, href in login_sub_nav %}
                 <li><a href="{{ href }}">{{ caption }}</a></li>
