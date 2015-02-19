@@ -23,6 +23,7 @@
   {% endfor %}
 </ul>
 
+{% set home_link = home_link|default('/') -%}
 <!-- logo -->
 <div class="logo-block">
   <a href="/">
