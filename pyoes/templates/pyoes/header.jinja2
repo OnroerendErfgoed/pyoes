@@ -26,7 +26,7 @@
 {% set home_link = home_link|default('/') -%}
 <!-- logo -->
 <div class="logo-block">
-  <a href="/">
+  <a href="{{ home_link }}">
     {% set active_title= active_title|default('Erfgoedstijl') -%}
     <h1>{{active_title}}</h1>
     <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
