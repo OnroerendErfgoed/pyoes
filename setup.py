@@ -45,6 +45,6 @@ setup(name='pyoes',
       main = pyoes:main
       [pyramid.scaffold]
       pyoes=pyoes.scaffolds:PyoesTemplate
-      pyoes030=pyoes.scaffolds:Pyoes030Template
+      pyoesAdmin=pyoes.scaffolds:PyoesAdminTemplate
       """,
       )

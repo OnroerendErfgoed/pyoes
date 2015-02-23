@@ -1,9 +1,0 @@
-{
-  "name": "+package+",
-  "version": "0.0.1",
-  "private": "true",
-  "dependencies": {
-    "foundation": "~5.3.0",
-	"foundation-icon-fonts": "*"
-  }
-}

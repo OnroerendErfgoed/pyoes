@@ -1,0 +1,28 @@
+
+
+
+footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple;}
+footer#footer-bottom .inner nav ul{margin:1em 0;padding-left:1.4em}
+footer#footer-bottom .inner nav > ul{float:$default-float;width:25%;}
+footer#footer-bottom .inner nav ul li {list-style-type:none}
+footer#footer-bottom .inner nav ul li a{display:block;line-height:1em;padding:0.4em 0;font-size:0.875em;}
+footer#footer-bottom .inner nav ul li a:hover{color:$black;}
+footer#footer-bottom .inner nav ul li a.active{color:$dark-purple;}
+footer#footer-bottom .inner article img{margin:auto 0 auto auto;display:block;}
+footer#footer-bottom .inner nav ul.lang-switch li{float:$default-float;margin-right:0.5em;font-size:0.875em;}
+
+/* 2 col */
+@media only screen and (max-width:888px) {
+  footer#footer-bottom .inner nav > ul {width:33.33%;}
+  footer#footer-bottom .inner nav > article {display:none;}
+}
+/* 1 col */
+@media only screen and (max-width:578px) {
+  footer#footer-bottom .inner nav > ul{width:100%;float:none;margin-top:0;}
+  footer#footer-bottom .inner nav > ul li{float:none;width:100%;padding:0;clear:none;padding:0;display:block;margin:0;}
+  footer#footer-bottom .inner nav > ul li > a{ padding:0;width:auto;border:none;text-align: left;border:none;padding-left:20px; color:#3e3d3f;display:block;line-height:36px;border-bottom:1px solid #e6e6e6;position: relative;}
+  footer#footer-bottom .inner nav > ul li > a:hover{background-color:#f2f2f2;padding-left:30px;}
+  footer#footer-bottom .inner nav > ul li > a:before{position: absolute;content:"> ";left:4px;}
+  footer#footer-bottom .inner nav > ul li.active-trail > a{background:none;color:#b4ac11;}
+  footer#footer-bottom .inner nav > ul li > a:hover:before{left:10px;}
+}

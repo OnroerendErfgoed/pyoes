@@ -27,9 +27,16 @@ je de code builden tot een sdist met via het :file:`setup.py` script van
     $ cd pyoes
     $ python setup.py sdist
     $ // activeer nu de virtual env van de pyramid app
-    $ pip install dist/pyoes-0.2.0.tar.gz
+    $ pip install dist/pyoes-0.3.0.tar.gz
 
-Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de 
+Je kan :mod:`pyoes` ook in de :file:`requirements.txt` toevoegen. Deze zal dan mee installeren
+wanneer de requirements geïnstalleerd worden.
+
+.. code-block:: ini
+
+    pyoes==0.3.0
+
+Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de
 standaard bestanden die nodig zijn toevoegen aan een static dir. Op zich is dit
 geen volledige pyramid scaffold. Deze maakt dus geen models, views en andere aan. 
 Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
@@ -45,11 +52,18 @@ aanwezig zijn op je systeem.
 .. code-block:: bash
     
     # ruby 1.9+
-    $ [sudo] apt-get install ruby
+    $ [sudo] apt-get install ruby-dev
     $ [sudo] gem install compass
     $ [sudo] npm install -g bower grunt-cli
     # optioneel
     $ [sudo] gem install foundation
+
+Deze kunnen ook via :mod:`Bundler` geïnstalleerd worden met de resources die in
+:file:`Gemfile` staan.
+
+.. code-block:: bash
+
+    $ bundle install
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
 moet je wel nog de parameter jinja2.directories correct instellen. Daarnaast 
@@ -77,6 +91,8 @@ geregistreerd worden.
 .. code-block:: python
 
     config.include('pyoes')
+
+
 
 Update
 ======
