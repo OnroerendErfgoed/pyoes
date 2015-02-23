@@ -1,3 +1,11 @@
+0.3.1 (23-02-2014)
+==================
+
+* Admin scaffold toegevoegd
+* Aanmelden/Afmelden knop toegevoegd
+* Google analytics geüpdate naar Universal analytics
+* Font-awesome toegevoegd als bower dependency
+
 0.3.0 (12-02-2014)
 ==================
 
