@@ -80,7 +80,7 @@
 
       {% else %}
       <ul class="right">
-        {% if login_user != '' %}
+        {% if not login_user == ' ' %}
         <li class="has-dropdown">
             <a href="#">{{ login_user }}</a>
             <ul class="dropdown">
