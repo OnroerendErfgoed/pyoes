@@ -69,6 +69,7 @@
 
       {% set login_nav = login_nav|default(default_login_nav) -%}
       {% set login_sub_nav = login_sub_nav|default(default_login_sub_nav) -%}
+      {% set login_user = login_user|default(request.user.userid) -%}
 
       {% if not request.user %}
       <ul class="right">
@@ -79,14 +80,16 @@
 
       {% else %}
       <ul class="right">
+        {% if login_user != '' %}
         <li class="has-dropdown">
-            <a href="#">{{ request.user.userid }}</a>
+            <a href="#">{{ login_user }}</a>
             <ul class="dropdown">
                {% for caption, href in login_sub_nav %}
                 <li><a href="{{ href }}">{{ caption }}</a></li>
                {% endfor %}
             </ul>
         </li>
+        {% endif %}
       </ul>
       {% endif %}
     </section>
