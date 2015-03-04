@@ -1,7 +1,7 @@
 0.3.3 (04-03-2015)
 ==================
-* Fix fvoor gebruikersnamen
-* Documentatie geupdate ivm admin scaffold
+* Fix voor gebruikersnamen
+* Documentatie geüpdate ivm admin scaffold
 
 0.3.2 (26-02-2015)
 ==================
