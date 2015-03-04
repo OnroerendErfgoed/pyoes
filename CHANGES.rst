@@ -1,9 +1,14 @@
-0.3.2 (26-02-2014)
+0.3.3 (04-03-2015)
+==================
+* Fix fvoor gebruikersnamen
+* Documentatie geupdate ivm admin scaffold
+
+0.3.2 (26-02-2015)
 ==================
 * Aanpassingen vooral aan admin scaffold
 
 
-0.3.1 (23-02-2014)
+0.3.1 (23-02-2015)
 ==================
 
 * Admin scaffold toegevoegd
@@ -11,7 +16,7 @@
 * Google analytics geüpdate naar Universal analytics
 * Font-awesome toegevoegd als bower dependency
 
-0.3.0 (12-02-2014)
+0.3.0 (12-02-2015)
 ==================
 
 * Erfgoedstijl aangepast aan vereisten van de nieuwe Vlaamse Huisstijl

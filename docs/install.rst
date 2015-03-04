@@ -45,7 +45,7 @@ Als je op de master versie wil werken moet je deze lijn toevoegen:
 Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de
 standaard bestanden die nodig zijn toevoegen aan een static dir. Op zich is dit
 geen volledige pyramid scaffold. Deze maakt dus geen models, views en andere aan. 
-Gebruik hiervoor een andere scaffold zoals de alchemy scaffold. Er zijn 2 scaffodls beschikbaar in pyoes:
+Gebruik hiervoor een andere scaffold zoals de alchemy scaffold. Er zijn 2 scaffolds beschikbaar in pyoes:
 * een scaffold voor de public frontend (pyoes)
 * een admin scffold (pyoesAdmin)
 De admin scaffold is nieuw vanaf versie 3.1.
