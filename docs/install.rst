@@ -27,14 +27,20 @@ je de code builden tot een sdist met via het :file:`setup.py` script van
     $ cd pyoes
     $ python setup.py sdist
     $ // activeer nu de virtual env van de pyramid app
-    $ pip install dist/pyoes-0.3.0.tar.gz
+    $ pip install dist/pyoes-0.3.2.tar.gz
 
 Je kan :mod:`pyoes` ook in de :file:`requirements.txt` toevoegen. Deze zal dan mee installeren
 wanneer de requirements geïnstalleerd worden.
 
 .. code-block:: ini
 
-    pyoes==0.3.0
+    pyoes==0.3.2
+
+Als je op de master versie wil werken moet je deze lijn toevoegen:
+
+.. code-block:: ini
+
+    -e git+https://github.com/OnroerendErfgoed/pyoes.git@master#egg=pyoes
 
 Om te starten, kun je best gebruik maken van de pyoes scaffold. Deze zal de
 standaard bestanden die nodig zijn toevoegen aan een static dir. Op zich is dit
@@ -46,8 +52,14 @@ Gebruik hiervoor een andere scaffold zoals de alchemy scaffold.
     $ pcreate -s alchemy <package_naam>
     $ pcreate -s pyoes <package_naam>
 
-Vooraleer verder te gaan, moet je zorgen dat compass, bower en eventueel ook foundation 
-aanwezig zijn op je systeem.
+.. warning::
+
+   Voer deze commando's niet uit van in de folder waarin je code staat, maar
+   vanuit de bovenliggende folder. Dus, als je je git repository hebt
+   uitgecheckt naar :file:`/home/me/projects/my_app`, voer het commando dan
+   uit in de folder :file:`/home/me/projects`.
+
+Vooraleer verder te gaan, moet je zorgen dat compass en bower aanwezig zijn op je systeem.
 
 .. code-block:: bash
     
@@ -55,14 +67,13 @@ aanwezig zijn op je systeem.
     $ [sudo] apt-get install ruby-dev
     $ [sudo] gem install compass
     $ [sudo] npm install -g bower grunt-cli
-    # optioneel
-    $ [sudo] gem install foundation
 
-Deze kunnen ook via :mod:`Bundler` geïnstalleerd worden met de resources die in
+Deze kunnen ook via `Bundler <http://bundler.io/>`__ geïnstalleerd worden met de resources die in
 :file:`Gemfile` staan.
 
 .. code-block:: bash
 
+    $ cd pyoes/static
     $ bundle install
 
 :mod:`pyoes` komt met een set van :term:`Jinja2` templates. Om deze te kunnen gebruiken, 
@@ -71,13 +82,13 @@ zijn er ook nog filters die je kunt toevoegen aan je project.
 
 .. code-block:: ini
 
-    jinja2.directories = 
+    jinja2.directories =
         <package_name>:templates
         pyoes:templates
     jinja2.filters = 
         setattr = pyoes.utils.set_attr_filter
 
-Installeer foundation nu lokaal via bower.
+Installeer foundation en font-awesome nu lokaal via bower.
 
 .. code-block:: bash
 
@@ -96,13 +107,6 @@ geregistreerd worden.
 
 Update
 ======
-
-.. warning::
-
-   Voer deze commando's niet uit van in de folder waarin je code staat, maar 
-   vanuit de bovenliggende folder. Dus, als je je git repository hebt 
-   uitgecheckt naar :file:`/home/me/projects/my_app`, voer het commando dan
-   uit in de folder :file:`/home/me/projects`.
 
 Als er nieuwe versies van :mod:`pyoes` zijn, moet je niet alle bovenstaande 
 stappen terug uitvoeren. Je kunt gewoon de scaffold terug uitvoeren en deze
@@ -162,3 +166,15 @@ Na de update mogen volgende bestanden in de :file:`static` folder verwijderd wor
  * :file:`img/icons`, :file:`img/pinpoints` en andere bestanden: Alle bestanden
    werden verplaatst naar :file:`img/pyoes`. Alles buiten deze folder dat je niet
    zelf hebt toegevoegd, mag weg.
+
+
+Van versie 2.x naar 3.x
+-----------------------
+
+.. warning::
+
+    Bij de update van 2.x naar 3.x zijn er vrij significante wijzigingen doorgevoerd
+    in de organisatie van de bestanden. Het is dus best erg voorzichtig te zijn
+    bij deze update. Indien er zware wijzigingen zijn doorgevoerd, zullen er conflicten
+    optreden. Het is best deze update op voorhand goed te simuleren en interactief
+    uit te voeren.
