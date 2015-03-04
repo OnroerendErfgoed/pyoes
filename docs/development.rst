@@ -14,7 +14,7 @@ unit tests
 
 Zoals altijd bij een bibliotheek proberen we zo goed mogelijk de code te testen. 
 Om het ontwikkelen en testen makkelijk te maken werken we met tox. Via tox zal 
-de code getest worden op python 2.7 en 3.2. Er wordt ook code coverage 
+de code getest worden op python 2.7, 3.3 en 3.4. Er wordt ook code coverage
 berekend op basis van python 2.7.
 
 Tox moet aanwezig zijn in je globale python installatie. Indien dit nog niet zo 

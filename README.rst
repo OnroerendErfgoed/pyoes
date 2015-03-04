@@ -8,14 +8,14 @@ pyoes: Pyramid OE style
 .. image:: https://badge.fury.io/py/pyoes.png
         :target: http://badge.fury.io/py/pyoes
 
-Pyoes is een package om het makkelijker te maken om layout te delen tussen de verschillende OE sites.
+Pyoes is een package om het makkelijker te maken om layout te delen tussen de verschillende OE
+(Onroerend Erfgoed) sites.
 
 Informatie over het werken met deze bibliotheek kun je vinden in de `docs` 
 folder. Deze kan gebuild worden tot propere documentatie met behulp van 
 `Sphinx <http://sphinx-doc.org>`_.
 
-Zorg dat Sphinx wel aanwezig is in de virtual environment waarin je pyramid_oeauth
-hebt geïnstalleerd.
+Zorg dat Sphinx wel aanwezig is in de virtual environment waarin je pyoes hebt geïnstalleerd.
 
 .. code-block:: bash
 
