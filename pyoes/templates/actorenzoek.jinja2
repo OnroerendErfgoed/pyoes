@@ -1,0 +1,490 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+
+
+
+<div class="row">
+
+
+
+<div class="large-12 columns">
+
+<div class="button-bar" style="width:290px;margin:0 auto;">
+        <ul class="button-group">
+          <li><a href="#" data-reveal-id="myModal1" class="tiny button">Actoren</a></li>
+          <li><a href="#" data-reveal-id="myModal2" class="tiny button">VKBO</a></li>
+          <li><a href="#" data-reveal-id="myModal3" class="tiny button">VKBP</a></li>
+        </ul>
+</div>
+
+
+<div class="panel">
+
+
+<!-- zoek actoren -->
+
+<div id="myModal1" class="reveal-modal" data-reveal>
+
+  <a class="close-reveal-modal" style="padding: 12px 18px">&#215;</a>
+
+    <header class="clearfix">
+        <h3 class="left" style="margin:6px 20px 0 0">Actoren</h3>
+            <dl class="tabs tiny" data-tab>
+              <dd class="active" style="margin:0 1px"><a href="#panel1" class="tiny">ZOEKEN</a></dd>
+              <dd><a href="#panel2" class="tiny">AANMAKEN</a></dd>
+            </dl>
+    </header>
+
+<div class="tabs-content">
+
+  <div class="content active" id="panel1">
+
+  <form style="padding-top:10px">
+
+  <div class="row">
+
+
+  <div class="large-4 columns">
+         <input type="text" placeholder="naam " />
+         <input type="text" placeholder="voornaam" />
+         <input type="text" placeholder="email " />
+         <input type="text" placeholder="telefoon" />
+  </div>
+
+  <div class="large-4 columns">
+        <input type="text" placeholder="straat" />
+        <input type="text" placeholder="nummer" class="left" style="width:45%;" />
+        <input type="text" placeholder="postbus" class="right" style="width:45%" />
+        <div class="clearfix">
+        <input type="text" placeholder="postcode" class="left"  style="width:30%" />
+        <input type="text" placeholder="gemeente" class="right" style="width:60%" />
+        </div>
+
+       <select>
+          <option value="0">België</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+       </select>
+
+  </div>
+
+      <div class="large-4 columns">
+
+       <select>
+          <option value="0">actortype</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+       </select>
+
+      <input type="text" placeholder="pers id" />
+      <input type="text" placeholder="rijksregisternummer" />
+
+
+  </div>
+
+
+  </div>
+
+
+
+  <div class="clearfix text-center">
+      <a href="" class="small button">Zoek</a>
+  </div>
+
+</form>
+
+</div>
+
+
+<!-- start aanmaken-->
+
+<div class="content" id="panel2">
+
+
+<div class="row">
+
+
+  <div class="large-4 columns">
+
+      <input type="text" readonly="readonly" value="naam" />
+
+      <input type="text" readonly="readonly" value="achternaam" />
+
+      <input type="text" readonly="readonly" value="e-mail" />
+
+  <div class="clearfix">
+
+      <input type="text" placeholder="e-mail" class="left" style="width:60%" />
+      <select class="right" style="width:30%">
+          <option value="0">thuis</option>
+          <option value="1">werk</option>
+       </select>
+
+  </div>
+
+      <input type="text" readonly="readonly" value="telefoon" />
+
+  <div class="clearfix">
+
+       <input type="text" placeholder="telefoon" class="left" style="width:60%"" />
+       <select class="right" style="width:30%">
+          <option value="0">thuis</option>
+          <option value="1">werk</option>
+       </select>
+
+  </div>
+
+
+
+  </div>
+
+
+  <div class="large-4 columns">
+
+        <input type="text" readonly="readonly" value="straat" />
+
+        <input type="text" readonly="readonly" value="nummer" class="left" style="width:45%;" />
+        <input type="text" readonly="readonly" value="postbus" class="right" style="width:45%;" />
+        <div class="clearfix">
+        <input type="text" readonly="readonly" value="postcode" class="left" style="width:30%" />
+        <input type="text" readonly="readonly" value="gemeente" class="right" style="width:60%" />
+        </div>
+
+        <input type="text" readonly="readonly" value="land" />
+
+
+
+  </div>
+
+    <div class="large-4 columns">
+
+      <input type="text" readonly="readonly" value="Actortype : " />
+      <input type="text" readonly="readonly" value="ID : 00-ABC-DEFGHIJ" />
+      <input type="text" readonly="readonly" value="RR : 00.00.00-000.00" />
+
+  </div>
+  </div>
+
+
+  <div class="clearfix text-center">
+      <a href="" class="small button">bewaar</a>
+  </div>
+
+
+
+</div>
+
+<!-- end aanmaken -->
+
+
+</div>
+
+</div>
+<!-- end zoek actoren -->
+
+
+
+
+<div id="myModal2" class="reveal-modal" data-reveal>
+
+<h3>VKBO</h3>
+
+<div class="tabs-content">
+
+<div class="content active" id="panel1">
+
+<form style="padding-top:10px">
+
+  <div class="large-4 columns">
+         <input type="text" placeholder="naam " />
+  </div>
+
+  <div class="large-4 columns">
+
+        <input type="text" placeholder="straat" />
+        <input type="text" placeholder="nummer" class="left" style="width:45%;" />
+        <input type="text" placeholder="postbus" class="right" style="width:45%;" />
+        <div class="clearfix">
+        <input type="text" placeholder="postcode" class="left" style="width:30%" />
+        <input type="text" placeholder="gemeente" class="right" style="width:60%" />
+        </div>
+
+  </div>
+
+  <div class="row">
+
+      <div class="large-4 columns">
+      <input type="text" placeholder="pers id" />
+      <input type="text" placeholder="rijksregisternummer" />
+  </div>
+
+   </div>
+
+
+  <div class="clearfix text-center">
+      <a href="" class="small button">zoek</a>
+  </div>
+
+
+
+</form>
+
+
+</div>
+
+</div>
+
+
+<a class="close-reveal-modal" style="padding: 12px 18px">&#215;</a>
+
+
+</div>
+
+
+<div id="myModal3" class="reveal-modal" data-reveal>
+
+
+<h3>Zoek VKBP</h3>
+
+<div class="tabs-content">
+
+<div class="content active" id="panel1">
+
+
+
+  <form style="padding-top:10px">
+
+  <div class="row">
+
+
+  <div class="large-4 columns">
+     <input type="text" placeholder="naam" />
+  </div>
+
+  <div class="large-4 columns">
+        <input type="text" placeholder="straat" />
+        <input type="text" placeholder="nummer" class="left" style="width:45%;" />
+        <input type="text" placeholder="postbus" class="right" style="width:45%;" />
+        <div class="clearfix">
+        <input type="text" placeholder="postcode" class="left" style="width:30%" />
+        <input type="text" placeholder="gemeente" class="right" style="width:60%" />
+        </div>
+  </div>
+
+  <div class="large-4 columns">
+      <input type="text" placeholder="rijksregisternummer" />
+  </div>
+
+   </div>
+
+  <div class="clearfix text-center">
+      <a href="" class="small button">zoek</a>
+  </div>
+
+
+</form>
+  <a class="close-reveal-modal">&#215;</a>
+
+</div>
+</div>
+</div>
+
+
+<!-- lijst -->
+
+<h5>Je zocht in Actoren op "naam"</h5>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Naam</th>
+        <th>Pers ID</th>
+        <th>Mail</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#" data-reveal-id="myModal5"><strong>Thomas Bell</strong></a></td>
+        <td></td>
+        <td></td>
+        <td><span class="success label right">updated</span></td>
+
+      </tr>
+      <tr>
+        <td><strong>Yan Chapel</strong></td>
+        <td></td>
+        <td></td>
+        <td><a href="#"><span class="label right ">kopieer naar actoren</span></a></td>
+      </tr>
+      <tr>
+        <td><strong>Pit Sampras</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Yan Chapel</strong></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+</table>
+
+<!-- end lijst -->
+
+
+    </div>
+  </div>
+</div>
+<!-- end content -->
+
+
+
+<!-- zoek detail -->
+
+<div id="myModal5" class="reveal-modal" data-reveal>
+
+  <a class="close-reveal-modal" style="padding: 12px 18px">&#215;</a>
+
+    <header class="clearfix">
+        <h3 class="left " style="margin:6px 20px 0 0">Actoren</h3>
+            <dl class="tabs tiny" data-tab>
+              <dd class="active" style="margin:0 1px"><a href="#panel1" class="tiny">PROFIEL</a></dd>
+              <dd><a href="#panel2" class="tiny">BEWERKEN</a></dd>
+            </dl>
+    </header>
+
+<div class="tabs-content">
+
+  <div class="content active" id="panel1">
+
+  <form style="padding-top:10px">
+
+
+
+  <div class="large-4 columns">
+         <input type="text" readonly="readonly" value="Thomas" />
+         <input type="text" readonly="readonly" value="Bell" />
+         <input type="text" readonly="readonly" value="Thomas@yahoo.com " />
+         <input type="text" readonly="readonly" value="0000/000000" />
+  </div>
+
+  <div class="large-4 columns">
+
+        <input type="text" readonly="readonly" value="Bellstraat" />
+        <input type="text" readonly="readonly" value="00" class="left" style="width:45%;" />
+        <input type="text" readonly="readonly" value="postbus" class="right" style="width:45%;" />
+
+        <div class="clearfix" style="clear:both;">
+        <input type="text" readonly="readonly" value="0000" class="left" style="width:30%" />
+        <input type="text" readonly="readonly" value="Antwerpen" class="right" style="width:60%" />
+        </div>
+
+        <input type="text" readonly="readonly" value="België" />
+
+  </div>
+
+    <div class="row">
+
+      <div class="large-4 columns">
+      <input type="text" readonly="readonly" value="Actortype: 1" />
+      <input type="text" readonly="readonly" value="ID : 00-ABC-DEFGHIJ" />
+      <input type="text" readonly="readonly" value="RR : 00.00.00-000.00" />
+  </div>
+
+  </div>
+
+
+</form>
+
+</div>
+
+
+<!-- start bewerken-->
+
+<div class="content" id="panel2">
+
+
+<form style="padding-top:10px">
+
+ <div class="row">
+
+
+  <div class="large-4 columns">
+         <input type="text" placeholder="Thomas " />
+         <input type="text" placeholder="Bell" />
+         <input type="text" placeholder="Thomas@yahoo.com " />
+         <input type="text" placeholder="0000/000000" />
+  </div>
+
+  <div class="large-4 columns">
+        <input type="text" placeholder="Bell straat" />
+        <input type="text" placeholder="00" class="left" style="width:45%;" />
+        <input type="text" placeholder="postbus" class="right" style="width:45%" />
+        <div class="clearfix">
+        <input type="text" placeholder="0000" class="left"  style="width:30%" />
+        <input type="text" placeholder="Antwerpen" class="right" style="width:60%" />
+        </div>
+
+       <select>
+          <option value="0">België</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+       </select>
+
+  </div>
+
+      <div class="large-4 columns">
+
+       <select>
+          <option value="0">actortype</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+       </select>
+
+      <input type="text" placeholder="ID : 00-ABC-DEFGHIJ" />
+      <input type="text" placeholder="RR : 00.00.00-000.00" />
+
+  </div>
+
+
+  </div>
+
+
+  <div class="clearfix text-center">
+      <a href="" class="small button">bewaar</a>
+  </div>
+
+</form>
+  </div>
+
+
+</div>
+
+<!-- end aanmaken -->
+
+
+</div>
+
+</div>
+
+
+<!-- end zoek detail -->
+
+
+
+
+</div>
+
+
+{% endblock %}
