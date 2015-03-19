@@ -128,3 +128,7 @@ def geoportaal(request):
 @view_config(route_name='pinpoints', renderer='templates/pinpoints.jinja2')
 def pinpoints(request):
     return {}
+
+@view_config(route_name='404', renderer='templates/404.jinja2')
+def viernulvier(request):
+    return {}

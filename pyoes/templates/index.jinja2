@@ -1,241 +1,97 @@
-{% layout "actoren-frontlayout" %}
+{% extends "layout.jinja2" %}
+
 {% block content %}
 
 
-<!-- content -->
+
+<br>
 
 
-<!-- search 3 extended -->
-<div class="row">
+    <div class="row">
 
-    <div class="large-12 columns">
-        <div class="panel fl-block-search">
-
-        <form name="" action="#" method="post" class="clearfix">
-            
-      
-              <div class="row">
-
-              <div class="large-4 medium-4 columns">         
-                      <select>
-                        <option value="">filter op</option>
-                        <option value="">ID</option>
-                        <option value="">Naam</option>
-                        <option value="">Organisatie</option>
-                        <option value="">Type</option>
-                      </select>
-              </div>
-
-              <div class="large-8 medium-8 columns">
-              
-              <div class="searchBox">
-                   <input type='text' placeholder='zoek actoren' />
-                   <button>zoek</button>
-                   </div>                 
-                </div>      
-             </div>
-
-            <ul class="tag-label clearfix">
-              <li>Jouw selectie</li>
-              <li><a href="#">Organisatie / <strong>Onroerend erfgoed</strong></a> <a href="#"><span>&#10006;</span></a></li>
-              <li><a href="#">Naam / <strong>Koen</strong></a> <a href="#"><span>&#10006;</span></a></li>
-              <li><a href="#">Alle filters verwijderen <span>&#10006;</span></a></li>
-            </ul>
-            <hr>
-
-        </form> 
+      <div class="large-12 columns">
 
 
+   <div class="panel">
 
-        <div class="row">
-            
-               <div class="large-8 medium-8 columns">
-                  <h5 style="padding-top:10px">Er zijn 5 resultaten beschikbaar</h5>
-               </div>     
+    <ul>
+      <li><a href="grids">Grids</a></li>
+      <li><a href="blokken">Blokken</a></li>
+      <li><a href="typo">Typo / Headings / Iconlist</a></li>
+      <li><a href="navigation">Navigatie types</a></li>
+      <li><a href="colors">Colors</a></li>
+      <li><a href="elements">Elementen</a></li>
+      <li><a href="images">Images</a></li>
+      <li>Media</li>
+    </ul>
 
-              <div class="large-4 medium-4 columns">
-                  <select>
-                      <option value="">sorteer op</option>
-                      <option value="">ID</option>
-                      <option value="">Naam</option>
-                      <option value="">Organisatie</option>
-                      <option value="">Type</option>           
-                  </select>
+    <hr>
 
-              </div>
+      <ul>
+      <li><a href="article">Basic article page 8/4</a></li>
+      <li><a href="article9-3">Basic article page 9/3</a></li>
+      </ul>
 
+    <hr>
 
-        </div>
+    <ul>
+      <li><a href="beeldbank">Theme Beeldbank</a></li>
+      <li><a href="beeldbank-zoeken">Theme Beeldbank uitgebreid zoeken</a></li>
+      <li><a href="beeldbank-detail">Theme Beeldbank detail</a></li>
+    </ul>
 
+    <hr>
+    <ul>
+      <li><a href="inventaris">Theme Inventaris</a></li>
+      <li><a href="inventaris-article">Theme Inventaris base article <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleID">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDv2">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfull">Theme Inventaris article ID full width <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfullv2">Theme Inventaris article ID full v2 width <small>(schets)</small></a></li>
+      <li><a href="inventaris-articleIDfullv3">Theme Inventaris article ID full v3 width <small>(schets)</small></a></li>
+      <li><a href="inventaris-zoekoverzicht">Theme Inventaris zoekoverzicht 2 col <small>(schets)</small></a></li>
+      <li>Theme Inventaris print article</li>
+    </ul>
 
+   <!   <hr>
 
-<!-- start row -->
+    <ul>
+      <li><a href="geoportaal">Theme Geoportaal</a></li>
+    </ul>
 
-<div class="row">
+      <hr>
 
-<div class="large-3 medium-3 columns">
+    <ul>
+      <li><a href="beheersplannen">Theme Beheersplannen</a></li>
+    </ul>
 
-    <div class="panel actoren-idcard">
-     <a href="actorenfront/detail">   
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-user"></i>
-          </div>
-          <h3>Van Daele <br> Koen</h3>
-          <small>ID : 1</small>    
-      </a>  
-    </div>  
+ <hr>
 
-</div>  
-
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-     <a href="actorenfront/detail-bedrijf">  
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-building"></i>
-          </div>
-          <h3>Onroerend erfgoed</h3>
-          <small>ID : 1</small>    
-     </a>   
-    </div>  
-
-</div>  
-
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-      <a href="actorenfront/detail-bedrijfv2"> 
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-user"></i>
-          </div>
-          <h3>Van Daele <br> Koen</h3>
-          <small>ID : 1</small>    
-      </a>   
-    </div>  
-
-</div>  
+    <ul>
+      <li><a href="actorenzoek">Zoekactoren</a></li>
+    </ul>
 
 
-<div class="large-3 medium-3 columns">
+    <hr>
 
-    <div class="panel actoren-idcard">
-    <a href="actorenfront/detail-bedrijf">     
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-building"></i>
-          </div>
-          <h3>Onroerend erfgoed</h3>
-          <small>ID : 1</small>    
-    </a>     
-    </div>  
+    <ul>
+      <li><a href="actorenfront">Zoekactoren front-end</a></li>
+    </ul>
 
-</div>  
+    <hr>
 
-</div>
-
-<!-- end row-->
+        <ul>
+          <li><a href="404">404</a></li>
+        </ul>
 
 
 
-
-<!-- start row -->
-
-<div class="row">
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-     <a href="actorenfront/detail">   
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-user"></i>
-          </div>
-          <h3>Van Daele <br> Koen</h3>
-          <small>ID : 1</small>    
-      </a>  
-    </div>  
-
-</div>  
-
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-     <a href="actorenfront/detail-bedrijf">  
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-building"></i>
-          </div>
-          <h3>Onroerend erfgoed</h3>
-          <small>ID : 1</small>    
-     </a>   
-    </div>  
-
-</div>  
-
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-      <a href="actorenfront/detail"> 
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-user"></i>
-          </div>
-          <h3>Van Daele <br> Koen</h3>
-          <small>ID : 1</small>    
-      </a>   
-    </div>  
-
-</div>  
-
-
-<div class="large-3 medium-3 columns">
-
-    <div class="panel actoren-idcard">
-    <a href="actorenfront/detail-bedrijf">     
-          <div class="actoren-icon-small clearfix">
-          <i class="fa fa-building"></i>
-          </div>
-          <h3>Onroerend erfgoed</h3>
-          <small>ID : 1</small>    
-    </a>     
-    </div>  
-
-</div>  
-
-</div>
-
-<!-- end row-->
-
-
-
+       </div>
+   </div>
     </div>
-</div>
 
-<!-- end search 3 extended-->
+{% endblock %}
 
-
-
-<!-- page navigation 2 -->
-
-<div class="pagination-centered">
-  <ul class="pagination">
-    <li><a href=""><</a></li>
-    <li class="unavailable"><a href="">1</a> </li>
-    <li class="current"><a href="">2</a></li>
-    <li class=""><a href="">3</a></li>
-    <li class="unavailable"><a href="">...</a></li>
-    <li class=""><a href="">10</a></li>
-    <li class=""><a href="">20</a></li>
-    <li class=""><a href="">30</a></li>
-    <li><a href="">></a></li>
-  </ul>
-</div>
-
-
-
-
-
-
-
-
+{% block footer %}
+    {% include "pyoes/footer.jinja2" %}
 {% endblock %}
