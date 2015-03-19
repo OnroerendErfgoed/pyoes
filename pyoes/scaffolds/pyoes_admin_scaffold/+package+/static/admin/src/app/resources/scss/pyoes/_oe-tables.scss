@@ -14,7 +14,7 @@ table {max-width: 100%;border-collapse: collapse;border-spacing: 0;}
 .table thead:first-child tr th, .table thead:first-child tr td {border-top: 0;}
 .table tbody + tbody {border-top: 2px solid $gray;}
 .table tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th{background-color: $light-gray;}
-.table tbody tr:hover td, .table tbody tr:hover th {background-color: $body-bg;}
+//.table tbody tr:hover td, .table tbody tr:hover th {background-color: $body-bg;}
 
 .table.border tbody tr td, .table.border tr th{border-right: 1px solid $gray;} 
 .table.border tbody tr td:last-child{border-right:1px solid $gray;} 
