@@ -26816,7 +26816,7 @@ ul.source-authors {
   margin-top: 10px;
   height: 255px;
   width: 98%;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 /* line 47, ../scss/pyoes/_oe-lists.scss */
