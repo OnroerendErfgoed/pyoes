@@ -53,7 +53,20 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 }
 
-.color-cube {height:100px;width:100px;color:#fff;float:left;padding:5px}
+.color-cube {height:100px;width:100px;color:$white;float:$default-float;padding:5px}
+
+
+
+// panel actoren front end search 
+
+.actoren-idcard {padding:0;background:$white;border:1px solid $mid-gray;}
+.actoren-idcard a {display:block;min-height:78px}
+.actoren-idcard a:hover {background:$white-gray;display:block;min-height:78px;}
+.actoren-idcard h3 {font-size:1em; margin:0;padding:15px 0 0 0;}
+
+
+.actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
+.actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
 
 
 

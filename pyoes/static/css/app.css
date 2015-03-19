@@ -26797,6 +26797,54 @@ ol.nonumbers > li {
   list-style-type: none;
 }
 
+/* line 42, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors li {
+  list-style-type: none;
+}
+
+/* line 43, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors {
+  font-family: "Flanders Art Sans", Arial, sans-serif;
+  color: #753f7f;
+  margin: 20px 0 0 0;
+  font-size: 0.6em;
+  line-height: 1.6em;
+}
+
+/* line 46, ../scss/pyoes/_oe-lists.scss */
+.source-authors-block {
+  margin-top: 10px;
+  height: 255px;
+  width: 98%;
+  overflow: scroll;
+}
+
+/* line 47, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+/* line 48, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list li {
+  color: #3f3840;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 18px;
+  padding: 4px;
+}
+
+/* line 49, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list li:hover {
+  background: #fbfbfb;
+  display: block;
+}
+
+/* line 50, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list i {
+  color: #e5e5e5;
+  margin: 0 8px;
+}
+
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
 .circle {
   margin: 0 auto 15px auto;
@@ -27043,9 +27091,54 @@ h4.header-img-panel {
 .color-cube {
   height: 100px;
   width: 100px;
-  color: #fff;
+  color: white;
   float: left;
   padding: 5px;
+}
+
+/* line 62, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard {
+  padding: 0;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+
+/* line 63, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard a {
+  display: block;
+  min-height: 78px;
+}
+
+/* line 64, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard a:hover {
+  background: #fbfbfb;
+  display: block;
+  min-height: 78px;
+}
+
+/* line 65, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+
+/* line 68, ../scss/pyoes/_oe-custom.scss */
+.actoren-icon-large, .actoren-icon-small {
+  float: left;
+  color: #ededed;
+  font-size: 4em;
+  padding: 0px 20px 0 0;
+  border-right: 1px solid #e5e5e5;
+  margin-right: 20px;
+}
+
+/* line 69, ../scss/pyoes/_oe-custom.scss */
+.actoren-icon-small {
+  border-right: 1px solid #e5e5e5;
+  margin-right: 15px;
+  font-size: 3em;
+  padding: 15px 20px;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
@@ -27491,11 +27584,6 @@ table {
 /* line 16, ../scss/pyoes/_oe-tables.scss */
 .table tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
   background-color: #ededed;
-}
-
-/* line 17, ../scss/pyoes/_oe-tables.scss */
-.table tbody tr:hover td, .table tbody tr:hover th {
-  background-color: #F5F5F5;
 }
 
 /* line 19, ../scss/pyoes/_oe-tables.scss */

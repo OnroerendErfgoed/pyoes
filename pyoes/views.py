@@ -29,12 +29,20 @@ def actorenfront(request):
 def actorenfrontdetailbedrijf(request):
     return {}
 
+@view_config(route_name='detail-bedrijfv2', renderer='templates/actorenfront/detail-bedrijfv2.jinja2')
+def actorenfrontdetailbedrijfv2(request):
+    return {}
+
 @view_config(route_name='detail', renderer='templates/actorenfront/detail.jinja2')
 def actorenfrontdetail(request):
     return {}
 
 @view_config(route_name='actorenzoek', renderer='templates/actorenzoek.jinja2')
 def actorenzoek(request):
+    return {}
+
+@view_config(route_name='actorenzoekdetail', renderer='templates/actorenzoek/detail.jinja2')
+def actorenzoekdetail(request):
     return {}
 
 @view_config(route_name='beeldbank-detail', renderer='templates/beeldbank/beeldbank-detail.jinja2')
