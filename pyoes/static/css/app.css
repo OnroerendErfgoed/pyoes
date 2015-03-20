@@ -26475,7 +26475,7 @@ nav#main-navigation .main-navigation-inner {
   max-width: 1142px;
 }
 
-/* line 2, ../scss/pyoes/_oe-footer.scss */
+/* line 4, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
   height: auto !important;
@@ -26483,17 +26483,17 @@ nav#main-navigation .main-navigation-inner {
   margin: 0 auto -100px;
 }
 
-/* line 9, ../scss/pyoes/_oe-footer.scss */
+/* line 10, ../scss/pyoes/_oe-footer.scss */
 #footerContainer {
   height: 55px;
 }
 
-/* line 12, ../scss/pyoes/_oe-footer.scss */
+/* line 13, ../scss/pyoes/_oe-footer.scss */
 .push {
   height: 100px;
 }
 
-/* line 16, ../scss/pyoes/_oe-footer.scss */
+/* line 17, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom {
   clear: both;
   overflow: hidden;
@@ -26502,24 +26502,24 @@ footer#footer-bottom {
   height: 100%;
 }
 
-/* line 17, ../scss/pyoes/_oe-footer.scss */
+/* line 18, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul {
   margin: 1em 0;
   padding-left: 1.4em;
 }
 
-/* line 18, ../scss/pyoes/_oe-footer.scss */
+/* line 19, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav > ul {
   float: left;
   width: 25%;
 }
 
-/* line 19, ../scss/pyoes/_oe-footer.scss */
+/* line 20, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li {
   list-style-type: none;
 }
 
-/* line 20, ../scss/pyoes/_oe-footer.scss */
+/* line 21, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a {
   display: block;
   line-height: 1em;
@@ -26527,23 +26527,23 @@ footer#footer-bottom .inner nav ul li a {
   font-size: 0.875em;
 }
 
-/* line 21, ../scss/pyoes/_oe-footer.scss */
+/* line 22, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a:hover {
   color: black;
 }
 
-/* line 22, ../scss/pyoes/_oe-footer.scss */
+/* line 23, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a.active {
   color: #753f7f;
 }
 
-/* line 23, ../scss/pyoes/_oe-footer.scss */
+/* line 24, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner article img {
   margin: auto 0 auto auto;
   display: block;
 }
 
-/* line 24, ../scss/pyoes/_oe-footer.scss */
+/* line 25, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul.lang-switch li {
   float: left;
   margin-right: 0.5em;
@@ -26552,26 +26552,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
 
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 28, ../scss/pyoes/_oe-footer.scss */
+  /* line 29, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 29, ../scss/pyoes/_oe-footer.scss */
+  /* line 30, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 33, ../scss/pyoes/_oe-footer.scss */
+  /* line 34, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 34, ../scss/pyoes/_oe-footer.scss */
+  /* line 35, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -26582,7 +26582,7 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     margin: 0;
   }
 
-  /* line 35, ../scss/pyoes/_oe-footer.scss */
+  /* line 36, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -26597,26 +26597,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     position: relative;
   }
 
-  /* line 36, ../scss/pyoes/_oe-footer.scss */
+  /* line 37, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 37, ../scss/pyoes/_oe-footer.scss */
+  /* line 38, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 38, ../scss/pyoes/_oe-footer.scss */
+  /* line 39, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 39, ../scss/pyoes/_oe-footer.scss */
+  /* line 40, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
@@ -26795,6 +26795,54 @@ ol.nonumbers {
 /* line 36, ../scss/pyoes/_oe-lists.scss */
 ol.nonumbers > li {
   list-style-type: none;
+}
+
+/* line 42, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors li {
+  list-style-type: none;
+}
+
+/* line 43, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors {
+  font-family: "Flanders Art Sans", Arial, sans-serif;
+  color: #753f7f;
+  margin: 20px 0 0 0;
+  font-size: 0.6em;
+  line-height: 1.6em;
+}
+
+/* line 46, ../scss/pyoes/_oe-lists.scss */
+.source-authors-block {
+  margin-top: 10px;
+  height: 255px;
+  width: 98%;
+  overflow-y: scroll;
+}
+
+/* line 47, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list {
+  font-size: 0.8em;
+  line-height: 1.6em;
+}
+
+/* line 48, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list li {
+  color: #3f3840;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 18px;
+  padding: 4px;
+}
+
+/* line 49, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list li:hover {
+  background: #fbfbfb;
+  display: block;
+}
+
+/* line 50, ../scss/pyoes/_oe-lists.scss */
+ul.source-authors-list i {
+  color: #e5e5e5;
+  margin: 0 8px;
 }
 
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
@@ -27043,9 +27091,54 @@ h4.header-img-panel {
 .color-cube {
   height: 100px;
   width: 100px;
-  color: #fff;
+  color: white;
   float: left;
   padding: 5px;
+}
+
+/* line 62, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard {
+  padding: 0;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+
+/* line 63, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard a {
+  display: block;
+  min-height: 78px;
+}
+
+/* line 64, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard a:hover {
+  background: #fbfbfb;
+  display: block;
+  min-height: 78px;
+}
+
+/* line 65, ../scss/pyoes/_oe-custom.scss */
+.actoren-idcard h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+
+/* line 68, ../scss/pyoes/_oe-custom.scss */
+.actoren-icon-large, .actoren-icon-small {
+  float: left;
+  color: #ededed;
+  font-size: 4em;
+  padding: 0px 20px 0 0;
+  border-right: 1px solid #e5e5e5;
+  margin-right: 20px;
+}
+
+/* line 69, ../scss/pyoes/_oe-custom.scss */
+.actoren-icon-small {
+  border-right: 1px solid #e5e5e5;
+  margin-right: 15px;
+  font-size: 3em;
+  padding: 15px 20px;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
@@ -27491,11 +27584,6 @@ table {
 /* line 16, ../scss/pyoes/_oe-tables.scss */
 .table tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
   background-color: #ededed;
-}
-
-/* line 17, ../scss/pyoes/_oe-tables.scss */
-.table tbody tr:hover td, .table tbody tr:hover th {
-  background-color: #F5F5F5;
 }
 
 /* line 19, ../scss/pyoes/_oe-tables.scss */

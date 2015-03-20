@@ -36,3 +36,15 @@ ol.nonumbers {margin-left:0}
 ol.nonumbers > li {list-style-type: none;} 
 
 
+
+// actoren (front-end)
+
+ul.source-authors li {list-style-type: none;}
+ul.source-authors  {font-family:$font-family-sans-serif;color:$dark-purple;margin:20px 0 0 0;font-size:0.6em;line-height:1.6em;}
+
+//temp?
+.source-authors-block {margin-top:10px;height:255px;width:98%;overflow:scroll}
+ul.source-authors-list  {font-size:0.8em;line-height:1.6em;}
+ul.source-authors-list li  {color:$dark-gray;border:1px solid $mid-gray;margin-bottom:18px;padding:4px}
+ul.source-authors-list li:hover  {background:$white-gray;display:block}
+ul.source-authors-list i  {color:$mid-gray;margin:0 8px}

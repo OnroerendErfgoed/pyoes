@@ -10,6 +10,13 @@ def main(global_config, **settings):
     config.add_route('header-footer', '/header-footer')
     config.add_route('grids', '/grids')
     config.add_route('beeldbank', '/beeldbank')
+    config.add_route('beheersplannen', '/beheersplannen')
+    config.add_route('actorenfront', '/actorenfront')
+    config.add_route('detail-bedrijf', '/actorenfront/detail-bedrijf')
+    config.add_route('detail-bedrijfv2', '/actorenfront/detail-bedrijfv2')
+    config.add_route('detail', '/actorenfront/detail')
+    config.add_route('actorenzoek', '/actorenzoek')
+    config.add_route('actorenzoekdetail', '/actorenzoek/detail')
     config.add_route('beeldbank-detail', '/beeldbank-detail')
     config.add_route('beeldbank-zoeken', '/beeldbank-zoeken')
     config.add_route('inventaris', '/inventaris')
@@ -31,6 +38,7 @@ def main(global_config, **settings):
     config.add_route('article9-3', '/article9-3')
     config.add_route('geoportaal', '/geoportaal')
     config.add_route('pinpoints', '/pinpoints')
+    config.add_route('404', '/404')
 
     includeme(config)
 
