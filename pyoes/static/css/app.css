@@ -5,7 +5,7 @@
     display: none;
   }
 }
-/* line 227, ../scss/pyoes/_oe-settings.scss */
+/* line 232, ../scss/pyoes/_oe-settings.scss */
 .tabs-content {
   background: #ededed;
   padding: 5px 10px;
@@ -16129,14 +16129,14 @@ select {
 /* Tooltips */
 /* line 38, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip {
-  border-bottom: dotted 1px #CCCCCC;
+  border-bottom: none;
   cursor: help;
-  font-weight: bold;
+  font-weight: none;
   color: #333333;
 }
 /* line 44, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #432348;
+  border-bottom: none;
   color: #944EA1;
 }
 /* line 50, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
@@ -16191,7 +16191,7 @@ select {
 /* line 95, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .tooltip.opened {
   color: #944EA1 !important;
-  border-bottom: dotted 1px #432348 !important;
+  border-bottom: none !important;
 }
 
 /* line 101, ../bower_components/foundation/scss/foundation/components/_tooltips.scss */
@@ -26817,6 +26817,7 @@ ul.source-authors {
   height: 255px;
   width: 98%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* line 47, ../scss/pyoes/_oe-lists.scss */
@@ -27139,6 +27140,80 @@ h4.header-img-panel {
   margin-right: 15px;
   font-size: 3em;
   padding: 15px 20px;
+}
+
+/*
+.placeholder-list li{float: left !important; list-style: none !important; margin-left: 30px !important; position: relative !important;}
+
+.placeholder-label {
+	line-height: 40px !important; 
+	font-size: 10px !important;
+	position: absolute !important; 
+	right: 120px !important; 
+	top: 0 !important; 
+	bottom: 0 !important;
+	opacity: 1 !important;
+	transition: opacity 5s ease !important;
+ 	z-index: 0 !important;
+}
+
+.placeholder-input {
+	border: 1px solid #ccc; 
+	height: 35px; 
+	padding: 0 10px !important; 
+	width: 90% !important; 
+	min-width: 200px !important; 
+	position: relative !important; 
+	font-size: 12px !important; 
+	height: 35px !important; 
+	z-index: 2;
+}
+
+.placeholder-label {
+	color: rgba(0,0,0,.99) !important;
+}
+
+
+.placeholder-label {color: #000 !important;}
+.placeholder-input:focus + .placeholder-label {right: 10px !important;}
+.placeholder-input:focus{background-color: rgba(255,255,255,.6) !important;}
+
+*/
+/* line 114, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  background-color: white;
+  font-family: inherit;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: inline-table;
+  font-size: 0.875rem;
+  height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  margin: 1px 0;
+}
+
+/* line 134, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container > label {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+/* line 140, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container > input[type=text] {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
