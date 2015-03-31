@@ -230,7 +230,10 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
     color: #bbb;
 }
 
-
+// fix for dropdown arrow in firefox
+select {
+  -moz-appearance: none !important;
+}
 
 
 
