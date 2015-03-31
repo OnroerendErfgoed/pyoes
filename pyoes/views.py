@@ -21,6 +21,10 @@ def beeldbank(request):
 def beheersplannen(request):
     return {}
 
+@view_config(route_name='beheersplannenres', renderer='templates/beheersplannen/result.jinja2')
+def beheersplannenres(request):
+    return {}
+
 @view_config(route_name='actorenfront', renderer='templates/actorenfront.jinja2')
 def actorenfront(request):
     return {}
@@ -83,6 +87,14 @@ def inventaris_articleIDfullv3(request):
 
 @view_config(route_name='inventaris-zoekoverzicht', renderer='templates/inventaris/inventaris-zoekoverzicht.jinja2')
 def inventaris_zoekoverzicht(request):
+    return {}
+
+@view_config(route_name='postregistratie', renderer='templates/postregistratie/index.jinja2')
+def postregistratie(request):
+    return {}
+
+@view_config(route_name='postreg-aanmaken', renderer='templates/postregistratie/aanmaken.jinja2')
+def postreg_aanmaken(request):
     return {}
 
 @view_config(route_name='icons', renderer='templates/icons.jinja2')

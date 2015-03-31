@@ -1,20 +1,7 @@
 
 
-// fix for sticky footer
-.container {
-    min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -100px;
-}
-#footerContainer {
-    height: 55px;
-}
-.push {
-    height: 100px;
-}
 
-footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple; height: 100%;}
+footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple;}
 footer#footer-bottom .inner nav ul{margin:1em 0;padding-left:1.4em}
 footer#footer-bottom .inner nav > ul{float:$default-float;width:25%;}
 footer#footer-bottom .inner nav ul li {list-style-type:none}

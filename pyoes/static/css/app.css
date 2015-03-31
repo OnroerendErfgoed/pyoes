@@ -1,15 +1,20 @@
 @charset "UTF-8";
 @media only screen and (max-width: 578px) {
-  /* line 47, ../scss/pyoes/_oe-settings.scss */
+  /* line 48, ../scss/pyoes/_oe-settings.scss */
   .bgimage, #service-navigation, .temp-embed {
     display: none;
   }
 }
-/* line 232, ../scss/pyoes/_oe-settings.scss */
+/* line 242, ../scss/pyoes/_oe-settings.scss */
 .tabs-content {
   background: #ededed;
   padding: 5px 10px;
-  border: 1px solid #753f7f;
+  margin-top: 1px;
+}
+
+/* line 243, ../scss/pyoes/_oe-settings.scss */
+.tabs dd {
+  margin-right: 1px !important;
 }
 
 /* line 347, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -5622,13 +5627,13 @@ select {
 }
 /* line 125, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small, button.dropdown.small {
-  padding-right: 3.0625rem;
+  padding-right: 1.75rem;
 }
 /* line 88, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small::after, button.dropdown.small::after {
-  border-width: 0.4375rem;
-  right: 1.3125rem;
-  margin-top: -0.15625rem;
+  border-width: 0.25rem;
+  right: 0.75rem;
+  margin-top: -0.0625rem;
 }
 /* line 117, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small::after, button.dropdown.small::after {
@@ -13031,13 +13036,13 @@ select {
 }
 /* line 125, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small, button.dropdown.small {
-  padding-right: 3.0625rem;
+  padding-right: 1.75rem;
 }
 /* line 88, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small::after, button.dropdown.small::after {
-  border-width: 0.4375rem;
-  right: 1.3125rem;
-  margin-top: -0.15625rem;
+  border-width: 0.25rem;
+  right: 0.75rem;
+  margin-top: -0.0625rem;
 }
 /* line 117, ../bower_components/foundation/scss/foundation/components/_dropdown-buttons.scss */
 .dropdown.button.small::after, button.dropdown.small::after {
@@ -13143,16 +13148,16 @@ select {
 }
 /* line 180, ../bower_components/foundation/scss/foundation/components/_split-buttons.scss */
 .split.button.small {
-  padding-right: 4.375rem;
+  padding-right: 2.5rem;
 }
 /* line 126, ../bower_components/foundation/scss/foundation/components/_split-buttons.scss */
 .split.button.small span {
-  width: 2.625rem;
+  width: 1.5rem;
 }
 /* line 127, ../bower_components/foundation/scss/foundation/components/_split-buttons.scss */
 .split.button.small span:after {
   border-top-style: solid;
-  border-width: 0.4375rem;
+  border-width: 0.25rem;
   top: 48%;
   margin-left: -0.375rem;
 }
@@ -26332,15 +26337,17 @@ th.hide-for-touch {
   padding: 0 25px 0 13px;
 }
 
-/* line 13, ../scss/pyoes/_oe-header.scss */
+/* line 15, ../scss/pyoes/_oe-header.scss */
 .logo-block h1 {
-  padding-top: 45px;
-  font-size: 34px;
+  /*padding-top:45px;*/
+  padding-top: 54px;
+  /*font-size:34px;*/
+  font-size: 2.9vmin;
   color: #753f7f;
   float: left;
 }
 
-/* line 20, ../scss/pyoes/_oe-header.scss */
+/* line 28, ../scss/pyoes/_oe-header.scss */
 .logo-block h2 {
   font-size: 23px;
   color: #753f7f !important;
@@ -26349,7 +26356,7 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 27, ../scss/pyoes/_oe-header.scss */
+/* line 35, ../scss/pyoes/_oe-header.scss */
 .logo-block h4 {
   font-size: 12px;
   color: #753f7f !important;
@@ -26358,67 +26365,67 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 35, ../scss/pyoes/_oe-header.scss */
+/* line 43, ../scss/pyoes/_oe-header.scss */
 .logo-block img {
   float: left;
   padding: 40px 0px 0 5px;
   vertical-align: bottom;
 }
 
-/* line 41, ../scss/pyoes/_oe-header.scss */
+/* line 49, ../scss/pyoes/_oe-header.scss */
 .bgimage {
   background: url(../img/pyoes/header-img.jpg);
-  width: 80%;
+  width: 960px;
   height: 135px;
   position: absolute;
   right: 0;
   z-index: 0;
 }
 
-/* line 51, ../scss/pyoes/_oe-header.scss */
+/* line 59, ../scss/pyoes/_oe-header.scss */
 nav#main-navigation .main-navigation-inner {
   padding: 0;
   position: relative;
 }
 
 /* service nav */
-/* line 55, ../scss/pyoes/_oe-header.scss */
+/* line 63, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   float: right;
   padding: 0;
 }
 
-/* line 56, ../scss/pyoes/_oe-header.scss */
+/* line 64, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li {
   margin-top: 0.4em;
   float: left;
   list-style-type: none;
 }
 
-/* line 57, ../scss/pyoes/_oe-header.scss */
+/* line 65, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a {
   font-size: 0.75em;
   color: #666666;
   line-height: 1.8em;
 }
 
-/* line 58, ../scss/pyoes/_oe-header.scss */
+/* line 66, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li > a {
   border-left: 1px solid #e5e5e5;
   padding: 0 1em;
 }
 
-/* line 59, ../scss/pyoes/_oe-header.scss */
+/* line 67, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:first-child > a {
   border-left: 0;
 }
 
-/* line 60, ../scss/pyoes/_oe-header.scss */
+/* line 68, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a:hover {
   color: #753f7f;
 }
 
-/* line 61, ../scss/pyoes/_oe-header.scss */
+/* line 69, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul {
   display: none;
   background-color: white;
@@ -26426,17 +26433,17 @@ nav#main-navigation .main-navigation-inner {
   position: absolute;
 }
 
-/* line 62, ../scss/pyoes/_oe-header.scss */
+/* line 70, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover i {
   color: #944ea1;
 }
 
-/* line 63, ../scss/pyoes/_oe-header.scss */
+/* line 71, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover ul {
   display: block;
 }
 
-/* line 64, ../scss/pyoes/_oe-header.scss */
+/* line 72, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li a {
   border-top: 1px solid #e5e5e5;
   margin: 0 1em;
@@ -26446,12 +26453,12 @@ nav#main-navigation .main-navigation-inner {
   padding: 0 4px;
 }
 
-/* line 65, ../scss/pyoes/_oe-header.scss */
+/* line 73, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li:first-child a {
   border: none;
 }
 
-/* line 66, ../scss/pyoes/_oe-header.scss */
+/* line 74, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   position: relative;
   z-index: 100;
@@ -26462,64 +26469,45 @@ nav#main-navigation .main-navigation-inner {
   margin-top: 10px;
 }
 
-/* line 69, ../scss/pyoes/_oe-header.scss */
+/* line 77, ../scss/pyoes/_oe-header.scss */
 .inner {
   margin: 0 auto;
   max-width: 1142px;
   padding: 0;
 }
 
-/* line 70, ../scss/pyoes/_oe-header.scss */
+/* line 78, ../scss/pyoes/_oe-header.scss */
 .inner-nav {
   margin: 0 auto;
   max-width: 1142px;
 }
 
 /* line 4, ../scss/pyoes/_oe-footer.scss */
-.container {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -100px;
-}
-
-/* line 10, ../scss/pyoes/_oe-footer.scss */
-#footerContainer {
-  height: 55px;
-}
-
-/* line 13, ../scss/pyoes/_oe-footer.scss */
-.push {
-  height: 100px;
-}
-
-/* line 17, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom {
   clear: both;
   overflow: hidden;
   background: white;
   border-top: 5px solid #753f7f;
-  height: 100%;
 }
 
-/* line 18, ../scss/pyoes/_oe-footer.scss */
+/* line 5, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul {
   margin: 1em 0;
   padding-left: 1.4em;
 }
 
-/* line 19, ../scss/pyoes/_oe-footer.scss */
+/* line 6, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav > ul {
   float: left;
   width: 25%;
 }
 
-/* line 20, ../scss/pyoes/_oe-footer.scss */
+/* line 7, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li {
   list-style-type: none;
 }
 
-/* line 21, ../scss/pyoes/_oe-footer.scss */
+/* line 8, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a {
   display: block;
   line-height: 1em;
@@ -26527,23 +26515,23 @@ footer#footer-bottom .inner nav ul li a {
   font-size: 0.875em;
 }
 
-/* line 22, ../scss/pyoes/_oe-footer.scss */
+/* line 9, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a:hover {
   color: black;
 }
 
-/* line 23, ../scss/pyoes/_oe-footer.scss */
+/* line 10, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a.active {
   color: #753f7f;
 }
 
-/* line 24, ../scss/pyoes/_oe-footer.scss */
+/* line 11, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner article img {
   margin: auto 0 auto auto;
   display: block;
 }
 
-/* line 25, ../scss/pyoes/_oe-footer.scss */
+/* line 12, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul.lang-switch li {
   float: left;
   margin-right: 0.5em;
@@ -26552,26 +26540,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
 
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 29, ../scss/pyoes/_oe-footer.scss */
+  /* line 16, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 30, ../scss/pyoes/_oe-footer.scss */
+  /* line 17, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 34, ../scss/pyoes/_oe-footer.scss */
+  /* line 21, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 35, ../scss/pyoes/_oe-footer.scss */
+  /* line 22, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -26582,7 +26570,7 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     margin: 0;
   }
 
-  /* line 36, ../scss/pyoes/_oe-footer.scss */
+  /* line 23, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -26597,26 +26585,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     position: relative;
   }
 
-  /* line 37, ../scss/pyoes/_oe-footer.scss */
+  /* line 24, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 38, ../scss/pyoes/_oe-footer.scss */
+  /* line 25, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 39, ../scss/pyoes/_oe-footer.scss */
+  /* line 26, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 40, ../scss/pyoes/_oe-footer.scss */
+  /* line 27, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
@@ -26816,8 +26804,7 @@ ul.source-authors {
   margin-top: 10px;
   height: 255px;
   width: 98%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: scroll;
 }
 
 /* line 47, ../scss/pyoes/_oe-lists.scss */
@@ -27030,12 +27017,12 @@ article a:hover, .panel p a:hover {
   text-decoration: none;
 }
 
-/* line 32, ../scss/pyoes/_oe-custom.scss */
+/* line 33, ../scss/pyoes/_oe-custom.scss */
 ul.tag-label {
   margin: 10px 0 0 0;
 }
 
-/* line 33, ../scss/pyoes/_oe-custom.scss */
+/* line 34, ../scss/pyoes/_oe-custom.scss */
 .tag-label li {
   float: left;
   background-color: #ededed;
@@ -27045,30 +27032,30 @@ ul.tag-label {
   font-size: 0.9em;
 }
 
-/* line 34, ../scss/pyoes/_oe-custom.scss */
+/* line 35, ../scss/pyoes/_oe-custom.scss */
 .tag-label li:first-child {
   background: none;
   padding-left: 0;
 }
 
-/* line 35, ../scss/pyoes/_oe-custom.scss */
+/* line 36, ../scss/pyoes/_oe-custom.scss */
 .tag-label li:last-child {
   background-color: #efefef;
 }
 
-/* line 36, ../scss/pyoes/_oe-custom.scss */
+/* line 37, ../scss/pyoes/_oe-custom.scss */
 .tag-label li a {
   text-decoration: none !important;
   color: black;
 }
 
-/* line 37, ../scss/pyoes/_oe-custom.scss */
+/* line 38, ../scss/pyoes/_oe-custom.scss */
 .tag-label li a span {
   margin: 2px 0 0 10px;
   color: #FF0000;
 }
 
-/* line 42, ../scss/pyoes/_oe-custom.scss */
+/* line 44, ../scss/pyoes/_oe-custom.scss */
 h4.header-img-panel {
   text-transform: uppercase;
   font-size: 1em;
@@ -27076,19 +27063,19 @@ h4.header-img-panel {
 }
 
 /* inventaris article margin */
-/* line 49, ../scss/pyoes/_oe-custom.scss */
+/* line 51, ../scss/pyoes/_oe-custom.scss */
 .articlemargin {
   width: 70%;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 52, ../scss/pyoes/_oe-custom.scss */
+  /* line 54, ../scss/pyoes/_oe-custom.scss */
   .articlemargin {
     width: 100%;
   }
 }
-/* line 56, ../scss/pyoes/_oe-custom.scss */
+/* line 58, ../scss/pyoes/_oe-custom.scss */
 .color-cube {
   height: 100px;
   width: 100px;
@@ -27097,34 +27084,48 @@ h4.header-img-panel {
   padding: 5px;
 }
 
-/* line 62, ../scss/pyoes/_oe-custom.scss */
+/* line 65, ../scss/pyoes/_oe-custom.scss */
+.icon-large-left {
+  float: left;
+  margin: 0 20px 20px 0;
+  font-size: 60px;
+  color: #ededed;
+}
+
+/* line 66, ../scss/pyoes/_oe-custom.scss */
+.vruler {
+  border-left: 1px solid #ededed;
+  padding-top: 0px;
+}
+
+/* line 75, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard {
   padding: 0;
   background: white;
   border: 1px solid #e5e5e5;
 }
 
-/* line 63, ../scss/pyoes/_oe-custom.scss */
+/* line 76, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard a {
   display: block;
   min-height: 78px;
 }
 
-/* line 64, ../scss/pyoes/_oe-custom.scss */
+/* line 77, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard a:hover {
   background: #fbfbfb;
   display: block;
   min-height: 78px;
 }
 
-/* line 65, ../scss/pyoes/_oe-custom.scss */
+/* line 78, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard h3 {
   font-size: 1em;
   margin: 0;
   padding: 15px 0 0 0;
 }
 
-/* line 68, ../scss/pyoes/_oe-custom.scss */
+/* line 81, ../scss/pyoes/_oe-custom.scss */
 .actoren-icon-large, .actoren-icon-small {
   float: left;
   color: #ededed;
@@ -27134,7 +27135,7 @@ h4.header-img-panel {
   margin-right: 20px;
 }
 
-/* line 69, ../scss/pyoes/_oe-custom.scss */
+/* line 82, ../scss/pyoes/_oe-custom.scss */
 .actoren-icon-small {
   border-right: 1px solid #e5e5e5;
   margin-right: 15px;
@@ -27142,55 +27143,16 @@ h4.header-img-panel {
   padding: 15px 20px;
 }
 
-/*
-.placeholder-list li{float: left !important; list-style: none !important; margin-left: 30px !important; position: relative !important;}
-
-.placeholder-label {
-	line-height: 40px !important; 
-	font-size: 10px !important;
-	position: absolute !important; 
-	right: 120px !important; 
-	top: 0 !important; 
-	bottom: 0 !important;
-	opacity: 1 !important;
-	transition: opacity 5s ease !important;
- 	z-index: 0 !important;
-}
-
-.placeholder-input {
-	border: 1px solid #ccc; 
-	height: 35px; 
-	padding: 0 10px !important; 
-	width: 90% !important; 
-	min-width: 200px !important; 
-	position: relative !important; 
-	font-size: 12px !important; 
-	height: 35px !important; 
-	z-index: 2;
-}
-
-.placeholder-label {
-	color: rgba(0,0,0,.99) !important;
-}
-
-
-.placeholder-label {color: #000 !important;}
-.placeholder-input:focus + .placeholder-label {right: 10px !important;}
-.placeholder-input:focus{background-color: rgba(255,255,255,.6) !important;}
-
-*/
-/* line 114, ../scss/pyoes/_oe-custom.scss */
+/* line 88, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
   background-color: white;
   font-family: inherit;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #cccccc;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d5d5d5;
   color: rgba(0, 0, 0, 0.75);
   display: inline-table;
+  vertical-align: top;
   font-size: 0.875rem;
   height: 2.3125rem;
   width: 100%;
@@ -27199,21 +27161,147 @@ h4.header-img-panel {
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
   margin: 1px 0;
+  margin-bottom: 16px;
 }
 
-/* line 134, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container > label {
+/* line 109, ../scss/pyoes/_oe-custom.scss */
+.placeholder-disabled {
+  background-color: #DDDDDD;
+}
+
+/* line 113, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container label {
   display: table-cell;
   padding-left: 10px;
+  color: #3f3840;
+  width: 20%;
+  font-size: 0.775rem;
+  vertical-align: middle;
+  background-color: transparent;
 }
 
-/* line 140, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container > input[type=text] {
+/* line 123, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container input[type="text"] {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent !important;
+  color: #3f3840;
+}
+
+/* line 132, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent;
+  background: none !important;
+  padding-left: 8px;
+}
+
+/* line 142, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container select {
   border: none;
   box-shadow: none;
   margin: 0;
   display: table-cell;
   background-color: transparent;
+  -moz-appearance: none;
+}
+
+/* line 151, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container > .combo-dropdown {
+  border: 0 !important;
+}
+
+/* line 155, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container textarea {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent !important;
+  resize: vertical;
+}
+
+/* line 164, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input.dijitDateTextBox {
+  padding-left: 0;
+}
+
+/* line 168, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input.dijitDateTextBox .dijitArrowButtonContainer {
+  border: none !important;
+  background: none;
+}
+
+/* line 173, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input.dijitDateTextBox .dijitInputContainer {
+  min-height: 100%;
+}
+
+/* line 177, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input.dijitDateTextBox input.dijitInputInner {
+  padding: 0.5rem !important;
+}
+
+/* line 181, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input.dijitDateTextBox input.dijitArrowButtonInner {
+  width: 1.25rem;
+  height: 100% !important;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+}
+
+/* line 190, ../scss/pyoes/_oe-custom.scss */
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 195, ../scss/pyoes/_oe-custom.scss */
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* line 202, ../scss/pyoes/_oe-custom.scss */
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+}
+
+/* line 206, ../scss/pyoes/_oe-custom.scss */
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #b05dbf;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+/* line 218, ../scss/pyoes/_oe-custom.scss */
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  content: '\2714';
+  background: #753f7f;
+  color: #fff;
+}
+
+/* line 224, ../scss/pyoes/_oe-custom.scss */
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+/* line 228, ../scss/pyoes/_oe-custom.scss */
+.radio-custom:checked + .radio-custom-label:before {
+  content: '\2714';
+  color: #bbb;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */

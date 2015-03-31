@@ -1,0 +1,202 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+
+
+
+<div class="row">
+
+
+
+<div class="large-3 columns">
+
+  <div class="panel fl-block-search">
+
+
+    <form class="form-search" method="GET" action="/beheersplannen">
+
+
+        <input name="query" type="text" class="span2 search-query" value="" placeholder="Beheersplan naam"/>
+
+        <select name="sort" class="span2">
+
+            <option selected value="Sorteervolgorde">Sorteervolgorde</option>
+            <option  value="">onderwerp</option>
+            <option  value="id">id</option>
+            <option  value="datum_goedkeuring">datum goedkeuring</option>
+
+        </select>
+
+
+
+     <h5>Beheersplantypes</h5>
+
+
+
+        <ul id="aggregation_beheersplantypes" class="nodisk">
+
+            <li>
+              <label  class="checkbox" for="chkbx_beheersplantypes_OEB">
+                <input  type="checkbox" name="beheersplantypes" value="OEB" id="chkbx_beheersplantypes_OEB" />
+                Land <small>(2)</small>
+              </label>
+            </li>
+
+            <li>
+              <label  class="checkbox" for="chkbx_beheersplantypes_OEB">
+                <input  type="checkbox" name="beheersplantypes" value="OEB" id="chkbx_beheersplantypes_OEB" />
+                Gemeente <small>(4)</small>
+              </label>
+            </li>
+
+            <li>
+              <label  class="checkbox" for="chkbx_beheersplantypes_OEB">
+                <input  type="checkbox" name="beheersplantypes" value="OEB" id="chkbx_beheersplantypes_OEB" />
+                Straat <small>(2)</small>
+              </label>
+            </li>
+
+            <li>
+              <label  class="checkbox" for="chkbx_beheersplantypes_OEB">
+                <input  type="checkbox" name="beheersplantypes" value="OEB" id="chkbx_beheersplantypes_OEB" />
+                Huisnummer <small>(2)</small>
+              </label>
+            </li>
+
+            <li>
+              <label  class="checkbox" for="chkbx_beheersplantypes_OEB">
+                <input  type="checkbox" name="beheersplantypes" value="OEB" id="chkbx_beheersplantypes_OEB" />
+                Subadres <small>(2)</small>
+              </label>
+            </li>
+
+          <div class="right clearfix">
+            <small><a href="">Alle filters ongedaan maken <i class="fa fa-trash"> </i></a></small>
+          </div>
+        </ul>
+
+  <br>
+
+
+
+      <input type="submit" class="button expand tiny" value="Zoeken" />
+        <!-- input type="reset" id="reset-zoeken" class="button expand tiny small" value="Wissen" / -->
+        <script type="text/javascript">
+          $('#reset-zoeken').on('click', function(evt) {
+            $('.widget-zoeken form input[type="text"]').attr('value', '');
+            $('.widget-zoeken form select[name="sort"]').val('onderwerp');
+            $('.widget-zoeken form select[name="status"]').val(' ');
+            $('.widget-zoeken form input[type="checkbox"]').removeAttr('checked');
+          });
+        </script>
+
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+        <div class="large-9 columns">
+
+        <div class="alert-box info text-center">Je zoekopdracht leverde 2 resultaten.</div>
+<div class="row">
+
+        <div class="pagination-centered">
+
+
+             <ul class="pagination">
+              <li class="arrow unavailable"><span>&lsaquo; vorige</span></li>
+              <li class="arrow unavailable"><span>1</span></li>
+              <li class="arrow unavailable"><span>volgende &rsaquo;</span></li>
+            </ul>
+
+          </div>
+        </div>
+
+
+
+    <div class="row">
+
+       <div class="large-4 columns left">
+           <div class="panel search-block">
+              <a href="/beheersplannen/6">
+                        <div class="media text-center">
+
+                            <img src="/static/img/leeg_beheersplan.jpg" title="Geen voorbeeld beschikbaar" />
+
+                        </div>
+                            <div class="inner">
+                                <h3>Test</h3>
+                            </div>
+
+                            <h5>ID 6</h5>
+                            <small><div class="date" datetime="2015-01-16">16-01-2015</div></small>
+                            <h5>Onroerend Erfgoed Beheersplan</h5>
+
+              </a>
+                </div>
+            </div>
+
+
+
+            <div class="large-4 columns left">
+                <div class="panel search-block">
+                    <a href="/beheersplannen/1">
+                        <div class="media text-center">
+
+                            <img src="/static/img/leeg_beheersplan.jpg" title="Geen voorbeeld beschikbaar" />
+
+                        </div>
+                            <div class="inner">
+                                <h3>Test</h3>
+                            </div>
+
+                            <h5>ID 1</h5>
+                            <h5>Onroerend Erfgoed Beheersplan</h5>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+<div class="row">
+  <div class="pagination-centered">
+
+
+
+    <ul class="pagination">
+
+        <li class="arrow unavailable"><span>&lsaquo; vorige</span></li>
+
+
+            <li class="arrow unavailable"><span>1</span></li>
+
+
+        <li class="arrow unavailable"><span>volgende &rsaquo;</span></li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+  <div class="push"></div>
+</div>
+
+
+
+
+
+{% endblock %}

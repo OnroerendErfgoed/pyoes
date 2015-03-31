@@ -10,12 +10,20 @@
 			 	padding:0 25px 0 13px;
 			 }
 
+
+
 .logo-block h1 { 
-				padding-top:45px;
-				font-size:34px;
+				/*padding-top:45px;*/
+				padding-top:54px;
+				/*font-size:34px;*/
+				font-size: 2.9vmin;
+		
 				color:$dark-purple;
 				float:$default-float;
 				}
+
+
+
 
 .logo-block h2 {
 				font-size:23px;
@@ -40,7 +48,7 @@
 
 .bgimage 		{
  				background:url(../img/pyoes/header-img.jpg);
- 				width:80%;
+ 				width:960px;
  				height:135px;
  				position:absolute;
  				right:0;
@@ -66,7 +74,7 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 #service-navigation { position:relative;z-index:100;background-color:white; filter:alpha(opacity=60); opacity:.6;padding:3px 0 8px 0;margin-top:10px}
 
 
-.inner{ margin: 0 auto; max-width: 1142px; padding: 0}
+.inner{ margin: 0 auto; max-width: 1142px; padding: 0;}
 .inner-nav{ margin: 0 auto; max-width: 1142px} 
 
 

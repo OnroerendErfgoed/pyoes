@@ -9,6 +9,7 @@
 // c. Global
 // d. Media Query Ranges
 // e. Typography
+// 09. Dropdown Buttons
 // 20. Pagination
 // 21. Panels
 // 28. Sub Nav
@@ -125,6 +126,7 @@ $has-tip-border-bottom: none;
 $has-tip-border-bottom-hover: none;
 $has-tip-font-weight: none;
 
+
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -190,6 +192,14 @@ $select-bg-color: $white;
 $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
 
+
+// 09. Dropdown Buttons
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$button-pip-sml: rem-calc(4);
+$dropdown-button-padding-sml: $button-pip-sml * 7;
+
+
 // 20. Pagination
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -229,7 +239,8 @@ $tabs-navigation-bg-color: $mid-purple  ;
 $tabs-navigation-active-bg-color: $dark-purple;
 $tabs-navigation-font-color: $white;
 $tabs-navigation-font-size: rem-calc(14);
-.tabs-content {background:$light-gray;padding:5px 10px;border:1px solid $dark-purple}
+.tabs-content {background:$light-gray;padding:5px 10px;margin-top:1px;}
+.tabs dd {margin-right:1px !important}
 
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -

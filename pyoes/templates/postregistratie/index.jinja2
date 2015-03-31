@@ -1,0 +1,100 @@
+{% extends "layout.jinja2" %}
+{% block content %} 
+  
+
+<!-- postregistratie menu -->
+
+
+<a href="#" data-reveal-id="myModal1" class="tiny button">Menu</a>
+
+<!-- pop menu -->
+
+<div id="myModal1" class="reveal-modal" data-reveal>
+
+<a class="close-reveal-modal" style="padding: 12px 18px">&#215;</a>
+
+
+   <header class="clearfix" style="margin-bottom:0px">
+        <h3>MENU</h3>
+            <dl class="tabs tiny" data-tab>
+              <dd class="active"><a href="" class="tiny button">Poststuk aanmaken</a></dd>
+              <dd><a href="" class="tiny button">Info</a></dd>
+              <dd><button data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown tiny">Mijn post
+              </button>
+              <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+                <li><a href="#">alle post</a></li>
+                <li><a href="#">mijn post</a></li>
+                <li><a href="#">mijn groepen</a></li>
+                <li><a href="#">mijn processen</a></li>
+              </ul>
+              </dd>
+              <dd class="right">
+                <form name="" action="#" method="post" style="width:320px">
+                     <div class="searchBox">
+                         <input type='text' placeholder='zoek'  />
+                         <button class="button tiny">zoeken</button>
+                    </div>
+                </form></dd>
+            </dl>
+
+    
+
+
+    </header> 
+
+</div>
+<!-- end postregistratie menu -->
+
+
+<p class="text-center">
+<a href="postregistratie/aanmaken">aanmaken</a>
+</p>
+
+<!-- content -->
+
+    <div class="row">
+      <div class="large-12 columns">
+
+        <div class="panel">
+
+            <div class="row">
+          
+              <div class="large-12 columns" style="margin-bottom:20px">
+                <h1>Welkom op de post registratie applicatie.</h1>
+              </div>   
+
+              <div class="large-6 medium-6 columns">
+              
+             
+              <p>Het agentschap Onroerend Erfgoed beschermt en registreert het onroerend erfgoed in Vlaanderen.</p>
+              <p>Je kan hier alle wettelijk rechtsgeldige beschermingsbeheersplannen raadplegen.</p>
+            
+              </div>
+
+
+              <div class="large-6 medium-6 columns vruler">
+
+                  <i class="fa fa-search icon-large-left"></i>
+                  <h3>Op zoek in de databank?</h3>
+                    Zoeken gaat eenvoudig.
+                    <p>Je kan filteren op beschermingstype, provincie, rechtsgevolg, datum van ondertekening, … door een of meerdere vakjes aan te vinken en op zoeken te klikken.</p>
+                    <p>Je kan ook gebruik maken van een vrij zoekveld.</p>
+                    Ben je op zoek naar een ??? ?<br>
+                    Deze kun je vinden in onze ???.
+                    <hr>
+                  <i class="fa fa-question icon-large-left"></i>
+                  <h3>Vragen?</h3>
+                  <p>Stel je fouten vast of heb je een vraag over een beheersplan? <br>
+                  Mail dan naar <a href="mailto:">???</a>.</p>
+                        
+              </div>
+
+           </div>
+
+        </div>
+      </div>
+    </div>
+<!-- end content -->
+
+
+{% endblock %}

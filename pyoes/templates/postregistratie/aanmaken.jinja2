@@ -1,0 +1,491 @@
+{% extends "layout.jinja2" %}
+{% block content %} 
+  
+
+<!-- postregistratie menu -->
+
+
+<a href="#" data-reveal-id="myModal1" class="tiny button">Menu</a>
+
+<!-- pop menu -->
+
+<div id="myModal1" class="reveal-modal" data-reveal>
+
+<a class="close-reveal-modal" style="padding: 12px 18px">&#215;</a>
+
+
+   <header class="clearfix" style="margin-bottom:0px">
+        <h3>MENU</h3>
+            <dl class="tabs tiny" data-tab>
+              <dd class="active"><a href="" class="tiny button">Poststuk aanmaken</a></dd>
+              <dd><a href="" class="tiny button">Info</a></dd>
+              <dd><button data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown tiny">Mijn post
+              </button>
+              <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
+                <li><a href="#">alle post</a></li>
+                <li><a href="#">mijn post</a></li>
+                <li><a href="#">mijn groepen</a></li>
+                <li><a href="#">mijn processen</a></li>
+              </ul>
+              </dd>
+              <dd class="left">
+                <form name="" action="#" method="post" style="width:320px">
+                     <div class="searchBox">
+                         <input type='text' placeholder='zoek'  />
+                         <button class="button tiny">zoeken</button>
+                    </div>
+                </form></dd>
+            </dl>
+
+  
+    </header> 
+
+
+
+<!-- post lijst -->
+
+<!-- div class="clearfix">
+<div class="left"><h6>Poststukken</h6></div>
+<div class="left" style="margin:7px 0 0 20px;font-size:0.8em"><a href="" class="">refresh <i class="fa fa-refresh"></i></a></div>
+<div class="right"><a href="" class="" style="font-size:0.8em">uitgebreid zoeken <i class="fa fa-chevron-right" style="font-size:0.8em"></i></a></div>
+</div -->
+
+
+
+
+<!-- table class="table">
+    <thead>
+      <tr>
+        <th style="width:10px">ID</th>
+        <th>Onderwerp</th>
+        <th>Korte inhoud</th>
+        <th>Datum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>28</td>
+        <td><a href="#" data-reveal-id="myModal5"><strong>aanvraag bescherming</strong></a</td>
+        <td>aanvraag tot bescherming Pedekerk</td>
+        <td>13/02/2015</td>
+      </tr>
+      <tr>
+         <td>27</td>
+        <td><a href="#" data-reveal-id="myModal5"><strong>aanvraag bescherming</strong></a</td>
+        <td>aanvraag tot bescherming Pedekerk</td>
+        <td>12/02/2015</td>
+      </tr>
+    </tbody>
+</table -->
+
+<!-- end post lijst -->
+
+<form>
+
+ <div class="row">
+     <div class="large-6 columns">
+
+            <select>
+                <option value="1">Datum</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Ons kenmerk">Ons kenmerk</label>
+                <input id="Ons kenmerk" class="placeholder-input" placeholder="Ons kenmerk" title="Ons kenmerk" type="text"/>
+            </div>
+           
+            <div class=""> 
+                <textarea placeholder="Omschrijving"></textarea>
+            </div>
+          
+      </div>
+
+
+       <div class="large-6 columns">
+
+        <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Onderwerp">Onderwerp</label>
+                <input id="Onderwerp" class="placeholder-input" placeholder="Onderwerp" title="Onderwerp" type="text"/>
+        </div>
+
+        <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Uw kenmerk">Uw kenmerk</label>
+                <input id="Uw kenmerk" class="placeholder-input" placeholder="Uw kenmerk" title="Uw kenmerk" type="text"/>
+        </div>
+          
+      </div>
+ </div>
+
+
+<small>Type : </small> &nbsp;&nbsp;
+<input id="checkbox1" type="checkbox"><label for="checkbox1">Brief</label>
+<input id="checkbox2" type="checkbox"><label for="checkbox2">Digitale Bouwaanvraag</label>
+<input id="checkbox3" type="checkbox"><label for="checkbox3">Mail</label>
+    
+
+
+<div class="row">
+<hr>
+       <div class="clearfix text-center">
+                <a href="" class="tiny button">annuleer</a>
+                <a href="" class="tiny button">bewaar</a>
+      </div> 
+</div>
+
+
+</form>
+
+
+<!-- end pop menu -->
+<!-- end postregistratie menu -->
+
+
+
+</div>
+
+
+
+<!-- page content -->
+
+<!-- nieuw postregistratie aanmaken-->
+
+<div class="row">
+
+  <div class="large-12 columns">
+
+      <div class="panel">
+
+
+      <h3 class="left"><small>Poststuk ID : 28</small></h3>
+    
+<div class="" style="margin:0 auto;text-align:center;width:600px;">
+<dl class="tabs" data-tab>
+  <dd class="active"><a href="#panel1" class="tiny button">Algemeen</a></dd>
+  <dd><a href="#panel2" class="tiny button">Rechten</a></dd>
+  <dd><a href="#panel3" class="tiny button">Processen</a></dd>
+  <dd><a href="#panel4" class="tiny button">Correspondenten</a></dd>
+  <dd><a href="#panel5" class="tiny button">Relaties</a></dd>
+  <dd><a href="#panel6" class="tiny button">Documenten</a></dd>
+</dl>
+</div>
+
+<div class="tabs-content" style="background:#fff">
+
+  <div class="content active" id="panel1">
+  
+
+    <div class="row">
+    <form>
+      <div class="large-6 columns">
+
+         <select>
+                <option value="1">Datum</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+          </select>
+
+            <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Ons kenmerk">Ons kenmerk</label>
+                <input id="Ons kenmerk" class="placeholder-input" placeholder="Ons kenmerk" title="Ons kenmerk" type="text"/>
+            </div>
+           
+            <div class=""> 
+                    <textarea placeholder="Omschrijving"></textarea>
+            </div>
+
+
+
+
+<!-- small>Type : </small> &nbsp;&nbsp;
+<input id="checkbox1" type="checkbox"><label for="checkbox1">Brief</label>
+<input id="checkbox2" type="checkbox"><label for="checkbox2">Digitale Bouwaanvraag</label>
+<input id="checkbox3" type="checkbox"><label for="checkbox3">Mail</label -->
+
+
+</div>
+
+
+
+
+      <div class="large-6 columns">
+
+        <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Onderwerp">Onderwerp</label>
+                <input id="Onderwerp" class="placeholder-input" placeholder="Onderwerp" title="Onderwerp" type="text"/>
+        </div>
+
+        <div class="placeholder-container" tabindex="">
+                <label class="placeholder-label" for="Uw kenmerk">Uw kenmerk</label>
+                <input id="Uw kenmerk" class="placeholder-input" placeholder="Uw kenmerk" title="Uw kenmerk" type="text"/>
+        </div>
+          
+      </div>
+
+
+     
+
+    </form>
+    </div>
+
+
+  
+         <ul class="source-authors">
+            <li>Status : onbeschikbaar</li>
+            <li>Aangemaakt door : claeyswo op 2007-10-05 om 00:14:12</li>
+            <li>Laatst bewerkt door : <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">claeyswo</span> op 
+            <time itemprop="datePublished" datetime="2009-05-06">2009-05-06 om 23:29:32</time></li>
+         </ul>
+
+
+  </div>
+
+
+
+    <form>
+     
+        <ul class="nodisk">
+        <li>
+            <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+            <label for="checkbox-1" class="checkbox-custom-label">First Choice</label>
+       </li>
+        <li>
+            <input id="checkbox-2" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+            <label for="checkbox-2" class="checkbox-custom-label">First Choice</label>
+       </li>
+       </ul>
+     
+    </form>
+
+
+
+
+  <div class="content" id="panel2">
+
+
+<div class="row">
+
+  <div class="large-6 columns">
+      
+  <h4>Groepen</h4> 
+
+        <form>
+          <table class="">
+
+              <tbody>
+                <tr>
+                  <td>Antwerpen</td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+                 <tr>
+                  <td>Antwerpen <small>tot 19-3-2015</small></td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+              
+              </tbody>
+          </table>
+
+
+         <input id="checkbox1" type="checkbox"><label for="checkbox1">Toon ook historische rechten</label>
+         <small class="right"><a href="">Toevoegen <i class="fa fa-plus-circle"></i></a></small>
+        </form>
+        
+  </div>
+
+
+  <div class="large-6 columns">
+  
+  <h4>Gebruikers</h4> 
+
+        <form>
+
+          <table class="">
+
+              <tbody>
+                <tr>
+                  <td>devosju</td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+                 <tr>
+                  <td>vandaeko <small></small></td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+                <tr>
+                  <td>claeyswo <small>tot 19-3-2015</small></td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+              
+              </tbody>
+          </table>
+
+
+   <input id="checkbox2" type="checkbox"><label for="checkbox2">Toon ook historische rechten</label>
+   <small class="right"><a href="">Toevoegen <i class="fa fa-plus-circle"></i></a></small>
+
+        </form>
+
+  </div>
+
+</div>
+  </div>
+
+
+
+ <div class="content" id="panel3">
+
+
+<div class="row">
+
+  <div class="large-6 columns">
+      
+  <h4>Processen</h4> 
+
+        <form>
+          <table class="">
+
+              <tbody>
+                <tr>
+                  <td>Zonering Adviesprocedures</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Zonering Adviesprocedures</td>
+                 
+                </tr>
+              
+              </tbody>
+          </table>
+
+         <small class="right"><a href="">Toevoegen <i class="fa fa-plus-circle"></i></a></small>
+        </form>
+        
+  </div>
+
+
+  </div>
+
+</div>
+
+
+
+  <div class="content" id="panel4">
+
+  <h4>Correspondenten</h4> 
+
+        <table class="">
+            <thead>
+              <tr>
+                <th style="width:10px">Type</th>
+                <th>Naam</th>
+                <th>Voornaam</th>
+                <th>Straat</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td><a href=""><i class="fa fa-trash right"></i></a></td>
+              </tr>
+              <tr>
+                <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td><a href=""><i class="fa fa-trash right"></i></a></td>
+              </tr>
+            
+            </tbody>
+        </table>
+         <small class="right"><a href="">Toevoegen <i class="fa fa-plus-circle"></i></a></small>
+
+  </div>
+
+
+  <div class="content" id="panel5">
+
+    <h4>Relaties</h4> 
+   <table>
+            <thead>
+              <tr>
+                <th style="width:10px">Type</th>
+                <th>Naar poststuk</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td><a href=""><i class="fa fa-trash right"></i></a></td>
+              </tr>
+              <tr>
+                <tr>
+                <td>1</td>
+                <td>2</td>
+                <td><a href=""><i class="fa fa-trash right"></i></a></td>
+              </tr>
+            </tbody>
+        </table>
+  
+     <small class="right"><a href="">Toevoegen <i class="fa fa-plus-circle"></i></a></small>
+
+  </div>
+
+    <div class="content" id="panel6">
+      <h4>Documenten</h4> 
+    <table>
+        <thead>
+          <tr>
+            <th style="width:10px">iD</th>
+            <th>Mime Type</th>
+            <th>Typering</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td><a href=""><i class="fa fa-trash right"></i></a></td>
+                </tr>
+        </tbody>
+    </table>
+  </div>
+ 
+  </div>
+</div>
+
+
+     
+      </div>
+
+  <div class="clearfix text-center">
+      <a href="" class="tiny button">annuleer</a>
+      <a href="" class="tiny button">bewaar</a>
+  </div> 
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}
