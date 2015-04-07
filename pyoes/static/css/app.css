@@ -26482,7 +26482,25 @@ nav#main-navigation .main-navigation-inner {
   max-width: 1142px;
 }
 
-/* line 4, ../scss/pyoes/_oe-footer.scss */
+/* line 3, ../scss/pyoes/_oe-footer.scss */
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -100px;
+}
+
+/* line 9, ../scss/pyoes/_oe-footer.scss */
+#footerContainer {
+  height: 55px;
+}
+
+/* line 12, ../scss/pyoes/_oe-footer.scss */
+.push {
+  height: 100px;
+}
+
+/* line 16, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom {
   clear: both;
   overflow: hidden;
@@ -26490,24 +26508,24 @@ footer#footer-bottom {
   border-top: 5px solid #753f7f;
 }
 
-/* line 5, ../scss/pyoes/_oe-footer.scss */
+/* line 17, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul {
   margin: 1em 0;
   padding-left: 1.4em;
 }
 
-/* line 6, ../scss/pyoes/_oe-footer.scss */
+/* line 18, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav > ul {
   float: left;
   width: 25%;
 }
 
-/* line 7, ../scss/pyoes/_oe-footer.scss */
+/* line 19, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li {
   list-style-type: none;
 }
 
-/* line 8, ../scss/pyoes/_oe-footer.scss */
+/* line 20, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a {
   display: block;
   line-height: 1em;
@@ -26515,23 +26533,23 @@ footer#footer-bottom .inner nav ul li a {
   font-size: 0.875em;
 }
 
-/* line 9, ../scss/pyoes/_oe-footer.scss */
+/* line 21, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a:hover {
   color: black;
 }
 
-/* line 10, ../scss/pyoes/_oe-footer.scss */
+/* line 22, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a.active {
   color: #753f7f;
 }
 
-/* line 11, ../scss/pyoes/_oe-footer.scss */
+/* line 23, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner article img {
   margin: auto 0 auto auto;
   display: block;
 }
 
-/* line 12, ../scss/pyoes/_oe-footer.scss */
+/* line 24, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul.lang-switch li {
   float: left;
   margin-right: 0.5em;
@@ -26540,26 +26558,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
 
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 16, ../scss/pyoes/_oe-footer.scss */
+  /* line 28, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 17, ../scss/pyoes/_oe-footer.scss */
+  /* line 29, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 21, ../scss/pyoes/_oe-footer.scss */
+  /* line 33, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 22, ../scss/pyoes/_oe-footer.scss */
+  /* line 34, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -26570,7 +26588,7 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     margin: 0;
   }
 
-  /* line 23, ../scss/pyoes/_oe-footer.scss */
+  /* line 35, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -26585,26 +26603,26 @@ footer#footer-bottom .inner nav ul.lang-switch li {
     position: relative;
   }
 
-  /* line 24, ../scss/pyoes/_oe-footer.scss */
+  /* line 36, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 25, ../scss/pyoes/_oe-footer.scss */
+  /* line 37, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 26, ../scss/pyoes/_oe-footer.scss */
+  /* line 38, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 27, ../scss/pyoes/_oe-footer.scss */
+  /* line 39, ../scss/pyoes/_oe-footer.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
@@ -26785,12 +26803,12 @@ ol.nonumbers > li {
   list-style-type: none;
 }
 
-/* line 42, ../scss/pyoes/_oe-lists.scss */
+/* line 41, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors li {
   list-style-type: none;
 }
 
-/* line 43, ../scss/pyoes/_oe-lists.scss */
+/* line 42, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors {
   font-family: "Flanders Art Sans", Arial, sans-serif;
   color: #753f7f;
@@ -26799,7 +26817,7 @@ ul.source-authors {
   line-height: 1.6em;
 }
 
-/* line 46, ../scss/pyoes/_oe-lists.scss */
+/* line 45, ../scss/pyoes/_oe-lists.scss */
 .source-authors-block {
   margin-top: 10px;
   height: 255px;
@@ -26807,13 +26825,13 @@ ul.source-authors {
   overflow: scroll;
 }
 
-/* line 47, ../scss/pyoes/_oe-lists.scss */
+/* line 46, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list {
   font-size: 0.8em;
   line-height: 1.6em;
 }
 
-/* line 48, ../scss/pyoes/_oe-lists.scss */
+/* line 47, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list li {
   color: #3f3840;
   border: 1px solid #e5e5e5;
@@ -26821,16 +26839,36 @@ ul.source-authors-list li {
   padding: 4px;
 }
 
-/* line 49, ../scss/pyoes/_oe-lists.scss */
+/* line 48, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list li:hover {
   background: #fbfbfb;
   display: block;
 }
 
-/* line 50, ../scss/pyoes/_oe-lists.scss */
+/* line 49, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list i {
   color: #e5e5e5;
   margin: 0 8px;
+}
+
+/* line 54, ../scss/pyoes/_oe-lists.scss */
+ul.list-selected-items {
+  margin-top: -10px;
+}
+
+/* line 55, ../scss/pyoes/_oe-lists.scss */
+.list-selected-items li {
+  border-bottom: 1px solid #ededed;
+}
+
+/* line 56, ../scss/pyoes/_oe-lists.scss */
+.list-selected-items li i {
+  padding: 5px 0 0 0;
+}
+
+/* line 60, ../scss/pyoes/_oe-lists.scss */
+.f-dropdown-padding li {
+  padding: 5px 0 8px 0;
 }
 
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
@@ -27017,13 +27055,13 @@ article a:hover, .panel p a:hover {
   text-decoration: none;
 }
 
-/* line 33, ../scss/pyoes/_oe-custom.scss */
-ul.tag-label {
+/* line 34, ../scss/pyoes/_oe-custom.scss */
+ul.tag-label, ul.tag-label-col {
   margin: 10px 0 0 0;
 }
 
-/* line 34, ../scss/pyoes/_oe-custom.scss */
-.tag-label li {
+/* line 35, ../scss/pyoes/_oe-custom.scss */
+.tag-label li, .tag-label-col li {
   float: left;
   background-color: #ededed;
   margin: 0 15px 10px 0;
@@ -27032,30 +27070,63 @@ ul.tag-label {
   font-size: 0.9em;
 }
 
-/* line 35, ../scss/pyoes/_oe-custom.scss */
-.tag-label li:first-child {
+/* line 36, ../scss/pyoes/_oe-custom.scss */
+.tag-label li:first-child, .tag-label-col li:first-child {
   background: none;
   padding-left: 0;
 }
 
-/* line 36, ../scss/pyoes/_oe-custom.scss */
+/* line 37, ../scss/pyoes/_oe-custom.scss */
 .tag-label li:last-child {
   background-color: #efefef;
 }
 
-/* line 37, ../scss/pyoes/_oe-custom.scss */
+/* line 38, ../scss/pyoes/_oe-custom.scss */
 .tag-label li a {
   text-decoration: none !important;
   color: black;
 }
 
-/* line 38, ../scss/pyoes/_oe-custom.scss */
-.tag-label li a span {
+/* line 39, ../scss/pyoes/_oe-custom.scss */
+.tag-label li a span, .tag-label-col li a span {
   margin: 2px 0 0 10px;
   color: #FF0000;
+  font-size: 1.1em;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
-/* line 44, ../scss/pyoes/_oe-custom.scss */
+/* line 41, ../scss/pyoes/_oe-custom.scss */
+.tag-label li i {
+  margin: 2px 0 0 10px;
+  color: #FF0000;
+  font-size: 0.8em;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/* line 45, ../scss/pyoes/_oe-custom.scss */
+.label-colored {
+  background-color: #2da3ce;
+}
+
+/* line 46, ../scss/pyoes/_oe-custom.scss */
+.label-colored a {
+  text-decoration: none !important;
+  color: white;
+  padding-right: 3px;
+}
+
+/* line 47, ../scss/pyoes/_oe-custom.scss */
+.label-colored a span {
+  color: white;
+  border-left: 1px dotted #a0d3e8;
+  padding-left: 8px;
+}
+
+/* line 52, ../scss/pyoes/_oe-custom.scss */
 h4.header-img-panel {
   text-transform: uppercase;
   font-size: 1em;
@@ -27063,19 +27134,19 @@ h4.header-img-panel {
 }
 
 /* inventaris article margin */
-/* line 51, ../scss/pyoes/_oe-custom.scss */
+/* line 59, ../scss/pyoes/_oe-custom.scss */
 .articlemargin {
   width: 70%;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 54, ../scss/pyoes/_oe-custom.scss */
+  /* line 62, ../scss/pyoes/_oe-custom.scss */
   .articlemargin {
     width: 100%;
   }
 }
-/* line 58, ../scss/pyoes/_oe-custom.scss */
+/* line 66, ../scss/pyoes/_oe-custom.scss */
 .color-cube {
   height: 100px;
   width: 100px;
@@ -27084,7 +27155,7 @@ h4.header-img-panel {
   padding: 5px;
 }
 
-/* line 65, ../scss/pyoes/_oe-custom.scss */
+/* line 73, ../scss/pyoes/_oe-custom.scss */
 .icon-large-left {
   float: left;
   margin: 0 20px 20px 0;
@@ -27092,40 +27163,54 @@ h4.header-img-panel {
   color: #ededed;
 }
 
-/* line 66, ../scss/pyoes/_oe-custom.scss */
+/* line 74, ../scss/pyoes/_oe-custom.scss */
 .vruler {
   border-left: 1px solid #ededed;
   padding-top: 0px;
 }
 
-/* line 75, ../scss/pyoes/_oe-custom.scss */
+/* line 82, ../scss/pyoes/_oe-custom.scss */
+.icon-large-left {
+  float: left;
+  margin: 0 20px 20px 0;
+  font-size: 60px;
+  color: #ededed;
+}
+
+/* line 83, ../scss/pyoes/_oe-custom.scss */
+.vruler {
+  border-left: 1px solid #ededed;
+  padding-top: 0px;
+}
+
+/* line 92, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard {
   padding: 0;
   background: white;
   border: 1px solid #e5e5e5;
 }
 
-/* line 76, ../scss/pyoes/_oe-custom.scss */
+/* line 93, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard a {
   display: block;
   min-height: 78px;
 }
 
-/* line 77, ../scss/pyoes/_oe-custom.scss */
+/* line 94, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard a:hover {
   background: #fbfbfb;
   display: block;
   min-height: 78px;
 }
 
-/* line 78, ../scss/pyoes/_oe-custom.scss */
+/* line 95, ../scss/pyoes/_oe-custom.scss */
 .actoren-idcard h3 {
   font-size: 1em;
   margin: 0;
   padding: 15px 0 0 0;
 }
 
-/* line 81, ../scss/pyoes/_oe-custom.scss */
+/* line 98, ../scss/pyoes/_oe-custom.scss */
 .actoren-icon-large, .actoren-icon-small {
   float: left;
   color: #ededed;
@@ -27135,7 +27220,7 @@ h4.header-img-panel {
   margin-right: 20px;
 }
 
-/* line 82, ../scss/pyoes/_oe-custom.scss */
+/* line 99, ../scss/pyoes/_oe-custom.scss */
 .actoren-icon-small {
   border-right: 1px solid #e5e5e5;
   margin-right: 15px;
@@ -27143,7 +27228,7 @@ h4.header-img-panel {
   padding: 15px 20px;
 }
 
-/* line 88, ../scss/pyoes/_oe-custom.scss */
+/* line 104, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
@@ -27164,12 +27249,12 @@ h4.header-img-panel {
   margin-bottom: 16px;
 }
 
-/* line 109, ../scss/pyoes/_oe-custom.scss */
+/* line 125, ../scss/pyoes/_oe-custom.scss */
 .placeholder-disabled {
   background-color: #DDDDDD;
 }
 
-/* line 113, ../scss/pyoes/_oe-custom.scss */
+/* line 129, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container label {
   display: table-cell;
   padding-left: 10px;
@@ -27180,7 +27265,7 @@ h4.header-img-panel {
   background-color: transparent;
 }
 
-/* line 123, ../scss/pyoes/_oe-custom.scss */
+/* line 139, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container input[type="text"] {
   border: none !important;
   box-shadow: none;
@@ -27190,7 +27275,7 @@ h4.header-img-panel {
   color: #3f3840;
 }
 
-/* line 132, ../scss/pyoes/_oe-custom.scss */
+/* line 148, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input {
   border: none !important;
   box-shadow: none;
@@ -27201,7 +27286,7 @@ h4.header-img-panel {
   padding-left: 8px;
 }
 
-/* line 142, ../scss/pyoes/_oe-custom.scss */
+/* line 158, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container select {
   border: none;
   box-shadow: none;
@@ -27209,14 +27294,16 @@ h4.header-img-panel {
   display: table-cell;
   background-color: transparent;
   -moz-appearance: none;
+  height: 37px;
+  font-size: 0.9em;
 }
 
-/* line 151, ../scss/pyoes/_oe-custom.scss */
+/* line 168, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container > .combo-dropdown {
   border: 0 !important;
 }
 
-/* line 155, ../scss/pyoes/_oe-custom.scss */
+/* line 172, ../scss/pyoes/_oe-custom.scss */
 .placeholder-container textarea {
   border: none !important;
   box-shadow: none;
@@ -27226,41 +27313,67 @@ h4.header-img-panel {
   resize: vertical;
 }
 
-/* line 164, ../scss/pyoes/_oe-custom.scss */
+/* line 180, ../scss/pyoes/_oe-custom.scss */
+.placeholder-container.error {
+  border: 1px solid #FF0000 !important;
+}
+
+/* line 183, ../scss/pyoes/_oe-custom.scss */
+.placeholder-input-border {
+  border-left: 1px dotted #d3d3d3 !important;
+}
+
+/* line 187, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input.dijitDateTextBox {
   padding-left: 0;
 }
 
-/* line 168, ../scss/pyoes/_oe-custom.scss */
+/* line 191, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input.dijitDateTextBox .dijitArrowButtonContainer {
   border: none !important;
   background: none;
 }
 
-/* line 173, ../scss/pyoes/_oe-custom.scss */
+/* line 196, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input.dijitDateTextBox .dijitInputContainer {
   min-height: 100%;
 }
 
-/* line 177, ../scss/pyoes/_oe-custom.scss */
+/* line 200, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input.dijitDateTextBox input.dijitInputInner {
   padding: 0.5rem !important;
 }
 
-/* line 181, ../scss/pyoes/_oe-custom.scss */
+/* line 204, ../scss/pyoes/_oe-custom.scss */
 .placeholder-input.dijitDateTextBox input.dijitArrowButtonInner {
   width: 1.25rem;
   height: 100% !important;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
 }
 
-/* line 190, ../scss/pyoes/_oe-custom.scss */
+/* line 213, ../scss/pyoes/_oe-custom.scss */
+.plus-icon {
+  padding-top: 12px;
+  padding-left: 8px;
+  color: #3f3840;
+}
+
+/* line 219, ../scss/pyoes/_oe-custom.scss */
+.plus-icon-link {
+  display: table-cell;
+  border-left: 1px dotted #d3d3d3;
+  float: left;
+  vertical-align: middle;
+  height: 37px;
+}
+
+/* line 232, ../scss/pyoes/_oe-custom.scss */
 .checkbox-custom, .radio-custom {
   opacity: 0;
   position: absolute;
 }
 
-/* line 195, ../scss/pyoes/_oe-custom.scss */
+/* line 237, ../scss/pyoes/_oe-custom.scss */
 .checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
   display: inline-block;
   vertical-align: middle;
@@ -27268,12 +27381,12 @@ h4.header-img-panel {
   cursor: pointer;
 }
 
-/* line 202, ../scss/pyoes/_oe-custom.scss */
+/* line 244, ../scss/pyoes/_oe-custom.scss */
 .checkbox-custom-label, .radio-custom-label {
   position: relative;
 }
 
-/* line 206, ../scss/pyoes/_oe-custom.scss */
+/* line 248, ../scss/pyoes/_oe-custom.scss */
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
   content: '';
   background: #b05dbf;
@@ -27286,24 +27399,51 @@ h4.header-img-panel {
   text-align: center;
 }
 
-/* line 218, ../scss/pyoes/_oe-custom.scss */
+/* line 260, ../scss/pyoes/_oe-custom.scss */
 .checkbox-custom:checked + .checkbox-custom-label:before {
   content: '\2714';
-  background: #753f7f;
+  background: #2da3ce;
   color: #fff;
 }
 
-/* line 224, ../scss/pyoes/_oe-custom.scss */
+/* line 266, ../scss/pyoes/_oe-custom.scss */
 .radio-custom + .radio-custom-label:before {
   border-radius: 50%;
 }
 
-/* line 228, ../scss/pyoes/_oe-custom.scss */
+/* line 270, ../scss/pyoes/_oe-custom.scss */
 .radio-custom:checked + .radio-custom-label:before {
   content: '\2714';
   color: #bbb;
 }
 
+/* line 276, ../scss/pyoes/_oe-custom.scss */
+select {
+  -moz-appearance: none !important;
+}
+
+/* line 283, ../scss/pyoes/_oe-custom.scss */
+.postreg-navbar {
+  margin: 0 auto;
+  width: 600px;
+}
+
+@media only screen and (max-width: 578px) {
+  /* line 285, ../scss/pyoes/_oe-custom.scss */
+  .postreg-navbar {
+    margin: 0 auto;
+    width: 600px;
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 578px) and (max-width: 800px) {
+  /* line 288, ../scss/pyoes/_oe-custom.scss */
+  .postreg-navbar {
+    margin: 0 auto;
+    width: 600px;
+    display: inline-block;
+  }
+}
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
 .fl-block {
   margin: 0 0 2em 0;

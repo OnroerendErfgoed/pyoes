@@ -36,7 +36,6 @@ ol.nonumbers {margin-left:0}
 ol.nonumbers > li {list-style-type: none;} 
 
 
-
 // actoren (front-end)
 
 ul.source-authors li {list-style-type: none;}
@@ -48,3 +47,15 @@ ul.source-authors-list  {font-size:0.8em;line-height:1.6em;}
 ul.source-authors-list li  {color:$dark-gray;border:1px solid $mid-gray;margin-bottom:18px;padding:4px}
 ul.source-authors-list li:hover  {background:$white-gray;display:block}
 ul.source-authors-list i  {color:$mid-gray;margin:0 8px}
+
+
+// Multiple fields in placeholder form list > elements form 
+
+ul.list-selected-items  {margin-top:-10px}
+.list-selected-items li {border-bottom:1px solid $light-gray}
+.list-selected-items li i {padding:5px 0 0 0}
+
+
+// list dropdown dropdown box
+.f-dropdown-padding li {padding:5px 0 8px 0;}
+

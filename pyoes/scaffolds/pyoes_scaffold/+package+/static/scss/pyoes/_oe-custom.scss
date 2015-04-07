@@ -29,14 +29,22 @@ article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
 article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
 
 
-// beeldbank
-ul.tag-label  {margin:10px 0 0 0;}
-.tag-label li {float:$default-float;background-color:$light-gray;margin:0 15px 10px 0;display:block;padding:4px 10px;font-size:0.9em}
-.tag-label li:first-child {background:none;padding-left:0}
+// beeldbank / beheersplannen label + colored
+
+ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
+.tag-label li, .tag-label-col li {float:$default-float;background-color:$light-gray;margin:0 15px 10px 0;display:block;padding:4px 10px;font-size:0.9em}
+.tag-label li:first-child, .tag-label-col li:first-child {background:none;padding-left:0}
 .tag-label li:last-child {background-color:$aluminum;}
 .tag-label li a  {text-decoration:none !important;color:$black}
-.tag-label li a span  {margin:2px 0 0 10px;color:$alert-color}
+.tag-label li a span, .tag-label-col li a span  {margin:2px 0 0 10px;color:$alert-color;font-size:1.1em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
 
+.tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
+
+// label colored
+
+.label-colored {background-color:$fresh-blue;}
+.label-colored a {text-decoration:none !important;color:$white;padding-right:3px}
+.label-colored a span {color:$white;border-left:1px dotted $info-color;padding-left:8px}
 
 
 // img panel header ( home page )
@@ -68,9 +76,18 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 
 
+// actoren / beheersplannen homepagina split columns
+
+// icon large left
+.icon-large-left {float:$default-float;margin:0 20px 20px 0;font-size:60px;color:$light-gray}
+.vruler {border-left:1px solid $light-gray;padding-top:0px}
 
 
-// panel actoren front end search 
+
+
+
+
+// panel actoren front end search
 
 .actoren-idcard {padding:0;background:$white;border:1px solid $mid-gray;}
 .actoren-idcard a {display:block;min-height:78px}
@@ -80,7 +97,6 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
 .actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
-
 
 // placeholder  
 
@@ -146,6 +162,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
   display: table-cell;
   background-color: transparent;
   -moz-appearance: none;
+  height:37px;font-size:0.9em
 }
 
 .placeholder-container > .combo-dropdown {
@@ -159,6 +176,12 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
   display: table-cell;
   background-color: transparent !important;
   resize: vertical;
+}
+.placeholder-container.error {
+  border: 1px solid $alert-color !important;
+}
+.placeholder-input-border {
+  border-left: 1px dotted #d3d3d3 !important;
 }
 
 .placeholder-input.dijitDateTextBox {
@@ -183,6 +206,25 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
   height: 100% !important;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
 }
+
+
+// placeholder form + icon
+
+.plus-icon {
+  padding-top: 12px;
+  padding-left: 8px;
+  color: #3f3840;
+}
+
+.plus-icon-link {
+  display:table-cell;
+  border-left: 1px dotted #d3d3d3;
+  float: left;
+  vertical-align: middle;
+  height: 37px;
+}
+
+
 
 //checkbox custom
 
@@ -217,7 +259,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
     content: '\2714';
-    background: $dark-purple;
+    background: $fresh-blue;
     color: #fff;
 }
 
@@ -236,6 +278,14 @@ select {
 }
 
 
+// postregistratie navigation bar
+
+.postreg-navbar {margin:0 auto;width:600px;}
+@media only screen and (max-width:578px) {
+ .postreg-navbar  {margin:0 auto;width:600px;display:table-cell}
+}
+
+@media only screen and (min-width:578px) and (max-width: 800px)  { .postreg-navbar  {margin:0 auto;width:600px;display:inline-block}}
 
 
 

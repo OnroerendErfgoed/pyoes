@@ -1,6 +1,80 @@
 
+<hr>
 
 <!-- form type 1 -->
+<p class="text-center">Inline textfield placeholder</p>
+
+
+      <div class="row">
+        <div class="large-4 columns">
+          <h5>Regular fields</h5>
+          <div class="placeholder-container" tabindex="-1">
+            <label for="email">E-mail</label>
+            <input id="email" placeholder="name@mail.com" title="Your Email" type="text"/>
+          </div>
+          <div class="placeholder-container" tabindex="-1">
+            <label for="username">Username</label>
+            <input id="username" placeholder="taeymma" title="Your Username" type="text"/>
+          </div>
+         
+          <h5>Multiple fields same line</h5>
+          <div class="placeholder-container" tabindex="-1" style="width: 48%;">
+            <label for="email">Email</label>
+            <input id="email" placeholder="name@mail.com" title="Your Email" type="text"/>
+          </div>
+          <div class="placeholder-container" tabindex="-1" class="right" style="width: 48%;">
+            <label for="username">Username</label>
+            <input id="username" placeholder="taeymma" title="Your Username" type="text"/>
+          </div>
+        
+          <h5>Multiple fields in placeholder</h5>
+          <div class="placeholder-container" tabindex="-1">
+            <label for="email">Email</label>
+            <input id="email" placeholder="name@mail.com" title="Your Email" type="text" class="left" style="width: 70%;"/>
+            <select class="placeholder-input-border" style="width: 30%;">
+              <option value=1>werk</option>
+              <option value=2>thuis</option>
+            </select>
+          </div>
+
+          <ul class="nodisk list-selected-items">
+            <li>
+              <small>mail@mail.be <a href=""><i class="fa fa-trash right"></i></a></small></li>
+            <li><small>mail@mail.be <a href=""><i class="fa fa-trash right"></i></a></small></li>
+          </ul>       
+              
+      
+
+      <div class="placeholder-container " tabindex="-1">
+          <label for="email">Telefoon</label>
+          <input id="email" placeholder="+32/0/000.00.00" type="text" class="" style="width:65%;float:left"/>
+          <select id="emailtype" class="placeholder-input-border" class="" style="width:25%;float:left">
+            <option value=1>thuis</option>
+            <option value=2 selected>werk</option>
+          </select>
+          <a href="#" class="plus-icon-link"><i class="fa fa-plus plus-icon"></i></a>
+      </div>
+
+
+<!-- + error -->
+
+      <div class="placeholder-container error" tabindex="-1">
+          <label for="email">Telefoon</label>
+          <input id="email" placeholder="+32/0/000.00.00" type="text" class="" style="width:65%;float:left"/>
+          <select id="emailtype" class="placeholder-input-border" class="" style="width:25%;float:left">
+            <option value=1>thuis</option>
+            <option value=2 selected>werk</option>
+          </select>
+          <a href="#" class="plus-icon-link"><i class="fa fa-plus plus-icon"></i></a>
+      </div>
+
+   <small class="error" style="margin-top:-10px">Gelieve bovenstaand veld correct in te vullen</small>
+
+    </div>
+  </div>
+
+
+
 
 <form>
 
@@ -11,6 +85,7 @@
       </label>
     </div>
   </div>
+
 
 
   <div class="row">
@@ -24,19 +99,19 @@
     </div>
   </div>
 
-
+ 
   <div class="row">
     <div class="large-12 columns">
-
+      
 
 
 
 <div class="row">
-
+     
     <div class="large-4 medium-4">
         <input type="text" placeholder="telefoonnummer" />
         <p id="nameHelpText">vb 000 00 00 00</p>
-    </div>
+    </div>            
 
     <div class="large-4 medium-4">
         <input type="text" placeholder="postcode" />
@@ -45,7 +120,7 @@
     <div class="large-4 medium-4">
         <input type="text" placeholder="postcode" />
     </div>
-
+                     
 </div>
 
 
@@ -131,7 +206,7 @@
 <div class="switch small">
   <input id="exampleCheckboxSwitch" type="checkbox">
   <label for="exampleCheckboxSwitch"></label>
-</div>
+</div> 
 
 
 <!-- Using radio buttons – each switch turns off the other two -->
@@ -139,7 +214,7 @@
 <div class="switch small">
   <input id="exampleRadioSwitch1" type="radio" checked name="testGroup">
   <label for="exampleRadioSwitch1"></label>
-</div>
+</div> 
 
 
 
