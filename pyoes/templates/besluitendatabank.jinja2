@@ -1,0 +1,179 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+<div class="row">
+
+   <div class="large-9 columns">
+
+       <div class="panel clearfix">
+
+		       	<div class="large-12" style="margin-bottom:20px">
+				    <h1>Welkom op de besluitendatabank.</h1>
+				</div>
+
+
+			<div class="clearfix">
+
+				<div class="large-6 medium-6 columns">
+	              <p>Het beheer van onroerend erfgoed is een ruim begrip. Het slaat op alle werken, maatregelen en handelingen die de waarden en kenmerken van het erfgoed in stand houden, verbeteren of herstellen.</p>
+	              <p>Daarbij is het belangrijk na te denken over de ambities op langere termijn.</p>
+	              <p>Die kun je concretiseren in een beheersplan voor het onroerend goed: een document waarin je onder meer vastlegt welke werkzaamheden waar en wanneer nodig zijn. Je kan hier al deze beheersplannen raadplegen</p>
+	            </div>
+
+
+	            <div class="large-6 medium-6 columns vruler">
+	               <i class="fa fa-search icon-large-left"></i>
+	               <h3>Op zoek in de databank?</h3>
+	               <p>Ben je op zoek naar een beschermd item? Deze kun je vinden in onze <a href="https://beschermingen.onroerenderfgoed.be">beschermingsdatabank</a>.</p>
+	               <i class="fa fa-question-circle icon-large-left"></i>
+	               <h3>Vragen?</h3>
+	               <p>Stel je fouten vast of heb je een vraag over een beschermingsbesluit? Mail dan naar <a href="mailto:beschermen@onroerenderfgoed.be">beschermen@onroerenderfgoed.be</a>.</p>
+	            </div>
+
+	 		</div>
+
+       </div>
+
+   </div>
+
+
+
+    <div class="large-3 columns">
+
+	<div class="panel fl-block-search">
+		<h3>Zoeken</h3>
+
+		<form class="form-search" method="GET" action="/besluiten">
+
+				<input name="query" type="text" class="span2 search-query" value="" />
+
+				<select name="sort" class="span2">
+					<option  selected="sorteervolgorde">sorteervolgorde</option>
+					<option  value="-datum_ondertekening">datum ondertekening</option>
+					<option value="onderwerp">onderwerp</option>
+					<option  value="id">id</option>
+				</select>
+
+
+				<h5>beschermingstypes</h5>
+
+				<ul id="facet_beschermingstypes" class="nodisk small-list" >
+
+					<li><label class="checkbox" for="chkbx_beschermingstypes_SD">
+						<input 	type="checkbox" name="beschermingstypes" value="SD" id="chkbx_beschermingstypes_SD" /> stads- of dorpsgezicht <small>(1)</small>
+						</label>
+					</li>
+
+				</ul>
+
+				<h5>provincies</h5>
+
+				<ul id="facet_provincies" class="nodisk small-list" >
+
+						<li>
+							<label 	class="checkbox"
+									for="chkbx_provincies_10000">
+								<input 	type="checkbox"
+										name="provincies"
+										value="10000"
+										id="chkbx_provincies_10000" /> Antwerpen <small>(1)</small>
+							</label>
+						</li>
+
+				</ul>
+
+
+				<h5>rechtsgevolgen</h5>
+
+				<ul id="facet_rechtsgevolgen" class="nodisk small-list">
+
+					<li>
+						<label 	class="checkbox" for="chkbx_rechtsgevolgen_21" style="">
+						<input 	type="checkbox" name="rechtsgevolgen" value="21" id="chkbx_rechtsgevolgen_21" /> besluiten tot ontwerp van lijst <small>(1)</small>
+						</label>
+					</li>
+
+
+				    <li>
+						<label 	class="checkbox" for="chkbx_rechtsgevolgen_15">
+						<input 	type="checkbox" name="rechtsgevolgen" value="15" id="chkbx_rechtsgevolgen_15" /> opheffingsbesluiten <small>(1)</small>
+						</label>
+				     </li>
+				</ul>
+
+
+
+
+
+		<h5>ondertekening</h5>
+
+		<ul id="facet_ondertekening" class="nodisk small-list">
+
+				<li>
+					<label class="checkbox"
+						   for="chkbx_ondertekening_2015">
+						<input type="checkbox"
+							   name="jaar_ondertekening"
+							   value="2015"
+							   id="chkbw_ondertekening_2015"
+
+							   />
+						2015 <small>(1)</small>
+					</label>
+				</li>
+
+		</ul>
+
+				<script type="text/javascript">
+					var hidden = $('#facet_ondertekening li:gt(9)').hide();
+					if (hidden.length > 0) {
+						$('#facet_ondertekening')
+							.after('<p class="facet_expander" id="expand_facet_ondertekening">Meer ...</p>');
+						$('#expand_facet_ondertekening').on('click', function(evt) {
+							if ($('#expand_facet_ondertekening').hasClass('facet_expanded')) {
+								$('#facet_ondertekening li:gt(9)').slideUp('slow');
+								$('#expand_facet_ondertekening').removeClass('facet_expanded');
+								$('#expand_facet_ondertekening').html('Meer ...');
+							} else {
+								$('#facet_ondertekening li:gt(9)').slideDown('slow');
+								$('#expand_facet_ondertekening').addClass('facet_expanded');
+								$('#expand_facet_ondertekening').html('Minder ...');
+							}
+						});
+					}
+				</script>
+
+
+		<h5>personen</h5>
+
+				<ul id="facet_personen" class="nodisk small-list">
+					<li>
+						<label 	class="checkbox" for="chkbx_personen_34">
+							<input 	type="checkbox" name="personen" value="34" id="chkbx_personen_34"/> Prins Karel <small>(1)</small>
+						</label>
+						</label>
+					</li>
+				</ul>
+
+				<h5>uitvaardigers</h5>
+				<ul id="facet_uitvaardigers" class="nodisk small-list">
+
+					<li>
+						<label 	class="checkbox" for="chkbx_uitvaardigers_8">
+							<input 	type="checkbox" name="uitvaardigers" value="8" id="chkbx_uitvaardigers_8" /> besluiten Vlaamse Regering <small>(1)</small>
+						</label>
+					</li>
+				</ul>
+
+				<select name="status" class="span2">
+					<option value=" ">beheer status</option>
+					<option  value="25">klaar voor activatie</option>
+					<option  value="10">klad</option>
+					<option  value="75">actief</option>
+				</select>
+		</form>
+	</div>
+
+   </div>
+</div>
+
+{% endblock %}

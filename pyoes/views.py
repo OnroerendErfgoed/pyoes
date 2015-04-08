@@ -17,6 +17,10 @@ def grids(request):
 def beeldbank(request):
     return {}
 
+@view_config(route_name='besluitendatabank', renderer='templates/besluitendatabank.jinja2')
+def besluitendatabank(request):
+    return {}
+
 @view_config(route_name='beheersplannen', renderer='templates/beheersplannen.jinja2')
 def beheersplannen(request):
     return {}

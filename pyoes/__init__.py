@@ -20,6 +20,7 @@ def main(global_config, **settings):
     config.add_route('actorenzoekdetail', '/actorenzoek/detail')
     config.add_route('beeldbank-detail', '/beeldbank-detail')
     config.add_route('beeldbank-zoeken', '/beeldbank-zoeken')
+    config.add_route('besluitendatabank', '/besluitendatabank')
     config.add_route('inventaris', '/inventaris')
     config.add_route('inventaris-article', '/inventaris-article')
     config.add_route('inventaris-articleID', '/inventaris-articleID')

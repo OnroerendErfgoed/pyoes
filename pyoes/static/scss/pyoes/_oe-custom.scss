@@ -18,6 +18,11 @@ input.error {border: 1px solid $alert-color}
 
 // select optionform beeldbank
 select {height:42px}
+select:focus {outline:none}
+// fix for dropdown arrow in firefox
+select {
+  -moz-appearance: none !important;
+}
 
 
 // articles
@@ -47,6 +52,7 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 .label-colored a span {color:$white;border-left:1px dotted $info-color;padding-left:8px}
 
 
+
 // img panel header ( home page )
 
 h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
@@ -70,16 +76,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 // actoren / beheersplannen homepagina split columns
 
 // icon large left
-.icon-large-left {float:$default-float;margin:0 20px 20px 0;font-size:60px;color:$light-gray}
-.vruler {border-left:1px solid $light-gray;padding-top:0px}
-
-
-
-
-// actoren / beheersplannen homepagina split columns
-
-// icon large left
-.icon-large-left {float:$default-float;margin:0 20px 20px 0;font-size:60px;color:$light-gray}
+.icon-large-left {float:$default-float;margin:0 20px 30px 0;font-size:60px;color:$light-gray}
 .vruler {border-left:1px solid $light-gray;padding-top:0px}
 
 
@@ -87,7 +84,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 
 
-// panel actoren front end search
+// panel actoren front end search 
 
 .actoren-idcard {padding:0;background:$white;border:1px solid $mid-gray;}
 .actoren-idcard a {display:block;min-height:78px}
@@ -97,6 +94,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
 .actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
+
 
 // placeholder  
 
@@ -207,8 +205,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
 }
 
-
-// placeholder form + icon
+// placeholder form + icon 
 
 .plus-icon {
   padding-top: 12px;
@@ -226,6 +223,8 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 
 
+
+
 //checkbox custom
 
 
@@ -238,7 +237,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
-    cursor: pointer;
+    cursor: pointer;  font-size:0.8em;
 }
 
 .checkbox-custom-label, .radio-custom-label {
@@ -247,7 +246,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
     content: '';
-    background: $light-purple;
+    background: $fresh-blue;
     display: inline-block;
     vertical-align: middle;
     width: 20px;
@@ -255,6 +254,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
     padding: 2px;
     margin-right: 10px;
     text-align: center;
+    font-size:0.8em;
 }
 
 .checkbox-custom:checked + .checkbox-custom-label:before {
@@ -272,13 +272,8 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
     color: #bbb;
 }
 
-// fix for dropdown arrow in firefox
-select {
-  -moz-appearance: none !important;
-}
 
-
-// postregistratie navigation bar
+// postregistratie navigation bar 
 
 .postreg-navbar {margin:0 auto;width:600px;}
 @media only screen and (max-width:578px) {
@@ -287,19 +282,7 @@ select {
 
 @media only screen and (min-width:578px) and (max-width: 800px)  { .postreg-navbar  {margin:0 auto;width:600px;display:inline-block}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// fix for dropdown arrow in firefox
+select {
+  -moz-appearance: none !important;
+}
