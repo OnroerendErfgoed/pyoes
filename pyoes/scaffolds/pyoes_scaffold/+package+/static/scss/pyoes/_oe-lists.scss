@@ -59,3 +59,11 @@ ul.list-selected-items  {margin-top:-10px}
 // list dropdown dropdown box
 .f-dropdown-padding li {padding:5px 0 8px 0;}
 
+
+// search list small - ex besluitendatabank
+
+.small-list {margin:0;border-bottom:1px solid $light-gray;padding:0;}
+ul.small-list li  {font-size:0.8em;margin:12px 0 0 0}
+ul.small-list li label {line-height:12px;min-height:12px}
+
+
