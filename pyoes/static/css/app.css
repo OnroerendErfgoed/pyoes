@@ -26854,11 +26854,12 @@ ul.source-authors-list i {
 /* line 54, ../scss/pyoes/_oe-lists.scss */
 ul.list-selected-items {
   margin-top: -10px;
+  margin-left: 10px;
 }
 
 /* line 55, ../scss/pyoes/_oe-lists.scss */
 .list-selected-items li {
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid #d5d5d5;
 }
 
 /* line 56, ../scss/pyoes/_oe-lists.scss */
