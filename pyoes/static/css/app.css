@@ -27470,6 +27470,83 @@ select {
   -moz-appearance: none !important;
 }
 
+/* line 296, ../scss/pyoes/_oe-custom.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+/* line 302, ../scss/pyoes/_oe-custom.scss */
+.alert-success .alert-link {
+  color: #2b542c;
+  text-decoration: underline;
+}
+
+/* line 307, ../scss/pyoes/_oe-custom.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+
+/* line 313, ../scss/pyoes/_oe-custom.scss */
+.alert-info .alert-link {
+  color: #245269;
+  text-decoration: underline;
+}
+
+/* line 317, ../scss/pyoes/_oe-custom.scss */
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+/* line 323, ../scss/pyoes/_oe-custom.scss */
+.alert-warning .alert-link {
+  color: #66512c;
+  text-decoration: underline;
+}
+
+/* line 326, ../scss/pyoes/_oe-custom.scss */
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+/* line 332, ../scss/pyoes/_oe-custom.scss */
+.alert-danger .alert-link {
+  color: #843534;
+  text-decoration: underline;
+}
+
+/* line 339, ../scss/pyoes/_oe-custom.scss */
+.bg-primary {
+  background-color: #944ea1;
+}
+
+/* line 342, ../scss/pyoes/_oe-custom.scss */
+.bg-success {
+  background-color: #43ac6a;
+}
+
+/* line 345, ../scss/pyoes/_oe-custom.scss */
+.bg-info {
+  background-color: #5bc0de;
+}
+
+/* line 348, ../scss/pyoes/_oe-custom.scss */
+.bg-warning {
+  background-color: #f08a24;
+}
+
+/* line 351, ../scss/pyoes/_oe-custom.scss */
+.bg-danger {
+  background-color: #ff0000;
+}
+
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
 .fl-block {
   margin: 0 0 2em 0;
