@@ -3,7 +3,11 @@
     <div class="footer-bottom-inner inner">
       <nav class="footer-doormat clearfix">
         {% block footer scoped %}
-
+          <ul>
+          {% for caption, href in footer_nav %}
+            <li><a href="{{ href }}">{{ caption }}</a></li>
+          {% endfor %}
+          </ul>
         {% endblock %}
       </nav>
     </div>

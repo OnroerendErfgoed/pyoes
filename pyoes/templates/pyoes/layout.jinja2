@@ -11,6 +11,7 @@
 {% set login_sub_nav = login_sub_nav -%}
 {% set service_nav = service_nav -%}
 {% set home_link = home_link -%}
+{% set footer_nav = footer_nav %}
 
 {% set default_footer_nav = [
 	('Toegankelijkheid', '/toegankelijkheid'),
@@ -80,7 +81,7 @@
     {% endblock %}
 
     {% block content scoped %}
-	{% endblock %}
+	  {% endblock %}
 	<div class="push"></div>
 </div>
 <div id="footerContainer">

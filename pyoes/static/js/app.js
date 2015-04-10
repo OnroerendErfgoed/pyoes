@@ -10,6 +10,7 @@ $('#mobile-menu-select').change(function() {
 /*
 // Function to stick footer to the bottom of page
 // -- not working 100% becauce of 'vlaanderen' banners
+*/
 $(document).ready(function() {
     var footer = $("#footer-bottom");
     var pos = footer.position();
@@ -22,4 +23,4 @@ $(document).ready(function() {
             'margin-top': height + 'px'
         });
     }
-});*/
+});
