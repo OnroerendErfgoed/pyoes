@@ -73,9 +73,17 @@
       {% if login_nav|length > 0 %}
         {% if not request.user %}
           <ul class="right">
+           {% if request.authenticated_userid != None %}
+            <li class="has-dropdown">
+              <a href="#">{{ request.authenticated_userid }}</a>
+              <ul class="dropdown">
+           {% endif %}
                {% for caption, href in login_nav %}
                 <li><a href="{{ href }}">{{ caption }}</a></li>
                {% endfor %}
+           {% if request.authenticated_userid != None %}
+              </ul></li>
+           {% endif %}
           </ul>
         {% else %}
           <ul class="right">
