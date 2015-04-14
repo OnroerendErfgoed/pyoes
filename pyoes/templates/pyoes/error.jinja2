@@ -1,0 +1,17 @@
+{% extends "layout.jinja2" %}
+
+{% set mailto_error = mailto_error|default('???') -%}
+
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <h2 class="subheader">Fout opgetreden! - 500</h2>
+            <p>Sorry, er is een onverwachte fout opgetreden.</p>
+            <p>Controleer of uw url en parameters correct zijn en probeer dan nogmaals.</p>
+            <p>Indien het probleem zich blijft voordoen, gelieve contact op te nemen met <a href="mailto:{{ mailto_error }}">{{ mailto_error }}</a>.</p>
+
+            {% block error_info %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
