@@ -1,0 +1,9 @@
+{% extends "pyoes/notfound.jinja2" %}
+
+{% set app_package = '{{package}}' %}
+{% set mailto_notfound = 'ict@onroerenderfgoed.be' %}
+
+{% block notfound_info %}
+
+{% endblock %}
+

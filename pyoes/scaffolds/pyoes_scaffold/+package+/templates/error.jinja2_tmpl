@@ -1,0 +1,8 @@
+{% extends "pyoes/error.jinja2" %}
+
+{% set app_package = '{{package}}' %}
+{% set mailto_error = 'ict@onroerenderfgoed.be' -%}
+
+{% block error_info %}
+
+{% endblock %}
