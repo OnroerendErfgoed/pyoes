@@ -1,11 +1,20 @@
 {% extends "pyoes/layout.jinja2" %}
+
+{% set mailto_notfound = mailto_notfound|default('???') -%}
+
 {% block content %}
 <div class="row">
     <div class="large-12 columns">
         <div class="panel">
-            <h1 class="subheader">Pagina niet gevonden - 404</h1>
-            <p>Sorry, maar de pagina die je hebt opgevraagd werd niet gevonden.
-            Heb je de zoekfunctie al geprobeerd? Die vind je bovenaan elke pagina.
+            <h1 class="subheader">Fout 404 - Pagina werd niet gevonden</h1>
+            <p>De pagina die je hebt opgevraagd, bestaat niet (meer).</p>
+            <h4 class="subheader">Wat nu?</h4>
+            <p>Ben je zeker dat je een correcte URL hebt ingegeven?
+              Ben je op deze foutpagina terechtgekomen na het volgen van een link op onze site?
+              Of ben je van mening dat deze pagina wel zou moeten bestaan?
+
+              Neem dan <a href="mailto:{{ mailto_notfound }}">contact</a> op met een van de beheerders.
+              Vergeet niet te vermelden welke pagina je zocht.
             </p>
 
             {% block notfound_info %}
