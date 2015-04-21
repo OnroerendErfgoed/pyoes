@@ -17,10 +17,8 @@
 }
 
 .logo-block h1 {
-  /*padding-top:45px;*/
   padding-top:45px;
   font-size:34px;
-  /*font-size: 2.9em;*/
   color:$dark-purple;
   float:$default-float;
 }
@@ -43,7 +41,8 @@
 .logo-block img {
   float:$default-float;
   padding:40px 0px 0 5px;
-  vertical-align:bottom
+  vertical-align:bottom;
+  width: 65px;
 }
 
 .bgimage 		{
@@ -53,6 +52,66 @@
   position:absolute;
   right:0;
   z-index:0
+}
+
+@media (max-width: 410px) {
+  .logo-block {
+    width: inherit;
+    height: 120px;
+  }
+
+  .logo-block .logo-block-title {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-block h1 {
+    padding-top:27px;
+  }
+
+  .logo-block h2 {
+    font-size:18px;
+    padding:35px 0 0 0;
+  }
+
+  .logo-block h4 {
+    font-size:7px;
+  }
+
+  .logo-block img {
+    width: 55px;
+    padding:25px 0 0 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-block {
+    width: inherit;
+    height: 90px;
+  }
+
+  .logo-block .logo-block-title {
+    width: 90px;
+    height: 90px;
+  }
+
+  .logo-block img {
+    width: 45px;
+    padding:18px 0 0 0;
+  }
+
+  .logo-block h1 {
+    padding-top:20px;
+  }
+
+  .logo-block h2 {
+    font-size:16px;
+    padding:28px 0 0 0;
+  }
+
+  .logo-block h4 {
+    font-size:7px;
+  }
 }
 
 nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
