@@ -27604,64 +27604,70 @@ select {
   text-decoration: underline;
 }
 
-/* line 23, ../scss/pyoes/_oe-blokken.scss */
+/* line 19, ../scss/pyoes/_oe-blokken.scss */
+.fl-block .block-text {
+  border: 1px solid #e3e3e3 !important;
+  border-top: none !important;
+}
+
+/* line 26, ../scss/pyoes/_oe-blokken.scss */
 .fl-block-largeimage {
   text-align: center;
 }
 
-/* line 24, ../scss/pyoes/_oe-blokken.scss */
+/* line 27, ../scss/pyoes/_oe-blokken.scss */
 .fl-block-largeimage img {
   margin: 10px 0;
   width: 180px;
   height: 180px;
 }
 
-/* line 25, ../scss/pyoes/_oe-blokken.scss */
+/* line 28, ../scss/pyoes/_oe-blokken.scss */
 .fl-block-largeimage a h5 {
   text-transform: uppercase;
 }
 
-/* line 26, ../scss/pyoes/_oe-blokken.scss */
+/* line 29, ../scss/pyoes/_oe-blokken.scss */
 .fl-block-largeimage a:hover h5 {
   text-decoration: underline;
 }
 
-/* line 27, ../scss/pyoes/_oe-blokken.scss */
+/* line 30, ../scss/pyoes/_oe-blokken.scss */
 .fl-block-largeimage .posted {
   line-height: 1em;
   color: #989898;
   margin-top: -0.5em;
 }
 
-/* line 33, ../scss/pyoes/_oe-blokken.scss */
+/* line 36, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more, .fl-block .field a.fa, .fl-block .field i.fa {
   float: right;
   text-decoration: none;
 }
 
-/* line 34, ../scss/pyoes/_oe-blokken.scss */
+/* line 37, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more:hover {
   text-decoration: underline;
 }
 
-/* line 35, ../scss/pyoes/_oe-blokken.scss */
+/* line 38, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more {
   font-family: "Flanders Art Sans Medium", Arial, sans-serif;
   color: #753f7f;
 }
 
-/* line 36, ../scss/pyoes/_oe-blokken.scss */
+/* line 39, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.fa {
   margin-top: 2em;
 }
 
-/* line 37, ../scss/pyoes/_oe-blokken.scss */
+/* line 40, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field:last-child {
   border: none;
   padding-bottom: 1.6em;
 }
 
-/* line 38, ../scss/pyoes/_oe-blokken.scss */
+/* line 41, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field figure {
   float: left;
   overflow: hidden;
@@ -27670,7 +27676,7 @@ select {
   padding: 0;
 }
 
-/* line 41, ../scss/pyoes/_oe-blokken.scss */
+/* line 44, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-date {
   text-transform: uppercase;
   border: none;
@@ -27679,35 +27685,35 @@ select {
   color: white;
 }
 
-/* line 42, ../scss/pyoes/_oe-blokken.scss */
+/* line 45, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-date i {
   float: none;
   margin-right: 0.4em;
 }
 
-/* line 43, ../scss/pyoes/_oe-blokken.scss */
+/* line 46, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image {
   border-bottom: 0;
 }
 
-/* line 44, ../scss/pyoes/_oe-blokken.scss */
+/* line 47, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image img {
   width: 100%;
   display: block;
 }
 
 /* -- RSS newsfeed-- */
-/* line 50, ../scss/pyoes/_oe-blokken.scss */
+/* line 53, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a {
   padding: 0.8em 1.4em 0.4em 1.4em;
 }
 
-/* line 51, ../scss/pyoes/_oe-blokken.scss */
+/* line 54, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a h5 {
   margin-right: 1.8em;
 }
 
-/* line 52, ../scss/pyoes/_oe-blokken.scss */
+/* line 55, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a .posted {
   position: absolute;
   right: 1.2em;
@@ -27719,7 +27725,7 @@ select {
 }
 
 /* -- titles -- */
-/* line 59, ../scss/pyoes/_oe-blokken.scss */
+/* line 62, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title, .fl-block.style-2 .block-title, .fl-block.style-3 .block-title {
   background-color: #753f7f;
   margin: 0;
@@ -27727,24 +27733,24 @@ select {
   font-size: 14px;
 }
 
-/* line 60, ../scss/pyoes/_oe-blokken.scss */
+/* line 63, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-3 .block-title {
   background-color: #2da3ce;
   color: white !important;
 }
 
-/* line 62, ../scss/pyoes/_oe-blokken.scss */
+/* line 65, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title.naked, .fl-block.style-2 .block-title.naked {
   color: #753f7f !important;
 }
 
-/* line 63, ../scss/pyoes/_oe-blokken.scss */
+/* line 66, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 a, .fl-block.style-2 a, .fl-block.style-3 a {
   color: white;
   display: block;
 }
 
-/* line 65, ../scss/pyoes/_oe-blokken.scss */
+/* line 68, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title, .fl-block .block-title.naked {
   background-color: #753f7f;
   text-transform: uppercase;
@@ -27754,27 +27760,27 @@ select {
   padding: 0.9em 1.4em 0.8em 1.2em;
 }
 
-/* line 67, ../scss/pyoes/_oe-blokken.scss */
+/* line 70, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title.naked {
   background-color: white !important;
   color: #753f7f !important;
   padding: 0;
 }
 
-/* line 69, ../scss/pyoes/_oe-blokken.scss */
+/* line 72, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a {
   color: #753f7f !important;
   margin: -8px 0 0 0;
   letter-spacing: -1px;
 }
 
-/* line 70, ../scss/pyoes/_oe-blokken.scss */
+/* line 73, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a:hover {
   text-decoration: underline !important;
 }
 
 /* -- social -- */
-/* line 75, ../scss/pyoes/_oe-blokken.scss */
+/* line 78, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social i.fa {
   float: none;
   margin: 0 1em 0 0.4em;
@@ -27783,49 +27789,49 @@ select {
   font-size: 1.6em;
 }
 
-/* line 76, ../scss/pyoes/_oe-blokken.scss */
+/* line 79, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .fl-block {
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 77, ../scss/pyoes/_oe-blokken.scss */
+/* line 80, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a {
   font-weight: 400;
 }
 
-/* line 78, ../scss/pyoes/_oe-blokken.scss */
+/* line 81, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a:hover {
   text-decoration: none;
 }
 
-/* line 80, ../scss/pyoes/_oe-blokken.scss */
+/* line 83, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.twitter > a {
   color: #2da5da;
 }
 
-/* line 81, ../scss/pyoes/_oe-blokken.scss */
+/* line 84, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.facebook > a {
   color: #3567a6;
 }
 
-/* line 82, ../scss/pyoes/_oe-blokken.scss */
+/* line 85, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.mail > a {
   color: #926da5;
 }
 
-/* line 83, ../scss/pyoes/_oe-blokken.scss */
+/* line 86, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.linkedin > a {
   color: #007ab9;
 }
 
-/* line 85, ../scss/pyoes/_oe-blokken.scss */
+/* line 88, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg {
   background-color: #b05dbf !important;
   color: white;
 }
 
-/* line 86, ../scss/pyoes/_oe-blokken.scss */
+/* line 89, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg h3 a {
   color: white !important;
 }

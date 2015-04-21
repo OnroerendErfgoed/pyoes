@@ -16,7 +16,10 @@
 .fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 { text-transform: uppercase;font-family: $font-family-medium-serif;}
 .fl-block .field.full a:hover h5 {text-decoration: underline;}
 
-
+.fl-block .block-text {
+  border: 1px solid #e3e3e3 !important;
+  border-top: none !important;
+}
 
 // flanders-block-large home
 
