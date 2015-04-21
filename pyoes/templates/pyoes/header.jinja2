@@ -28,7 +28,7 @@
 <div class="logo-block">
   <a href="{{ home_link }}">
     {% set active_title= active_title|default('Erfgoedstijl') -%}
-    <h1>{{active_title}}</h1>
+    <div class="logo-block-title"><h1>{{active_title}}</h1></div>
     <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
     <h2>Vlaanderen</h2>
     <h4>is Onroerend Erfgoed</h4>
