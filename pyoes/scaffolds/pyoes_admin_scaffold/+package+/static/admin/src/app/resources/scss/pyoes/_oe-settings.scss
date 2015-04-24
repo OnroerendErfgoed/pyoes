@@ -44,12 +44,6 @@ $total-columns: 12;
 $column-gutter: rem-calc(30);
 
 
-@media only screen and (max-width:578px) {
-   .bgimage,  #service-navigation, .temp-embed {display:none}
-
-}
-
-
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -119,12 +113,13 @@ $body-font-style: normal;
 $font-smoothing: antialiased;
 
 // Overwrite font-awesome font dir
-$fa-font-path: "../bower_components/font-awesome/fonts";
+$fa-font-path: "../../../font-awesome/fonts";
 
 // Overwrite border bottom and font-weight for tooltip fields
 $has-tip-border-bottom: none;
 $has-tip-border-bottom-hover: none;
 $has-tip-font-weight: none;
+
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -

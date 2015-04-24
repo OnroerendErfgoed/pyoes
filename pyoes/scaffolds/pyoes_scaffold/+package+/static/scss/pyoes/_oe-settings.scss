@@ -44,12 +44,6 @@ $total-columns: 12;
 $column-gutter: rem-calc(30);
 
 
-@media only screen and (max-width:578px) {
-   .bgimage,  #service-navigation, .temp-embed {display:none}
-
-}
-
-
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -125,6 +119,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 $has-tip-border-bottom: none;
 $has-tip-border-bottom-hover: none;
 $has-tip-font-weight: none;
+
 
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -

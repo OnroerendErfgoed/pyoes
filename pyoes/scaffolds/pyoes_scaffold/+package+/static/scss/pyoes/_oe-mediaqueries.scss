@@ -1,0 +1,58 @@
+// OE custom mediaqueries
+
+// General
+@media only screen and (max-width:578px) {
+   .bgimage,  #service-navigation, .temp-embed {display:none}
+}
+
+
+/* inventaris article margin */
+.articlemargin {width:70%;margin:0 auto}
+@media only screen and (max-width:578px) {
+   .articlemargin  {width:100%}
+}
+
+// postregistratie navigation bar
+.postreg-navbar {margin:0 auto;width:600px;}
+@media only screen and (max-width:578px) {
+ .postreg-navbar  {margin:0 auto;width:600px;display:table-cell}
+}
+@media only screen and (min-width:578px) and (max-width: 800px)  { .postreg-navbar  {margin:0 auto;width:600px;display:inline-block}}
+
+
+// Header queries
+@media (max-width: 410px) {
+  .logo-block { width: inherit; height: 120px; }
+  .logo-block .logo-block-title { width: 120px; height: 120px; }
+  .logo-block h1 { padding-top:27px; }
+  .logo-block h2 { font-size:18px; padding:35px 0 0 0; }
+  .logo-block h4 { font-size:8px; }
+  .logo-block img { width: 55px; padding:25px 0 0 0; }
+}
+
+@media (max-width: 320px) {
+  .logo-block { width: inherit; height: 90px; }
+  .logo-block .logo-block-title { width: 90px; height: 90px; }
+  .logo-block img { width: 45px; padding:18px 0 0 0; }
+  .logo-block h1 { padding-top:20px; }
+  .logo-block h2 { font-size:16px; padding:28px 0 0 0; }
+  .logo-block h4 { font-size:8px; }
+}
+
+
+// Footer queries
+/* 2 col */
+@media only screen and (max-width:888px) {
+  footer#footer-bottom .inner nav > ul {width:33.33%;}
+  footer#footer-bottom .inner nav > article {display:none;}
+}
+/* 1 col */
+@media only screen and (max-width:578px) {
+  footer#footer-bottom .inner nav > ul{width:100%;float:none;margin-top:0;}
+  footer#footer-bottom .inner nav > ul li{float:none;width:100%;padding:0;clear:none;padding:0;display:block;margin:0;}
+  footer#footer-bottom .inner nav > ul li > a{ padding:0;width:auto;border:none;text-align: left;border:none;padding-left:20px; color:#3e3d3f;display:block;line-height:36px;border-bottom:1px solid #e6e6e6;position: relative;}
+  footer#footer-bottom .inner nav > ul li > a:hover{background-color:#f2f2f2;padding-left:30px;}
+  footer#footer-bottom .inner nav > ul li > a:before{position: absolute;content:"> ";left:4px;}
+  footer#footer-bottom .inner nav > ul li.active-trail > a{background:none;color:#b4ac11;}
+  footer#footer-bottom .inner nav > ul li > a:hover:before{left:10px;}
+}

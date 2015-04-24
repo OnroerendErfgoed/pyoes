@@ -9,11 +9,13 @@
 @import "pyoes/oe-lists";
 @import "pyoes/oe-statistics";
 @import "pyoes/oe-search";
-@import "pyoes/oe-custom";
 @import "pyoes/oe-blokken";
 @import "pyoes/oe-social";
 @import "pyoes/oe-tables";
 @import "pyoes/oe-images";
+@import "pyoes/oe-elements";
+@import "pyoes/oe-forms";
+@import "pyoes/oe-mediaqueries";
 
 @import "{{package}}";
 

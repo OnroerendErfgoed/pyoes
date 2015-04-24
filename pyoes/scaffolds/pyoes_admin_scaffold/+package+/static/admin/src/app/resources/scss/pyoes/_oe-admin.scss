@@ -1,0 +1,83 @@
+// Private frontend (admin) custom SASS code.
+
+/* General */
+html, body { height: 100%; width: 100%; margin: 0; padding: 0; background: #f3f3f3; overflow:hidden; }
+#appContainer { width: 100%; height: 100%; }
+
+/* Loading overlay */
+.pageOverlay { top: 0; left: 0; position: absolute; height: 100%; width: 100%; z-index: 1001; display: block; }
+#loadingOverlay { background: #484848 url('../img/general/loader.gif') no-repeat center; background-size: 50px 50px; cursor: wait; }
+.loadingMessage { text-align: center; padding-top: 10px; color: #999; }
+
+/* Admin Header */
+$header-height: 50px;
+.appHeader { background-color: #ffffff; height: $header-height; overflow: hidden; }
+.appHeader .headerLeft { height: $header-height; position: relative; margin-right: 305px; padding-left: 20px; }
+.appHeader .headerTitle, .appHeader .headerLogo, .appHeader .headerMenu { display: inline-block; float: left; height: 100%; }
+.appHeader .headerLogo { background: url('../img/pyoes/OE-vlaanderen-logo.png') no-repeat center left; padding-left: 40px; background-size: 40px; margin-left: 15px; }
+.appHeader .headerMenu { padding: 10px; margin-left: 15px; }
+.appHeader h1{ margin: 0; padding: 0; font-size: 26px !important; line-height: $header-height; }
+.appHeader h2 { font-size: 23px; color: #753f7f !important; margin: 0; padding: 5px 0 0 0; }
+.appHeader h4 { font-size: 12px; color: #753f7f !important; margin: 0; padding-left: 3px; }
+.appHeader .headerMenu button { padding: 5px 10px 5px 5px; margin: 0; text-transform: capitalize; }
+.appHeader .headerMenu .fa-bars:before { padding: 5px; }
+.appHeader .headerRight { height: $header-height; float: right; width: 300px; margin-left: 5px; color: #3E769E; text-align: right; font-size: 0.875rem; padding: 5px 5px 0 0; }
+.appHeader .headerRight a, .appHeader .headerRight  a:visited { color: #3E769E; text-decoration: underline; }
+
+/* Admin Footer */
+.appFooter { margin: 0; border-top: 1px #efefef solid; height: 25px; width: 100%; background: #ffffff url('../img/pyoes/OE-vlaanderen-logo.png') no-repeat center left; background-size: 24px; padding-left: 24px; font-size: 0.875rem; }
+
+/* Placeholder admin (dojo) */
+.placeholder-input.dijitDateTextBox { padding-left: 0; }
+.placeholder-input.dijitDateTextBox .dijitArrowButtonContainer { border: none !important; background: none; }
+.placeholder-input.dijitDateTextBox .dijitInputContainer { min-height: 100%; }
+.placeholder-input.dijitDateTextBox input.dijitInputInner { padding: 0.5rem !important; }
+.placeholder-input.dijitDateTextBox input.dijitArrowButtonInner { width: 1.25rem; height: 100% !important; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+); }
+
+
+
+/* ==== DOJO Overrides ==== */
+// Dialog
+.dijitDialogUnderlay { background: rgba(72, 72, 72, 0.8); opacity: 1; }
+.nihilo .dijitDialog .dijitDialogTitle { font-size: 23px; color: #753f7f; }
+.nihilo .dijitDialogCloseIcon { background: none; }
+.dijitDialog .closeText { display: block; }
+.nihilo .dijitDialog { background-color: #FFFFFF; }
+
+// Restore dgrid css
+.dgrid table.dgrid-row-table { margin: 0; background: none; }
+.dgrid table th { width: auto; }
+.dgrid [class*="column"] + [class*="column"]:last-child { float: none; }
+.dgrid-sort-arrow { margin: 0; }
+
+// Tab container
+.nihilo .dijitTabSpacer { border: none; height: 0; }
+.nihilo .dijitTabPaneWrapper { border: none; border-radius: 0; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTab { border: 1px solid #efefef; border-top: none; background: #ffffff none; border-radius: 0; }
+.nihilo .dijitTab .tabLabel, .nihilo .dijitTabCloseButton:before { color: $gray; }
+.nihilo .dijitTabCloseButton { background: none; width: 15px; height: 100%; margin-top: 0; }
+.nihilo .dijitTabCloseButton:before { content: "\f00d"; font-family: FontAwesome; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTabContainerBottom-tabs .dijitTabChecked { border: none; background: #ffffff none; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTab.dijitTabChecked .dijitTabCloseButton{ cursor: pointer; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .tabLabel,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabHover .tabLabel,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .dijitTabCloseButton:before,
+.nihilo .dijitTabContainerBottom-tabs .dijitTabHover .dijitTabCloseButtonHover:before { color: $dark-purple; }
+.nihilo .dijitTabContainerTop-tabs { text-align: center; width: 100% !important; padding: 0; }
+.nihilo .dijitTabContainerTop-tabs .dijitTab { background: $mid-purple none; border: none; border-radius: 0; color: $white; font-size: 0.6875rem; padding: 0.625rem 1.25rem; text-transform: uppercase; line-height: normal; margin: 0 1px 1.25rem 0; }
+.nihilo .dijitTabContainerTop-tabs .dijitTab:hover,
+.nihilo .dijitTabContainerTop-tabs .dijitTab.dijitTabChecked { background: $dark-purple none; }
+
+// Restore dijit css
+.nihilo input[type="text"].dijitInputInner { padding: 0 0.25em !important; }
+.nihilo input[type="text"].dijitArrowButtonInner { background-color: rgba(0, 0, 0, 0); border: none; cursor: pointer; }
+
+// Inputs
+.nihilo .dijitSelect .dijitButtonContents, .nihilo .dijitSelect, .nihilo .dijitTextBox, .nihilo .dijitTextArea { background: #fff none; }
+.nihilo .dijitTextBox { height: 1.5rem; }
+.nihilo .dijitArrowButton, .nihilo input.dijitInputInner { height: 100%; }
+
+// Accordeon container
+.nihilo .dijitAccordionTitle, .nihilo .dijitAccordionTitleSelected { background: #EEEEEE none; }
+.nihilo .dijitAccordionTitleSelected { color: #753f7f; }
+.nihilo .placeholder-disabled .dijitArrowButtonContainer { display: none; }

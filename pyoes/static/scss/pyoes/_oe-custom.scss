@@ -3,7 +3,7 @@
 // OE custom CLASSES form and articles
 //
 
-
+/*
 // form custom
 
 // all buttons text uppercase
@@ -32,8 +32,8 @@ h4 > em {padding:5px 0 10px 0;display:block;font-size:1.3em;line-height:1.3em}
 article > h1 {padding-bottom:18px;}
 article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
 article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
-
-
+*/
+/*
 // beeldbank / beheersplannen label + colored
 
 ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
@@ -42,7 +42,6 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 .tag-label li:last-child {background-color:$aluminum;}
 .tag-label li a  {text-decoration:none !important;color:$black}
 .tag-label li a span, .tag-label-col li a span  {margin:2px 0 0 10px;color:$alert-color;font-size:1.1em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
-
 .tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
 
 // label colored
@@ -61,18 +60,18 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 // temp
 
 /* inventaris article margin */
-
+/*
 .articlemargin {width:70%;margin:0 auto}
 
 @media only screen and (max-width:578px) {
    .articlemargin  {width:100%}
 
+
+.color-cube { height:100px; width:100px; color:$white; float:$default-float; padding:5px }
+
 }
-
-.color-cube {height:100px;width:100px;color:$white;float:$default-float;padding:5px}
-
-
-
+*/
+/*
 // actoren / beheersplannen homepagina split columns
 
 // icon large left
@@ -80,9 +79,9 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 .vruler {border-left:1px solid $light-gray;padding-top:0px}
 
 
+*/
 
-
-
+/*
 
 // panel actoren front end search 
 
@@ -94,11 +93,11 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
 .actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
-
+*/
 
 // placeholder  
 
-
+/*
 .placeholder-container {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
@@ -123,7 +122,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 .placeholder-disabled {
   background-color: #DDDDDD;
 }
-    
+
 .placeholder-container label {
   display: table-cell;
   padding-left: 10px;
@@ -220,10 +219,10 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
   vertical-align: middle;
   height: 37px;
 }
+*/
 
 
-
-
+/*
 
 //checkbox custom
 
@@ -271,10 +270,10 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
    content: '\2714';
     color: #bbb;
 }
-
+*/
 
 // postregistratie navigation bar 
-
+/*
 .postreg-navbar {margin:0 auto;width:600px;}
 @media only screen and (max-width:578px) {
  .postreg-navbar  {margin:0 auto;width:600px;display:table-cell}
@@ -282,14 +281,10 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 @media only screen and (min-width:578px) and (max-width: 800px)  { .postreg-navbar  {margin:0 auto;width:600px;display:inline-block}}
 
-// fix for dropdown arrow in firefox
-select {
-  -moz-appearance: none !important;
-}
 
+*/
 
-
-
+/*
 
 
 //Alt elements alert box 
@@ -352,7 +347,7 @@ select {
   background-color: #ff0000;
 }
 
-
+*/
 
 
 

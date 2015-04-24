@@ -1,18 +1,12 @@
 @charset "UTF-8";
-@media only screen and (max-width: 578px) {
-  /* line 48, ../scss/pyoes/_oe-settings.scss */
-  .bgimage, #service-navigation, .temp-embed {
-    display: none;
-  }
-}
-/* line 242, ../scss/pyoes/_oe-settings.scss */
+/* line 236, ../scss/pyoes/_oe-settings.scss */
 .tabs-content {
   background: #ededed;
   padding: 5px 10px;
   margin-top: 1px;
 }
 
-/* line 243, ../scss/pyoes/_oe-settings.scss */
+/* line 237, ../scss/pyoes/_oe-settings.scss */
 .tabs dd {
   margin-right: 1px !important;
 }
@@ -26337,24 +26331,22 @@ th.hide-for-touch {
   padding: 0 25px 0 13px;
 }
 
-/* line 13, ../scss/pyoes/_oe-header.scss */
+/* line 5, ../scss/pyoes/_oe-header.scss */
 .logo-block .logo-block-title {
   width: 165px;
   height: 135px;
   float: left;
 }
 
-/* line 19, ../scss/pyoes/_oe-header.scss */
+/* line 6, ../scss/pyoes/_oe-header.scss */
 .logo-block h1 {
-  /*padding-top:45px;*/
   padding-top: 45px;
   font-size: 34px;
-  /*font-size: 2.9em;*/
   color: #753f7f;
   float: left;
 }
 
-/* line 28, ../scss/pyoes/_oe-header.scss */
+/* line 7, ../scss/pyoes/_oe-header.scss */
 .logo-block h2 {
   font-size: 23px;
   color: #753f7f !important;
@@ -26363,7 +26355,7 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 35, ../scss/pyoes/_oe-header.scss */
+/* line 8, ../scss/pyoes/_oe-header.scss */
 .logo-block h4 {
   font-size: 12px;
   color: #753f7f !important;
@@ -26372,7 +26364,7 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 43, ../scss/pyoes/_oe-header.scss */
+/* line 9, ../scss/pyoes/_oe-header.scss */
 .logo-block img {
   float: left;
   padding: 40px 0px 0 5px;
@@ -26380,7 +26372,7 @@ th.hide-for-touch {
   width: 65px;
 }
 
-/* line 50, ../scss/pyoes/_oe-header.scss */
+/* line 10, ../scss/pyoes/_oe-header.scss */
 .bgimage {
   background: url(../img/pyoes/header-img.jpg);
   width: 80%;
@@ -26390,120 +26382,50 @@ th.hide-for-touch {
   z-index: 0;
 }
 
-@media (max-width: 410px) {
-  /* line 60, ../scss/pyoes/_oe-header.scss */
-  .logo-block {
-    width: inherit;
-    height: 120px;
-  }
-
-  /* line 65, ../scss/pyoes/_oe-header.scss */
-  .logo-block .logo-block-title {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* line 70, ../scss/pyoes/_oe-header.scss */
-  .logo-block h1 {
-    padding-top: 27px;
-  }
-
-  /* line 74, ../scss/pyoes/_oe-header.scss */
-  .logo-block h2 {
-    font-size: 18px;
-    padding: 35px 0 0 0;
-  }
-
-  /* line 79, ../scss/pyoes/_oe-header.scss */
-  .logo-block h4 {
-    font-size: 7px;
-  }
-
-  /* line 83, ../scss/pyoes/_oe-header.scss */
-  .logo-block img {
-    width: 55px;
-    padding: 25px 0 0 0;
-  }
-}
-@media (max-width: 320px) {
-  /* line 90, ../scss/pyoes/_oe-header.scss */
-  .logo-block {
-    width: inherit;
-    height: 90px;
-  }
-
-  /* line 95, ../scss/pyoes/_oe-header.scss */
-  .logo-block .logo-block-title {
-    width: 90px;
-    height: 90px;
-  }
-
-  /* line 100, ../scss/pyoes/_oe-header.scss */
-  .logo-block img {
-    width: 45px;
-    padding: 18px 0 0 0;
-  }
-
-  /* line 105, ../scss/pyoes/_oe-header.scss */
-  .logo-block h1 {
-    padding-top: 20px;
-  }
-
-  /* line 109, ../scss/pyoes/_oe-header.scss */
-  .logo-block h2 {
-    font-size: 16px;
-    padding: 28px 0 0 0;
-  }
-
-  /* line 114, ../scss/pyoes/_oe-header.scss */
-  .logo-block h4 {
-    font-size: 7px;
-  }
-}
-/* line 119, ../scss/pyoes/_oe-header.scss */
+/* line 12, ../scss/pyoes/_oe-header.scss */
 nav#main-navigation .main-navigation-inner {
   padding: 0;
   position: relative;
 }
 
 /* service nav */
-/* line 122, ../scss/pyoes/_oe-header.scss */
+/* line 15, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   float: right;
   padding: 0;
 }
 
-/* line 123, ../scss/pyoes/_oe-header.scss */
+/* line 16, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li {
   margin-top: 0.4em;
   float: left;
   list-style-type: none;
 }
 
-/* line 124, ../scss/pyoes/_oe-header.scss */
+/* line 17, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a {
   font-size: 0.75em;
   color: #666666;
   line-height: 1.8em;
 }
 
-/* line 125, ../scss/pyoes/_oe-header.scss */
+/* line 18, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li > a {
   border-left: 1px solid #e5e5e5;
   padding: 0 1em;
 }
 
-/* line 126, ../scss/pyoes/_oe-header.scss */
+/* line 19, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:first-child > a {
   border-left: 0;
 }
 
-/* line 127, ../scss/pyoes/_oe-header.scss */
+/* line 20, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a:hover {
   color: #753f7f;
 }
 
-/* line 128, ../scss/pyoes/_oe-header.scss */
+/* line 21, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul {
   display: none;
   background-color: white;
@@ -26511,17 +26433,17 @@ nav#main-navigation .main-navigation-inner {
   position: absolute;
 }
 
-/* line 129, ../scss/pyoes/_oe-header.scss */
+/* line 22, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover i {
   color: #944ea1;
 }
 
-/* line 130, ../scss/pyoes/_oe-header.scss */
+/* line 23, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover ul {
   display: block;
 }
 
-/* line 131, ../scss/pyoes/_oe-header.scss */
+/* line 24, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li a {
   border-top: 1px solid #e5e5e5;
   margin: 0 1em;
@@ -26531,12 +26453,12 @@ nav#main-navigation .main-navigation-inner {
   padding: 0 4px;
 }
 
-/* line 132, ../scss/pyoes/_oe-header.scss */
+/* line 25, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li:first-child a {
   border: none;
 }
 
-/* line 133, ../scss/pyoes/_oe-header.scss */
+/* line 26, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   position: relative;
   z-index: 100;
@@ -26547,14 +26469,14 @@ nav#main-navigation .main-navigation-inner {
   margin-top: 10px;
 }
 
-/* line 135, ../scss/pyoes/_oe-header.scss */
+/* line 28, ../scss/pyoes/_oe-header.scss */
 .inner {
   margin: 0 auto;
   max-width: 1142px;
   padding: 0;
 }
 
-/* line 136, ../scss/pyoes/_oe-header.scss */
+/* line 29, ../scss/pyoes/_oe-header.scss */
 .inner-nav {
   margin: 0 auto;
   max-width: 1142px;
@@ -26568,17 +26490,17 @@ nav#main-navigation .main-navigation-inner {
   margin: 0 auto -100px;
 }
 
-/* line 9, ../scss/pyoes/_oe-footer.scss */
+/* line 4, ../scss/pyoes/_oe-footer.scss */
 #footerContainer {
   height: 55px;
 }
 
-/* line 12, ../scss/pyoes/_oe-footer.scss */
+/* line 5, ../scss/pyoes/_oe-footer.scss */
 .push {
   height: 100px;
 }
 
-/* line 16, ../scss/pyoes/_oe-footer.scss */
+/* line 7, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom {
   clear: both;
   overflow: hidden;
@@ -26586,24 +26508,24 @@ footer#footer-bottom {
   border-top: 5px solid #753f7f;
 }
 
-/* line 17, ../scss/pyoes/_oe-footer.scss */
+/* line 8, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul {
   margin: 1em 0;
   padding-left: 1.4em;
 }
 
-/* line 18, ../scss/pyoes/_oe-footer.scss */
+/* line 9, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav > ul {
   float: left;
   width: 25%;
 }
 
-/* line 19, ../scss/pyoes/_oe-footer.scss */
+/* line 10, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li {
   list-style-type: none;
 }
 
-/* line 20, ../scss/pyoes/_oe-footer.scss */
+/* line 11, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a {
   display: block;
   line-height: 1em;
@@ -26611,100 +26533,29 @@ footer#footer-bottom .inner nav ul li a {
   font-size: 0.875em;
 }
 
-/* line 21, ../scss/pyoes/_oe-footer.scss */
+/* line 12, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a:hover {
   color: black;
 }
 
-/* line 22, ../scss/pyoes/_oe-footer.scss */
+/* line 13, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul li a.active {
   color: #753f7f;
 }
 
-/* line 23, ../scss/pyoes/_oe-footer.scss */
+/* line 14, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner article img {
   margin: auto 0 auto auto;
   display: block;
 }
 
-/* line 24, ../scss/pyoes/_oe-footer.scss */
+/* line 15, ../scss/pyoes/_oe-footer.scss */
 footer#footer-bottom .inner nav ul.lang-switch li {
   float: left;
   margin-right: 0.5em;
   font-size: 0.875em;
 }
 
-/* 2 col */
-@media only screen and (max-width: 888px) {
-  /* line 28, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul {
-    width: 33.33%;
-  }
-
-  /* line 29, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > article {
-    display: none;
-  }
-}
-/* 1 col */
-@media only screen and (max-width: 578px) {
-  /* line 33, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul {
-    width: 100%;
-    float: none;
-    margin-top: 0;
-  }
-
-  /* line 34, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li {
-    float: none;
-    width: 100%;
-    padding: 0;
-    clear: none;
-    padding: 0;
-    display: block;
-    margin: 0;
-  }
-
-  /* line 35, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li > a {
-    padding: 0;
-    width: auto;
-    border: none;
-    text-align: left;
-    border: none;
-    padding-left: 20px;
-    color: #3e3d3f;
-    display: block;
-    line-height: 36px;
-    border-bottom: 1px solid #e6e6e6;
-    position: relative;
-  }
-
-  /* line 36, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li > a:hover {
-    background-color: #f2f2f2;
-    padding-left: 30px;
-  }
-
-  /* line 37, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li > a:before {
-    position: absolute;
-    content: "> ";
-    left: 4px;
-  }
-
-  /* line 38, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li.active-trail > a {
-    background: none;
-    color: #b4ac11;
-  }
-
-  /* line 39, ../scss/pyoes/_oe-footer.scss */
-  footer#footer-bottom .inner nav > ul li > a:hover:before {
-    left: 10px;
-  }
-}
 @font-face {
   font-family: "Flanders Art Sans Light";
   src: url("../fonts/FlandersArtSans-Light.eot");
@@ -26970,6 +26821,58 @@ ul.small-list li label {
   min-height: 12px;
 }
 
+/* line 72, ../scss/pyoes/_oe-lists.scss */
+ul.tag-label, ul.tag-label-col {
+  margin: 10px 0 0 0;
+}
+
+/* line 73, ../scss/pyoes/_oe-lists.scss */
+.tag-label li, .tag-label-col li {
+  float: left;
+  background-color: #ededed;
+  margin: 0 15px 10px 0;
+  display: block;
+  padding: 4px 10px;
+  font-size: 0.9em;
+}
+
+/* line 74, ../scss/pyoes/_oe-lists.scss */
+.tag-label li:first-child, .tag-label-col li:first-child {
+  background: none;
+  padding-left: 0;
+}
+
+/* line 75, ../scss/pyoes/_oe-lists.scss */
+.tag-label li:last-child {
+  background-color: #efefef;
+}
+
+/* line 76, ../scss/pyoes/_oe-lists.scss */
+.tag-label li a {
+  text-decoration: none !important;
+  color: black;
+}
+
+/* line 77, ../scss/pyoes/_oe-lists.scss */
+.tag-label li a span, .tag-label-col li a span {
+  margin: 2px 0 0 10px;
+  color: #FF0000;
+  font-size: 1.1em;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/* line 78, ../scss/pyoes/_oe-lists.scss */
+.tag-label li i {
+  margin: 2px 0 0 10px;
+  color: #FF0000;
+  font-size: 0.8em;
+  border-left: 1px solid white;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
 .circle {
   margin: 0 auto 15px auto;
@@ -27102,527 +27005,6 @@ ul.small-list li label {
   font-size: 0.9em;
   margin: 10px 0 5px 0;
   padding: 0;
-}
-
-/* line 10, ../scss/pyoes/_oe-custom.scss */
-.button {
-  text-transform: uppercase;
-}
-
-/* line 13, ../scss/pyoes/_oe-custom.scss */
-legend {
-  text-transform: uppercase;
-  font-size: 0.8em;
-}
-
-/* line 16, ../scss/pyoes/_oe-custom.scss */
-.error {
-  background: none !important;
-}
-
-/* line 17, ../scss/pyoes/_oe-custom.scss */
-input.error {
-  border: 1px solid #FF0000;
-}
-
-/* line 20, ../scss/pyoes/_oe-custom.scss */
-select {
-  height: 42px;
-}
-
-/* line 21, ../scss/pyoes/_oe-custom.scss */
-select:focus {
-  outline: none;
-}
-
-/* line 23, ../scss/pyoes/_oe-custom.scss */
-select {
-  -moz-appearance: none !important;
-}
-
-/* line 30, ../scss/pyoes/_oe-custom.scss */
-dt, b, strong {
-  font-family: "Flanders Art Sans Bold", Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* line 31, ../scss/pyoes/_oe-custom.scss */
-h4 > em {
-  padding: 5px 0 10px 0;
-  display: block;
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
-
-/* line 32, ../scss/pyoes/_oe-custom.scss */
-article > h1 {
-  padding-bottom: 18px;
-}
-
-/* line 33, ../scss/pyoes/_oe-custom.scss */
-article a, .panel p a {
-  color: #2da3ce;
-  text-decoration: underline;
-}
-
-/* line 34, ../scss/pyoes/_oe-custom.scss */
-article a:hover, .panel p a:hover {
-  color: #2da3ce;
-  text-decoration: none;
-}
-
-/* line 39, ../scss/pyoes/_oe-custom.scss */
-ul.tag-label, ul.tag-label-col {
-  margin: 10px 0 0 0;
-}
-
-/* line 40, ../scss/pyoes/_oe-custom.scss */
-.tag-label li, .tag-label-col li {
-  float: left;
-  background-color: #ededed;
-  margin: 0 15px 10px 0;
-  display: block;
-  padding: 4px 10px;
-  font-size: 0.9em;
-}
-
-/* line 41, ../scss/pyoes/_oe-custom.scss */
-.tag-label li:first-child, .tag-label-col li:first-child {
-  background: none;
-  padding-left: 0;
-}
-
-/* line 42, ../scss/pyoes/_oe-custom.scss */
-.tag-label li:last-child {
-  background-color: #efefef;
-}
-
-/* line 43, ../scss/pyoes/_oe-custom.scss */
-.tag-label li a {
-  text-decoration: none !important;
-  color: black;
-}
-
-/* line 44, ../scss/pyoes/_oe-custom.scss */
-.tag-label li a span, .tag-label-col li a span {
-  margin: 2px 0 0 10px;
-  color: #FF0000;
-  font-size: 1.1em;
-  border-left: 1px solid white;
-  padding-left: 10px;
-  font-weight: bold;
-}
-
-/* line 46, ../scss/pyoes/_oe-custom.scss */
-.tag-label li i {
-  margin: 2px 0 0 10px;
-  color: #FF0000;
-  font-size: 0.8em;
-  border-left: 1px solid white;
-  padding-left: 10px;
-  font-weight: bold;
-}
-
-/* line 50, ../scss/pyoes/_oe-custom.scss */
-.label-colored {
-  background-color: #2da3ce;
-}
-
-/* line 51, ../scss/pyoes/_oe-custom.scss */
-.label-colored a {
-  text-decoration: none !important;
-  color: white;
-  padding-right: 3px;
-}
-
-/* line 52, ../scss/pyoes/_oe-custom.scss */
-.label-colored a span {
-  color: white;
-  border-left: 1px dotted #a0d3e8;
-  padding-left: 8px;
-}
-
-/* line 58, ../scss/pyoes/_oe-custom.scss */
-h4.header-img-panel {
-  text-transform: uppercase;
-  font-size: 1em;
-  padding: 20px 0;
-}
-
-/* inventaris article margin */
-/* line 65, ../scss/pyoes/_oe-custom.scss */
-.articlemargin {
-  width: 70%;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 578px) {
-  /* line 68, ../scss/pyoes/_oe-custom.scss */
-  .articlemargin {
-    width: 100%;
-  }
-}
-/* line 72, ../scss/pyoes/_oe-custom.scss */
-.color-cube {
-  height: 100px;
-  width: 100px;
-  color: white;
-  float: left;
-  padding: 5px;
-}
-
-/* line 79, ../scss/pyoes/_oe-custom.scss */
-.icon-large-left {
-  float: left;
-  margin: 0 20px 30px 0;
-  font-size: 60px;
-  color: #ededed;
-}
-
-/* line 80, ../scss/pyoes/_oe-custom.scss */
-.vruler {
-  border-left: 1px solid #ededed;
-  padding-top: 0px;
-}
-
-/* line 89, ../scss/pyoes/_oe-custom.scss */
-.actoren-idcard {
-  padding: 0;
-  background: white;
-  border: 1px solid #e5e5e5;
-}
-
-/* line 90, ../scss/pyoes/_oe-custom.scss */
-.actoren-idcard a {
-  display: block;
-  min-height: 78px;
-}
-
-/* line 91, ../scss/pyoes/_oe-custom.scss */
-.actoren-idcard a:hover {
-  background: #fbfbfb;
-  display: block;
-  min-height: 78px;
-}
-
-/* line 92, ../scss/pyoes/_oe-custom.scss */
-.actoren-idcard h3 {
-  font-size: 1em;
-  margin: 0;
-  padding: 15px 0 0 0;
-}
-
-/* line 95, ../scss/pyoes/_oe-custom.scss */
-.actoren-icon-large, .actoren-icon-small {
-  float: left;
-  color: #ededed;
-  font-size: 4em;
-  padding: 0px 20px 0 0;
-  border-right: 1px solid #e5e5e5;
-  margin-right: 20px;
-}
-
-/* line 96, ../scss/pyoes/_oe-custom.scss */
-.actoren-icon-small {
-  border-right: 1px solid #e5e5e5;
-  margin-right: 15px;
-  font-size: 3em;
-  padding: 15px 20px;
-}
-
-/* line 102, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
-  background-color: white;
-  font-family: inherit;
-  border: 1px solid #d5d5d5;
-  color: rgba(0, 0, 0, 0.75);
-  display: inline-table;
-  vertical-align: top;
-  font-size: 0.875rem;
-  height: 2.3125rem;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
-  margin: 1px 0;
-  margin-bottom: 16px;
-}
-
-/* line 123, ../scss/pyoes/_oe-custom.scss */
-.placeholder-disabled {
-  background-color: #DDDDDD;
-}
-
-/* line 127, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container label {
-  display: table-cell;
-  padding-left: 10px;
-  color: #3f3840;
-  width: 20%;
-  font-size: 0.775rem;
-  vertical-align: middle;
-  background-color: transparent;
-}
-
-/* line 137, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container input[type="text"] {
-  border: none !important;
-  box-shadow: none;
-  margin: 0;
-  display: table-cell;
-  background-color: transparent !important;
-  color: #3f3840;
-}
-
-/* line 146, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input {
-  border: none !important;
-  box-shadow: none;
-  margin: 0;
-  display: table-cell;
-  background-color: transparent;
-  background: none !important;
-  padding-left: 8px;
-}
-
-/* line 156, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container select {
-  border: none;
-  box-shadow: none;
-  margin: 0;
-  display: table-cell;
-  background-color: transparent;
-  -moz-appearance: none;
-  height: 37px;
-  font-size: 0.9em;
-}
-
-/* line 166, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container > .combo-dropdown {
-  border: 0 !important;
-}
-
-/* line 170, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container textarea {
-  border: none !important;
-  box-shadow: none;
-  margin: 0;
-  display: table-cell;
-  background-color: transparent !important;
-  resize: vertical;
-}
-
-/* line 178, ../scss/pyoes/_oe-custom.scss */
-.placeholder-container.error {
-  border: 1px solid #FF0000 !important;
-}
-
-/* line 181, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input-border {
-  border-left: 1px dotted #d3d3d3 !important;
-}
-
-/* line 185, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input.dijitDateTextBox {
-  padding-left: 0;
-}
-
-/* line 189, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input.dijitDateTextBox .dijitArrowButtonContainer {
-  border: none !important;
-  background: none;
-}
-
-/* line 194, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input.dijitDateTextBox .dijitInputContainer {
-  min-height: 100%;
-}
-
-/* line 198, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input.dijitDateTextBox input.dijitInputInner {
-  padding: 0.5rem !important;
-}
-
-/* line 202, ../scss/pyoes/_oe-custom.scss */
-.placeholder-input.dijitDateTextBox input.dijitArrowButtonInner {
-  width: 1.25rem;
-  height: 100% !important;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
-}
-
-/* line 210, ../scss/pyoes/_oe-custom.scss */
-.plus-icon {
-  padding-top: 12px;
-  padding-left: 8px;
-  color: #3f3840;
-}
-
-/* line 216, ../scss/pyoes/_oe-custom.scss */
-.plus-icon-link {
-  display: table-cell;
-  border-left: 1px dotted #d3d3d3;
-  float: left;
-  vertical-align: middle;
-  height: 37px;
-}
-
-/* line 231, ../scss/pyoes/_oe-custom.scss */
-.checkbox-custom, .radio-custom {
-  opacity: 0;
-  position: absolute;
-}
-
-/* line 236, ../scss/pyoes/_oe-custom.scss */
-.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-/* line 243, ../scss/pyoes/_oe-custom.scss */
-.checkbox-custom-label, .radio-custom-label {
-  position: relative;
-}
-
-/* line 247, ../scss/pyoes/_oe-custom.scss */
-.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
-  content: '';
-  background: #2da3ce;
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  padding: 2px;
-  margin-right: 10px;
-  text-align: center;
-  font-size: 0.8em;
-}
-
-/* line 260, ../scss/pyoes/_oe-custom.scss */
-.checkbox-custom:checked + .checkbox-custom-label:before {
-  content: '\2714';
-  background: #2da3ce;
-  color: #fff;
-}
-
-/* line 266, ../scss/pyoes/_oe-custom.scss */
-.radio-custom + .radio-custom-label:before {
-  border-radius: 50%;
-}
-
-/* line 270, ../scss/pyoes/_oe-custom.scss */
-.radio-custom:checked + .radio-custom-label:before {
-  content: '\2714';
-  color: #bbb;
-}
-
-/* line 278, ../scss/pyoes/_oe-custom.scss */
-.postreg-navbar {
-  margin: 0 auto;
-  width: 600px;
-}
-
-@media only screen and (max-width: 578px) {
-  /* line 280, ../scss/pyoes/_oe-custom.scss */
-  .postreg-navbar {
-    margin: 0 auto;
-    width: 600px;
-    display: table-cell;
-  }
-}
-@media only screen and (min-width: 578px) and (max-width: 800px) {
-  /* line 283, ../scss/pyoes/_oe-custom.scss */
-  .postreg-navbar {
-    margin: 0 auto;
-    width: 600px;
-    display: inline-block;
-  }
-}
-/* line 286, ../scss/pyoes/_oe-custom.scss */
-select {
-  -moz-appearance: none !important;
-}
-
-/* line 296, ../scss/pyoes/_oe-custom.scss */
-.alert-success {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #3c763d;
-}
-
-/* line 302, ../scss/pyoes/_oe-custom.scss */
-.alert-success .alert-link {
-  color: #2b542c;
-  text-decoration: underline;
-}
-
-/* line 307, ../scss/pyoes/_oe-custom.scss */
-.alert-info {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
-}
-
-/* line 313, ../scss/pyoes/_oe-custom.scss */
-.alert-info .alert-link {
-  color: #245269;
-  text-decoration: underline;
-}
-
-/* line 317, ../scss/pyoes/_oe-custom.scss */
-.alert-warning {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  color: #8a6d3b;
-}
-
-/* line 323, ../scss/pyoes/_oe-custom.scss */
-.alert-warning .alert-link {
-  color: #66512c;
-  text-decoration: underline;
-}
-
-/* line 326, ../scss/pyoes/_oe-custom.scss */
-.alert-danger {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #a94442;
-}
-
-/* line 332, ../scss/pyoes/_oe-custom.scss */
-.alert-danger .alert-link {
-  color: #843534;
-  text-decoration: underline;
-}
-
-/* line 339, ../scss/pyoes/_oe-custom.scss */
-.bg-primary {
-  background-color: #944ea1;
-}
-
-/* line 342, ../scss/pyoes/_oe-custom.scss */
-.bg-success {
-  background-color: #43ac6a;
-}
-
-/* line 345, ../scss/pyoes/_oe-custom.scss */
-.bg-info {
-  background-color: #5bc0de;
-}
-
-/* line 348, ../scss/pyoes/_oe-custom.scss */
-.bg-warning {
-  background-color: #f08a24;
-}
-
-/* line 351, ../scss/pyoes/_oe-custom.scss */
-.bg-danger {
-  background-color: #ff0000;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
@@ -27907,6 +27289,51 @@ select {
   color: white !important;
 }
 
+/* line 93, ../scss/pyoes/_oe-blokken.scss */
+.actoren-idcard {
+  padding: 0;
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+
+/* line 94, ../scss/pyoes/_oe-blokken.scss */
+.actoren-idcard a {
+  display: block;
+  min-height: 78px;
+}
+
+/* line 95, ../scss/pyoes/_oe-blokken.scss */
+.actoren-idcard a:hover {
+  background: #fbfbfb;
+  display: block;
+  min-height: 78px;
+}
+
+/* line 96, ../scss/pyoes/_oe-blokken.scss */
+.actoren-idcard h3 {
+  font-size: 1em;
+  margin: 0;
+  padding: 15px 0 0 0;
+}
+
+/* line 98, ../scss/pyoes/_oe-blokken.scss */
+.actoren-icon-large, .actoren-icon-small {
+  float: left;
+  color: #ededed;
+  font-size: 4em;
+  padding: 0px 20px 0 0;
+  border-right: 1px solid #e5e5e5;
+  margin-right: 20px;
+}
+
+/* line 99, ../scss/pyoes/_oe-blokken.scss */
+.actoren-icon-small {
+  border-right: 1px solid #e5e5e5;
+  margin-right: 15px;
+  font-size: 3em;
+  padding: 15px 20px;
+}
+
 /* line 5, ../scss/pyoes/_oe-social.scss */
 ul.socialbox {
   list-style: none;
@@ -28131,4 +27558,547 @@ figcaption {
 /* line 20, ../scss/pyoes/_oe-images.scss */
 aside img {
   margin: 5px 30px 5px 0;
+}
+
+/* Icons main page */
+/* line 4, ../scss/pyoes/_oe-elements.scss */
+.icon-large-left {
+  float: left;
+  margin: 0 20px 30px 0;
+  font-size: 60px;
+  color: #ededed;
+}
+
+/* line 5, ../scss/pyoes/_oe-elements.scss */
+.vruler {
+  border-left: 1px solid #ededed;
+  padding-top: 0px;
+}
+
+/* Alt elements alert box */
+/* line 9, ../scss/pyoes/_oe-elements.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+/* line 10, ../scss/pyoes/_oe-elements.scss */
+.alert-success .alert-link {
+  color: #2b542c;
+  text-decoration: underline;
+}
+
+/* line 11, ../scss/pyoes/_oe-elements.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+
+/* line 12, ../scss/pyoes/_oe-elements.scss */
+.alert-info .alert-link {
+  color: #245269;
+  text-decoration: underline;
+}
+
+/* line 13, ../scss/pyoes/_oe-elements.scss */
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+
+/* line 14, ../scss/pyoes/_oe-elements.scss */
+.alert-warning .alert-link {
+  color: #66512c;
+  text-decoration: underline;
+}
+
+/* line 15, ../scss/pyoes/_oe-elements.scss */
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+/* line 16, ../scss/pyoes/_oe-elements.scss */
+.alert-danger .alert-link {
+  color: #843534;
+  text-decoration: underline;
+}
+
+/* line 18, ../scss/pyoes/_oe-elements.scss */
+.bg-primary {
+  background-color: #944ea1;
+}
+
+/* line 19, ../scss/pyoes/_oe-elements.scss */
+.bg-success {
+  background-color: #43ac6a;
+}
+
+/* line 20, ../scss/pyoes/_oe-elements.scss */
+.bg-info {
+  background-color: #5bc0de;
+}
+
+/* line 21, ../scss/pyoes/_oe-elements.scss */
+.bg-warning {
+  background-color: #f08a24;
+}
+
+/* line 22, ../scss/pyoes/_oe-elements.scss */
+.bg-danger {
+  background-color: #ff0000;
+}
+
+/* line 26, ../scss/pyoes/_oe-elements.scss */
+.label-colored {
+  background-color: #2da3ce;
+}
+
+/* line 27, ../scss/pyoes/_oe-elements.scss */
+.label-colored a {
+  text-decoration: none !important;
+  color: white;
+  padding-right: 3px;
+}
+
+/* line 28, ../scss/pyoes/_oe-elements.scss */
+.label-colored a span {
+  color: white;
+  border-left: 1px dotted #a0d3e8;
+  padding-left: 8px;
+}
+
+/* line 32, ../scss/pyoes/_oe-elements.scss */
+h4.header-img-panel {
+  text-transform: uppercase;
+  font-size: 1em;
+  padding: 20px 0;
+}
+
+/* line 34, ../scss/pyoes/_oe-elements.scss */
+.color-cube {
+  height: 100px;
+  width: 100px;
+  color: white;
+  float: left;
+  padding: 5px;
+}
+
+/* line 37, ../scss/pyoes/_oe-elements.scss */
+dt, b, strong {
+  font-family: "Flanders Art Sans Bold", Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* line 38, ../scss/pyoes/_oe-elements.scss */
+h4 > em {
+  padding: 5px 0 10px 0;
+  display: block;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+/* line 39, ../scss/pyoes/_oe-elements.scss */
+article > h1 {
+  padding-bottom: 18px;
+}
+
+/* line 40, ../scss/pyoes/_oe-elements.scss */
+article a, .panel p a {
+  color: #2da3ce;
+  text-decoration: underline;
+}
+
+/* line 41, ../scss/pyoes/_oe-elements.scss */
+article a:hover, .panel p a:hover {
+  color: #2da3ce;
+  text-decoration: none;
+}
+
+/* Placeholder fields */
+/* line 4, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #d5d5d5;
+  color: rgba(0, 0, 0, 0.75);
+  display: inline-table;
+  vertical-align: top;
+  font-size: 0.875rem;
+  height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  margin: 1px 0 16px 0;
+}
+
+/* line 6, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container label {
+  display: table-cell;
+  padding-left: 10px;
+  color: #3f3840;
+  width: 20%;
+  font-size: 0.775rem;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+/* line 7, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container input[type="text"] {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent !important;
+  color: #3f3840;
+}
+
+/* line 8, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container select {
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent;
+  -moz-appearance: none;
+  height: 37px;
+  font-size: 0.9em;
+}
+
+/* line 9, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container > .combo-dropdown {
+  border: 0 !important;
+}
+
+/* line 10, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container textarea {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent !important;
+  resize: vertical;
+}
+
+/* line 11, ../scss/pyoes/_oe-forms.scss */
+.placeholder-container.error {
+  border: 1px solid #FF0000 !important;
+}
+
+/* line 12, ../scss/pyoes/_oe-forms.scss */
+.placeholder-input {
+  border: none !important;
+  box-shadow: none;
+  margin: 0;
+  display: table-cell;
+  background-color: transparent;
+  background: none !important;
+  padding-left: 8px;
+}
+
+/* line 13, ../scss/pyoes/_oe-forms.scss */
+.placeholder-input-border {
+  border-left: 1px dotted #d3d3d3 !important;
+}
+
+/* line 14, ../scss/pyoes/_oe-forms.scss */
+.placeholder-disabled {
+  background-color: #DDDDDD;
+}
+
+/* line 16, ../scss/pyoes/_oe-forms.scss */
+.plus-icon {
+  padding-top: 12px;
+  padding-left: 8px;
+  color: #3f3840;
+}
+
+/* line 17, ../scss/pyoes/_oe-forms.scss */
+.plus-icon-link {
+  display: table-cell;
+  border-left: 1px dotted #d3d3d3;
+  float: left;
+  vertical-align: middle;
+  height: 37px;
+}
+
+/* Checkbox custom */
+/* line 21, ../scss/pyoes/_oe-forms.scss */
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+/* line 22, ../scss/pyoes/_oe-forms.scss */
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+/* line 23, ../scss/pyoes/_oe-forms.scss */
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+}
+
+/* line 24, ../scss/pyoes/_oe-forms.scss */
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #2da3ce;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* line 25, ../scss/pyoes/_oe-forms.scss */
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  content: '\2714';
+  background: #2da3ce;
+  color: #fff;
+}
+
+/* line 26, ../scss/pyoes/_oe-forms.scss */
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+/* line 27, ../scss/pyoes/_oe-forms.scss */
+.radio-custom:checked + .radio-custom-label:before {
+  content: '\2714';
+  color: #bbb;
+}
+
+/* Form custom */
+/* line 32, ../scss/pyoes/_oe-forms.scss */
+.button {
+  text-transform: uppercase;
+}
+
+/* line 34, ../scss/pyoes/_oe-forms.scss */
+legend {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+/* line 36, ../scss/pyoes/_oe-forms.scss */
+.error {
+  background: none !important;
+}
+
+/* line 37, ../scss/pyoes/_oe-forms.scss */
+input.error {
+  border: 1px solid #FF0000;
+}
+
+/* line 39, ../scss/pyoes/_oe-forms.scss */
+select {
+  height: 42px;
+}
+
+/* line 40, ../scss/pyoes/_oe-forms.scss */
+select:focus {
+  outline: none;
+}
+
+/* line 42, ../scss/pyoes/_oe-forms.scss */
+select {
+  -moz-appearance: none !important;
+}
+
+@media only screen and (max-width: 578px) {
+  /* line 5, ../scss/pyoes/_oe-mediaqueries.scss */
+  .bgimage, #service-navigation, .temp-embed {
+    display: none;
+  }
+}
+/* inventaris article margin */
+/* line 10, ../scss/pyoes/_oe-mediaqueries.scss */
+.articlemargin {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 578px) {
+  /* line 12, ../scss/pyoes/_oe-mediaqueries.scss */
+  .articlemargin {
+    width: 100%;
+  }
+}
+/* line 16, ../scss/pyoes/_oe-mediaqueries.scss */
+.postreg-navbar {
+  margin: 0 auto;
+  width: 600px;
+}
+
+@media only screen and (max-width: 578px) {
+  /* line 18, ../scss/pyoes/_oe-mediaqueries.scss */
+  .postreg-navbar {
+    margin: 0 auto;
+    width: 600px;
+    display: table-cell;
+  }
+}
+@media only screen and (min-width: 578px) and (max-width: 800px) {
+  /* line 20, ../scss/pyoes/_oe-mediaqueries.scss */
+  .postreg-navbar {
+    margin: 0 auto;
+    width: 600px;
+    display: inline-block;
+  }
+}
+@media (max-width: 410px) {
+  /* line 25, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block {
+    width: inherit;
+    height: 120px;
+  }
+
+  /* line 26, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block .logo-block-title {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* line 27, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h1 {
+    padding-top: 27px;
+  }
+
+  /* line 28, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h2 {
+    font-size: 18px;
+    padding: 35px 0 0 0;
+  }
+
+  /* line 29, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h4 {
+    font-size: 8px;
+  }
+
+  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block img {
+    width: 55px;
+    padding: 25px 0 0 0;
+  }
+}
+@media (max-width: 320px) {
+  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block {
+    width: inherit;
+    height: 90px;
+  }
+
+  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block .logo-block-title {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* line 36, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block img {
+    width: 45px;
+    padding: 18px 0 0 0;
+  }
+
+  /* line 37, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h1 {
+    padding-top: 20px;
+  }
+
+  /* line 38, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h2 {
+    font-size: 16px;
+    padding: 28px 0 0 0;
+  }
+
+  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h4 {
+    font-size: 8px;
+  }
+}
+/* 2 col */
+@media only screen and (max-width: 888px) {
+  /* line 46, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul {
+    width: 33.33%;
+  }
+
+  /* line 47, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > article {
+    display: none;
+  }
+}
+/* 1 col */
+@media only screen and (max-width: 578px) {
+  /* line 51, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul {
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
+
+  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li {
+    float: none;
+    width: 100%;
+    padding: 0;
+    clear: none;
+    padding: 0;
+    display: block;
+    margin: 0;
+  }
+
+  /* line 53, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li > a {
+    padding: 0;
+    width: auto;
+    border: none;
+    text-align: left;
+    border: none;
+    padding-left: 20px;
+    color: #3e3d3f;
+    display: block;
+    line-height: 36px;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+  }
+
+  /* line 54, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li > a:hover {
+    background-color: #f2f2f2;
+    padding-left: 30px;
+  }
+
+  /* line 55, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li > a:before {
+    position: absolute;
+    content: "> ";
+    left: 4px;
+  }
+
+  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li.active-trail > a {
+    background: none;
+    color: #b4ac11;
+  }
+
+  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
+  footer#footer-bottom .inner nav > ul li > a:hover:before {
+    left: 10px;
+  }
 }

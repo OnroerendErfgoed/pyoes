@@ -1,118 +1,13 @@
 
 .wrapper {background:$white}
 
-.logo-block {
-  width:410px;
-  background: url(../img/pyoes/header-logo-bg.png) no-repeat;
-  height:135px;
-  position:relative;
-  z-index:40;
-  padding:0 25px 0 13px;
-}
-
-.logo-block .logo-block-title {
-  width: 165px;
-  height: 135px;
-  float: left;
-}
-
-.logo-block h1 {
-  padding-top:45px;
-  font-size:34px;
-  color:$dark-purple;
-  float:$default-float;
-}
-
-.logo-block h2 {
-  font-size:23px;
-  color:$dark-purple !important;
-  float:$default-float;
-  padding:51px 0 0 0;margin:0
-}
-
-.logo-block h4 {
-  font-size:12px;
-  color:$dark-purple !important;
-  float:$default-float;
-  padding-left:3px;
-  margin:0
-}
-
-.logo-block img {
-  float:$default-float;
-  padding:40px 0px 0 5px;
-  vertical-align:bottom;
-  width: 65px;
-}
-
-.bgimage 		{
-  background:url(../img/pyoes/header-img.jpg);
-  width: 80%;
-  height:135px;
-  position:absolute;
-  right:0;
-  z-index:0
-}
-
-@media (max-width: 410px) {
-  .logo-block {
-    width: inherit;
-    height: 120px;
-  }
-
-  .logo-block .logo-block-title {
-    width: 120px;
-    height: 120px;
-  }
-
-  .logo-block h1 {
-    padding-top:27px;
-  }
-
-  .logo-block h2 {
-    font-size:18px;
-    padding:35px 0 0 0;
-  }
-
-  .logo-block h4 {
-    font-size:7px;
-  }
-
-  .logo-block img {
-    width: 55px;
-    padding:25px 0 0 0;
-  }
-}
-
-@media (max-width: 320px) {
-  .logo-block {
-    width: inherit;
-    height: 90px;
-  }
-
-  .logo-block .logo-block-title {
-    width: 90px;
-    height: 90px;
-  }
-
-  .logo-block img {
-    width: 45px;
-    padding:18px 0 0 0;
-  }
-
-  .logo-block h1 {
-    padding-top:20px;
-  }
-
-  .logo-block h2 {
-    font-size:16px;
-    padding:28px 0 0 0;
-  }
-
-  .logo-block h4 {
-    font-size:7px;
-  }
-}
+.logo-block { width:410px; background: url(../img/pyoes/header-logo-bg.png) no-repeat; height:135px; position:relative; z-index:40; padding:0 25px 0 13px; }
+.logo-block .logo-block-title { width: 165px; height: 135px; float: left; }
+.logo-block h1 { padding-top:45px; font-size:34px; color:$dark-purple; float:$default-float; }
+.logo-block h2 { font-size:23px; color:$dark-purple !important; float:$default-float; padding:51px 0 0 0;margin:0 }
+.logo-block h4 { font-size:12px; color:$dark-purple !important; float:$default-float; padding-left:3px; margin:0 }
+.logo-block img { float:$default-float; padding:40px 0px 0 5px; vertical-align:bottom; width: 65px; }
+.bgimage { background:url(../img/pyoes/header-img.jpg); width: 80%; height:135px; position:absolute; right:0; z-index:0 }
 
 nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 
