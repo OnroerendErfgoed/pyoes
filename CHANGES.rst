@@ -1,3 +1,14 @@
+0.4.0 (24-04-2015)
+==================
+
+* fix voor favicon
+* Speciale input velden toegevoegd
+* Voorbeeldtemplates verder uitgewerkt
+* Generieke 404/500 templates toegevoegd
+* Alertblock toegevoegd
+* Mediaqueries toegevoegd die problemen met header op mobile devices oplost
+* Problemen met footer verholpen
+
 0.3.3 (04-03-2015)
 ==================
 * Fix voor gebruikersnamen
