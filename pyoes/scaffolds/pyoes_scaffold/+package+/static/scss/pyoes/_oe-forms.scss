@@ -12,6 +12,7 @@
 .placeholder-input { border: none !important; box-shadow: none; margin: 0; display: table-cell; background-color: transparent; background: none !important; padding-left: 8px; }
 .placeholder-input-border { border-left: 1px dotted #d3d3d3 !important; }
 .placeholder-disabled { background-color: #DDDDDD; }
+.placeholder-textarea label { vertical-align: top; padding-top: 8px;}
 
 .plus-icon { padding-top: 12px; padding-left: 8px; color: #3f3840; }
 .plus-icon-link { display:table-cell; border-left: 1px dotted #d3d3d3; float: left; vertical-align: middle; height: 37px; }
