@@ -43,6 +43,7 @@ def main(global_config, **settings):
     config.add_route('geoportaal', '/geoportaal')
     config.add_route('pinpoints', '/pinpoints')
     config.add_route('404', '/404')
+    config.add_route('atramhasismenu', '/atramhasismenu')
 
     includeme(config)
 
