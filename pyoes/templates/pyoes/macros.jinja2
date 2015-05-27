@@ -11,3 +11,8 @@
     </script>
     <!-- End Google Analytics -->
 {% endmacro %}
+
+{% macro generate_uri(request, settingsURI, id) %}
+  {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
+{% endmacro %}
+
