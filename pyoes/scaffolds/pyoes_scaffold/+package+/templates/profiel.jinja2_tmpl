@@ -1,0 +1,3 @@
+{% extends "pyoes/profiel.jinja2" %}
+
+{% set app_package = 'adviezen' %}
