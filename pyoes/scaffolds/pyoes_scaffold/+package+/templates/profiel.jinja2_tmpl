@@ -1,7 +1,7 @@
 {% extends "layout.jinja2" %}
 {% set app_package = '{{package}}' %}
 
-{% block html_title %}Profiel | {{ app_package|capitalize }} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Profiel | {{ app_package }} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
 <div class="row">
