@@ -1,7 +1,7 @@
 {% extends "layout.jinja2" %}
-{% set app_package = '{{package}}' %}
+{% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Profiel | {{package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Profiel | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
 <div class="row">
