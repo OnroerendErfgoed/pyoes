@@ -7,6 +7,8 @@ notifications:
  email:
     - koen.vandaele@rwo.vlaanderen.be
     - klaas.millet@rwo.vlaanderen.be
+env:
+ - LC_ALL=en_US.utf-8
 install:
  - pip install -r requirements-dev.txt
  - python setup.py develop
