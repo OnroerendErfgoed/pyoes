@@ -11,8 +11,8 @@ pyoes: Pyramid OE style
 Pyoes is een package om het makkelijker te maken om layout te delen tussen de verschillende OE
 (Onroerend Erfgoed) sites.
 
-Informatie over het werken met deze bibliotheek kun je vinden in de `docs` 
-folder. Deze kan gebuild worden tot propere documentatie met behulp van 
+Informatie over het werken met deze bibliotheek kun je vinden in de `docs`
+folder. Deze kan gebuild worden tot propere documentatie met behulp van
 `Sphinx <http://sphinx-doc.org>`_.
 
 Zorg dat Sphinx wel aanwezig is in de virtual environment waarin je pyoes hebt geïnstalleerd.
