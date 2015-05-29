@@ -24,4 +24,4 @@ class StaticViewTests(unittest.TestCase):
         sv = self._get_static_view(request)
         res = sv.faviconico()
         self.assertIsInstance(res, FileResponse)
-        self.assertEqual('image/x-icon', res.content_type)
+        assert res.content_type in ['image/x-icon', 'image/vnd.microsoft.icon']

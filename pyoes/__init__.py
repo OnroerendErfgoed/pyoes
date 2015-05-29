@@ -52,7 +52,7 @@ def main(global_config, **settings):
 
 
 def includeme(config):
-    
+
     config.add_static_view('pyoes_static', 'pyoes:static')
     config.scan('pyoes.static_views')
 
