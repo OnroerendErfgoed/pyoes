@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
+
 from pyramid.config import Configurator
 
 
-def main(global_config, **settings):
-    """ This function returns a Pyramid WSGI application.
+def main(global_config, **settings): # pragma: no cover
+    """
+    Returns a pyramid application that can help demo the style.
     """
     config = Configurator(settings=settings)
     config.add_static_view('static', 'static', cache_max_age=3600)
@@ -52,6 +55,11 @@ def main(global_config, **settings):
 
 
 def includeme(config):
+    '''
+    Include pyoes in a pyramid application.
+
+    :param pyramid.config.Configurator config:
+    '''
 
     config.add_static_view('pyoes_static', 'pyoes:static')
     config.scan('pyoes.static_views')
