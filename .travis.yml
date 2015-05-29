@@ -3,6 +3,10 @@ python:
  - 2.7
  - 3.3
  - 3.4
+notifications:
+ email:
+    - koen.vandaele@rwo.vlaanderen.be
+    - klaas.millet@rwo.vlaanderen.be
 install:
  - pip install -r requirements-dev.txt
  - python setup.py develop
