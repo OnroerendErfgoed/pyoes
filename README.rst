@@ -5,6 +5,10 @@ pyoes: Pyramid OE style
         :target: https://travis-ci.org/OnroerendErfgoed/pyoes
 .. image:: https://coveralls.io/repos/OnroerendErfgoed/pyoes/badge.png?branch=master
         :target: https://coveralls.io/r/OnroerendErfgoed/pyoes
+
+.. image:: https://readthedocs.org/projects/pyoes/badge/?version=latest
+        :target: https://readthedocs.org/projects/pyoes/?badge=latest
+        :alt: Documentation Status
 .. image:: https://badge.fury.io/py/pyoes.png
         :target: http://badge.fury.io/py/pyoes
 
