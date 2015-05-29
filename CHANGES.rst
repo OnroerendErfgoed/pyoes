@@ -1,3 +1,12 @@
+0.4.1 (29-05-2015)
+==================
+
+* Added a textarea element with an inline label
+* Added a checkbox with a placeholder
+* Added a generic profile template
+* Added a macro for generating a URI for a resource
+* Added a generic datetime format filter
+
 0.4.0 (24-04-2015)
 ==================
 
