@@ -6,6 +6,9 @@
 * Added a generic profile template
 * Added a macro for generating a URI for a resource
 * Added a generic datetime format filter
+* Cleaned up some project related stuff and docs.
+* Raise the coverage significantly by writing some new tests and excluding some
+  things from coverage.
 
 0.4.0 (24-04-2015)
 ==================
