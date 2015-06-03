@@ -11,6 +11,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.rst')).read()
 requires = [
     'pyramid',
     'pyramid_jinja2',
+    'python-dateutil',
     ]
 
 setup(name='pyoes',
