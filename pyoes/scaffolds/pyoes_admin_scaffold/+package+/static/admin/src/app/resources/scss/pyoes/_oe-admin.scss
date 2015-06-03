@@ -5,20 +5,20 @@ html, body { height: 100%; width: 100%; margin: 0; padding: 0; background: #f3f3
 #appContainer { width: 100%; height: 100%; }
 
 /* Loading overlay */
-.pageOverlay { top: 0; left: 0; position: absolute; height: 100%; width: 100%; z-index: 1001; display: block; }
-#loadingOverlay { background: #484848 url('../img/general/loader.gif') no-repeat center; background-size: 50px 50px; cursor: wait; }
-.loadingMessage { text-align: center; padding-top: 10px; color: #999; }
+.pageOverlay { top: 0; left: 0; position: absolute; height: 100%; width: 100%; z-index: 1001; display: block; background: #484848; text-align: center;}
+//#loadingOverlay { background: #484848 url('../img/general/loader.gif') no-repeat center; background-size: 50px 50px; cursor: wait; }
+.loadingMessage {font-size: 1em; margin: 30px; color: #999; }
 
 /* Admin Header */
 $header-height: 50px;
-.appHeader { background-color: #ffffff; height: $header-height; overflow: hidden; }
+.appHeader { background-color: $white; height: $header-height; overflow: hidden; }
 .appHeader .headerLeft { height: $header-height; position: relative; margin-right: 305px; padding-left: 20px; }
-.appHeader .headerTitle, .appHeader .headerLogo, .appHeader .headerMenu { display: inline-block; float: left; height: 100%; }
+.appHeader .headerTitle, .appHeader .headerLogo, .appHeader .headerMenu { display: inline-block; float: left; height: 100%; margin-right: 15px;}
 .appHeader .headerLogo { background: url('../img/pyoes/OE-vlaanderen-logo.png') no-repeat center left; padding-left: 40px; background-size: 40px; margin-left: 15px; }
 .appHeader .headerMenu { padding: 10px; margin-left: 15px; }
 .appHeader h1{ margin: 0; padding: 0; font-size: 26px !important; line-height: $header-height; }
-.appHeader h2 { font-size: 23px; color: #753f7f !important; margin: 0; padding: 5px 0 0 0; }
-.appHeader h4 { font-size: 12px; color: #753f7f !important; margin: 0; padding-left: 3px; }
+.appHeader h2 { font-size: 23px; color: $dark-purple !important; margin: 0; padding: 5px 0 0 0; }
+.appHeader h4 { font-size: 12px; color: $dark-purple !important; margin: 0; padding-left: 3px; }
 .appHeader .headerMenu button { padding: 5px 10px 5px 5px; margin: 0; text-transform: capitalize; }
 .appHeader .headerMenu .fa-bars:before { padding: 5px; }
 .appHeader .headerRight { height: $header-height; float: right; width: 300px; margin-left: 5px; color: #3E769E; text-align: right; font-size: 0.875rem; padding: 5px 5px 0 0; }
