@@ -91,7 +91,15 @@ $header-height: 50px;
 
 // date field placeholder
 .nihilo .dijitInputField .dijitPlaceHolder { padding: 8px 0 0 0; }
+.nihilo .dijitTabContainerTop-child { display: inline-block; min-width: 100%; position: absolute; }
 
+//selectlist in grid
+.nihilo .dijitSelect .dijitButtonContents { padding-left: 10px; }
+
+//select dropdows in grids
+.nihilo .dgrid .dijitSelect.dijitReadOnly .dijitArrowButtonContainer { display: none; }
+.nihilo .dgrid .dijitSelect .dijitArrowButtonContainer .dijitArrowButtonInner { margin: 0; }
+.nihilo .dgrid .dijitSelect .dijitSelectLabel { margin: 5px; }
 
 // appBody/appMenu
 .appBody { padding: 20px 20px 10px; }
