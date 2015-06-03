@@ -58,7 +58,7 @@ $header-height: 50px;
 .nihilo .dijitTabCloseButton { background: none; width: 15px; height: 100%; margin-top: 0; }
 .nihilo .dijitTabCloseButton:before { content: "\f00d"; font-family: FontAwesome; }
 .nihilo .dijitTabContainerBottom-tabs .dijitTabContainerBottom-tabs .dijitTabChecked { border: none; background: #ffffff none; }
-.nihilo .dijitTabContainerBottom-tabs .dijitTab.dijitTabChecked .dijitTabCloseButton{ cursor: pointer; }
+.nihilo .dijitTabContainerBottom-tabs .dijitTab.dijitTabChecked .dijitTabCloseButton{ cursor: pointer; padding-top: 5px;}
 .nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .tabLabel,
 .nihilo .dijitTabContainerBottom-tabs .dijitTabHover .tabLabel,
 .nihilo .dijitTabContainerBottom-tabs .dijitTabChecked .dijitTabCloseButton:before,
@@ -67,6 +67,7 @@ $header-height: 50px;
 .nihilo .dijitTabContainerTop-tabs .dijitTab { background: $mid-purple none; border: none; border-radius: 0; color: $white; font-size: 0.6875rem; padding: 0.625rem 1.25rem; text-transform: uppercase; line-height: normal; margin: 0 1px 1.25rem 0; }
 .nihilo .dijitTabContainerTop-tabs .dijitTab:hover,
 .nihilo .dijitTabContainerTop-tabs .dijitTab.dijitTabChecked { background: $dark-purple none; }
+
 
 // Restore dijit css
 .nihilo input[type="text"].dijitInputInner { padding: 0 0.25em !important; }
@@ -81,3 +82,6 @@ $header-height: 50px;
 .nihilo .dijitAccordionTitle, .nihilo .dijitAccordionTitleSelected { background: #EEEEEE none; }
 .nihilo .dijitAccordionTitleSelected { color: #753f7f; }
 .nihilo .placeholder-disabled .dijitArrowButtonContainer { display: none; }
+
+// date field placeholder
+.nihilo .dijitInputField .dijitPlaceHolder { padding: 8px 0 0 0; }
