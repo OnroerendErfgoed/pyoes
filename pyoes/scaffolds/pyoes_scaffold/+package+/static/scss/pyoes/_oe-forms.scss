@@ -12,6 +12,13 @@
 .placeholder-input { border: none !important; box-shadow: none; margin: 0; display: table-cell; background-color: transparent; background: none !important; padding-left: 8px; }
 .placeholder-input-border { border-left: 1px dotted #d3d3d3 !important; }
 .placeholder-disabled { background-color: #DDDDDD; }
+.placeholder-textarea label { vertical-align: top; padding-top: 8px;}
+
+.placeholder-checkbox input[type="checkbox"], .placeholder-checkbox-label { display: table-cell !important; vertical-align: middle !important; cursor: pointer; font-size:0.8em; }
+.placeholder-checkbox label { position: relative; width: 100%; }
+.placeholder-checkbox input[type="checkbox"] { opacity: 0; position: absolute; }
+.placeholder-checkbox input[type="checkbox"] + .placeholder-checkbox-label:after { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 20px; height: 20px; padding: 2px; margin-left: 10px; text-align: center; font-size:0.8em; }
+.placeholder-checkbox input[type="checkbox"]:checked + .placeholder-checkbox-label:after { content: '\2714'; background: $fresh-blue; color: #fff; }
 
 .plus-icon { padding-top: 12px; padding-left: 8px; color: #3f3840; }
 .plus-icon-link { display:table-cell; border-left: 1px dotted #d3d3d3; float: left; vertical-align: middle; height: 37px; }

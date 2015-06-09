@@ -10,7 +10,7 @@
 .fl-block-search_fieldset select  {width:95%}
     
 .searchBox {position: relative;padding: 0px;}
-.searchBox input {box-sizing: border-box;width: 100%;padding: 20px;}
+.searchBox input {box-sizing: border-box;width: 100%; padding: 0 0 0 10px;}
 .searchBox button {padding:12px 30px;position: absolute;top: 0px;right: 0px;text-transform: uppercase; }
 .searchBox button:before {content: '';position: absolute;display: block;height: 44px;top:0;left:0;width:0;}
 .searchBox small {font-size:0.8em;float:$opposite-direction;margin-bottom:20px;}

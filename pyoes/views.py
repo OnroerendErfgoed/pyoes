@@ -148,3 +148,7 @@ def pinpoints(request):
 @view_config(route_name='404', renderer='templates/404.jinja2')
 def viernulvier(request):
     return {}
+
+@view_config(route_name='atramhasismenu', renderer='templates/atramhasis_menu.jinja2')
+def atramhasismenu(request):
+    return {}

@@ -1,0 +1,34 @@
+{% extends "layout.jinja2" %}
+{% set app_package = app_package|default('Pyoes') %}
+
+{% block html_title %}Profiel | {{app_package}} | Onroerend Erfgoed{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="large-12 columns">
+        <div class="panel">
+            <h3>Uw profiel</h3>
+
+            {% if not request.user and not request.user.userid %}
+              <div class="alert">
+              U bent niet aangemeld.
+              </div>
+            {% else %}
+              {% if request.user.actor %}
+                <p>U bent aangemeld als <strong>{{ request.user.actor.omschrijving }}</strong>.</p>
+              {% else %}
+                <p>U bent aangemeld als <strong>{{ request.user.userid }}</strong>.</p>
+              {% endif %}
+              <p>U beschikt over volgende rollen:</p>
+              <ul>
+              {% if request.user.groups %}
+                {% for rol in request.user.groups %}
+                    <li><em>{{ rol }}</em></li>
+                {% endfor %}
+              {% endif %}
+              </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

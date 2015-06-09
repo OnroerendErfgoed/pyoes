@@ -1,0 +1,119 @@
+{% extends "layout.jinja2" %}
+{% block content %}
+<script>
+function showlist(item) {
+  var list = document.getElementById(item);
+  $(list).toggle(500);
+  $('#item2').toggle(500);
+
+}
+
+function showsubList(item, elem) {
+  var list = document.getElementById(item);
+  $("ul#item1list > li:not(:first)").toggle(500);
+  $(list).toggle(500);
+}
+
+function handleClick(item) {
+
+}
+
+$(document).ready(function () {
+  console.log("ready");
+  loadChildList();
+
+});
+
+function loadChildList() {
+  var mainlist = document.getElementById('main');
+  var childList = document.getElementById('childList');
+  $(mainlist).children('li').each(function() {
+    var newItem = $(this).clone();
+    $(newItem).children('ul').remove();
+    $(newItem).attr("id", $(newItem).attr("id") + '_2');
+    $(newItem).on('click', function () {
+        openList(newItem);
+    });
+    $(childList).append(newItem);
+  });
+}
+
+function openList(newItem) {
+  $('#selected').append(newItem);
+  $('#childList').children().remove();
+  var id = $(newItem).attr("id");
+  console.log(id);
+  $('#' + id + 'list').children('li').each(function() {
+    var newItem = $(this).clone();
+    console.log($(this).text());
+    $(newItem).children('ul').remove();
+    $(newItem).attr("id", $(newItem).attr("id") + '_2');
+    $(newItem).on('click', function () {
+      openList(newItem);
+    });
+    $('#childList').append(newItem);
+  });
+}
+
+</script>
+<style>
+  .nostyleList {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    color: gray;
+  }
+
+ a {
+   color: gray;
+ }
+
+.hidden {
+  display:none;
+}
+</style>
+
+
+<div class="row">
+  <div class="large-4 columns panel">
+    <ul id="parentlist" class="nostyleList">
+
+    </ul>
+    <div id="selected">
+
+    </div>
+    <ul id="childList" class="nostyleList">
+
+    </ul>
+    <hr>
+    <div class="hidden">
+      <div id="menu">
+        <ul id="main">
+          <li id="item1">item1
+            <ul id="item1_2list">
+              <li>elem1</li>
+              <li>elem2</li>
+              <li>elem3</li>
+            </ul>
+          </li>
+          <li id="item2">item2
+             <ul id="item2list">
+              <li>elem4</li>
+              <li>elem5</li>
+              <li>elem6</li>
+            </ul>
+          </li>
+          <li id="item3">item3
+             <ul id="item3list">
+              <li>elem7</li>
+              <li>elem8</li>
+              <li>elem9</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
