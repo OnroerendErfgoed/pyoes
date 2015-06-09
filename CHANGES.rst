@@ -1,3 +1,19 @@
+0.4.2 (09-06-2015)
+==================
+
+* Kleine layout fixes
+* Admin interface update
+
+0.4.1 (29-05-2015)
+==================
+* Toevoegen van een textarea element met een inline label 
+* Toevoegen van een checkbox met een placeholder
+* Toevoegen van een generieke profile template
+* Toevoegen van een macro om een URI voor een resource te genereren
+* Toevoegen van een generiek datetime format filter
+* Opkuisen van het project
+* Schrijven van nieuwe tests om coverage te vergroten
+
 0.4.0 (24-04-2015)
 ==================
 
