@@ -5,11 +5,15 @@
 
 
 // li colored disk
-ul.disk {margin:10px 0;padding-left: 1em;}
-ul.disk li {list-style: disc outside none; color: $light-purple;}
-ul.disk li span {color: $dark-gray;}
-ul.disk li a {color:$fresh-blue !important; text-decoration:underline;margin-bottom:8px;}
-ul.disk li a:hover {text-decoration:none} 
+ul.disk          	{ list-style:none; padding:0; margin:10px 0; }
+ul.disk li          { padding-left:1em; position:relative; }
+ul.disk li:before   { content:"•"; color:$light-purple; position:absolute; left:0em; }
+ul.disk li a:link 	{ color:$fresh-blue;margin-bottom:8px;text-decoration:underline} 
+ul.disk li a:hover 	{ text-decoration:none} 
+ul.disk ul         	{ list-style:none; padding:0; margin:5px 0; font-size:0.9em;}
+
+
+
 
 // li no disk
 ul.nodisk {margin-left: 0em;}
@@ -30,6 +34,8 @@ ul.reactions {margin:0;font-size:0.9em}
 
 //ordered list
 ol > li {list-style-type: decimal;} 
+ol > li ol {padding:0; margin:5px 15px; font-size:0.9em} 
+
 
 // ordered list no number
 ol.nonumbers {margin-left:0} 
@@ -76,5 +82,50 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 .tag-label li a  {text-decoration:none !important;color:$black}
 .tag-label li a span, .tag-label-col li a span  {margin:2px 0 0 10px;color:$alert-color;font-size:1.1em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
 .tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
+
+
+
+ul.newlist {list-style:none; padding:0; margin:10px 0;}
+
+/*
+ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff}
+
+.newlist li a {clear:left;display:block;padding:0px 0 0px 0}
+.newlist li a:hover {background:$light-gray;display:block;padding:0px 0 0px 0;text-decoration:none; -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;}
+.newlist li {display:block;border-bottom:1px solid #efefef}
+.newlist h5 {padding-top:0px;text-transform: uppercase;font-family: $font-family-medium-serif;}
+
+.newlist p {color:#333;margin:5px;font-size:0.8em}
+
+.newlist li figure {margin:0px;width:150px;float:left;margin-right:20px;height:150px;overflow:hidden;}
+.newlist li figure img {width:150px;}*/
+
+
+/*.newlist li figure img {float:left;width:150px;height:150px;overflow:hidden;margin:20px}*/
+
+
+// vertical position list 
+.fl-block-largeimage  {margin-bottom:30px;text-align:center;}
+.fl-block-largeimage div {text-align:center}
+.fl-block-largeimage h5 {line-height:20px;text-transform:uppercase;}
+.fl-block-largeimage span {color:$gray;}
+.fl-block-largeimage a:hover {text-decoration: underline}
+
+.img-vert-list {height: 180px; width: 180px;display: inline-block;position: relative;}
+.img-vert-list img {max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top:0;bottom:0;left:0;right:0;margin: auto}
+
+
+// definition list besluiten
+
+dl.def-besluit {margin:20px 0}
+.def-besluit dt {font-size:0.8em}
+.def-besluit dd {margin-left:160px;margin-top:-26px}
+
+
+
+
 
 
