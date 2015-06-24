@@ -1,0 +1,21 @@
+{% extends "layout.jinja2" %}
+
+{% set app_package = app_package|default('Pyoes') %}
+{% block html_title %}Failed Authentication | {{app_package}} | Onroerend Erfgoed{% endblock %}
+
+{% block body %}
+<div class="large-12 columns">
+    <div class="panel">
+        <div class="alert-box alert">Het aanmelden is mislukt. Gelieve <a href="{{ request.route_path('aanmelden') }}">opnieuw te proberen</a>.</div>
+
+        <div data-alert class="alert-box info">
+            <p>Enkele vaak voorkomende redenen waarom dit kan fout gaan:</p>
+            <ul>
+                <li><strong>Je hebt er lang over gedaan om aan te melden.</strong> Als dit teveel tijd in beslag neemt, wordt je aanmeldingspoging niet gehonoreerd.</li>
+                <li><strong>Je bent niet gestart op <a href="{{ request.route_path('aanmelden') }}">{{ request.route_path('aanmelden') }}</a>.</strong> Het aanmeldformulier zelf staat op een andere website. Je wordt naar deze site <em>geredirect</em>. Je mag de locatie van dit formulier bv. niet opslaan in je bookmarks aangezien je dan een eerste stap overslaat.</li>
+                <li><strong>Er zijn problemen met de aanmelddienst.</strong> Deze kunnen zoals steeds gemeld worden aan het IT-team via de Trac Helpdesk.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

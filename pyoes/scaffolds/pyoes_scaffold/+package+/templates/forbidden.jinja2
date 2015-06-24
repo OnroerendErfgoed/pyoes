@@ -1,0 +1,12 @@
+{% extends "layout.jinja2" %}
+
+{% set app_package = app_package|default('Pyoes') %}
+{% block html_title %}Forbidden | {{app_package}} | Onroerend Erfgoed{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="large-12 columns">
+        <div data-alert class="alert-box alert">{{ message }}</div>
+    </div>
+</div>
+{% endblock %}
