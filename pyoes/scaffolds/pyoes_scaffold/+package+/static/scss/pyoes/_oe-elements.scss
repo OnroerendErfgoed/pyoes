@@ -1,7 +1,7 @@
 // OE Elements
 
 /* Icons main page */
-.icon-large-left {float:$default-float;margin:0 20px 30px 0;font-size:60px;color:$light-gray}
+.icon-large-left {float:$default-float;margin:0 20px 30px 0;font-size:60px;color:$mid-gray}
 .vruler {border-left:1px solid $light-gray;padding-top:0px}
 
 
@@ -33,6 +33,7 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
 .color-cube { height:100px; width:100px; color:$white; float:$default-float; padding:5px }
 
+
 // articles
 dt, b, strong {font-family: $font-family-bold-serif;font-weight:700;}
 h4 > em {padding:5px 0 10px 0;display:block;font-size:1.3em;line-height:1.3em}
@@ -40,4 +41,4 @@ article > h1 {padding-bottom:18px;}
 article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
 article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
 
-
+.panel article h3, .panel article h4, .panel article h5 {line-height:1.3em} 

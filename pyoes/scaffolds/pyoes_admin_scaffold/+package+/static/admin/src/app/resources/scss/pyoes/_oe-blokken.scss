@@ -4,31 +4,39 @@
 //
 
 
-
 .fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;}
 .fl-block .field {border-bottom:1px solid $mid-gray;overflow:hidden;background-color:$white;position:relative;padding:1.6em 1.2em 1.2em 1.2em;}
 .fl-block .field p {margin:0;font-size:$switch-font-size-med;}
 
+.fl-block .field img {height:105px;overflow: hidden}
+
 .fl-block .field.full {padding:0;}
 .fl-block .field.full > a {display:block;padding:1.6em 1.4em 1.6em 1.4em;color:#5e5e5e;}
 
-.fl-block .field.full a:hover{background-color:$white-gray;text-decoration: none;}
+.fl-block .field.full a:hover{background-color:$white-gray;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;text-decoration: none; }
 .fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 { text-transform: uppercase;font-family: $font-family-medium-serif;}
 .fl-block .field.full a:hover h5 {text-decoration: underline;}
 
-.fl-block .block-text {
-  border: 1px solid #e3e3e3 !important;
-  border-top: none !important;
-}
+.fl-block .block-text {border: 1px solid #e3e3e3 !important;border-top: none !important;}
+
+
+.time-block  {display: block;margin:0.6em 0 0 0;font-size:0.8em}
+
+//inventaris result list 
+.result figure {width:150px;background:#efefef;text-align:center}
+.result img {min-height:auto;height:150px}
+
+
+
 
 // flanders-block-large home
-
+/*
 .fl-block-largeimage {text-align:center}
 .fl-block-largeimage img {margin:10px 0;width:180px;height:180px}
 .fl-block-largeimage a h5 {text-transform: uppercase}
 .fl-block-largeimage a:hover h5 {text-decoration: underline}
 .fl-block-largeimage .posted {line-height:1em;color:$silver;margin-top:-0.5em;}
-
+*/
 
 
 // flanders-block-more link
@@ -44,7 +52,7 @@
 .fl-block .block-date {text-transform: uppercase;border:none;background-color:$dark-purple;padding:0.75em 1.5em 0.65em;color:$white;}
 .fl-block .field.block-date i {float:none;margin-right:0.4em;}
 .fl-block .field.block-image {border-bottom:0;}
-.fl-block .field.block-image img{width:100%;display:block;}
+.fl-block .field.block-image img {width:100%;display:block;}
 
 
 
@@ -97,5 +105,8 @@
 
 .actoren-icon-large, .actoren-icon-small {float:$default-float;color:$light-gray;font-size:4em;padding:0px 20px 0 0;border-right:1px solid $mid-gray;margin-right:20px}
 .actoren-icon-small {border-right:1px solid $mid-gray;margin-right:15px;font-size:3em;padding:15px 20px}
+
+
+
 
 
