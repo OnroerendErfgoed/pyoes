@@ -120,9 +120,9 @@ ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff
 
 // definition list besluiten
 
-dl.def-besluit {margin:20px 0}
-.def-besluit dt {font-size:0.8em}
-.def-besluit dd {margin-left:160px;margin-top:-26px}
+dl.def-besluit {margin:20px 0 0 0}
+.def-besluit dt {font-size:0.9em;color:$dark-gray;font-weight:normal !important}
+.def-besluit dd {margin-left:160px;margin-top:-24px}
 
 
 
