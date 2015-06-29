@@ -26382,50 +26382,60 @@ th.hide-for-touch {
   z-index: 0;
 }
 
-/* line 12, ../scss/pyoes/_oe-header.scss */
+/* line 11, ../scss/pyoes/_oe-header.scss */
+.bgimage-bouwkunde {
+  background: url(../img/pyoes/dibe_1.jpg) no-repeat right;
+  width: 80%;
+  height: 135px;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 14, ../scss/pyoes/_oe-header.scss */
 nav#main-navigation .main-navigation-inner {
   padding: 0;
   position: relative;
 }
 
 /* service nav */
-/* line 15, ../scss/pyoes/_oe-header.scss */
+/* line 17, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   float: right;
   padding: 0;
 }
 
-/* line 16, ../scss/pyoes/_oe-header.scss */
+/* line 18, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li {
   margin-top: 0.4em;
   float: left;
   list-style-type: none;
 }
 
-/* line 17, ../scss/pyoes/_oe-header.scss */
+/* line 19, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a {
   font-size: 0.75em;
-  color: #666666;
+  color: black;
   line-height: 1.8em;
 }
 
-/* line 18, ../scss/pyoes/_oe-header.scss */
+/* line 20, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li > a {
   border-left: 1px solid #e5e5e5;
   padding: 0 1em;
 }
 
-/* line 19, ../scss/pyoes/_oe-header.scss */
+/* line 21, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:first-child > a {
   border-left: 0;
 }
 
-/* line 20, ../scss/pyoes/_oe-header.scss */
+/* line 22, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a:hover {
   color: #753f7f;
 }
 
-/* line 21, ../scss/pyoes/_oe-header.scss */
+/* line 23, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul {
   display: none;
   background-color: white;
@@ -26433,17 +26443,17 @@ nav#main-navigation .main-navigation-inner {
   position: absolute;
 }
 
-/* line 22, ../scss/pyoes/_oe-header.scss */
+/* line 24, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover i {
   color: #944ea1;
 }
 
-/* line 23, ../scss/pyoes/_oe-header.scss */
+/* line 25, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover ul {
   display: block;
 }
 
-/* line 24, ../scss/pyoes/_oe-header.scss */
+/* line 26, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li a {
   border-top: 1px solid #e5e5e5;
   margin: 0 1em;
@@ -26453,30 +26463,30 @@ nav#main-navigation .main-navigation-inner {
   padding: 0 4px;
 }
 
-/* line 25, ../scss/pyoes/_oe-header.scss */
+/* line 27, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li:first-child a {
   border: none;
 }
 
-/* line 26, ../scss/pyoes/_oe-header.scss */
+/* line 28, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   position: relative;
   z-index: 100;
   background-color: white;
-  filter: alpha(opacity=60);
+  filter: alpha(opacity=90);
   opacity: .6;
   padding: 3px 0 8px 0;
   margin-top: 10px;
 }
 
-/* line 28, ../scss/pyoes/_oe-header.scss */
+/* line 30, ../scss/pyoes/_oe-header.scss */
 .inner {
   margin: 0 auto;
   max-width: 1142px;
   padding: 0;
 }
 
-/* line 29, ../scss/pyoes/_oe-header.scss */
+/* line 31, ../scss/pyoes/_oe-header.scss */
 .inner-nav {
   margin: 0 auto;
   max-width: 1142px;
@@ -26637,26 +26647,30 @@ h6 {
 
 /* line 8, ../scss/pyoes/_oe-lists.scss */
 ul.disk {
+  list-style: none;
+  padding: 0;
   margin: 10px 0;
-  padding-left: 1em;
 }
 
 /* line 9, ../scss/pyoes/_oe-lists.scss */
 ul.disk li {
-  list-style: disc outside none;
-  color: #b05dbf;
+  padding-left: 1em;
+  position: relative;
 }
 
 /* line 10, ../scss/pyoes/_oe-lists.scss */
-ul.disk li span {
-  color: #3f3840;
+ul.disk li:before {
+  content: "•";
+  color: #b05dbf;
+  position: absolute;
+  left: 0em;
 }
 
 /* line 11, ../scss/pyoes/_oe-lists.scss */
-ul.disk li a {
-  color: #2da3ce !important;
-  text-decoration: underline;
+ul.disk li a:link {
+  color: #2da3ce;
   margin-bottom: 8px;
+  text-decoration: underline;
 }
 
 /* line 12, ../scss/pyoes/_oe-lists.scss */
@@ -26664,52 +26678,60 @@ ul.disk li a:hover {
   text-decoration: none;
 }
 
-/* line 15, ../scss/pyoes/_oe-lists.scss */
+/* line 13, ../scss/pyoes/_oe-lists.scss */
+ul.disk ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+/* line 19, ../scss/pyoes/_oe-lists.scss */
 ul.nodisk {
   margin-left: 0em;
 }
 
-/* line 16, ../scss/pyoes/_oe-lists.scss */
+/* line 20, ../scss/pyoes/_oe-lists.scss */
 ul.nodisk li {
   list-style: inside none;
 }
 
-/* line 19, ../scss/pyoes/_oe-lists.scss */
+/* line 23, ../scss/pyoes/_oe-lists.scss */
 ul.source li {
   list-style-type: none;
 }
 
-/* line 20, ../scss/pyoes/_oe-lists.scss */
+/* line 24, ../scss/pyoes/_oe-lists.scss */
 ul.source {
   margin: 20px 0;
   padding-left: 0;
   font-size: 0.8em;
 }
 
-/* line 24, ../scss/pyoes/_oe-lists.scss */
+/* line 28, ../scss/pyoes/_oe-lists.scss */
 ul.reactions {
   margin: 0;
   font-size: 0.9em;
 }
 
-/* line 25, ../scss/pyoes/_oe-lists.scss */
+/* line 29, ../scss/pyoes/_oe-lists.scss */
 .reactions li {
   list-style-type: none;
   padding: 5px 10px;
 }
 
-/* line 26, ../scss/pyoes/_oe-lists.scss */
+/* line 30, ../scss/pyoes/_oe-lists.scss */
 .reactions li:nth-child(2) {
   background-color: #ededed;
 }
 
-/* line 27, ../scss/pyoes/_oe-lists.scss */
+/* line 31, ../scss/pyoes/_oe-lists.scss */
 .reactions cite {
   font-family: "Flanders Art Sans Bold", Arial, sans-serif;
   font-size: 1em;
 }
 
-/* line 28, ../scss/pyoes/_oe-lists.scss */
+/* line 32, ../scss/pyoes/_oe-lists.scss */
 .reactions blockquote {
   border: none;
   color: #3f3840;
@@ -26717,27 +26739,34 @@ ul.reactions {
   margin: 0 0 5px 0;
 }
 
-/* line 32, ../scss/pyoes/_oe-lists.scss */
+/* line 36, ../scss/pyoes/_oe-lists.scss */
 ol > li {
   list-style-type: decimal;
 }
 
-/* line 35, ../scss/pyoes/_oe-lists.scss */
+/* line 37, ../scss/pyoes/_oe-lists.scss */
+ol > li ol {
+  padding: 0;
+  margin: 5px 15px;
+  font-size: 0.9em;
+}
+
+/* line 41, ../scss/pyoes/_oe-lists.scss */
 ol.nonumbers {
   margin-left: 0;
 }
 
-/* line 36, ../scss/pyoes/_oe-lists.scss */
+/* line 42, ../scss/pyoes/_oe-lists.scss */
 ol.nonumbers > li {
   list-style-type: none;
 }
 
-/* line 41, ../scss/pyoes/_oe-lists.scss */
+/* line 47, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors li {
   list-style-type: none;
 }
 
-/* line 42, ../scss/pyoes/_oe-lists.scss */
+/* line 48, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors {
   font-family: "Flanders Art Sans", Arial, sans-serif;
   color: #753f7f;
@@ -26746,7 +26775,7 @@ ul.source-authors {
   line-height: 1.6em;
 }
 
-/* line 45, ../scss/pyoes/_oe-lists.scss */
+/* line 51, ../scss/pyoes/_oe-lists.scss */
 .source-authors-block {
   margin-top: 10px;
   height: 255px;
@@ -26754,13 +26783,13 @@ ul.source-authors {
   overflow-y: scroll;
 }
 
-/* line 46, ../scss/pyoes/_oe-lists.scss */
+/* line 52, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list {
   font-size: 0.8em;
   line-height: 1.6em;
 }
 
-/* line 47, ../scss/pyoes/_oe-lists.scss */
+/* line 53, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list li {
   color: #3f3840;
   border: 1px solid #e5e5e5;
@@ -26768,66 +26797,66 @@ ul.source-authors-list li {
   padding: 4px;
 }
 
-/* line 48, ../scss/pyoes/_oe-lists.scss */
+/* line 54, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list li:hover {
   background: #fbfbfb;
   display: block;
 }
 
-/* line 49, ../scss/pyoes/_oe-lists.scss */
+/* line 55, ../scss/pyoes/_oe-lists.scss */
 ul.source-authors-list i {
   color: #e5e5e5;
   margin: 0 8px;
 }
 
-/* line 54, ../scss/pyoes/_oe-lists.scss */
+/* line 60, ../scss/pyoes/_oe-lists.scss */
 ul.list-selected-items {
   margin-top: -10px;
   margin-left: 10px;
   padding-right: 10px;
 }
 
-/* line 55, ../scss/pyoes/_oe-lists.scss */
+/* line 61, ../scss/pyoes/_oe-lists.scss */
 .list-selected-items li {
   border-bottom: 1px solid #d5d5d5;
 }
 
-/* line 56, ../scss/pyoes/_oe-lists.scss */
+/* line 62, ../scss/pyoes/_oe-lists.scss */
 .list-selected-items li i {
   padding: 5px 0 0 0;
   cursor: pointer;
 }
 
-/* line 60, ../scss/pyoes/_oe-lists.scss */
+/* line 66, ../scss/pyoes/_oe-lists.scss */
 .f-dropdown-padding li {
   padding: 5px 0 8px 0;
 }
 
-/* line 65, ../scss/pyoes/_oe-lists.scss */
+/* line 71, ../scss/pyoes/_oe-lists.scss */
 .small-list {
   margin: 0;
   border-bottom: 1px solid #ededed;
   padding: 0;
 }
 
-/* line 66, ../scss/pyoes/_oe-lists.scss */
+/* line 72, ../scss/pyoes/_oe-lists.scss */
 ul.small-list li {
   font-size: 0.8em;
   margin: 12px 0 0 0;
 }
 
-/* line 67, ../scss/pyoes/_oe-lists.scss */
+/* line 73, ../scss/pyoes/_oe-lists.scss */
 ul.small-list li label {
   line-height: 12px;
   min-height: 12px;
 }
 
-/* line 72, ../scss/pyoes/_oe-lists.scss */
+/* line 78, ../scss/pyoes/_oe-lists.scss */
 ul.tag-label, ul.tag-label-col {
   margin: 10px 0 0 0;
 }
 
-/* line 73, ../scss/pyoes/_oe-lists.scss */
+/* line 79, ../scss/pyoes/_oe-lists.scss */
 .tag-label li, .tag-label-col li {
   float: left;
   background-color: #ededed;
@@ -26837,24 +26866,24 @@ ul.tag-label, ul.tag-label-col {
   font-size: 0.9em;
 }
 
-/* line 74, ../scss/pyoes/_oe-lists.scss */
+/* line 80, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:first-child, .tag-label-col li:first-child {
   background: none;
   padding-left: 0;
 }
 
-/* line 75, ../scss/pyoes/_oe-lists.scss */
+/* line 81, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:last-child {
   background-color: #efefef;
 }
 
-/* line 76, ../scss/pyoes/_oe-lists.scss */
+/* line 82, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a {
   text-decoration: none !important;
   color: black;
 }
 
-/* line 77, ../scss/pyoes/_oe-lists.scss */
+/* line 83, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a span, .tag-label-col li a span {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26864,7 +26893,7 @@ ul.tag-label, ul.tag-label-col {
   font-weight: bold;
 }
 
-/* line 78, ../scss/pyoes/_oe-lists.scss */
+/* line 84, ../scss/pyoes/_oe-lists.scss */
 .tag-label li i {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26872,6 +26901,96 @@ ul.tag-label, ul.tag-label-col {
   border-left: 1px solid white;
   padding-left: 10px;
   font-weight: bold;
+}
+
+/* line 88, ../scss/pyoes/_oe-lists.scss */
+ul.newlist {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+/*
+ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff}
+
+.newlist li a {clear:left;display:block;padding:0px 0 0px 0}
+.newlist li a:hover {background:$light-gray;display:block;padding:0px 0 0px 0;text-decoration:none; -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;}
+.newlist li {display:block;border-bottom:1px solid #efefef}
+.newlist h5 {padding-top:0px;text-transform: uppercase;font-family: $font-family-medium-serif;}
+
+.newlist p {color:#333;margin:5px;font-size:0.8em}
+
+.newlist li figure {margin:0px;width:150px;float:left;margin-right:20px;height:150px;overflow:hidden;}
+.newlist li figure img {width:150px;}*/
+/*.newlist li figure img {float:left;width:150px;height:150px;overflow:hidden;margin:20px}*/
+/* line 111, ../scss/pyoes/_oe-lists.scss */
+.fl-block-largeimage {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 112, ../scss/pyoes/_oe-lists.scss */
+.fl-block-largeimage div {
+  text-align: center;
+}
+
+/* line 113, ../scss/pyoes/_oe-lists.scss */
+.fl-block-largeimage h5 {
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+/* line 114, ../scss/pyoes/_oe-lists.scss */
+.fl-block-largeimage span {
+  color: #d5d5d5;
+}
+
+/* line 115, ../scss/pyoes/_oe-lists.scss */
+.fl-block-largeimage a:hover {
+  text-decoration: underline;
+}
+
+/* line 117, ../scss/pyoes/_oe-lists.scss */
+.img-vert-list {
+  height: 180px;
+  width: 180px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 118, ../scss/pyoes/_oe-lists.scss */
+.img-vert-list img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 123, ../scss/pyoes/_oe-lists.scss */
+dl.def-besluit {
+  margin: 20px 0 0 0;
+}
+
+/* line 124, ../scss/pyoes/_oe-lists.scss */
+.def-besluit dt {
+  font-size: 0.9em;
+  color: #3f3840;
+  font-weight: normal !important;
+}
+
+/* line 125, ../scss/pyoes/_oe-lists.scss */
+.def-besluit dd {
+  margin-left: 160px;
+  margin-top: -24px;
 }
 
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
@@ -27008,13 +27127,13 @@ ul.tag-label, ul.tag-label-col {
   padding: 0;
 }
 
-/* line 8, ../scss/pyoes/_oe-blokken.scss */
+/* line 7, ../scss/pyoes/_oe-blokken.scss */
 .fl-block {
   margin: 0 0 2em 0;
   font-size: 14px;
 }
 
-/* line 9, ../scss/pyoes/_oe-blokken.scss */
+/* line 8, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field {
   border-bottom: 1px solid #e5e5e5;
   overflow: hidden;
@@ -27023,105 +27142,113 @@ ul.tag-label, ul.tag-label-col {
   padding: 1.6em 1.2em 1.2em 1.2em;
 }
 
-/* line 10, ../scss/pyoes/_oe-blokken.scss */
+/* line 9, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field p {
   margin: 0;
   font-size: 14px;
 }
 
-/* line 12, ../scss/pyoes/_oe-blokken.scss */
+/* line 11, ../scss/pyoes/_oe-blokken.scss */
+.fl-block .field img {
+  height: 105px;
+  overflow: hidden;
+}
+
+/* line 13, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full {
   padding: 0;
 }
 
-/* line 13, ../scss/pyoes/_oe-blokken.scss */
+/* line 14, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full > a {
   display: block;
   padding: 1.6em 1.4em 1.6em 1.4em;
   color: #5e5e5e;
 }
 
-/* line 15, ../scss/pyoes/_oe-blokken.scss */
+/* line 16, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a:hover {
   background-color: #fbfbfb;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   text-decoration: none;
 }
 
-/* line 16, ../scss/pyoes/_oe-blokken.scss */
+/* line 17, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 {
   text-transform: uppercase;
   font-family: "Flanders Art Sans Medium", Arial, sans-serif;
 }
 
-/* line 17, ../scss/pyoes/_oe-blokken.scss */
+/* line 18, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a:hover h5 {
   text-decoration: underline;
 }
 
-/* line 19, ../scss/pyoes/_oe-blokken.scss */
+/* line 20, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-text {
   border: 1px solid #e3e3e3 !important;
   border-top: none !important;
 }
 
+/* line 23, ../scss/pyoes/_oe-blokken.scss */
+.time-block {
+  display: block;
+  margin: 0.6em 0 0 0;
+  font-size: 0.8em;
+}
+
 /* line 26, ../scss/pyoes/_oe-blokken.scss */
-.fl-block-largeimage {
+.result figure {
+  width: 150px;
+  background: #efefef;
   text-align: center;
 }
 
 /* line 27, ../scss/pyoes/_oe-blokken.scss */
-.fl-block-largeimage img {
-  margin: 10px 0;
-  width: 180px;
-  height: 180px;
+.result img {
+  min-height: auto;
+  height: 150px;
 }
 
-/* line 28, ../scss/pyoes/_oe-blokken.scss */
-.fl-block-largeimage a h5 {
-  text-transform: uppercase;
-}
-
-/* line 29, ../scss/pyoes/_oe-blokken.scss */
-.fl-block-largeimage a:hover h5 {
-  text-decoration: underline;
-}
-
-/* line 30, ../scss/pyoes/_oe-blokken.scss */
-.fl-block-largeimage .posted {
-  line-height: 1em;
-  color: #989898;
-  margin-top: -0.5em;
-}
-
-/* line 36, ../scss/pyoes/_oe-blokken.scss */
+/*
+.fl-block-largeimage {text-align:center}
+.fl-block-largeimage img {margin:10px 0;width:180px;height:180px}
+.fl-block-largeimage a h5 {text-transform: uppercase}
+.fl-block-largeimage a:hover h5 {text-decoration: underline}
+.fl-block-largeimage .posted {line-height:1em;color:$silver;margin-top:-0.5em;}
+*/
+/* line 44, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more, .fl-block .field a.fa, .fl-block .field i.fa {
   float: right;
   text-decoration: none;
 }
 
-/* line 37, ../scss/pyoes/_oe-blokken.scss */
+/* line 45, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more:hover {
   text-decoration: underline;
 }
 
-/* line 38, ../scss/pyoes/_oe-blokken.scss */
+/* line 46, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more {
   font-family: "Flanders Art Sans Medium", Arial, sans-serif;
   color: #753f7f;
 }
 
-/* line 39, ../scss/pyoes/_oe-blokken.scss */
+/* line 47, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.fa {
   margin-top: 2em;
 }
 
-/* line 40, ../scss/pyoes/_oe-blokken.scss */
+/* line 48, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field:last-child {
   border: none;
   padding-bottom: 1.6em;
 }
 
-/* line 41, ../scss/pyoes/_oe-blokken.scss */
+/* line 49, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field figure {
   float: left;
   overflow: hidden;
@@ -27130,7 +27257,7 @@ ul.tag-label, ul.tag-label-col {
   padding: 0;
 }
 
-/* line 44, ../scss/pyoes/_oe-blokken.scss */
+/* line 52, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-date {
   text-transform: uppercase;
   border: none;
@@ -27139,35 +27266,35 @@ ul.tag-label, ul.tag-label-col {
   color: white;
 }
 
-/* line 45, ../scss/pyoes/_oe-blokken.scss */
+/* line 53, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-date i {
   float: none;
   margin-right: 0.4em;
 }
 
-/* line 46, ../scss/pyoes/_oe-blokken.scss */
+/* line 54, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image {
   border-bottom: 0;
 }
 
-/* line 47, ../scss/pyoes/_oe-blokken.scss */
+/* line 55, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image img {
   width: 100%;
   display: block;
 }
 
 /* -- RSS newsfeed-- */
-/* line 53, ../scss/pyoes/_oe-blokken.scss */
+/* line 61, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a {
   padding: 0.8em 1.4em 0.4em 1.4em;
 }
 
-/* line 54, ../scss/pyoes/_oe-blokken.scss */
+/* line 62, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a h5 {
   margin-right: 1.8em;
 }
 
-/* line 55, ../scss/pyoes/_oe-blokken.scss */
+/* line 63, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a .posted {
   position: absolute;
   right: 1.2em;
@@ -27179,7 +27306,7 @@ ul.tag-label, ul.tag-label-col {
 }
 
 /* -- titles -- */
-/* line 62, ../scss/pyoes/_oe-blokken.scss */
+/* line 70, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title, .fl-block.style-2 .block-title, .fl-block.style-3 .block-title {
   background-color: #753f7f;
   margin: 0;
@@ -27187,24 +27314,24 @@ ul.tag-label, ul.tag-label-col {
   font-size: 14px;
 }
 
-/* line 63, ../scss/pyoes/_oe-blokken.scss */
+/* line 71, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-3 .block-title {
   background-color: #2da3ce;
   color: white !important;
 }
 
-/* line 65, ../scss/pyoes/_oe-blokken.scss */
+/* line 73, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title.naked, .fl-block.style-2 .block-title.naked {
   color: #753f7f !important;
 }
 
-/* line 66, ../scss/pyoes/_oe-blokken.scss */
+/* line 74, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 a, .fl-block.style-2 a, .fl-block.style-3 a {
   color: white;
   display: block;
 }
 
-/* line 68, ../scss/pyoes/_oe-blokken.scss */
+/* line 76, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title, .fl-block .block-title.naked {
   background-color: #753f7f;
   text-transform: uppercase;
@@ -27214,27 +27341,27 @@ ul.tag-label, ul.tag-label-col {
   padding: 0.9em 1.4em 0.8em 1.2em;
 }
 
-/* line 70, ../scss/pyoes/_oe-blokken.scss */
+/* line 78, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title.naked {
   background-color: white !important;
   color: #753f7f !important;
   padding: 0;
 }
 
-/* line 72, ../scss/pyoes/_oe-blokken.scss */
+/* line 80, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a {
   color: #753f7f !important;
   margin: -8px 0 0 0;
   letter-spacing: -1px;
 }
 
-/* line 73, ../scss/pyoes/_oe-blokken.scss */
+/* line 81, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a:hover {
   text-decoration: underline !important;
 }
 
 /* -- social -- */
-/* line 78, ../scss/pyoes/_oe-blokken.scss */
+/* line 86, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social i.fa {
   float: none;
   margin: 0 1em 0 0.4em;
@@ -27243,81 +27370,81 @@ ul.tag-label, ul.tag-label-col {
   font-size: 1.6em;
 }
 
-/* line 79, ../scss/pyoes/_oe-blokken.scss */
+/* line 87, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .fl-block {
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 80, ../scss/pyoes/_oe-blokken.scss */
+/* line 88, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a {
   font-weight: 400;
 }
 
-/* line 81, ../scss/pyoes/_oe-blokken.scss */
+/* line 89, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a:hover {
   text-decoration: none;
 }
 
-/* line 83, ../scss/pyoes/_oe-blokken.scss */
+/* line 91, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.twitter > a {
   color: #2da5da;
 }
 
-/* line 84, ../scss/pyoes/_oe-blokken.scss */
+/* line 92, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.facebook > a {
   color: #3567a6;
 }
 
-/* line 85, ../scss/pyoes/_oe-blokken.scss */
+/* line 93, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.mail > a {
   color: #926da5;
 }
 
-/* line 86, ../scss/pyoes/_oe-blokken.scss */
+/* line 94, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.linkedin > a {
   color: #007ab9;
 }
 
-/* line 88, ../scss/pyoes/_oe-blokken.scss */
+/* line 96, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg {
   background-color: #b05dbf !important;
   color: white;
 }
 
-/* line 89, ../scss/pyoes/_oe-blokken.scss */
+/* line 97, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg h3 a {
   color: white !important;
 }
 
-/* line 93, ../scss/pyoes/_oe-blokken.scss */
+/* line 101, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard {
   padding: 0;
   background: white;
   border: 1px solid #e5e5e5;
 }
 
-/* line 94, ../scss/pyoes/_oe-blokken.scss */
+/* line 102, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard a {
   display: block;
   min-height: 78px;
 }
 
-/* line 95, ../scss/pyoes/_oe-blokken.scss */
+/* line 103, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard a:hover {
   background: #fbfbfb;
   display: block;
   min-height: 78px;
 }
 
-/* line 96, ../scss/pyoes/_oe-blokken.scss */
+/* line 104, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard h3 {
   font-size: 1em;
   margin: 0;
   padding: 15px 0 0 0;
 }
 
-/* line 98, ../scss/pyoes/_oe-blokken.scss */
+/* line 106, ../scss/pyoes/_oe-blokken.scss */
 .actoren-icon-large, .actoren-icon-small {
   float: left;
   color: #ededed;
@@ -27327,7 +27454,7 @@ ul.tag-label, ul.tag-label-col {
   margin-right: 20px;
 }
 
-/* line 99, ../scss/pyoes/_oe-blokken.scss */
+/* line 107, ../scss/pyoes/_oe-blokken.scss */
 .actoren-icon-small {
   border-right: 1px solid #e5e5e5;
   margin-right: 15px;
@@ -27533,7 +27660,7 @@ figure {
 /* line 7, ../scss/pyoes/_oe-images.scss */
 figcaption {
   margin: 0 0 20px 0;
-  border-bottom: 1px solid #ededed;
+  /*border-bottom:1px solid $light-gray;*/
   padding: 10px 0;
   font-size: 80%;
 }
@@ -27556,9 +27683,37 @@ figcaption {
   padding: 0;
 }
 
+/* line 16, ../scss/pyoes/_oe-images.scss */
+.bb-imagelarge img {
+  width: 70%;
+}
+
+/* line 19, ../scss/pyoes/_oe-images.scss */
+.bb-vertical-large {
+  margin: 0;
+  padding: 0;
+}
+
 /* line 20, ../scss/pyoes/_oe-images.scss */
+.bb-horizontal-large {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, ../scss/pyoes/_oe-images.scss */
+.bb-horizontal-large img {
+  width: 60%;
+}
+
+/* line 27, ../scss/pyoes/_oe-images.scss */
 aside img {
-  margin: 5px 30px 5px 0;
+  margin: 5px 20px 5px 0;
+}
+
+/* line 29, ../scss/pyoes/_oe-images.scss */
+.figure-left {
+  float: left;
+  margin: 5px 20px 5px 0;
 }
 
 /* Icons main page */
@@ -27567,7 +27722,7 @@ aside img {
   float: left;
   margin: 0 20px 30px 0;
   font-size: 60px;
-  color: #ededed;
+  color: #e5e5e5;
 }
 
 /* line 5, ../scss/pyoes/_oe-elements.scss */
@@ -27689,13 +27844,13 @@ h4.header-img-panel {
   padding: 5px;
 }
 
-/* line 37, ../scss/pyoes/_oe-elements.scss */
+/* line 38, ../scss/pyoes/_oe-elements.scss */
 dt, b, strong {
   font-family: "Flanders Art Sans Bold", Arial, sans-serif;
   font-weight: 700;
 }
 
-/* line 38, ../scss/pyoes/_oe-elements.scss */
+/* line 39, ../scss/pyoes/_oe-elements.scss */
 h4 > em {
   padding: 5px 0 10px 0;
   display: block;
@@ -27703,21 +27858,26 @@ h4 > em {
   line-height: 1.3em;
 }
 
-/* line 39, ../scss/pyoes/_oe-elements.scss */
+/* line 40, ../scss/pyoes/_oe-elements.scss */
 article > h1 {
   padding-bottom: 18px;
 }
 
-/* line 40, ../scss/pyoes/_oe-elements.scss */
+/* line 41, ../scss/pyoes/_oe-elements.scss */
 article a, .panel p a {
   color: #2da3ce;
   text-decoration: underline;
 }
 
-/* line 41, ../scss/pyoes/_oe-elements.scss */
+/* line 42, ../scss/pyoes/_oe-elements.scss */
 article a:hover, .panel p a:hover {
   color: #2da3ce;
   text-decoration: none;
+}
+
+/* line 44, ../scss/pyoes/_oe-elements.scss */
+.panel article h3, .panel article h4, .panel article h5 {
+  line-height: 1.3em;
 }
 
 /* Placeholder fields */
@@ -27973,28 +28133,45 @@ select {
   .bgimage, #service-navigation, .temp-embed {
     display: none;
   }
+
+  /* line 6, ../scss/pyoes/_oe-mediaqueries.scss */
+  .bb-imagelarge {
+    margin: 0 0 30px 0;
+    padding: 0;
+  }
+
+  /* line 7, ../scss/pyoes/_oe-mediaqueries.scss */
+  .bb-imagelarge img {
+    width: 100%;
+  }
+
+  /* line 9, ../scss/pyoes/_oe-mediaqueries.scss */
+  .bb-vertical-large img {
+    width: 100%;
+    height: 400px;
+  }
 }
 /* inventaris article margin */
-/* line 10, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 15, ../scss/pyoes/_oe-mediaqueries.scss */
 .articlemargin {
   width: 70%;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 12, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 17, ../scss/pyoes/_oe-mediaqueries.scss */
   .articlemargin {
     width: 100%;
   }
 }
-/* line 16, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 21, ../scss/pyoes/_oe-mediaqueries.scss */
 .postreg-navbar {
   margin: 0 auto;
   width: 600px;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 18, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 23, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -28002,7 +28179,7 @@ select {
   }
 }
 @media only screen and (min-width: 578px) and (max-width: 800px) {
-  /* line 20, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 25, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -28010,97 +28187,97 @@ select {
   }
 }
 @media (max-width: 391px) {
-  /* line 25, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 100px;
   }
 
-  /* line 26, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 31, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 120px;
     height: 100px;
   }
 
-  /* line 27, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 32, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 27px;
   }
 
-  /* line 28, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 33, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 18px;
     padding: 35px 0 0 0;
   }
 
-  /* line 29, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 
-  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 55px;
     padding: 25px 0 0 0;
   }
 }
 @media (max-width: 320px) {
-  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 70px;
   }
 
-  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 105px;
     height: 70px;
   }
 
-  /* line 36, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 41, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 45px;
     padding: 18px 0 0 0;
   }
 
-  /* line 37, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 42, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 20px;
   }
 
-  /* line 38, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 16px;
     padding: 28px 0 0 0;
   }
 
-  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 }
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 46, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 51, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 47, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 51, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -28111,7 +28288,7 @@ select {
     margin: 0;
   }
 
-  /* line 53, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 58, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -28126,26 +28303,26 @@ select {
     position: relative;
   }
 
-  /* line 54, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 59, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 55, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 60, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
