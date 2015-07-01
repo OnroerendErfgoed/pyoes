@@ -69,8 +69,15 @@ ul.list-selected-items  {margin-top:-10px; margin-left: 10px; padding-right: 10p
 // search list small - ex besluitendatabank
 
 .small-list {margin:0;border-bottom:1px solid $light-gray;padding:0;}
-ul.small-list li  {font-size:0.8em;margin:12px 0 0 0}
+ul.small-list li  {font-size:0.9em;margin:12px 0 0 0;border-top:1px solid $mid-gray;padding-top:10px}
+ul.small-list li i {margin:0;}
 ul.small-list li label {line-height:12px;min-height:12px}
+ul.small-list li:last-child {padding-bottom:12px}
+
+ul.small-list ul   {margin: 0}
+ul.small-list ul li  {font-size:0.8em;border-top:none;margin:0}
+ul.small-list ul li input {float:left;}
+ul.small-list ul li label {}
 
 
 // beeldbank / beheersplannen label + colored
@@ -82,29 +89,6 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 .tag-label li a  {text-decoration:none !important;color:$black}
 .tag-label li a span, .tag-label-col li a span  {margin:2px 0 0 10px;color:$alert-color;font-size:1.1em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
 .tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
-
-
-
-ul.newlist {list-style:none; padding:0; margin:10px 0;}
-
-/*
-ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff}
-
-.newlist li a {clear:left;display:block;padding:0px 0 0px 0}
-.newlist li a:hover {background:$light-gray;display:block;padding:0px 0 0px 0;text-decoration:none; -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;}
-.newlist li {display:block;border-bottom:1px solid #efefef}
-.newlist h5 {padding-top:0px;text-transform: uppercase;font-family: $font-family-medium-serif;}
-
-.newlist p {color:#333;margin:5px;font-size:0.8em}
-
-.newlist li figure {margin:0px;width:150px;float:left;margin-right:20px;height:150px;overflow:hidden;}
-.newlist li figure img {width:150px;}*/
-
-
-/*.newlist li figure img {float:left;width:150px;height:150px;overflow:hidden;margin:20px}*/
 
 
 // vertical position list 
@@ -124,6 +108,13 @@ dl.def-besluit {margin:20px 0 0 0}
 .def-besluit dt {font-size:0.9em;color:$dark-gray;font-weight:normal !important}
 .def-besluit dd {margin-left:160px;margin-top:-24px}
 
+
+// list download
+ul.listdownload  {list-style-type:none;float:right;padding:24px 20px 0 0;font-size:0.8em}
+.listdownload li  {float:left !important;margin-left:20px}
+ul.listdownload li i {color:gray;float:left !important;margin:0px 10px 0 0;font-size:1.5em }
+ul.listdownload li a {color:$dark-purple !important;}
+ul.listdownload li a:hover {color:$black !important;}
 
 
 
