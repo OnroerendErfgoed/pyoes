@@ -4,7 +4,7 @@
 //
 
 
-.fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;}
+.fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;border:1px solid $mid-gray}
 .fl-block .field {border-bottom:1px solid $mid-gray;overflow:hidden;background-color:$white;position:relative;padding:1.6em 1.2em 1.2em 1.2em;}
 .fl-block .field p {margin:0;font-size:$switch-font-size-med;}
 
@@ -23,7 +23,7 @@
 .time-block  {display: block;margin:0.6em 0 0 0;font-size:0.8em}
 
 //inventaris result list 
-.result figure {width:150px;background:#efefef;text-align:center}
+.result figure {width:150px;background:#fff;border:1px solid $light-gray;text-align:center;float:none;}
 .result img {min-height:auto;height:150px}
 
 
