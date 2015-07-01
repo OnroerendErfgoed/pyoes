@@ -113,7 +113,7 @@ $body-font-style: normal;
 $font-smoothing: antialiased;
 
 // Overwrite font-awesome font dir
-$fa-font-path: "../../../font-awesome/fonts";
+$fa-font-path: "../bower_components/font-awesome/fonts";
 
 // Overwrite border bottom and font-weight for tooltip fields
 $has-tip-border-bottom: none;

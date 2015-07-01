@@ -16,7 +16,7 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 /* service nav */
 #service-navigation	  {float:$opposite-direction;padding:0;}
 #service-navigation > li {margin-top:0.4em;float:$default-float;list-style-type:none}
-#service-navigation > li a {font-size:0.75em;color:$steel;line-height:1.8em;}
+#service-navigation > li a {font-size:0.75em;color:$black;line-height:1.8em;}
 #service-navigation > li > a {border-left:1px solid $mid-gray;padding:0 1em;}
 #service-navigation > li:first-child > a {border-left:0;}
 #service-navigation > li a:hover {color:$dark-purple;}
@@ -25,7 +25,7 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 #service-navigation > li:hover ul{display:block;}
 #service-navigation > li ul li a{border-top:1px solid $mid-gray;margin:0 1em;display:block;text-align: center;line-height:2.5em;padding:0 4px;}
 #service-navigation > li ul li:first-child a{border:none;}
-#service-navigation { position:relative;z-index:100;background-color:white; filter:alpha(opacity=60); opacity:.6;padding:3px 0 8px 0;margin-top:10px}
+#service-navigation { position:relative;z-index:100;background-color:white; filter:alpha(opacity=90); opacity:.6;padding:3px 0 8px 0;margin-top:10px}
 
 .inner{ margin: 0 auto; max-width: 1142px; padding: 0;}
 .inner-nav{ margin: 0 auto; max-width: 1142px} 
