@@ -26841,22 +26841,51 @@ ul.list-selected-items {
 
 /* line 72, ../scss/pyoes/_oe-lists.scss */
 ul.small-list li {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin: 12px 0 0 0;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
 }
 
 /* line 73, ../scss/pyoes/_oe-lists.scss */
+ul.small-list li i {
+  margin: 0;
+}
+
+/* line 74, ../scss/pyoes/_oe-lists.scss */
 ul.small-list li label {
   line-height: 12px;
   min-height: 12px;
 }
 
+/* line 75, ../scss/pyoes/_oe-lists.scss */
+ul.small-list li:last-child {
+  padding-bottom: 12px;
+}
+
+/* line 77, ../scss/pyoes/_oe-lists.scss */
+ul.small-list ul {
+  margin: 0;
+}
+
 /* line 78, ../scss/pyoes/_oe-lists.scss */
+ul.small-list ul li {
+  font-size: 0.8em;
+  border-top: none;
+  margin: 0;
+}
+
+/* line 79, ../scss/pyoes/_oe-lists.scss */
+ul.small-list ul li input {
+  float: left;
+}
+
+/* line 85, ../scss/pyoes/_oe-lists.scss */
 ul.tag-label, ul.tag-label-col {
   margin: 10px 0 0 0;
 }
 
-/* line 79, ../scss/pyoes/_oe-lists.scss */
+/* line 86, ../scss/pyoes/_oe-lists.scss */
 .tag-label li, .tag-label-col li {
   float: left;
   background-color: #ededed;
@@ -26866,24 +26895,24 @@ ul.tag-label, ul.tag-label-col {
   font-size: 0.9em;
 }
 
-/* line 80, ../scss/pyoes/_oe-lists.scss */
+/* line 87, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:first-child, .tag-label-col li:first-child {
   background: none;
   padding-left: 0;
 }
 
-/* line 81, ../scss/pyoes/_oe-lists.scss */
+/* line 88, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:last-child {
   background-color: #efefef;
 }
 
-/* line 82, ../scss/pyoes/_oe-lists.scss */
+/* line 89, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a {
   text-decoration: none !important;
   color: black;
 }
 
-/* line 83, ../scss/pyoes/_oe-lists.scss */
+/* line 90, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a span, .tag-label-col li a span {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26893,7 +26922,7 @@ ul.tag-label, ul.tag-label-col {
   font-weight: bold;
 }
 
-/* line 84, ../scss/pyoes/_oe-lists.scss */
+/* line 91, ../scss/pyoes/_oe-lists.scss */
 .tag-label li i {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26903,57 +26932,34 @@ ul.tag-label, ul.tag-label-col {
   font-weight: bold;
 }
 
-/* line 88, ../scss/pyoes/_oe-lists.scss */
-ul.newlist {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-
-/*
-ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff}
-
-.newlist li a {clear:left;display:block;padding:0px 0 0px 0}
-.newlist li a:hover {background:$light-gray;display:block;padding:0px 0 0px 0;text-decoration:none; -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;}
-.newlist li {display:block;border-bottom:1px solid #efefef}
-.newlist h5 {padding-top:0px;text-transform: uppercase;font-family: $font-family-medium-serif;}
-
-.newlist p {color:#333;margin:5px;font-size:0.8em}
-
-.newlist li figure {margin:0px;width:150px;float:left;margin-right:20px;height:150px;overflow:hidden;}
-.newlist li figure img {width:150px;}*/
-/*.newlist li figure img {float:left;width:150px;height:150px;overflow:hidden;margin:20px}*/
-/* line 111, ../scss/pyoes/_oe-lists.scss */
+/* line 95, ../scss/pyoes/_oe-lists.scss */
 .fl-block-largeimage {
   margin-bottom: 30px;
   text-align: center;
 }
 
-/* line 112, ../scss/pyoes/_oe-lists.scss */
+/* line 96, ../scss/pyoes/_oe-lists.scss */
 .fl-block-largeimage div {
   text-align: center;
 }
 
-/* line 113, ../scss/pyoes/_oe-lists.scss */
+/* line 97, ../scss/pyoes/_oe-lists.scss */
 .fl-block-largeimage h5 {
   line-height: 20px;
   text-transform: uppercase;
 }
 
-/* line 114, ../scss/pyoes/_oe-lists.scss */
+/* line 98, ../scss/pyoes/_oe-lists.scss */
 .fl-block-largeimage span {
   color: #d5d5d5;
 }
 
-/* line 115, ../scss/pyoes/_oe-lists.scss */
+/* line 99, ../scss/pyoes/_oe-lists.scss */
 .fl-block-largeimage a:hover {
   text-decoration: underline;
 }
 
-/* line 117, ../scss/pyoes/_oe-lists.scss */
+/* line 101, ../scss/pyoes/_oe-lists.scss */
 .img-vert-list {
   height: 180px;
   width: 180px;
@@ -26961,7 +26967,7 @@ ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff
   position: relative;
 }
 
-/* line 118, ../scss/pyoes/_oe-lists.scss */
+/* line 102, ../scss/pyoes/_oe-lists.scss */
 .img-vert-list img {
   max-height: 100%;
   max-width: 100%;
@@ -26975,22 +26981,54 @@ ul.newlist {list-style:none; padding:0; margin:10px 0;color:#333;background:#fff
   margin: auto;
 }
 
-/* line 123, ../scss/pyoes/_oe-lists.scss */
+/* line 107, ../scss/pyoes/_oe-lists.scss */
 dl.def-besluit {
   margin: 20px 0 0 0;
 }
 
-/* line 124, ../scss/pyoes/_oe-lists.scss */
+/* line 108, ../scss/pyoes/_oe-lists.scss */
 .def-besluit dt {
   font-size: 0.9em;
   color: #3f3840;
   font-weight: normal !important;
 }
 
-/* line 125, ../scss/pyoes/_oe-lists.scss */
+/* line 109, ../scss/pyoes/_oe-lists.scss */
 .def-besluit dd {
   margin-left: 160px;
   margin-top: -24px;
+}
+
+/* line 113, ../scss/pyoes/_oe-lists.scss */
+ul.listdownload {
+  list-style-type: none;
+  float: right;
+  padding: 24px 20px 0 0;
+  font-size: 0.8em;
+}
+
+/* line 114, ../scss/pyoes/_oe-lists.scss */
+.listdownload li {
+  float: left !important;
+  margin-left: 20px;
+}
+
+/* line 115, ../scss/pyoes/_oe-lists.scss */
+ul.listdownload li i {
+  color: gray;
+  float: left !important;
+  margin: 0px 10px 0 0;
+  font-size: 1.5em;
+}
+
+/* line 116, ../scss/pyoes/_oe-lists.scss */
+ul.listdownload li a {
+  color: #753f7f !important;
+}
+
+/* line 117, ../scss/pyoes/_oe-lists.scss */
+ul.listdownload li a:hover {
+  color: black !important;
 }
 
 /* line 7, ../scss/pyoes/_oe-statistics.scss */
@@ -27131,6 +27169,7 @@ dl.def-besluit {
 .fl-block {
   margin: 0 0 2em 0;
   font-size: 14px;
+  border: 1px solid #e5e5e5;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
@@ -27203,8 +27242,10 @@ dl.def-besluit {
 /* line 26, ../scss/pyoes/_oe-blokken.scss */
 .result figure {
   width: 150px;
-  background: #efefef;
+  background: #fff;
+  border: 1px solid #ededed;
   text-align: center;
+  float: none;
 }
 
 /* line 27, ../scss/pyoes/_oe-blokken.scss */
@@ -28150,28 +28191,41 @@ select {
     width: 100%;
     height: 400px;
   }
+
+  /* line 11, ../scss/pyoes/_oe-mediaqueries.scss */
+  .result figure {
+    float: none !important;
+    background: none;
+    width: 100%;
+  }
+
+  /* line 12, ../scss/pyoes/_oe-mediaqueries.scss */
+  .result img {
+    float: none !important;
+    height: 100% !important;
+  }
 }
 /* inventaris article margin */
-/* line 15, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 20, ../scss/pyoes/_oe-mediaqueries.scss */
 .articlemargin {
   width: 70%;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 17, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 22, ../scss/pyoes/_oe-mediaqueries.scss */
   .articlemargin {
     width: 100%;
   }
 }
-/* line 21, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 26, ../scss/pyoes/_oe-mediaqueries.scss */
 .postreg-navbar {
   margin: 0 auto;
   width: 600px;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 23, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 28, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -28179,7 +28233,7 @@ select {
   }
 }
 @media only screen and (min-width: 578px) and (max-width: 800px) {
-  /* line 25, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -28187,97 +28241,97 @@ select {
   }
 }
 @media (max-width: 391px) {
-  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 100px;
   }
 
-  /* line 31, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 36, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 120px;
     height: 100px;
   }
 
-  /* line 32, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 37, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 27px;
   }
 
-  /* line 33, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 38, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 18px;
     padding: 35px 0 0 0;
   }
 
-  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 
-  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 55px;
     padding: 25px 0 0 0;
   }
 }
 @media (max-width: 320px) {
-  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 70px;
   }
 
-  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 45, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 105px;
     height: 70px;
   }
 
-  /* line 41, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 46, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 45px;
     padding: 18px 0 0 0;
   }
 
-  /* line 42, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 47, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 20px;
   }
 
-  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 48, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 16px;
     padding: 28px 0 0 0;
   }
 
-  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 49, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 }
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 51, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -28288,7 +28342,7 @@ select {
     margin: 0;
   }
 
-  /* line 58, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 63, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -28303,26 +28357,26 @@ select {
     position: relative;
   }
 
-  /* line 59, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 64, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 60, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 65, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 66, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 67, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
