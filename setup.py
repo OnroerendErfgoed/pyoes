@@ -15,7 +15,7 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.4.2',
+      version='0.4.3',
       description='Algemene onroerenderfgoed stijl (gebaseerd op de Vlaamse huisstijl) voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -33,7 +33,7 @@ setup(name='pyoes',
         "Topic :: Text Processing :: Markup :: HTML"
         ],
       author='Koen Van Daele',
-      author_email='koen.vandael@rwo.vlaanderen.be',
+      author_email='koen.vandaele@rwo.vlaanderen.be',
       url='https://pyoes.readthedocs.org/en/latest/',
       keywords='pyramid oe onroerend erfgoed sass compass style css jinja2 templates',
       packages=['pyoes'],

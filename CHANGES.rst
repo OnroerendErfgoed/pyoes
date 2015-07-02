@@ -1,3 +1,11 @@
+0.4.3 (02-07-2015)
+==================
+
+* Bugfix error pages
+* Lijstweergave zoekresultaten aangepast
+* Detailpagina besluitentype geüpdate
+* zoekwidget toegevoegd
+
 0.4.2 (09-06-2015)
 ==================
 
