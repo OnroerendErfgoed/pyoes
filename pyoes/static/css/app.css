@@ -26880,12 +26880,12 @@ ul.small-list ul li input {
   float: left;
 }
 
-/* line 85, ../scss/pyoes/_oe-lists.scss */
+/* line 88, ../scss/pyoes/_oe-lists.scss */
 ul.tag-label, ul.tag-label-col {
   margin: 10px 0 0 0;
 }
 
-/* line 86, ../scss/pyoes/_oe-lists.scss */
+/* line 89, ../scss/pyoes/_oe-lists.scss */
 .tag-label li, .tag-label-col li {
   float: left;
   background-color: #ededed;
@@ -26895,24 +26895,24 @@ ul.tag-label, ul.tag-label-col {
   font-size: 0.9em;
 }
 
-/* line 87, ../scss/pyoes/_oe-lists.scss */
+/* line 90, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:first-child, .tag-label-col li:first-child {
   background: none;
   padding-left: 0;
 }
 
-/* line 88, ../scss/pyoes/_oe-lists.scss */
+/* line 91, ../scss/pyoes/_oe-lists.scss */
 .tag-label li:last-child {
   background-color: #efefef;
 }
 
-/* line 89, ../scss/pyoes/_oe-lists.scss */
+/* line 92, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a {
   text-decoration: none !important;
   color: black;
 }
 
-/* line 90, ../scss/pyoes/_oe-lists.scss */
+/* line 93, ../scss/pyoes/_oe-lists.scss */
 .tag-label li a span, .tag-label-col li a span {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26922,7 +26922,7 @@ ul.tag-label, ul.tag-label-col {
   font-weight: bold;
 }
 
-/* line 91, ../scss/pyoes/_oe-lists.scss */
+/* line 94, ../scss/pyoes/_oe-lists.scss */
 .tag-label li i {
   margin: 2px 0 0 10px;
   color: #FF0000;
@@ -26932,34 +26932,7 @@ ul.tag-label, ul.tag-label-col {
   font-weight: bold;
 }
 
-/* line 95, ../scss/pyoes/_oe-lists.scss */
-.fl-block-largeimage {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* line 96, ../scss/pyoes/_oe-lists.scss */
-.fl-block-largeimage div {
-  text-align: center;
-}
-
-/* line 97, ../scss/pyoes/_oe-lists.scss */
-.fl-block-largeimage h5 {
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-/* line 98, ../scss/pyoes/_oe-lists.scss */
-.fl-block-largeimage span {
-  color: #d5d5d5;
-}
-
 /* line 99, ../scss/pyoes/_oe-lists.scss */
-.fl-block-largeimage a:hover {
-  text-decoration: underline;
-}
-
-/* line 101, ../scss/pyoes/_oe-lists.scss */
 .img-vert-list {
   height: 180px;
   width: 180px;
@@ -26967,7 +26940,7 @@ ul.tag-label, ul.tag-label-col {
   position: relative;
 }
 
-/* line 102, ../scss/pyoes/_oe-lists.scss */
+/* line 100, ../scss/pyoes/_oe-lists.scss */
 .img-vert-list img {
   max-height: 100%;
   max-width: 100%;
@@ -26981,39 +26954,38 @@ ul.tag-label, ul.tag-label-col {
   margin: auto;
 }
 
-/* line 107, ../scss/pyoes/_oe-lists.scss */
-dl.def-besluit {
-  margin: 20px 0 0 0;
+/* line 104, ../scss/pyoes/_oe-lists.scss */
+.def-besluit {
+  margin: 30px 0;
 }
 
-/* line 108, ../scss/pyoes/_oe-lists.scss */
-.def-besluit dt {
-  font-size: 0.9em;
+/* line 105, ../scss/pyoes/_oe-lists.scss */
+.def-besluit td:first-child {
+  width: 150px;
+  font-size: 0.8em;
   color: #3f3840;
-  font-weight: normal !important;
 }
 
-/* line 109, ../scss/pyoes/_oe-lists.scss */
-.def-besluit dd {
-  margin-left: 160px;
-  margin-top: -24px;
+/* line 106, ../scss/pyoes/_oe-lists.scss */
+.def-besluit td {
+  vertical-align: top;
 }
 
-/* line 113, ../scss/pyoes/_oe-lists.scss */
+/* line 110, ../scss/pyoes/_oe-lists.scss */
 ul.listdownload {
   list-style-type: none;
   float: right;
-  padding: 24px 20px 0 0;
+  padding: 3px 0 0 0;
   font-size: 0.8em;
 }
 
-/* line 114, ../scss/pyoes/_oe-lists.scss */
+/* line 111, ../scss/pyoes/_oe-lists.scss */
 .listdownload li {
   float: left !important;
   margin-left: 20px;
 }
 
-/* line 115, ../scss/pyoes/_oe-lists.scss */
+/* line 112, ../scss/pyoes/_oe-lists.scss */
 ul.listdownload li i {
   color: gray;
   float: left !important;
@@ -27021,12 +26993,12 @@ ul.listdownload li i {
   font-size: 1.5em;
 }
 
-/* line 116, ../scss/pyoes/_oe-lists.scss */
+/* line 113, ../scss/pyoes/_oe-lists.scss */
 ul.listdownload li a {
   color: #753f7f !important;
 }
 
-/* line 117, ../scss/pyoes/_oe-lists.scss */
+/* line 114, ../scss/pyoes/_oe-lists.scss */
 ul.listdownload li a:hover {
   color: black !important;
 }
@@ -27169,7 +27141,6 @@ ul.listdownload li a:hover {
 .fl-block {
   margin: 0 0 2em 0;
   font-size: 14px;
-  border: 1px solid #e5e5e5;
 }
 
 /* line 8, ../scss/pyoes/_oe-blokken.scss */
@@ -27185,6 +27156,7 @@ ul.listdownload li a:hover {
 .fl-block .field p {
   margin: 0;
   font-size: 14px;
+  padding: 0 0 20px 0;
 }
 
 /* line 11, ../scss/pyoes/_oe-blokken.scss */
@@ -27193,20 +27165,21 @@ ul.listdownload li a:hover {
   overflow: hidden;
 }
 
-/* line 13, ../scss/pyoes/_oe-blokken.scss */
+/* line 12, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full {
-  padding: 0;
+  padding: 0px 0;
 }
 
-/* line 14, ../scss/pyoes/_oe-blokken.scss */
+/* line 13, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full > a {
   display: block;
   padding: 1.6em 1.4em 1.6em 1.4em;
   color: #5e5e5e;
 }
 
-/* line 16, ../scss/pyoes/_oe-blokken.scss */
+/* line 14, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a:hover {
+  display: block;
   background-color: #fbfbfb;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
@@ -27215,31 +27188,31 @@ ul.listdownload li a:hover {
   text-decoration: none;
 }
 
-/* line 17, ../scss/pyoes/_oe-blokken.scss */
+/* line 23, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 {
   text-transform: uppercase;
   font-family: "Flanders Art Sans Medium", Arial, sans-serif;
 }
 
-/* line 18, ../scss/pyoes/_oe-blokken.scss */
+/* line 24, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full a:hover h5 {
   text-decoration: underline;
 }
 
-/* line 20, ../scss/pyoes/_oe-blokken.scss */
+/* line 26, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-text {
   border: 1px solid #e3e3e3 !important;
   border-top: none !important;
 }
 
-/* line 23, ../scss/pyoes/_oe-blokken.scss */
+/* line 29, ../scss/pyoes/_oe-blokken.scss */
 .time-block {
   display: block;
   margin: 0.6em 0 0 0;
   font-size: 0.8em;
 }
 
-/* line 26, ../scss/pyoes/_oe-blokken.scss */
+/* line 32, ../scss/pyoes/_oe-blokken.scss */
 .result figure {
   width: 150px;
   background: #fff;
@@ -27248,7 +27221,7 @@ ul.listdownload li a:hover {
   float: none;
 }
 
-/* line 27, ../scss/pyoes/_oe-blokken.scss */
+/* line 33, ../scss/pyoes/_oe-blokken.scss */
 .result img {
   min-height: auto;
   height: 150px;
@@ -27261,35 +27234,61 @@ ul.listdownload li a:hover {
 .fl-block-largeimage a:hover h5 {text-decoration: underline}
 .fl-block-largeimage .posted {line-height:1em;color:$silver;margin-top:-0.5em;}
 */
-/* line 44, ../scss/pyoes/_oe-blokken.scss */
+/* line 47, ../scss/pyoes/_oe-blokken.scss */
+.fl-block-largeimage {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* line 48, ../scss/pyoes/_oe-blokken.scss */
+.fl-block-largeimage div {
+  text-align: center;
+}
+
+/* line 49, ../scss/pyoes/_oe-blokken.scss */
+.fl-block-largeimage h5 {
+  line-height: 20px;
+}
+
+/* line 50, ../scss/pyoes/_oe-blokken.scss */
+.fl-block-largeimage h5:hover {
+  text-decoration: underline !important;
+}
+
+/* line 51, ../scss/pyoes/_oe-blokken.scss */
+.fl-block-largeimage a span {
+  color: #d5d5d5;
+}
+
+/* line 55, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more, .fl-block .field a.fa, .fl-block .field i.fa {
   float: right;
   text-decoration: none;
 }
 
-/* line 45, ../scss/pyoes/_oe-blokken.scss */
+/* line 56, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more:hover {
   text-decoration: underline;
 }
 
-/* line 46, ../scss/pyoes/_oe-blokken.scss */
+/* line 57, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.more {
   font-family: "Flanders Art Sans Medium", Arial, sans-serif;
   color: #753f7f;
 }
 
-/* line 47, ../scss/pyoes/_oe-blokken.scss */
+/* line 58, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field a.fa {
   margin-top: 2em;
 }
 
-/* line 48, ../scss/pyoes/_oe-blokken.scss */
+/* line 59, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field:last-child {
   border: none;
   padding-bottom: 1.6em;
 }
 
-/* line 49, ../scss/pyoes/_oe-blokken.scss */
+/* line 60, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field figure {
   float: left;
   overflow: hidden;
@@ -27298,7 +27297,7 @@ ul.listdownload li a:hover {
   padding: 0;
 }
 
-/* line 52, ../scss/pyoes/_oe-blokken.scss */
+/* line 63, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-date {
   text-transform: uppercase;
   border: none;
@@ -27307,35 +27306,35 @@ ul.listdownload li a:hover {
   color: white;
 }
 
-/* line 53, ../scss/pyoes/_oe-blokken.scss */
+/* line 64, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-date i {
   float: none;
   margin-right: 0.4em;
 }
 
-/* line 54, ../scss/pyoes/_oe-blokken.scss */
+/* line 65, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image {
   border-bottom: 0;
 }
 
-/* line 55, ../scss/pyoes/_oe-blokken.scss */
+/* line 66, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.block-image img {
   width: 100%;
   display: block;
 }
 
 /* -- RSS newsfeed-- */
-/* line 61, ../scss/pyoes/_oe-blokken.scss */
+/* line 72, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a {
   padding: 0.8em 1.4em 0.4em 1.4em;
 }
 
-/* line 62, ../scss/pyoes/_oe-blokken.scss */
+/* line 73, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a h5 {
   margin-right: 1.8em;
 }
 
-/* line 63, ../scss/pyoes/_oe-blokken.scss */
+/* line 74, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.full.rss a .posted {
   position: absolute;
   right: 1.2em;
@@ -27347,7 +27346,7 @@ ul.listdownload li a:hover {
 }
 
 /* -- titles -- */
-/* line 70, ../scss/pyoes/_oe-blokken.scss */
+/* line 81, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title, .fl-block.style-2 .block-title, .fl-block.style-3 .block-title {
   background-color: #753f7f;
   margin: 0;
@@ -27355,24 +27354,24 @@ ul.listdownload li a:hover {
   font-size: 14px;
 }
 
-/* line 71, ../scss/pyoes/_oe-blokken.scss */
+/* line 82, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-3 .block-title {
   background-color: #2da3ce;
   color: white !important;
 }
 
-/* line 73, ../scss/pyoes/_oe-blokken.scss */
+/* line 84, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 .block-title.naked, .fl-block.style-2 .block-title.naked {
   color: #753f7f !important;
 }
 
-/* line 74, ../scss/pyoes/_oe-blokken.scss */
+/* line 85, ../scss/pyoes/_oe-blokken.scss */
 .fl-block.style-1 a, .fl-block.style-2 a, .fl-block.style-3 a {
   color: white;
   display: block;
 }
 
-/* line 76, ../scss/pyoes/_oe-blokken.scss */
+/* line 87, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title, .fl-block .block-title.naked {
   background-color: #753f7f;
   text-transform: uppercase;
@@ -27382,27 +27381,27 @@ ul.listdownload li a:hover {
   padding: 0.9em 1.4em 0.8em 1.2em;
 }
 
-/* line 78, ../scss/pyoes/_oe-blokken.scss */
+/* line 89, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .block-title.naked {
   background-color: white !important;
   color: #753f7f !important;
   padding: 0;
 }
 
-/* line 80, ../scss/pyoes/_oe-blokken.scss */
+/* line 91, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a {
   color: #753f7f !important;
   margin: -8px 0 0 0;
   letter-spacing: -1px;
 }
 
-/* line 81, ../scss/pyoes/_oe-blokken.scss */
+/* line 92, ../scss/pyoes/_oe-blokken.scss */
 .block-text h3 a:hover {
   text-decoration: underline !important;
 }
 
 /* -- social -- */
-/* line 86, ../scss/pyoes/_oe-blokken.scss */
+/* line 97, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social i.fa {
   float: none;
   margin: 0 1em 0 0.4em;
@@ -27411,81 +27410,81 @@ ul.listdownload li a:hover {
   font-size: 1.6em;
 }
 
-/* line 87, ../scss/pyoes/_oe-blokken.scss */
+/* line 98, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .fl-block {
   border-right: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 88, ../scss/pyoes/_oe-blokken.scss */
+/* line 99, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a {
   font-weight: 400;
 }
 
-/* line 89, ../scss/pyoes/_oe-blokken.scss */
+/* line 100, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social > a:hover {
   text-decoration: none;
 }
 
-/* line 91, ../scss/pyoes/_oe-blokken.scss */
+/* line 102, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.twitter > a {
   color: #2da5da;
 }
 
-/* line 92, ../scss/pyoes/_oe-blokken.scss */
+/* line 103, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.facebook > a {
   color: #3567a6;
 }
 
-/* line 93, ../scss/pyoes/_oe-blokken.scss */
+/* line 104, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.mail > a {
   color: #926da5;
 }
 
-/* line 94, ../scss/pyoes/_oe-blokken.scss */
+/* line 105, ../scss/pyoes/_oe-blokken.scss */
 .fl-block .field.social.linkedin > a {
   color: #007ab9;
 }
 
-/* line 96, ../scss/pyoes/_oe-blokken.scss */
+/* line 107, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg {
   background-color: #b05dbf !important;
   color: white;
 }
 
-/* line 97, ../scss/pyoes/_oe-blokken.scss */
+/* line 108, ../scss/pyoes/_oe-blokken.scss */
 .coloredbg h3 a {
   color: white !important;
 }
 
-/* line 101, ../scss/pyoes/_oe-blokken.scss */
+/* line 112, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard {
   padding: 0;
   background: white;
   border: 1px solid #e5e5e5;
 }
 
-/* line 102, ../scss/pyoes/_oe-blokken.scss */
+/* line 113, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard a {
   display: block;
   min-height: 78px;
 }
 
-/* line 103, ../scss/pyoes/_oe-blokken.scss */
+/* line 114, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard a:hover {
   background: #fbfbfb;
   display: block;
   min-height: 78px;
 }
 
-/* line 104, ../scss/pyoes/_oe-blokken.scss */
+/* line 115, ../scss/pyoes/_oe-blokken.scss */
 .actoren-idcard h3 {
   font-size: 1em;
   margin: 0;
   padding: 15px 0 0 0;
 }
 
-/* line 106, ../scss/pyoes/_oe-blokken.scss */
+/* line 117, ../scss/pyoes/_oe-blokken.scss */
 .actoren-icon-large, .actoren-icon-small {
   float: left;
   color: #ededed;
@@ -27495,7 +27494,7 @@ ul.listdownload li a:hover {
   margin-right: 20px;
 }
 
-/* line 107, ../scss/pyoes/_oe-blokken.scss */
+/* line 118, ../scss/pyoes/_oe-blokken.scss */
 .actoren-icon-small {
   border-right: 1px solid #e5e5e5;
   margin-right: 15px;
@@ -27825,58 +27824,63 @@ aside img {
   text-decoration: underline;
 }
 
-/* line 18, ../scss/pyoes/_oe-elements.scss */
+/* line 17, ../scss/pyoes/_oe-elements.scss */
+.alert-time {
+  background-color: #666;
+}
+
+/* line 21, ../scss/pyoes/_oe-elements.scss */
 .bg-primary {
   background-color: #944ea1;
 }
 
-/* line 19, ../scss/pyoes/_oe-elements.scss */
+/* line 22, ../scss/pyoes/_oe-elements.scss */
 .bg-success {
   background-color: #43ac6a;
 }
 
-/* line 20, ../scss/pyoes/_oe-elements.scss */
+/* line 23, ../scss/pyoes/_oe-elements.scss */
 .bg-info {
   background-color: #5bc0de;
 }
 
-/* line 21, ../scss/pyoes/_oe-elements.scss */
+/* line 24, ../scss/pyoes/_oe-elements.scss */
 .bg-warning {
   background-color: #f08a24;
 }
 
-/* line 22, ../scss/pyoes/_oe-elements.scss */
+/* line 25, ../scss/pyoes/_oe-elements.scss */
 .bg-danger {
   background-color: #ff0000;
 }
 
-/* line 26, ../scss/pyoes/_oe-elements.scss */
+/* line 29, ../scss/pyoes/_oe-elements.scss */
 .label-colored {
   background-color: #2da3ce;
 }
 
-/* line 27, ../scss/pyoes/_oe-elements.scss */
+/* line 30, ../scss/pyoes/_oe-elements.scss */
 .label-colored a {
   text-decoration: none !important;
   color: white;
   padding-right: 3px;
 }
 
-/* line 28, ../scss/pyoes/_oe-elements.scss */
+/* line 31, ../scss/pyoes/_oe-elements.scss */
 .label-colored a span {
   color: white;
   border-left: 1px dotted #a0d3e8;
   padding-left: 8px;
 }
 
-/* line 32, ../scss/pyoes/_oe-elements.scss */
+/* line 35, ../scss/pyoes/_oe-elements.scss */
 h4.header-img-panel {
   text-transform: uppercase;
   font-size: 1em;
   padding: 20px 0;
 }
 
-/* line 34, ../scss/pyoes/_oe-elements.scss */
+/* line 37, ../scss/pyoes/_oe-elements.scss */
 .color-cube {
   height: 100px;
   width: 100px;
@@ -27885,13 +27889,13 @@ h4.header-img-panel {
   padding: 5px;
 }
 
-/* line 38, ../scss/pyoes/_oe-elements.scss */
+/* line 41, ../scss/pyoes/_oe-elements.scss */
 dt, b, strong {
   font-family: "Flanders Art Sans Bold", Arial, sans-serif;
   font-weight: 700;
 }
 
-/* line 39, ../scss/pyoes/_oe-elements.scss */
+/* line 42, ../scss/pyoes/_oe-elements.scss */
 h4 > em {
   padding: 5px 0 10px 0;
   display: block;
@@ -27899,24 +27903,24 @@ h4 > em {
   line-height: 1.3em;
 }
 
-/* line 40, ../scss/pyoes/_oe-elements.scss */
+/* line 43, ../scss/pyoes/_oe-elements.scss */
 article > h1 {
   padding-bottom: 18px;
 }
 
-/* line 41, ../scss/pyoes/_oe-elements.scss */
+/* line 44, ../scss/pyoes/_oe-elements.scss */
 article a, .panel p a {
   color: #2da3ce;
   text-decoration: underline;
 }
 
-/* line 42, ../scss/pyoes/_oe-elements.scss */
+/* line 45, ../scss/pyoes/_oe-elements.scss */
 article a:hover, .panel p a:hover {
   color: #2da3ce;
   text-decoration: none;
 }
 
-/* line 44, ../scss/pyoes/_oe-elements.scss */
+/* line 47, ../scss/pyoes/_oe-elements.scss */
 .panel article h3, .panel article h4, .panel article h5 {
   line-height: 1.3em;
 }

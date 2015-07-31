@@ -4,16 +4,22 @@
 //
 
 
-.fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;border:1px solid $mid-gray}
+.fl-block  {margin: 0 0 2em 0;font-size:$switch-font-size-med;}
 .fl-block .field {border-bottom:1px solid $mid-gray;overflow:hidden;background-color:$white;position:relative;padding:1.6em 1.2em 1.2em 1.2em;}
-.fl-block .field p {margin:0;font-size:$switch-font-size-med;}
+.fl-block .field p {margin:0;font-size:$switch-font-size-med;padding:0 0 20px 0}
 
 .fl-block .field img {height:105px;overflow: hidden}
-
-.fl-block .field.full {padding:0;}
+.fl-block .field.full {padding:0px 0 ;}
 .fl-block .field.full > a {display:block;padding:1.6em 1.4em 1.6em 1.4em;color:#5e5e5e;}
+.fl-block .field.full a:hover{display:block;background-color:$white-gray;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;text-decoration: none; }
 
-.fl-block .field.full a:hover{background-color:$white-gray;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;text-decoration: none; }
+
+
+
+
+
+
+
 .fl-block .field.full a h5, .fl-block .field.fullfeed a h5, .largeimagefield a h5 { text-transform: uppercase;font-family: $font-family-medium-serif;}
 .fl-block .field.full a:hover h5 {text-decoration: underline;}
 
@@ -24,8 +30,7 @@
 
 //inventaris result list 
 .result figure {width:150px;background:#fff;border:1px solid $light-gray;text-align:center;float:none;}
-.result img {min-height:auto;height:150px}
-
+.result img {min-height:auto;height:150px;}
 
 
 
@@ -38,9 +43,15 @@
 .fl-block-largeimage .posted {line-height:1em;color:$silver;margin-top:-0.5em;}
 */
 
+// vertical position list 
+.fl-block-largeimage  {margin-bottom:30px;text-align:center;}
+.fl-block-largeimage div {text-align:center}
+.fl-block-largeimage h5 {line-height:20px}
+.fl-block-largeimage h5:hover {text-decoration: underline !important}
+.fl-block-largeimage a span {color:$gray;}
+
 
 // flanders-block-more link
-
 .fl-block .field a.more,.fl-block .field a.fa,.fl-block .field i.fa {float:$opposite-direction;text-decoration:none;}
 .fl-block .field a.more:hover{text-decoration:underline;}
 .fl-block .field a.more {font-family: $font-family-medium-serif;color:$dark-purple}

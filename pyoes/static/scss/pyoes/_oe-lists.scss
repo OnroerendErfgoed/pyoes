@@ -80,6 +80,9 @@ ul.small-list ul li input {float:left;}
 ul.small-list ul li label {}
 
 
+
+
+
 // beeldbank / beheersplannen label + colored
 
 ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
@@ -91,12 +94,7 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 .tag-label li i  {margin:2px 0 0 10px;color:$alert-color;font-size:0.8em;border-left:1px solid $white;padding-left:10px;font-weight:bold;}
 
 
-// vertical position list 
-.fl-block-largeimage  {margin-bottom:30px;text-align:center;}
-.fl-block-largeimage div {text-align:center}
-.fl-block-largeimage h5 {line-height:20px;text-transform:uppercase;}
-.fl-block-largeimage span {color:$gray;}
-.fl-block-largeimage a:hover {text-decoration: underline}
+
 
 .img-vert-list {height: 180px; width: 180px;display: inline-block;position: relative;}
 .img-vert-list img {max-height: 100%;max-width: 100%;width: auto;height: auto;position: absolute;top:0;bottom:0;left:0;right:0;margin: auto}
@@ -109,7 +107,7 @@ ul.tag-label, ul.tag-label-col  {margin:10px 0 0 0;}
 
 
 // list download
-ul.listdownload  {list-style-type:none;float:right;padding:24px 20px 0 0;font-size:0.8em}
+ul.listdownload  {list-style-type:none;float:right;padding:3px 0 0 0;font-size:0.8em}
 .listdownload li  {float:left !important;margin-left:20px}
 ul.listdownload li i {color:gray;float:left !important;margin:0px 10px 0 0;font-size:1.5em }
 ul.listdownload li a {color:$dark-purple !important;}
