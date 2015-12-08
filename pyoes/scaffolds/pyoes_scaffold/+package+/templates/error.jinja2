@@ -1,22 +1,37 @@
 {% extends "layout.jinja2" %}
 
-{% set mailto_error = mailto_error|default('???') -%}
+{% set mailto_notfound = mailto_notfound|default('???') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Error | {{app_package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="large-12 columns">
-        <div class="panel">
-            <h2 class="subheader">Fout opgetreden! - 500</h2>
-            <p>Sorry, er is een onverwachte fout opgetreden.</p>
-            <p>Controleer of uw url en parameters correct zijn en probeer dan nogmaals.</p>
-            <p>Indien het probleem zich blijft voordoen, gelieve contact op te nemen met <a href="mailto:{{ mailto_error }}">{{ mailto_error }}</a>.</p>
-
-            {% block error_info %}
-            {% endblock %}
-        </div>
+  <div class="" style="height:100%">
+    <div class="text-center" style="padding:20px 0; color: #753F7F;">
+      <h1 style="font-size:60px;">
+        <i class="fa fa-warning" style=""></i>
+        <span style="">500</span><br>
+      </h1>
+      <h3><span>Er is een technisch probleem.</span></h3>
+      <h4><strong><span style="color:#753F7F">Sorry! Onze website heeft een technisch probleem. Hierdoor kan je deze pagina niet raadplegen. </span></strong></h4>
     </div>
-</div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <div class="text-center">
+            <div class="small-10 small-centered columns" style="padding:20px 0">
+              <h5 class="text-left" style="">Wat kan je zelf doen?</h5>
+              <ul class="disk text-left" style="margin-bottom:10px;">
+                <li><strong>Vernieuw de browserpagina <small>(CTRL+F5 of CMD+R)</small></strong></li>
+                <li><strong>Wis de browsergeschiedenis en geef de URL opnieuw in.</strong></li>
+                <li><strong>Meld ons het technisch probleem via <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a>.</strong></br>
+                  Vergeet niet te vermelden welke pagina je zocht, welk besturingsysteem (Windows, MacOS, ... ) en welke browser ( Chrome, ... ).</li>
+                <li><strong>Je kan een nieuwe zoekopdracht starten op de <a href="#">homepagina.</a></strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

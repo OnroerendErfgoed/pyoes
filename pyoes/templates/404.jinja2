@@ -1,6 +1,6 @@
 {% extends "layout.jinja2" %}
 
-{% set mailto_notfound = mailto_notfound|default('???') -%}
+{% set mailto_notfound = mailto_notfound|default('ict@onroerenderfgoed.be') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
@@ -26,11 +26,11 @@
                   De oorsprong van dit probleem kan een eenvoudige tikfout zijn.
                 </li>
                 <li><strong>Ben je foutief doorgelinkt?</strong>
-                  Meld het ons via <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a>.
+                  Meld het ons via <a href="mailto:{{ mailto_notfound }}">{{ mailto_notfound }}</a>.
                 </li>
                 <li><strong>Werd de pagina gewist of verplaatst?</strong>
                   Dan kan je een nieuwe zoekopdracht starten op de
-                  <a href="#">homepagina.</a>
+                  <a href="/">homepagina.</a>
                 </li>
               </ul>
             </div>

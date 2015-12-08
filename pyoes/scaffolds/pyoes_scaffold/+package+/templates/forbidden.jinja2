@@ -1,12 +1,33 @@
 {% extends "layout.jinja2" %}
 
+{% set mailto_notfound = mailto_notfound|default('???') -%}
 {% set app_package = app_package|default('Pyoes') %}
-{% block html_title %}Forbidden | {{app_package}} | Onroerend Erfgoed{% endblock %}
+
+{% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="large-12 columns">
-        <div data-alert class="alert-box alert">{{ message }}</div>
-    </div>
+<div class="" style="height:100%">
+	<div class="text-center" style="padding:20px 0; color: #753F7F;">
+		<h1 style="font-size:60px;">
+			<i class="fa fa-warning"></i>
+			<span>403</span><br>
+		</h1>
+		<h3><span>De pagina is afgeschermd.</span></h3>
+		<h4><strong><span style="color: #753F7F;">Deze pagina is niet voor jou bedoeld. Slechts een beperkt aantal mensen heeft de rechten om ze te bekijken.</span></strong></h4>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel">
+				<div class="text-center">
+					<div class="small-10 small-centered columns" style="padding:20px 0">
+						<h5 class="text-left" style="">Wat kan je zelf doen?</h5>
+						<ul class="disk text-left" style="margin-bottom:10px;">
+							<li><strong>Mail naar <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a> als je de rechten wilt bekomen</strong></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}
