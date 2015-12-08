@@ -6,24 +6,37 @@
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="large-12 columns">
-        <div class="panel">
-            <h1 class="subheader">Fout 404 - Pagina werd niet gevonden</h1>
-            <p>De pagina die je hebt opgevraagd, bestaat niet (meer).</p>
-            <h4 class="subheader">Wat nu?</h4>
-            <p>Ben je zeker dat je een correcte URL hebt ingegeven?<br>
-              Ben je op deze foutpagina terechtgekomen na het volgen van een link op onze site?<br>
-              Of ben je van mening dat deze pagina wel zou moeten bestaan?
-            </p>
-            <p>
-              Neem dan <a href="mailto:{{ mailto_notfound }}">contact</a> op met een van de beheerders.
-              Vergeet niet te vermelden welke pagina je zocht.
-            </p>
-
-            {% block notfound_info %}
-            {% endblock %}
-        </div>
+  <div class="body-bg-error" style="height:100%">
+    <div class="text-center" style="padding:20px 0">
+      <h1 style="font-size:60px;color:#fff">
+        <i class="fa fa-warning" style="color:#fff"></i>
+        <span style="color:#fff">404</span><br>
+      </h1>
+      <h3><span style="color:#fff">De pagina werd niet gevonden.</span></h3>
+      <h4><strong><span style="color:#fff">De pagina die je hebt opgevraagd, bestaat niet (meer) of ze is verplaatst.</span></strong></h4>
     </div>
-</div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <div class="text-center">
+            <div class="small-10 small-centered columns" style="padding:20px 0">
+              <h5 class="text-left">Wat kan je zelf doen?</h5>
+              <ul class="disk text-left">
+                <li><strong>Controleer de schrijfwijze van de URL.</strong>
+                  De oorsprong van dit probleem kan een eenvoudige tikfout zijn.
+                </li>
+                <li><strong>Ben je foutief doorgelinkt?</strong>
+                  Meld het ons via <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a>.
+                </li>
+                <li><strong>Werd de pagina gewist of verplaatst?</strong>
+                  Dan kan je een nieuwe zoekopdracht starten op de
+                  <a href="#">homepagina.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

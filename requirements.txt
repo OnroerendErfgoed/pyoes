@@ -1,6 +1,6 @@
 pyramid==1.5.7
 
 pyramid_jinja2==2.5
-jinja2==2.7.3
+jinja2==2.8
 
 python-dateutil==2.4.2
