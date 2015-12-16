@@ -3,7 +3,7 @@
 {% set mailto_notfound = mailto_notfound|default('???') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Failed Authentication | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
 <div class="" style="height:100%">
@@ -12,8 +12,8 @@
 			<i class="fa fa-warning"></i>
 			<span>401</span><br>
 		</h1>
-		<h3><span>De pagina is afgeschermd.</span></h3>
-		<h4><strong><span style="color: #753F7F;">Deze pagina is niet voor jou bedoeld. Slechts een beperkt aantal mensen heeft de rechten om ze te bekijken.</span></strong></h4>
+		<h3><span>Paswoord vereist.</span></h3>
+		<h4><strong><span style="color: #753F7F;">Je kan deze pagina alleen maar bekijken als je beschikt over een paswoord. Heb je net geprobeerd om in te loggen? Dan was je login om de een of andere reden ongeldig.</span></strong></h4>
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
@@ -22,7 +22,7 @@
 					<div class="small-10 small-centered columns" style="padding:20px 0">
 						<h5 class="text-left" style="">Wat kan je zelf doen?</h5>
 						<ul class="disk text-left" style="margin-bottom:10px;">
-							<li><strong>Mail naar <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a> als je de rechten wilt bekomen</strong></li>
+							<li><strong>Controleer je logingegevens</strong></li>
 						</ul>
 					</div>
 				</div>
