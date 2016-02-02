@@ -1,6 +1,6 @@
 {% extends "layout.jinja2" %}
 
-{% set mailto_notfound = mailto_notfound|default('???') -%}
+{% set mailto_error = mailto_error|default('ict@onroerenderfgoed.be') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
@@ -22,7 +22,7 @@
 					<div class="small-10 small-centered columns" style="padding:20px 0">
 						<h5 class="text-left" style="">Wat kan je zelf doen?</h5>
 						<ul class="disk text-left" style="margin-bottom:10px;">
-							<li><strong>Mail naar <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a> als je de rechten wilt bekomen</strong></li>
+							<li><strong>Mail naar <a href="mailto:{{ mailto_error }}">{{ mailto_error }}</a> als je de rechten wilt bekomen</strong></li>
 						</ul>
 					</div>
 				</div>

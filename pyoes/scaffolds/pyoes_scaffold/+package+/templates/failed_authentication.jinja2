@@ -1,21 +1,33 @@
 {% extends "layout.jinja2" %}
 
+{% set mailto_notfound = mailto_notfound|default('???') -%}
 {% set app_package = app_package|default('Pyoes') %}
+
 {% block html_title %}Failed Authentication | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
-{% block body %}
-<div class="large-12 columns">
-    <div class="panel">
-        <div class="alert-box alert">Het aanmelden is mislukt. Gelieve <a href="{{ request.route_path('aanmelden') }}">opnieuw te proberen</a>.</div>
-
-        <div data-alert class="alert-box info">
-            <p>Enkele vaak voorkomende redenen waarom dit kan fout gaan:</p>
-            <ul>
-                <li><strong>Je hebt er lang over gedaan om aan te melden.</strong> Als dit teveel tijd in beslag neemt, wordt je aanmeldingspoging niet gehonoreerd.</li>
-                <li><strong>Je bent niet gestart op <a href="{{ request.route_path('aanmelden') }}">{{ request.route_path('aanmelden') }}</a>.</strong> Het aanmeldformulier zelf staat op een andere website. Je wordt naar deze site <em>geredirect</em>. Je mag de locatie van dit formulier bv. niet opslaan in je bookmarks aangezien je dan een eerste stap overslaat.</li>
-                <li><strong>Er zijn problemen met de aanmelddienst.</strong> Deze kunnen zoals steeds gemeld worden aan het IT-team via de Trac Helpdesk.</li>
-            </ul>
-        </div>
-    </div>
+{% block content %}
+<div class="" style="height:100%">
+	<div class="text-center" style="padding:20px 0; color: #753F7F;">
+		<h1 style="font-size:60px;">
+			<i class="fa fa-warning"></i>
+			<span>401</span><br>
+		</h1>
+		<h3><span>Paswoord vereist.</span></h3>
+		<h4><strong><span style="color: #753F7F;">Je kan deze pagina alleen maar bekijken als je beschikt over een paswoord. Heb je net geprobeerd om in te loggen? Dan was je login om de een of andere reden ongeldig.</span></strong></h4>
+	</div>
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel">
+				<div class="text-center">
+					<div class="small-10 small-centered columns" style="padding:20px 0">
+						<h5 class="text-left" style="">Wat kan je zelf doen?</h5>
+						<ul class="disk text-left" style="margin-bottom:10px;">
+							<li><strong>Controleer je logingegevens</strong></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 {% endblock %}

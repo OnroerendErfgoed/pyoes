@@ -1,6 +1,6 @@
 {% extends "layout.jinja2" %}
 
-{% set mailto_notfound = mailto_notfound|default('???') -%}
+{% set mailto_error = mailto_error|default('ict@onroerenderfgoed.be') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
@@ -24,9 +24,9 @@
               <ul class="disk text-left" style="margin-bottom:10px;">
                 <li><strong>Vernieuw de browserpagina <small>(CTRL+F5 of CMD+R)</small></strong></li>
                 <li><strong>Wis de browsergeschiedenis en geef de URL opnieuw in.</strong></li>
-                <li><strong>Meld ons het technisch probleem via <a href="mailto:ict@onroerenderfgoed.be">ict@onroerenderfgoed.be</a>.</strong></br>
+                <li><strong>Meld ons het technisch probleem via <a href="mailto:{{ mailto_error }}">{{ mailto_error }}</a>.</strong></br>
                   Vergeet niet te vermelden welke pagina je zocht, welk besturingsysteem (Windows, MacOS, ... ) en welke browser ( Chrome, ... ).</li>
-                <li><strong>Je kan een nieuwe zoekopdracht starten op de <a href="#">homepagina.</a></strong></li>
+                <li><strong>Je kan een nieuwe zoekopdracht starten op de <a href="/">homepagina.</a></strong></li>
               </ul>
             </div>
           </div>

@@ -145,8 +145,20 @@ def geoportaal(request):
 def pinpoints(request):
     return {}
 
+@view_config(route_name='401', renderer='templates/401.jinja2')
+def viernuleen(request):
+    return {}
+
+@view_config(route_name='403', renderer='templates/403.jinja2')
+def viernuldrie(request):
+    return {}
+
 @view_config(route_name='404', renderer='templates/404.jinja2')
 def viernulvier(request):
+    return {}
+
+@view_config(route_name='500', renderer='templates/500.jinja2')
+def vijfhonderd(request):
     return {}
 
 @view_config(route_name='atramhasismenu', renderer='templates/atramhasis_menu.jinja2')

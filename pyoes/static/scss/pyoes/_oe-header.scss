@@ -31,4 +31,28 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 .inner-nav{ margin: 0 auto; max-width: 1142px} 
 
 
+/* ====== iw2-layout breakpoints ======= */
+/* ==================================== */
 
+/* Set this to the desired minimum width of the entire website */
+
+.iwgh2,
+.iwgf2 { min-width:980px !important; }
+
+/* Set the minumum and maximum width of the global header and footer content
+	 This content will be centered inside the global header and footer.
+*/
+.iw2-layout.iw2-custom-breakpoint { min-width:980px !important; max-width:980px !important; margin:0 auto !important;}
+
+/* Set the width (in percentage) and minimum width of the GH and GF content for screens larger then 1024*/
+/*screens >1024*/
+@media screen and (min-width: 1024px) {
+	.iw2-responsive .iw2-layout.iw2-default-breakpoint { width:80% !important; min-width:980px !important; }
+}
+/* Set the width (in percentage) and minimum width of the GH and GF content for smallest screens (phones)*/
+/*mobile*/
+@media screen and (max-device-width: 767px) {
+	.iw2-responsive .iw2-layout.iw2-default-breakpoint { width:100% !important; min-width:0 !important; }
+}
+
+.iw2-wrapper.iw2-default-margin { padding:0 0px !important; }

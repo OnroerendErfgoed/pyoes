@@ -1,12 +1,12 @@
 @charset "UTF-8";
-/* line 236, ../scss/pyoes/_oe-settings.scss */
+/* line 238, ../scss/pyoes/_oe-settings.scss */
 .tabs-content {
   background: #ededed;
   padding: 5px 10px;
   margin-top: 1px;
 }
 
-/* line 237, ../scss/pyoes/_oe-settings.scss */
+/* line 239, ../scss/pyoes/_oe-settings.scss */
 .tabs dd {
   margin-right: 1px !important;
 }
@@ -26492,6 +26492,48 @@ nav#main-navigation .main-navigation-inner {
   max-width: 1142px;
 }
 
+/* ====== iw2-layout breakpoints ======= */
+/* ==================================== */
+/* Set this to the desired minimum width of the entire website */
+/* line 39, ../scss/pyoes/_oe-header.scss */
+.iwgh2,
+.iwgf2 {
+  min-width: 980px !important;
+}
+
+/* Set the minumum and maximum width of the global header and footer content
+	 This content will be centered inside the global header and footer.
+*/
+/* line 45, ../scss/pyoes/_oe-header.scss */
+.iw2-layout.iw2-custom-breakpoint {
+  min-width: 980px !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+
+/* Set the width (in percentage) and minimum width of the GH and GF content for screens larger then 1024*/
+/*screens >1024*/
+@media screen and (min-width: 1024px) {
+  /* line 50, ../scss/pyoes/_oe-header.scss */
+  .iw2-responsive .iw2-layout.iw2-default-breakpoint {
+    width: 80% !important;
+    min-width: 980px !important;
+  }
+}
+/* Set the width (in percentage) and minimum width of the GH and GF content for smallest screens (phones)*/
+/*mobile*/
+@media screen and (max-device-width: 767px) {
+  /* line 55, ../scss/pyoes/_oe-header.scss */
+  .iw2-responsive .iw2-layout.iw2-default-breakpoint {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+/* line 58, ../scss/pyoes/_oe-header.scss */
+.iw2-wrapper.iw2-default-margin {
+  padding: 0 0px !important;
+}
+
 /* line 3, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
@@ -27936,6 +27978,11 @@ article a:hover, .panel p a:hover {
 /* line 47, ../scss/pyoes/_oe-elements.scss */
 .panel article h3, .panel article h4, .panel article h5 {
   line-height: 1.3em;
+}
+
+/* line 48, ../scss/pyoes/_oe-elements.scss */
+.body-bg-error {
+  background: #753f7f;
 }
 
 /* Placeholder fields */
