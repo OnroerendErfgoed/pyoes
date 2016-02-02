@@ -23,3 +23,10 @@ table {max-width: 100%;border-collapse: collapse;border-spacing: 0;}
 
 .table.border tr td,.table.border tr th{text-align:right;} 
 .table.border tr td:first-child,.table.border tr th:first-child{text-align:left;} 
+
+
+
+.table-app {width:100%;margin:20px 0 10px 0}
+.table-app th:first-child { width:20px}
+.table-app th:last-child { width:20px}
+.table-app td:last-child i { margin: 0 10px 0 0;}

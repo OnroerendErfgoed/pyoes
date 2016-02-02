@@ -34,7 +34,8 @@
 // img panel header ( home page )
 h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 
-.color-cube { height:100px; width:100px; color:$white; float:$default-float; padding:5px }
+// color page 
+.color-cube { height:120px; width:160px; color:$white; float:$default-float; padding:5px }
 
 
 // articles
@@ -45,3 +46,4 @@ article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
 article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
 
 .panel article h3, .panel article h4, .panel article h5 {line-height:1.3em} 
+.body-bg-error {background:$body-error-bg}

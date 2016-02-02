@@ -1,8 +1,8 @@
 
 // fix for sticky footer
-.container { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px; }
-#footerContainer { height: 55px;}
-.push { height: 100px; }
+.container { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -132px; }
+#footerContainer { height: 87px;}
+.push { height: 132px; }
 
 footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple;}
 footer#footer-bottom .inner nav ul{margin:1em 0;padding-left:1.4em}
@@ -13,18 +13,3 @@ footer#footer-bottom .inner nav ul li a:hover{color:$black;}
 footer#footer-bottom .inner nav ul li a.active{color:$dark-purple;}
 footer#footer-bottom .inner article img{margin:auto 0 auto auto;display:block;}
 footer#footer-bottom .inner nav ul.lang-switch li{float:$default-float;margin-right:0.5em;font-size:0.875em;}
-
-
-// Overwrites for Vlaanderen Header/Footer
-.iwgf2-site-info-header h2 {
-font-size: 1.1875em !important;
-line-height: 1.26316em !important;
-margin: 0;
-padding: 0;
-}
-
-.iwgf2 h2 {
-color: #fff !important;
-}
-
-
