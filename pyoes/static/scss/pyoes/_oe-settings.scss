@@ -28,7 +28,7 @@
 $base-font-size: 100%;
 
 // The $base-font-size is 100% while $base-line-height is 10%
- $base-line-height: 140%;
+$base-line-height: 140%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
 $include-html-classes: true;
@@ -135,7 +135,6 @@ $xlarge-range: (73.128em, 120em) !default;
 $xxlarge-range: (120.063em, 99999999em) !default;
 
 
-
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -188,7 +187,6 @@ $select-bg-color: $white;
 $select-hover-bg-color: scale-color($select-bg-color, $lightness: -3%);
 
 
-
 // 09. Dropdown Buttons
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -231,7 +229,7 @@ $switch-font-size-lrg: 17px;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 $tabs-navigation-padding: rem-calc(12);
-$tabs-navigation-bg-color: $mid-purple  ;
+$tabs-navigation-bg-color: $mid-purple;
 $tabs-navigation-active-bg-color: $dark-purple;
 $tabs-navigation-font-color: $white;
 $tabs-navigation-font-size: rem-calc(14);
