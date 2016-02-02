@@ -24,23 +24,23 @@
 
 <head>
   {% block html_header scoped %}
-      <meta charset="utf-8">
+    <meta charset="utf-8">
 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
+    <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
 
-      <link rel="stylesheet"
-            href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
+    <link rel="stylesheet"
+          href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
 
-      <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
+    <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
 
     {% block css -%}
       {% set default_css_files = []-%}
 
       {% set css_files = css_files|default(default_css_files) -%}
       {% for css in css_files -%}
-          <link rel="stylesheet" href="{{ css }}"/>
+        <link rel="stylesheet" href="{{ css }}"/>
       {% endfor %}
     {% endblock -%}
 
@@ -50,7 +50,7 @@
 		] -%}
       {% set js_files = js_files|default(default_js_files) -%}
       {% for js in js_files -%}
-          <script type="text/javascript" src="{{ js }}"></script>
+        <script type="text/javascript" src="{{ js }}"></script>
       {% endfor -%}
     {% endblock -%}
 
@@ -66,7 +66,8 @@
 </head>
 <body>
 <div class="container">
-    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5499d8dc0848446e91022c6dba9db343?mtime=1421237274"></script>
+  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5499d8dc0848446e91022c6dba9db343?mtime=1421237274"></script>
+
   {% block header scoped %}
     {% include "pyoes/header.jinja2" %}
   {% endblock %}
@@ -76,12 +77,12 @@
 
   {% block content scoped %}
   {% endblock %}
-    <div class="push"></div>
+  <div class="push"></div>
 </div>
 <div id="footerContainer">
   {% include "pyoes/footer.jinja2" %}
 
-    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/79a9f632dc8e45aa884f7924ee16f7bf?mtime=1421237274"></script>
+  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/79a9f632dc8e45aa884f7924ee16f7bf?mtime=1421237274"></script>
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
