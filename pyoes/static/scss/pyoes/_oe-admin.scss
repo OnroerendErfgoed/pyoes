@@ -154,3 +154,7 @@ $header-height: 50px;
 .input-container { position: relative; width: 100px; height: 20px; display:inline-block; }
 .input-container a { position: absolute; width: 100%; height: 100%; cursor: pointer; display: inline-block; }
 .input-container input[type="file"] { z-index: 2; opacity: 0; position: relative; width: 100%; height: 100%; cursor: pointer; padding: 0; margin: 0; display: inline-block; }
+
+//closeicon dialog
+.dijitDialog .closeText { right: 0px; margin-top: 5px; }
+.dijitDialog .closeText i { margin-right: 10px; }
