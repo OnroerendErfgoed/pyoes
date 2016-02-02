@@ -26632,22 +26632,64 @@ nav#main-navigation .main-navigation-inner {
   max-width: 1142px;
 }
 
+/* ====== iw2-layout breakpoints ======= */
+/* ==================================== */
+/* Set this to the desired minimum width of the entire website */
+/* line 68, ../scss/pyoes/_oe-header.scss */
+.iwgh2,
+.iwgf2 {
+  min-width: 980px !important;
+}
+
+/* Set the minumum and maximum width of the global header and footer content
+	 This content will be centered inside the global header and footer.
+*/
+/* line 74, ../scss/pyoes/_oe-header.scss */
+.iw2-layout.iw2-custom-breakpoint {
+  min-width: 980px !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
+
+/* Set the width (in percentage) and minimum width of the GH and GF content for screens larger then 1024*/
+/*screens >1024*/
+@media screen and (min-width: 1024px) {
+  /* line 79, ../scss/pyoes/_oe-header.scss */
+  .iw2-responsive .iw2-layout.iw2-default-breakpoint {
+    width: 80% !important;
+    min-width: 980px !important;
+  }
+}
+/* Set the width (in percentage) and minimum width of the GH and GF content for smallest screens (phones)*/
+/*mobile*/
+@media screen and (max-device-width: 767px) {
+  /* line 84, ../scss/pyoes/_oe-header.scss */
+  .iw2-responsive .iw2-layout.iw2-default-breakpoint {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+/* line 87, ../scss/pyoes/_oe-header.scss */
+.iw2-wrapper.iw2-default-margin {
+  padding: 0 0px !important;
+}
+
 /* line 3, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -132px;
+  margin: 0 auto -131px;
 }
 
 /* line 4, ../scss/pyoes/_oe-footer.scss */
 #footerContainer {
-  height: 87px;
+  height: 86px;
 }
 
 /* line 5, ../scss/pyoes/_oe-footer.scss */
 .push {
-  height: 132px;
+  height: 131px;
 }
 
 /* line 7, ../scss/pyoes/_oe-footer.scss */

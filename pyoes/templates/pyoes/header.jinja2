@@ -11,29 +11,17 @@
 <div class="wrapper clearfix">
   <div class="main-navigation-inner clearfix inner">
 
-<!-- service-navigation vlaanderen-->
-<ul id="service-navigation" class="clearfix">
-  {% set default_service_nav = [
-    ('home', 'Home Onroerend Erfgoed', 'http://www.onroerenderfgoed.be')
-    ]
-  -%}
-  {% set service_nav = service_nav|default(default_service_nav) -%}
-  {% for id, caption, href in service_nav %}
-    <li><a href="{{ href }}">{{ caption }}</a></li>
-  {% endfor %}
-</ul>
-
-{% set home_link = home_link|default('/') -%}
-<!-- logo -->
-<div class="logo-block">
-  <a href="{{ home_link }}">
-    {% set active_title= active_title|default('Erfgoedstijl') -%}
-    <div class="logo-block-title"><h1>{{active_title}}</h1></div>
-    <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
-    <h2>Vlaanderen</h2>
-    <h4>is Onroerend Erfgoed</h4>
-  </a>
-</div>
+    {% set home_link = home_link|default('/') -%}
+    <!-- logo -->
+    <div class="logo-block">
+      <a href="{{ home_link }}">
+        {% set active_title= active_title|default('Erfgoedstijl') -%}
+        <div class="logo-block-title"><h1>{{active_title}}</h1></div>
+        <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
+        <h2>Vlaanderen</h2>
+        <h4>is erfgoed</h4>
+      </a>
+    </div>
 
   </div>
 </div>
@@ -42,7 +30,7 @@
 {% block main_nav %}
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
-      <li class="name">  
+      <li class="name">
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
     </ul>
@@ -53,7 +41,7 @@
         ('zoeken', 'Zoeken', '/'),
         ('vinden', 'Vinden', '/')
         ]
-      -%}
+        -%}
 
       {% set default_login_nav = [('Aanmelden', '/')] %}
       {% set default_login_sub_nav = [('Profiel', '/'), ('Afmelden', '/')] %}
@@ -62,8 +50,13 @@
 
       <ul class="left">
         {% for id, caption, href in main_nav %}
-            <li{% if id == active_main_nav %} class="active"{% endif
-            %}><a href="{{ href }}">{{ caption }}</a></li>
+          <li{% if id == active_main_nav %} class="active"{% endif %}>
+            {% if id == 'home' %}
+              <a href="{{ href }}"><i class="fa fa-institution"></i></a>
+            {% else %}
+              <a href="{{ href }}">{{ caption }}</a>
+            {% endif %}
+          </li>
         {% endfor %}
       </ul>
 
@@ -73,26 +66,26 @@
       {% if login_nav|length > 0 %}
         {% if not request.user %}
           <ul class="right">
-           {% if request.authenticated_userid != None %}
-            <li class="has-dropdown">
+            {% if request.authenticated_userid != None %}
+              <li class="has-dropdown">
               <a href="#">{{ request.authenticated_userid }}</a>
               <ul class="dropdown">
-           {% endif %}
-               {% for caption, href in login_nav %}
-                <li><a href="{{ href }}">{{ caption }}</a></li>
-               {% endfor %}
-           {% if request.authenticated_userid != None %}
+            {% endif %}
+            {% for caption, href in login_nav %}
+              <li><a href="{{ href }}">{{ caption }}</a></li>
+            {% endfor %}
+            {% if request.authenticated_userid != None %}
               </ul></li>
-           {% endif %}
+            {% endif %}
           </ul>
         {% else %}
           <ul class="right">
             <li class="has-dropdown">
               <a href="#">{{ request.user.userid }}</a>
               <ul class="dropdown">
-                 {% for caption, href in login_sub_nav %}
+                {% for caption, href in login_sub_nav %}
                   <li><a href="{{ href }}">{{ caption }}</a></li>
-                 {% endfor %}
+                {% endfor %}
               </ul>
             </li>
           </ul>
