@@ -50,8 +50,6 @@ $subheader-top-margin: .2rem !default;
 $subheader-bottom-margin: .5rem !default;
 
 
-
-
 // A general <small> styling
 $small-font-size: 60% !default;
 $small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
@@ -66,8 +64,6 @@ $paragraph-aside-font-size: rem-calc(14) !default;
 $paragraph-aside-line-height: 1.35 !default;
 $paragraph-aside-font-style: italic !default;
 $paragraph-text-rendering: optimizeLegibility !default;
-
-
 
 // We use these to style anchors
 $anchor-text-decoration: none !default;
@@ -102,8 +98,6 @@ $blockquote-border: 1px solid $gray  !default;
 $blockquote-cite-font-size: rem-calc(13) !default;
 $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%) !default;
 $blockquote-cite-link-color: $blockquote-cite-font-color !default;
-
-
 
 // Acronym styles
 // $acronym-underline: 1px dotted $gray  !default;

@@ -16,6 +16,8 @@
 @import "pyoes/oe-elements";
 @import "pyoes/oe-forms";
 @import "pyoes/oe-mediaqueries";
+@import "pyoes/oe-components";
+@import "pyoes/oe-media";
 @import "pyoes/oe-admin";
 
 @import "{{package}}";
