@@ -26748,6 +26748,11 @@ footer#footer-bottom .inner nav ul.lang-switch li {
   font-size: 0.875em;
 }
 
+/* line 17, ../scss/pyoes/_oe-footer.scss */
+.iwgf2-site-info-header h2 {
+  color: white !important;
+}
+
 @font-face {
   font-family: "Flanders Art Sans Light";
   src: url("../fonts/FlandersArtSans-Light.eot");
