@@ -20,6 +20,17 @@
 .placeholder-checkbox input[type="checkbox"] + .placeholder-checkbox-label:after { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 20px; height: 20px; padding: 2px; margin-left: 10px; text-align: center; font-size:0.8em; }
 .placeholder-checkbox input[type="checkbox"]:checked + .placeholder-checkbox-label:after { content: '\2714'; background: $fresh-blue; color: #fff; }
 
+
+/*small*/
+.placeholder-checkbox-sm input[type="checkbox"], .placeholder-checkbox-label-sm { display: table-cell !important; vertical-align: middle !important; cursor: pointer; font-size:0.7em; }
+.placeholder-checkbox-sm label { position: relative; width: 100%; }
+.placeholder-checkbox-sm input[type="checkbox"] { opacity: 0; position: absolute; }
+.placeholder-checkbox-sm input[type="checkbox"] + .placeholder-checkbox-label-sm:before { content: ''; background: $fresh-blue; display: inline-block; vertical-align: middle; width: 15px; height: 15px; padding: 0px; margin-right: 10px; text-align: center; font-size:0.8em; }
+.placeholder-checkbox-sm input[type="checkbox"]:checked + .placeholder-checkbox-label-sm:before { content: '\2714'; background: $fresh-blue; color: #fff; }
+
+
+
+
 .plus-icon { padding-top: 12px; padding-left: 8px; color: #3f3840; }
 .plus-icon-link { display:table-cell; border-left: 1px dotted #d3d3d3; float: left; vertical-align: middle; height: 37px; }
 
