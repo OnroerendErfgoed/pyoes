@@ -15,9 +15,11 @@
 {% set mailto_error = mailto_error -%}
 
 {% set default_footer_nav = [
-	('Toegankelijkheid', '/toegankelijkheid'),
-	('Juridische Informatie', '/juridische-informatie')
-] -%}
+	('Toegankelijkheid', 'https://www.onroerenderfgoed.be/toegankelijkheid'),
+	('Juridische Informatie', 'https://www.onroerenderfgoed.be/nl/juridisch')
+]
+-%}
+
 {% set footer_nav = footer_nav|default(default_footer_nav) -%}
 
 {% set datum_copyright = datum_copyright|default('2017') -%}
