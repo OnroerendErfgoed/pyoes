@@ -1,3 +1,14 @@
+0.4.4 (03-02-2016)
+==================
+
+* Proces scaffold toegevoegd
+* verbeterde error page templates
+* nieuw Home icon
+* verbeterde footer links
+* social media links toegevoegd
+* verschillende stijl verbeteringen
+* update naar jinja2 2.8
+
 0.4.3 (02-07-2015)
 ==================
 

@@ -15,7 +15,7 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.4.3',
+      version='0.4.4',
       description='Algemene onroerenderfgoed stijl (gebaseerd op de Vlaamse huisstijl) voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -48,5 +48,6 @@ setup(name='pyoes',
       [pyramid.scaffold]
       pyoes=pyoes.scaffolds:PyoesTemplate
       pyoesAdmin=pyoes.scaffolds:PyoesAdminTemplate
+      pyoesProces=pyoes.scaffolds:PyoesProcesTemplate
       """,
       )
