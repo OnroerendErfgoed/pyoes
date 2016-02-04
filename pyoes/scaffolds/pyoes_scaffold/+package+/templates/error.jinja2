@@ -1,9 +1,9 @@
 {% extends "layout.jinja2" %}
 
-{% set mailto_notfound = mailto_notfound|default('???') -%}
+{% set mailto_notfound = mailto_notfound|default('ict@onroerenderfgoed.be') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Error | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
   <div class="" style="height:100%">
