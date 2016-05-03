@@ -26435,7 +26435,14 @@ th.hide-for-touch {
   z-index: 0;
 }
 
-/* line 23, ../scss/pyoes/_oe-header.scss */
+@media (min-width: 1900px) {
+  /* line 24, ../scss/pyoes/_oe-header.scss */
+  .bgimage {
+    background: url(../img/pyoes/header-img-white.jpg) no-repeat right;
+    width: 75%;
+  }
+}
+/* line 26, ../scss/pyoes/_oe-header.scss */
 .bgimage-bouwkunde {
   background: url(../img/pyoes/dibe_1.jpg) no-repeat right;
   width: 80%;
@@ -26445,7 +26452,7 @@ th.hide-for-touch {
   z-index: 0;
 }
 
-/* line 27, ../scss/pyoes/_oe-header.scss */
+/* line 30, ../scss/pyoes/_oe-header.scss */
 .logo-block-short {
   width: 380px;
   background: url(../img/pyoes/header-logo-bg.png) no-repeat;
@@ -26455,14 +26462,14 @@ th.hide-for-touch {
   padding: 0 25px 0 13px;
 }
 
-/* line 28, ../scss/pyoes/_oe-header.scss */
+/* line 31, ../scss/pyoes/_oe-header.scss */
 .logo-block-short .logo-block-title {
   width: 10px;
   height: 60px;
   float: left;
 }
 
-/* line 29, ../scss/pyoes/_oe-header.scss */
+/* line 32, ../scss/pyoes/_oe-header.scss */
 .logo-block-short h1 {
   padding: 8px 10px 0 0;
   font-size: 29px;
@@ -26470,7 +26477,7 @@ th.hide-for-touch {
   float: left;
 }
 
-/* line 30, ../scss/pyoes/_oe-header.scss */
+/* line 33, ../scss/pyoes/_oe-header.scss */
 .logo-block-short h2 {
   font-size: 23px;
   color: #753f7f !important;
@@ -26479,7 +26486,7 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 31, ../scss/pyoes/_oe-header.scss */
+/* line 34, ../scss/pyoes/_oe-header.scss */
 .logo-block-short h4 {
   font-size: 12px;
   color: #753f7f !important;
@@ -26488,7 +26495,7 @@ th.hide-for-touch {
   margin: 0;
 }
 
-/* line 32, ../scss/pyoes/_oe-header.scss */
+/* line 35, ../scss/pyoes/_oe-header.scss */
 .logo-block-short img {
   float: left;
   padding: 7px 0 0 8px;
@@ -26496,18 +26503,18 @@ th.hide-for-touch {
   width: 50px;
 }
 
-/* line 34, ../scss/pyoes/_oe-header.scss */
+/* line 37, ../scss/pyoes/_oe-header.scss */
 .nav-short-item {
   text-align: center;
 }
 
-/* line 35, ../scss/pyoes/_oe-header.scss */
+/* line 38, ../scss/pyoes/_oe-header.scss */
 ul.nav-short-item {
   list-style-type: none;
   margin-top: 5px;
 }
 
-/* line 36, ../scss/pyoes/_oe-header.scss */
+/* line 39, ../scss/pyoes/_oe-header.scss */
 .nav-short-item li {
   float: left;
   width: 70px;
@@ -26516,66 +26523,66 @@ ul.nav-short-item {
   display: block;
 }
 
-/* line 37, ../scss/pyoes/_oe-header.scss */
+/* line 40, ../scss/pyoes/_oe-header.scss */
 .nav-short-item li:last-child {
   border-right: 0px;
 }
 
-/* line 38, ../scss/pyoes/_oe-header.scss */
+/* line 41, ../scss/pyoes/_oe-header.scss */
 .nav-short-item li i {
   font-size: 1.4rem;
   margin: 8px 0 5px 0;
 }
 
-/* line 39, ../scss/pyoes/_oe-header.scss */
+/* line 42, ../scss/pyoes/_oe-header.scss */
 .nav-short-item a {
   color: white;
 }
 
-/* line 43, ../scss/pyoes/_oe-header.scss */
+/* line 46, ../scss/pyoes/_oe-header.scss */
 nav#main-navigation .main-navigation-inner {
   padding: 0;
   position: relative;
 }
 
 /* service nav */
-/* line 46, ../scss/pyoes/_oe-header.scss */
+/* line 49, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   float: right;
   padding: 0;
 }
 
-/* line 47, ../scss/pyoes/_oe-header.scss */
+/* line 50, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li {
   margin-top: 0.4em;
   float: left;
   list-style-type: none;
 }
 
-/* line 48, ../scss/pyoes/_oe-header.scss */
+/* line 51, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a {
   font-size: 0.75em;
   color: black;
   line-height: 1.8em;
 }
 
-/* line 49, ../scss/pyoes/_oe-header.scss */
+/* line 52, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li > a {
   border-left: 1px solid #e5e5e5;
   padding: 0 1em;
 }
 
-/* line 50, ../scss/pyoes/_oe-header.scss */
+/* line 53, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:first-child > a {
   border-left: 0;
 }
 
-/* line 51, ../scss/pyoes/_oe-header.scss */
+/* line 54, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li a:hover {
   color: #753f7f;
 }
 
-/* line 52, ../scss/pyoes/_oe-header.scss */
+/* line 55, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul {
   display: none;
   background-color: white;
@@ -26583,17 +26590,17 @@ nav#main-navigation .main-navigation-inner {
   position: absolute;
 }
 
-/* line 53, ../scss/pyoes/_oe-header.scss */
+/* line 56, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover i {
   color: #944ea1;
 }
 
-/* line 54, ../scss/pyoes/_oe-header.scss */
+/* line 57, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li:hover ul {
   display: block;
 }
 
-/* line 55, ../scss/pyoes/_oe-header.scss */
+/* line 58, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li a {
   border-top: 1px solid #e5e5e5;
   margin: 0 1em;
@@ -26603,12 +26610,12 @@ nav#main-navigation .main-navigation-inner {
   padding: 0 4px;
 }
 
-/* line 56, ../scss/pyoes/_oe-header.scss */
+/* line 59, ../scss/pyoes/_oe-header.scss */
 #service-navigation > li ul li:first-child a {
   border: none;
 }
 
-/* line 57, ../scss/pyoes/_oe-header.scss */
+/* line 60, ../scss/pyoes/_oe-header.scss */
 #service-navigation {
   position: relative;
   z-index: 100;
@@ -26619,14 +26626,14 @@ nav#main-navigation .main-navigation-inner {
   margin-top: 10px;
 }
 
-/* line 59, ../scss/pyoes/_oe-header.scss */
+/* line 62, ../scss/pyoes/_oe-header.scss */
 .inner {
   margin: 0 auto;
   max-width: 1142px;
   padding: 0;
 }
 
-/* line 60, ../scss/pyoes/_oe-header.scss */
+/* line 63, ../scss/pyoes/_oe-header.scss */
 .inner-nav {
   margin: 0 auto;
   max-width: 1142px;
@@ -26635,7 +26642,7 @@ nav#main-navigation .main-navigation-inner {
 /* ====== iw2-layout breakpoints ======= */
 /* ==================================== */
 /* Set this to the desired minimum width of the entire website */
-/* line 68, ../scss/pyoes/_oe-header.scss */
+/* line 71, ../scss/pyoes/_oe-header.scss */
 .iwgh2,
 .iwgf2 {
   min-width: 980px !important;
@@ -26644,7 +26651,7 @@ nav#main-navigation .main-navigation-inner {
 /* Set the minumum and maximum width of the global header and footer content
 	 This content will be centered inside the global header and footer.
 */
-/* line 74, ../scss/pyoes/_oe-header.scss */
+/* line 77, ../scss/pyoes/_oe-header.scss */
 .iw2-layout.iw2-custom-breakpoint {
   min-width: 980px !important;
   max-width: 980px !important;
@@ -26654,7 +26661,7 @@ nav#main-navigation .main-navigation-inner {
 /* Set the width (in percentage) and minimum width of the GH and GF content for screens larger then 1024*/
 /*screens >1024*/
 @media screen and (min-width: 1024px) {
-  /* line 79, ../scss/pyoes/_oe-header.scss */
+  /* line 82, ../scss/pyoes/_oe-header.scss */
   .iw2-responsive .iw2-layout.iw2-default-breakpoint {
     width: 80% !important;
     min-width: 980px !important;
@@ -26663,13 +26670,13 @@ nav#main-navigation .main-navigation-inner {
 /* Set the width (in percentage) and minimum width of the GH and GF content for smallest screens (phones)*/
 /*mobile*/
 @media screen and (max-device-width: 767px) {
-  /* line 84, ../scss/pyoes/_oe-header.scss */
+  /* line 87, ../scss/pyoes/_oe-header.scss */
   .iw2-responsive .iw2-layout.iw2-default-breakpoint {
     width: 100% !important;
     min-width: 0 !important;
   }
 }
-/* line 87, ../scss/pyoes/_oe-header.scss */
+/* line 90, ../scss/pyoes/_oe-header.scss */
 .iw2-wrapper.iw2-default-margin {
   padding: 0 0px !important;
 }
