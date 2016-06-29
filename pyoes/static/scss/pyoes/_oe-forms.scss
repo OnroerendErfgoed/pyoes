@@ -58,3 +58,21 @@ select {height:42px}
 select:focus {outline:none}
 // fix for dropdown arrow in firefox
 select { -moz-appearance: none !important; }
+
+
+input::-webkit-input-placeholder {
+  color: $silver;
+  text-overflow: ellipsis;
+}
+input:-moz-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+}
+input::-moz-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+} /* for the future */
+input:-ms-input-placeholder {
+  color: $silver !important;
+  text-overflow: ellipsis;
+}

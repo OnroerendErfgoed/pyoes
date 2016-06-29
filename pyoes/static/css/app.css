@@ -14781,6 +14781,31 @@ select {
   -moz-appearance: none !important;
 }
 
+/* line 63, ../scss/pyoes/_oe-forms.scss */
+input::-webkit-input-placeholder {
+  color: #989898;
+  text-overflow: ellipsis;
+}
+
+/* line 67, ../scss/pyoes/_oe-forms.scss */
+input:-moz-placeholder {
+  color: #989898 !important;
+  text-overflow: ellipsis;
+}
+
+/* line 71, ../scss/pyoes/_oe-forms.scss */
+input::-moz-placeholder {
+  color: #989898 !important;
+  text-overflow: ellipsis;
+}
+
+/* for the future */
+/* line 75, ../scss/pyoes/_oe-forms.scss */
+input:-ms-input-placeholder {
+  color: #989898 !important;
+  text-overflow: ellipsis;
+}
+
 @media only screen and (max-width: 578px) {
   /* line 5, ../scss/pyoes/_oe-mediaqueries.scss */
   .bgimage, #service-navigation, .temp-embed {
