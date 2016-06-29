@@ -42,12 +42,14 @@
         ('vinden', 'Vinden', '/')
         ]
         -%}
+      {% set default_dropdown_main_nav = [] %}
 
       {% set default_login_nav = [('Aanmelden', '/')] %}
       {% set default_login_sub_nav = [('Profiel', '/'), ('Afmelden', '/')] %}
 
       {% set main_nav = main_nav|default(default_main_nav) -%}
 
+      {# MAIN NAV #}
       <ul class="left">
         {% for id, caption, href in main_nav %}
           <li{% if id == active_main_nav %} class="active"{% endif %}>
@@ -60,9 +62,28 @@
         {% endfor %}
       </ul>
 
+      {% set dropdown_main_nav = dropdown_main_nav|default(default_dropdown_main_nav) -%}
+
+      {# DROPDOWN NAV #}
+      {% if dropdown_main_nav|length > 0 %}
+        <ul class="left">
+          {% for id, caption, submenu in dropdown_main_nav %}
+            <li class="has-dropdown">
+              <a href="#">{{ caption }}</a>
+              <ul class="dropdown">
+                {% for id, subCaption, href in submenu %}
+                  <li><a href="{{ href }}">{{ subCaption }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       {% set login_nav = login_nav|default(default_login_nav) -%}
       {% set login_sub_nav = login_sub_nav|default(default_login_sub_nav) -%}
 
+      {# USER MENU #}
       {% if login_nav|length > 0 %}
         {% if not request.user %}
           <ul class="right">
@@ -81,7 +102,11 @@
         {% else %}
           <ul class="right">
             <li class="has-dropdown">
-              <a href="#">{{ request.user.userid }}</a>
+              {% if request.user.actor and request.user.actor.omschrijving %}
+                <a href="#">{{ request.user.actor.omschrijving }}</a>
+              {% else %}
+                <a href="#">{{ request.user.attributes.displayname }}</a>
+              {% endif %}
               <ul class="dropdown">
                 {% for caption, href in login_sub_nav %}
                   <li><a href="{{ href }}">{{ caption }}</a></li>

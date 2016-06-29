@@ -158,3 +158,13 @@ $header-height: 50px;
 //closeicon dialog
 .dijitDialog .closeText { right: 0px; margin-top: 5px; }
 .dijitDialog .closeText i { margin-right: 10px; }
+
+/* Dgrowl */
+.dGrowl-channel { width: 350px; }
+.dGrowl-notification { width: 320px; }
+.dGrowl-channel-warn .dGrowl-notification { background-color: rgb(255, 217, 162); border: 1px solid rgb(233, 123, 20); }
+
+.hide { display: none !important; }
+
+.dijitDialog .closeText { right: 0px; margin-top: 5px; }
+.dijitDialog .closeText i { margin-right: 10px; }
