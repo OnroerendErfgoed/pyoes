@@ -81,7 +81,11 @@
         {% else %}
           <ul class="right">
             <li class="has-dropdown">
-              <a href="#">{{ request.user.userid }}</a>
+              {% if request.user.actor and request.user.actor.omschrijving %}
+                <a href="#">{{ request.user.actor.omschrijving }}</a>
+              {% else %}
+                <a href="#">{{ request.user.attributes.displayname }}</a>
+              {% endif %}
               <ul class="dropdown">
                 {% for caption, href in login_sub_nav %}
                   <li><a href="{{ href }}">{{ caption }}</a></li>
