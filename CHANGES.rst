@@ -1,3 +1,16 @@
+0.4.6 (30-06-2016)
+==================
+
+* bugfix in code voor dropdowns
+
+0.4.5 (29-06-2016
+=================
+
+* mogelijkheid toegevoegd om dropdown in het menu te tonen
+* enkele verbeteringen in de error pagina's
+* uitlijning van de Vlaanderen banners
+* verschillende verbeteringen voor de admin stijl
+
 0.4.4 (03-02-2016)
 ==================
 
