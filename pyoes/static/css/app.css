@@ -13052,7 +13052,7 @@ footer#footer-bottom .inner nav ul.lang-switch li {
 footer#footer-bottom .inner .mailtolink {
   background-color: #753f7f;
   color: white;
-  padding: 5px;
+  padding: 8px 16px;
 }
 
 /* line 18, ../scss/pyoes/_oe-footer.scss */
