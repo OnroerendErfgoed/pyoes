@@ -13048,7 +13048,14 @@ footer#footer-bottom .inner nav ul.lang-switch li {
   font-size: 0.875em;
 }
 
-/* line 17, ../scss/pyoes/_oe-footer.scss */
+/* line 16, ../scss/pyoes/_oe-footer.scss */
+footer#footer-bottom .inner .mailtolink {
+  background-color: #753f7f;
+  color: white;
+  padding: 8px 16px;
+}
+
+/* line 18, ../scss/pyoes/_oe-footer.scss */
 .iwgf2-site-info-header h2 {
   color: white !important;
 }
