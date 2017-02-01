@@ -26,6 +26,12 @@ class TestDatetimeFormatFilter(unittest.TestCase):
         fd = datetime_format_filter(d)
         self.assertEqual('07-09-2014 20:00', fd)
 
+    def test_datetime_format_filter_date(self):
+        from datetime import date
+        d = date(2014, 9, 7)
+        fd = datetime_format_filter(d, format='%d-%m-%Y')
+        self.assertEqual('07-09-2014', fd)
+
     def test_datetime_format_filter_custom_format(self):
         from datetime import datetime
         d = datetime(2014, 9, 7, 20, 00)
