@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
-'''
+"""
 Contains some extra filters for Jinja2.
 
 To use these, they need to be registered in your pyramid config.
-'''
-from dateutil import tz, parser
+"""
+from dateutil import parser
+
 
 def set_attr_filter(target, key, value):
-    '''
+    """
     Jinja2 filter that sets an attribute of an object.
-    '''
+    """
     target[key] = value
     return target
+
 
 def datetime_format_filter(value, format='%d-%m-%Y %H:%M'):
     """
@@ -24,8 +26,14 @@ def datetime_format_filter(value, format='%d-%m-%Y %H:%M'):
     :param format: The format to print the date in.
     :return: The formatted date, eg. `07-09-2014 20:00`.
     """
-    try:
-        return value.strftime(format)
-    except AttributeError:
-        date = parser.parse(value, dayfirst=True)
-        return date.strftime(format)
+    if value:
+        try:
+            return value.strftime(format)
+        except AttributeError:
+            if value[0:4].find('-') == -1 and value[0:4].find('/') == -1:
+                date = parser.parse(value, yearfirst=True, dayfirst=False)
+            else:
+                date = parser.parse(value, dayfirst=True)
+            return date.strftime(format)
+    else:
+        return ''
