@@ -1,3 +1,11 @@
+0.4.7 (02-02-2017)
+==================
+
+* bugfix datum
+* favicon
+* IE compatibility
+* link ict mailbox
+
 0.4.6 (30-06-2016)
 ==================
 
