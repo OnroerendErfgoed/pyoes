@@ -54,7 +54,7 @@
         {% for id, caption, href in main_nav %}
           <li{% if id == active_main_nav %} class="active"{% endif %}>
             {% if id == 'home' %}
-              <a href="{{ href }}"><i class="fa fa-institution"></i></a>
+              <a href="{{ href }}"><i class="fa fa-home"></i></a>
             {% else %}
               <a href="{{ href }}">{{ caption }}</a>
             {% endif %}
