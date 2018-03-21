@@ -69,7 +69,9 @@
 </head>
 <body>
 <div class="container">
-  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5499d8dc0848446e91022c6dba9db343?mtime=1421237274"></script>
+  {% block vlaanderen-header scoped %}
+    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/5499d8dc0848446e91022c6dba9db343?mtime=1421237274"></script>
+  {% endblock %}
 
   {% block header scoped %}
     {% include "pyoes/header.jinja2" %}
@@ -87,7 +89,9 @@
     {% include "pyoes/footer.jinja2" %}
   {% endblock %}
 
-  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/79a9f632dc8e45aa884f7924ee16f7bf?mtime=1421237274"></script>
+  {% block vlaanderen-footer scoped %}
+    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/79a9f632dc8e45aa884f7924ee16f7bf?mtime=1421237274"></script>
+  {% endblock %}
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
