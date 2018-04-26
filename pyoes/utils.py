@@ -52,24 +52,25 @@ def fuzzy_date_format_filter(value, format='%d-%m-%Y'):
     """
     if value:
         try:
-            return date_converter(value, format)
+            return _fuzzy_date_formatter(value, format)
         except AttributeError:
             if value[0:4].find('-') == -1 and value[0:4].find('/') == -1:
                 date = parser.parse(value, yearfirst=True, dayfirst=False)
             else:
                 date = parser.parse(value, dayfirst=True)
-            return date_converter(date, format)
+            return _fuzzy_date_formatter(date, format)
     else:
         return ''
 
 
-def date_converter(date, format):
+def _fuzzy_date_formatter(date, format='%d-%m-%Y'):
     """
     Dateconverter to convert date or datetime objects to strings in a specific format
 
     Implemented because of the problems of datetime.strftime method with years before 1900
     :param date:
     :param format: The format to print the date in. (must be a predefined format)
+                    '%d-%m-%Y' or '%m-%Y' or '%Y'
     :return: The formatted date, eg. `07-09-2014`
     """
     if format == '%d-%m-%Y':
