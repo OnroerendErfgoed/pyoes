@@ -1,3 +1,8 @@
+0.5.0 (27-0-2018)
+==================
+
+* Added new jinja2 filter specific for formatting fuzzy_dates (also for dates before 1900)
+
 0.4.8 (22-03-2018)
 ==================
 
