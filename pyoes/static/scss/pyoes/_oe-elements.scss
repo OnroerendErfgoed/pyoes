@@ -42,8 +42,8 @@ h4.header-img-panel {text-transform:uppercase;font-size:1em;padding:20px 0}
 dt, b, strong {font-family: $font-family-bold-serif;font-weight:700;}
 h4 > em {padding:5px 0 10px 0;display:block;font-size:1.3em;line-height:1.3em}
 article > h1 {padding-bottom:18px;}
-article a, .panel p a  {color:$fresh-blue;text-decoration:underline}
-article a:hover, .panel p a:hover  {color:$fresh-blue;text-decoration:none}
+article a, .panel p a  {color:$link-color;text-decoration:underline}
+article a:hover, .panel p a:hover  {color:$link-color;text-decoration:none}
 
 .panel article h3, .panel article h4, .panel article h5 {line-height:1.3em} 
 .body-bg-error { background:$body-error-bg; }
