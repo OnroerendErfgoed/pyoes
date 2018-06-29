@@ -1,6 +1,5 @@
 {
   "name": "{{package}}",
-  "version": "0.0.1",
   "private": "true",
   "dependencies": {
     "foundation": "~5.5.0",
