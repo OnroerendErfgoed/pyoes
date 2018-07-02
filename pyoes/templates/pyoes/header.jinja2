@@ -1,4 +1,6 @@
 
+
+{% set displayname = ['Maarten'] %}
 <!-- header -->
 
 <!-- embed -->
@@ -105,7 +107,7 @@
               {% if request.user.actor and request.user.actor.omschrijving %}
                 <a href="#">{{ request.user.actor.omschrijving }}</a>
               {% else %}
-                {% if iterable(request.user.attributes.displayname) %}
+                {% if request.user.attributes.displayname is iterable %}
                   <a href="#">{{ request.user.attributes.displayname[0] }}</a>
                 {% else %}
                   <a href="#">{{ request.user.attributes.displayname }}</a>
