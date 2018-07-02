@@ -1,8 +1,21 @@
 {
   "name": "{{package}}",
   "private": "true",
+  "authors": [
+    "Flanders Heritage Agency <ict@onroerenderfgoed.be>"
+  ],
+  "description": "{{package}} applicatie",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "foundation": "~5.5.0",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.6.3"
   }
 }
