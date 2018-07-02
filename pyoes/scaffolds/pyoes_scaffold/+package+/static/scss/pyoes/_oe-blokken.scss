@@ -10,7 +10,7 @@
 
 .fl-block .field img {height:105px;overflow: hidden}
 .fl-block .field.full {padding:0px 0 ;}
-.fl-block .field.full > a {display:block;padding:1.6em 1.4em 1.6em 1.4em;color:#5e5e5e;}
+.fl-block .field.full > a {display:block;padding:1.6em 1.4em 1.6em 1.4em;color:$link-color;}
 .fl-block .field.full a:hover{display:block;background-color:$white-gray;-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;text-decoration: none; }
 
 
@@ -82,7 +82,7 @@
 
 .fl-block .block-title.naked { background-color:$white !important;color:$dark-purple !important;padding:0;}
 
-.block-text h3 a { color:$dark-purple !important;margin:-8px 0 0 0;letter-spacing:-1px}
+.block-text h3 a { color:$link-color !important;margin:-8px 0 0 0;letter-spacing:-1px}
 .block-text h3 a:hover { text-decoration:underline !important }
 
 
