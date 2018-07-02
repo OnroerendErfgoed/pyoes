@@ -1,4 +1,3 @@
-
 <!-- header -->
 
 <!-- embed -->
@@ -41,7 +40,7 @@
         ('zoeken', 'Zoeken', '/'),
         ('vinden', 'Vinden', '/')
         ]
-        -%}
+          -%}
       {% set default_dropdown_main_nav = [] %}
 
       {% set default_login_nav = [('Aanmelden', '/')] %}
@@ -105,7 +104,11 @@
               {% if request.user.actor and request.user.actor.omschrijving %}
                 <a href="#">{{ request.user.actor.omschrijving }}</a>
               {% else %}
-                <a href="#">{{ request.user.attributes.displayname }}</a>
+                {% if request.user.attributes.displayname is iterable %}
+                  <a href="#">{{ request.user.attributes.displayname[0] }}</a>
+                {% else %}
+                  <a href="#">{{ request.user.attributes.displayname }}</a>
+                {% endif %}
               {% endif %}
               <ul class="dropdown">
                 {% for caption, href in login_sub_nav %}
