@@ -1,3 +1,12 @@
+0.6.0 (04-07-2018)
+==================
+
+- Fix jquery versie in public scaffold bower.json (#97)
+- admin bower.json template updaten (#98)
+- Display aangemelde gebruiker in geval gebruiker geen Actor object heeft (#104)
+- Aanpassen link color (#110)
+- Privacybeleid link in footer (#116)
+
 0.5.0 (27-0-2018)
 ==================
 
