@@ -1,3 +1,8 @@
+0.7.0 (18-07-2018)
+==================
+- Updaten van GA macro (#125)
+- Aanpassen kleur active in menubar (#124)
+
 0.6.0 (04-07-2018)
 ==================
 
