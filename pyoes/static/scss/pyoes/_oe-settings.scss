@@ -67,7 +67,7 @@ $warning-color: #f08a24 !default;
 $info-color: #a0d3e8 !default;   
 $custom-color:#FFFFCC !default; 
 
-
+$very-dark-purple: rgb(33,7,41); //#210729
 $dark-purple    : rgb(117,63,127); 	// #753F7F  
 $mid-purple     : rgb(148,78,161); 	// #944EA1
 $light-purple   : rgb(176,93,191); 	// #B05DBF
@@ -230,7 +230,7 @@ $switch-font-size-lrg: 17px;
 
 $tabs-navigation-padding: rem-calc(12);
 $tabs-navigation-bg-color: $mid-purple;
-$tabs-navigation-active-bg-color: $dark-purple;
+$tabs-navigation-active-bg-color: $very-dark-purple;
 $tabs-navigation-font-color: $white;
 $tabs-navigation-font-size: rem-calc(14);
 .tabs-content {background:$light-gray;padding:5px 10px;margin-top:1px;}
@@ -248,7 +248,7 @@ $topbar-dropdown-link-bg: $mid-purple;
 // Set the link colors and styles for top-level nav
 
 $topbar-link-font-size: rem-calc(14);
-$topbar-link-bg-hover: $dark-purple;
-$topbar-link-bg-active: $dark-purple !default;
-$topbar-link-bg-active-hover: scale-color($dark-gray, $lightness: -14%);
+$topbar-link-bg-hover: $very-dark-purple;
+$topbar-link-bg-active: $very-dark-purple !default;
+$topbar-link-bg-active-hover: scale-color($very-dark-purple, $lightness: -14%);
 
