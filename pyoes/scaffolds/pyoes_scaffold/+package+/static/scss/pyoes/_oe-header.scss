@@ -25,6 +25,23 @@
 }
 .bgimage-bouwkunde { background:url(../img/pyoes/dibe_1.jpg) no-repeat right; width: 80%; height:135px; position:absolute; right:0; z-index:0 }
 
+.header-links a {
+	color: $link-color;
+  text-decoration: none;
+  outline: 0;
+  margin: 0 16px;
+  border-bottom: solid 1px transparent;
+  -webkit-transform: scaleX(0);
+  -webkit-transition: border-bottom-color .3s ease-out;
+     -moz-transition: border-bottom-color .3s ease-out;
+      -ms-transition: border-bottom-color .3s ease-out;
+       -o-transition: border-bottom-color .3s ease-out;
+          transition: border-bottom-color .3s ease-out;
+
+  &:hover {
+    border-bottom: solid 1px $link-color;
+  }
+}
 
 // logo small header for apps like geoportal
 .logo-block-short { width:380px; background: url(../img/pyoes/header-logo-bg.png) no-repeat; height:60px; position:relative; z-index:40; padding:0 25px 0 13px;}
