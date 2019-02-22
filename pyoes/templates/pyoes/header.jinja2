@@ -12,6 +12,7 @@
 
     {% set home_link = home_link|default('/') -%}
     <!-- logo -->
+    <div class="large-8 small-9 columns">
     <div class="logo-block">
       <a href="{{ home_link }}">
         {% set active_title= active_title|default('Erfgoedstijl') -%}
@@ -20,6 +21,13 @@
         <h2>Vlaanderen</h2>
         <h4>is erfgoed</h4>
       </a>
+    </div>
+    </div>
+    <div class="large-4 small-3 columns text-right header-links">
+      <div style="height: 135px; line-height:135px;">
+        <a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a> \
+        <a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a>
+      </div>
     </div>
 
   </div>
