@@ -64,7 +64,7 @@
 
 * Bugfix error pages
 * Lijstweergave zoekresultaten aangepast
-* Detailpagina besluitentype geüpdate
+* Detailpagina besluitentype geupdate
 * zoekwidget toegevoegd
 
 0.4.2 (09-06-2015)
@@ -97,7 +97,7 @@
 0.3.3 (04-03-2015)
 ==================
 * Fix voor gebruikersnamen
-* Documentatie geüpdate ivm admin scaffold
+* Documentatie geupdate ivm admin scaffold
 
 0.3.2 (26-02-2015)
 ==================
@@ -109,7 +109,7 @@
 
 * Admin scaffold toegevoegd
 * Aanmelden/Afmelden knop toegevoegd
-* Google analytics geüpdate naar Universal analytics
+* Google analytics geupdate naar Universal analytics
 * Font-awesome toegevoegd als bower dependency
 
 0.3.0 (12-02-2015)
