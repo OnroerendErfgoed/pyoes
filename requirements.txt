@@ -1,6 +1,6 @@
-pyramid==1.5.7
+pyramid==1.10.4
 
-pyramid_jinja2==2.5
-jinja2==2.8
+pyramid_jinja2==2.8
+jinja2==2.10.1
 
-python-dateutil==2.6.0
+python-dateutil==2.8.0
