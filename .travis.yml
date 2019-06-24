@@ -1,12 +1,10 @@
 language: python
 python:
- - 2.7
- - 3.3
- - 3.4
+ - "2.7"
+ - "3.5"
 notifications:
  email:
-    - koen.vandaele@rwo.vlaanderen.be
-    - klaas.millet@rwo.vlaanderen.be
+    - vanderhaegen.cedrik@vlaanderen.be
 env:
  - LC_ALL=en_US.utf-8
 install:
