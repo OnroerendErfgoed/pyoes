@@ -122,3 +122,14 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 
 .iw2-wrapper.iw2-custom-margin { padding:0 21px !important; }
 .iw2-layout.iw2-custom-breakpoint { min-width: 73.25rem !important; }
+
+// transition op de mobile menu drop down
+nav.top-bar {
+  transition: max-height .3s ease-in-out;
+  max-height: $topbar-height;
+  overflow: hidden;
+  height: auto;
+  &.expanded {
+    max-height: 666px;
+  }
+}

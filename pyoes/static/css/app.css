@@ -13893,6 +13893,18 @@ nav#main-navigation .main-navigation-inner {
   min-width: 73.25rem !important;
 }
 
+/* line 127, ../scss/pyoes/_oe-header.scss */
+nav.top-bar {
+  transition: max-height .3s ease-in-out;
+  max-height: 2.8125rem;
+  overflow: hidden;
+  height: auto;
+}
+/* line 132, ../scss/pyoes/_oe-header.scss */
+nav.top-bar.expanded {
+  max-height: 666px;
+}
+
 /* line 3, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
