@@ -131,5 +131,21 @@ nav.top-bar {
   height: auto;
   &.expanded {
     max-height: 666px;
+
+    // verander menu icoon in 'X' als het menu open is
+    .toggle-topbar a span::after {
+      content: "\2715";
+      box-shadow: none;
+      font-size: 1.8em;
+      font-weight: 100;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+      display: inline-block;
+      position: relative;
+      top: 4px;
+      right: -7px;
+      width: 0;
+    }
   }
 }

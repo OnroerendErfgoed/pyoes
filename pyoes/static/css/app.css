@@ -7041,11 +7041,11 @@ meta.foundation-mq-topbar {
 }
 /* line 277, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
-  color: #888888;
+  color: white;
 }
 /* line 280, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a span::after {
-  box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888;
+  box-shadow: 0 0 0 1px white, 0 7px 0 1px white, 0 14px 0 1px white;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   /* line 293, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -13903,6 +13903,21 @@ nav.top-bar {
 /* line 132, ../scss/pyoes/_oe-header.scss */
 nav.top-bar.expanded {
   max-height: 666px;
+}
+/* line 136, ../scss/pyoes/_oe-header.scss */
+nav.top-bar.expanded .toggle-topbar a span::after {
+  content: "\2715";
+  box-shadow: none;
+  font-size: 1.8em;
+  font-weight: 100;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  right: -7px;
+  width: 0;
 }
 
 /* line 3, ../scss/pyoes/_oe-footer.scss */
