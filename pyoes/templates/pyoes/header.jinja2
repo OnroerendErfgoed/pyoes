@@ -12,22 +12,24 @@
 
     {% set home_link = home_link|default('/') -%}
     <!-- logo -->
-    <div class="large-8 small-9 columns">
-    <div class="logo-block">
-      <a href="{{ home_link }}">
-        {% set active_title= active_title|default('Erfgoedstijl') -%}
-        <div class="logo-block-title"><h1>{{active_title}}</h1></div>
-        <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
-        <h2>Vlaanderen</h2>
-        <h4>is erfgoed</h4>
-      </a>
-    </div>
-    </div>
-    <div class="large-4 small-3 columns text-right header-links">
-      <div style="height: 135px; line-height:135px;">
-        <a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a> \
-        <a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a>
+    <div class="medium-8 small-12 columns">
+      <div class="logo-block">
+        <a href="{{ home_link }}">
+          {% set active_title= active_title|default('Erfgoedstijl') -%}
+          <div class="logo-block-title"><h1>{{active_title}}</h1></div>
+          <img src="{{ request.static_path(app_package + ':static/img/pyoes/OE-vlaanderen-logo.png') }}" width="65">
+          <h2>Vlaanderen</h2>
+          <h4>is erfgoed</h4>
+        </a>
       </div>
+    </div>
+    <div class="medium-4 columns text-right header-links show-for-medium-up">
+      <nav>
+        <ul>
+          <li><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
+          <li><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
+        </ul>
+      </nav>
     </div>
 
   </div>
@@ -48,7 +50,7 @@
         ('zoeken', 'Zoeken', '/'),
         ('vinden', 'Vinden', '/')
         ]
-          -%}
+        -%}
       {% set default_dropdown_main_nav = [] %}
 
       {% set default_login_nav = [('Aanmelden', '/')] %}
@@ -67,6 +69,8 @@
             {% endif %}
           </li>
         {% endfor %}
+        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
+        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
       </ul>
 
       {% set dropdown_main_nav = dropdown_main_nav|default(default_dropdown_main_nav) -%}

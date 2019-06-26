@@ -244,6 +244,9 @@ $topbar-bg: $topbar-bg-color;
 $topbar-margin-bottom: 30px;
 $topbar-dropdown-bg: $mid-purple;
 $topbar-dropdown-link-bg: $mid-purple;
+$topbar-menu-link-color-toggled: $white;
+$topbar-menu-icon-color-toggled: $white;
+$topbar-breakpoint: #{lower-bound($large-range)};
 
 // Set the link colors and styles for top-level nav
 

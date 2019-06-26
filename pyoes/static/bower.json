@@ -1,9 +1,9 @@
 {
   "name": "+package+",
-  "private": "true",
+  "private": true,
   "dependencies": {
     "foundation": "~5.5.3",
-    "font-awesome": "~4.3.0",
+    "font-awesome": "~4.7.0",
     "jquery": "2.1.4"
   }
 }

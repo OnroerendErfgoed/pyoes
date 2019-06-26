@@ -15,14 +15,13 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.8.0',
+      version='0.9.0a1',
       description='Algemene onroerenderfgoed stijl (gebaseerd op de Vlaamse huisstijl) voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
         "Programming Language :: JavaScript",
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
@@ -33,7 +32,7 @@ setup(name='pyoes',
         "Topic :: Text Processing :: Markup :: HTML"
         ],
       author='Koen Van Daele',
-      author_email='koen.vandaele@rwo.vlaanderen.be',
+      author_email='koen.vandaele@vlaanderen.be',
       url='https://pyoes.readthedocs.org/en/latest/',
       keywords='pyramid oe onroerend erfgoed sass compass style css jinja2 templates',
       packages=['pyoes'],

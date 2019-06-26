@@ -1,8 +1,8 @@
 {
   "name": "{{package}}",
-  "private": "true",
+  "private": true,
   "dependencies": {
-    "foundation": "~5.5.0",
-    "font-awesome": "~4.3.0"
+    "foundation": "~5.5.3",
+    "font-awesome": "~4.7.0"
   }
 }
