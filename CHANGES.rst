@@ -1,7 +1,11 @@
+0.9.0 (26-06-2019)
+==================
+- Libs updaten - security alert (#140)
+- Mobiele layout verbeteren (#139)
+
 0.8.0 (22-02-2019)
 ==================
 - Header - contact & over ons links (#135)
-
 
 0.7.0 (18-07-2018)
 ==================
