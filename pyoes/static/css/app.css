@@ -13897,14 +13897,13 @@ nav#main-navigation .main-navigation-inner {
 nav.top-bar {
   transition: max-height .3s ease-in-out;
   max-height: 2.8125rem;
-  overflow: hidden;
   height: auto;
 }
-/* line 132, ../scss/pyoes/_oe-header.scss */
+/* line 131, ../scss/pyoes/_oe-header.scss */
 nav.top-bar.expanded {
   max-height: 666px;
 }
-/* line 136, ../scss/pyoes/_oe-header.scss */
+/* line 135, ../scss/pyoes/_oe-header.scss */
 nav.top-bar.expanded .toggle-topbar a span::after {
   content: "\2715";
   box-shadow: none;

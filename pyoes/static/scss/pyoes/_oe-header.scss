@@ -127,7 +127,6 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
 nav.top-bar {
   transition: max-height .3s ease-in-out;
   max-height: $topbar-height;
-  overflow: hidden;
   height: auto;
   &.expanded {
     max-height: 666px;
