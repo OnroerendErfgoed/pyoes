@@ -6870,8 +6870,8 @@ table tr td {
 }
 /* line 113, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:36.128em)/";
-  width: 36.128em;
+  font-family: "/only screen and (min-width:55.503em)/";
+  width: 55.503em;
 }
 
 /* Wrapped around .top-bar to contain to grid width */
@@ -7398,7 +7398,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 36.128em) {
+@media only screen and (min-width: 55.503em) {
   /* line 492, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #944ea1;
@@ -14027,19 +14027,31 @@ footer#footer-bottom .inner .mailtolink {
   font-style: normal;
   font-weight: 400;
 }
-/* line 38, ../scss/pyoes/_oe-type.scss */
+@font-face {
+  font-family: "Flanders Art Sans Bold";
+  src: url("../fonts/FlandersArtSans-Bold.eot");
+  src: url("../fonts/FlandersArtSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/FlandersArtSans-Bold.woff") format("woff"), url("../fonts/FlandersArtSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+/* line 49, ../scss/pyoes/_oe-type.scss */
 .demo-light {
   font-family: "Flanders Art Sans Light";
 }
 
-/* line 39, ../scss/pyoes/_oe-type.scss */
+/* line 50, ../scss/pyoes/_oe-type.scss */
 .demo-regular {
   font-family: "Flanders Art Sans";
 }
 
-/* line 40, ../scss/pyoes/_oe-type.scss */
+/* line 51, ../scss/pyoes/_oe-type.scss */
 .demo-medium {
   font-family: "Flanders Art Sans Medium";
+}
+
+/* line 52, ../scss/pyoes/_oe-type.scss */
+.demo-bold {
+  font-family: "Flanders Art Sans Bold";
 }
 
 /* line 8, ../scss/pyoes/_oe-headings.scss */
