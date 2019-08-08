@@ -34,8 +34,19 @@
   font-weight:  400;
 }
 
+@font-face {
+  font-family: "Flanders Art Sans Bold";
+  src: url("../fonts/FlandersArtSans-Bold.eot");
+  src: url("../fonts/FlandersArtSans-Bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/FlandersArtSans-Bold.woff") format("woff"),
+  url("../fonts/FlandersArtSans-Bold.ttf")  format("truetype");
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
 
 .demo-light{font-family: "Flanders Art Sans Light";}
 .demo-regular{font-family: "Flanders Art Sans";}
 .demo-medium{font-family: "Flanders Art Sans Medium";}
-
+.demo-bold{font-family: "Flanders Art Sans Bold";}
