@@ -1,3 +1,7 @@
+0.9.1 (08-08-2019)
+==================
+- "Flanders Art Sans Bold" ontbreekt in _oe-type.scss (#146)
+
 0.9.0 (26-06-2019)
 ==================
 - Libs updaten - security alert (#140)
