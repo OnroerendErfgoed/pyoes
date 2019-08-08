@@ -52,3 +52,4 @@ bower_components/*
 
 #IDE
 .idea
+!.idea/runConfigurations
