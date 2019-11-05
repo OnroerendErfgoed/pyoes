@@ -1,3 +1,7 @@
+0.9.2 (05-11-2019)
+==================
+- Compile errors door unrecognized characters (#149)
+
 0.9.1 (08-08-2019)
 ==================
 - "Flanders Art Sans Bold" ontbreekt in _oe-type.scss (#146)
