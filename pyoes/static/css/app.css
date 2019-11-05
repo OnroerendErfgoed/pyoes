@@ -1,12 +1,12 @@
 @charset "UTF-8";
-/* line 236, ../scss/pyoes/_oe-settings.scss */
+/* line 237, ../scss/pyoes/_oe-settings.scss */
 .tabs-content {
   background: #ededed;
   padding: 5px 10px;
   margin-top: 1px;
 }
 
-/* line 237, ../scss/pyoes/_oe-settings.scss */
+/* line 238, ../scss/pyoes/_oe-settings.scss */
 .tabs dd {
   margin-right: 1px !important;
 }
@@ -15007,7 +15007,7 @@ div.subnav-panel h3 {
   padding: 15px 20px;
 }
 
-/* line 5, ../scss/pyoes/_oe-social.scss */
+/* line 6, ../scss/pyoes/_oe-social.scss */
 ul.socialbox {
   list-style: none;
   padding: 0;
@@ -15015,7 +15015,7 @@ ul.socialbox {
   position: relative;
 }
 
-/* line 6, ../scss/pyoes/_oe-social.scss */
+/* line 7, ../scss/pyoes/_oe-social.scss */
 ul.socialbox:after {
   content: " ";
   visibility: hidden;
@@ -15024,7 +15024,7 @@ ul.socialbox:after {
   clear: both;
 }
 
-/* line 7, ../scss/pyoes/_oe-social.scss */
+/* line 8, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li {
   float: left;
   display: block;
@@ -15032,7 +15032,7 @@ ul.socialbox > li {
   line-height: 0;
 }
 
-/* line 8, ../scss/pyoes/_oe-social.scss */
+/* line 9, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li > a, ul.socialbox > li > span, ul.socialbox li i {
   display: inline-block;
   line-height: 2.4em;
@@ -15043,111 +15043,111 @@ ul.socialbox > li > a, ul.socialbox > li > span, ul.socialbox li i {
   text-decoration: none;
 }
 
-/* line 9, ../scss/pyoes/_oe-social.scss */
+/* line 10, ../scss/pyoes/_oe-social.scss */
 ul.socialbox li i {
   padding: 0;
   display: inline;
   float: none;
 }
 
-/* line 10, ../scss/pyoes/_oe-social.scss */
+/* line 11, ../scss/pyoes/_oe-social.scss */
 ul.socialbox li a:hover {
   text-decoration: none;
 }
 
 /* background colors */
-/* line 14, ../scss/pyoes/_oe-social.scss */
+/* line 15, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.facebook > a {
   background-color: #3567a6;
 }
 
-/* line 15, ../scss/pyoes/_oe-social.scss */
+/* line 16, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.facebook > a:hover {
   background-color: #255592;
 }
 
-/* line 16, ../scss/pyoes/_oe-social.scss */
+/* line 17, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.twitter > a {
   background-color: #2da5da;
 }
 
-/* line 17, ../scss/pyoes/_oe-social.scss */
+/* line 18, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.twitter > a:hover {
   background-color: #2690bf;
 }
 
-/* line 18, ../scss/pyoes/_oe-social.scss */
+/* line 19, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.linkedin > a {
   background-color: #007ab9;
 }
 
-/* line 19, ../scss/pyoes/_oe-social.scss */
+/* line 20, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.linkedin > a:hover {
   background-color: #006ca4;
 }
 
-/* line 20, ../scss/pyoes/_oe-social.scss */
+/* line 21, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.mail > a {
   background-color: #926da5;
 }
 
-/* line 21, ../scss/pyoes/_oe-social.scss */
+/* line 22, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.mail > a:hover {
   background-color: #7a588b;
 }
 
-/* line 22, ../scss/pyoes/_oe-social.scss */
+/* line 23, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.print > a {
   background-color: #888888;
 }
 
-/* line 23, ../scss/pyoes/_oe-social.scss */
+/* line 24, ../scss/pyoes/_oe-social.scss */
 ul.socialbox > li.print > a:hover {
   background-color: #6e6e6e;
 }
 
-/* line 24, ../scss/pyoes/_oe-social.scss */
+/* line 25, ../scss/pyoes/_oe-social.scss */
 ul.socialbox li li.linkedin a, ul.socialbox li li.linkedin a i {
   color: #007ab9;
 }
 
-/* line 25, ../scss/pyoes/_oe-social.scss */
+/* line 26, ../scss/pyoes/_oe-social.scss */
 ul.socialbox li li.mail a, ul.socialbox li li.mail a i {
   color: #926da5;
 }
 
-/* line 26, ../scss/pyoes/_oe-social.scss */
+/* line 27, ../scss/pyoes/_oe-social.scss */
 ul.socialbox li li.print a, ul.socialbox li li.print a i {
   color: #888888;
 }
 
 /* table inventaris article */
-/* line 3, ../scss/pyoes/_oe-tables.scss */
+/* line 4, ../scss/pyoes/_oe-tables.scss */
 table {
   width: 100%;
   margin: 20px 0;
 }
 
-/* line 4, ../scss/pyoes/_oe-tables.scss */
+/* line 5, ../scss/pyoes/_oe-tables.scss */
 table th {
   width: 150px;
 }
 
 /* base table layout */
-/* line 9, ../scss/pyoes/_oe-tables.scss */
+/* line 10, ../scss/pyoes/_oe-tables.scss */
 table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 10, ../scss/pyoes/_oe-tables.scss */
+/* line 11, ../scss/pyoes/_oe-tables.scss */
 .table {
   width: 100%;
   margin-bottom: 18px;
 }
 
-/* line 11, ../scss/pyoes/_oe-tables.scss */
+/* line 12, ../scss/pyoes/_oe-tables.scss */
 .table th, .table td {
   padding: 8px;
   line-height: 18px;
@@ -15156,64 +15156,64 @@ table {
   border-top: 1px solid #d5d5d5;
 }
 
-/* line 13, ../scss/pyoes/_oe-tables.scss */
+/* line 14, ../scss/pyoes/_oe-tables.scss */
 .table thead th {
   vertical-align: bottom;
 }
 
-/* line 14, ../scss/pyoes/_oe-tables.scss */
+/* line 15, ../scss/pyoes/_oe-tables.scss */
 .table thead:first-child tr th, .table thead:first-child tr td {
   border-top: 0;
 }
 
-/* line 15, ../scss/pyoes/_oe-tables.scss */
+/* line 16, ../scss/pyoes/_oe-tables.scss */
 .table tbody + tbody {
   border-top: 2px solid #d5d5d5;
 }
 
-/* line 16, ../scss/pyoes/_oe-tables.scss */
+/* line 17, ../scss/pyoes/_oe-tables.scss */
 .table tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
   background-color: #ededed;
 }
 
-/* line 19, ../scss/pyoes/_oe-tables.scss */
+/* line 20, ../scss/pyoes/_oe-tables.scss */
 .table.border tbody tr td, .table.border tr th {
   border-right: 1px solid #d5d5d5;
 }
 
-/* line 20, ../scss/pyoes/_oe-tables.scss */
+/* line 21, ../scss/pyoes/_oe-tables.scss */
 .table.border tbody tr td:last-child {
   border-right: 1px solid #d5d5d5;
 }
 
 /* Right align numbers */
-/* line 24, ../scss/pyoes/_oe-tables.scss */
+/* line 25, ../scss/pyoes/_oe-tables.scss */
 .table.border tr td, .table.border tr th {
   text-align: right;
 }
 
-/* line 25, ../scss/pyoes/_oe-tables.scss */
+/* line 26, ../scss/pyoes/_oe-tables.scss */
 .table.border tr td:first-child, .table.border tr th:first-child {
   text-align: left;
 }
 
-/* line 29, ../scss/pyoes/_oe-tables.scss */
+/* line 30, ../scss/pyoes/_oe-tables.scss */
 .table-app {
   width: 100%;
   margin: 20px 0 10px 0;
 }
 
-/* line 30, ../scss/pyoes/_oe-tables.scss */
+/* line 31, ../scss/pyoes/_oe-tables.scss */
 .table-app th:first-child {
   width: 20px;
 }
 
-/* line 31, ../scss/pyoes/_oe-tables.scss */
+/* line 32, ../scss/pyoes/_oe-tables.scss */
 .table-app th:last-child {
   width: 20px;
 }
 
-/* line 32, ../scss/pyoes/_oe-tables.scss */
+/* line 33, ../scss/pyoes/_oe-tables.scss */
 .table-app td:last-child i {
   margin: 0 10px 0 0;
 }
@@ -15283,7 +15283,7 @@ aside img {
 }
 
 /* Icons main page */
-/* line 4, ../scss/pyoes/_oe-elements.scss */
+/* line 5, ../scss/pyoes/_oe-elements.scss */
 .icon-large-left {
   float: left;
   margin: 0 20px 30px 0;
@@ -15291,122 +15291,122 @@ aside img {
   color: #e5e5e5;
 }
 
-/* line 5, ../scss/pyoes/_oe-elements.scss */
+/* line 6, ../scss/pyoes/_oe-elements.scss */
 .vruler {
   border-left: 1px solid #ededed;
   padding-top: 0px;
 }
 
 /* Alt elements alert box */
-/* line 9, ../scss/pyoes/_oe-elements.scss */
+/* line 10, ../scss/pyoes/_oe-elements.scss */
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
 }
 
-/* line 10, ../scss/pyoes/_oe-elements.scss */
+/* line 11, ../scss/pyoes/_oe-elements.scss */
 .alert-success .alert-link {
   color: #2b542c;
   text-decoration: underline;
 }
 
-/* line 11, ../scss/pyoes/_oe-elements.scss */
+/* line 12, ../scss/pyoes/_oe-elements.scss */
 .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #31708f;
 }
 
-/* line 12, ../scss/pyoes/_oe-elements.scss */
+/* line 13, ../scss/pyoes/_oe-elements.scss */
 .alert-info .alert-link {
   color: #245269;
   text-decoration: underline;
 }
 
-/* line 13, ../scss/pyoes/_oe-elements.scss */
+/* line 14, ../scss/pyoes/_oe-elements.scss */
 .alert-warning {
   background-color: #fcf8e3;
   border-color: #faebcc;
   color: #8a6d3b;
 }
 
-/* line 14, ../scss/pyoes/_oe-elements.scss */
+/* line 15, ../scss/pyoes/_oe-elements.scss */
 .alert-warning .alert-link {
   color: #66512c;
   text-decoration: underline;
 }
 
-/* line 15, ../scss/pyoes/_oe-elements.scss */
+/* line 16, ../scss/pyoes/_oe-elements.scss */
 .alert-danger {
   background-color: #f2dede;
   border-color: #ebccd1;
   color: #a94442;
 }
 
-/* line 16, ../scss/pyoes/_oe-elements.scss */
+/* line 17, ../scss/pyoes/_oe-elements.scss */
 .alert-danger .alert-link {
   color: #843534;
   text-decoration: underline;
 }
 
-/* line 17, ../scss/pyoes/_oe-elements.scss */
+/* line 18, ../scss/pyoes/_oe-elements.scss */
 .alert-time {
   background-color: #666;
 }
 
-/* line 21, ../scss/pyoes/_oe-elements.scss */
+/* line 22, ../scss/pyoes/_oe-elements.scss */
 .bg-primary {
   background-color: #944ea1;
 }
 
-/* line 22, ../scss/pyoes/_oe-elements.scss */
+/* line 23, ../scss/pyoes/_oe-elements.scss */
 .bg-success {
   background-color: #43ac6a;
 }
 
-/* line 23, ../scss/pyoes/_oe-elements.scss */
+/* line 24, ../scss/pyoes/_oe-elements.scss */
 .bg-info {
   background-color: #5bc0de;
 }
 
-/* line 24, ../scss/pyoes/_oe-elements.scss */
+/* line 25, ../scss/pyoes/_oe-elements.scss */
 .bg-warning {
   background-color: #f08a24;
 }
 
-/* line 25, ../scss/pyoes/_oe-elements.scss */
+/* line 26, ../scss/pyoes/_oe-elements.scss */
 .bg-danger {
   background-color: #ff0000;
 }
 
-/* line 29, ../scss/pyoes/_oe-elements.scss */
+/* line 30, ../scss/pyoes/_oe-elements.scss */
 .label-colored {
   background-color: #2da3ce;
 }
 
-/* line 30, ../scss/pyoes/_oe-elements.scss */
+/* line 31, ../scss/pyoes/_oe-elements.scss */
 .label-colored a {
   text-decoration: none !important;
   color: white;
   padding-right: 3px;
 }
 
-/* line 31, ../scss/pyoes/_oe-elements.scss */
+/* line 32, ../scss/pyoes/_oe-elements.scss */
 .label-colored a span {
   color: white;
   border-left: 1px dotted #a0d3e8;
   padding-left: 8px;
 }
 
-/* line 35, ../scss/pyoes/_oe-elements.scss */
+/* line 36, ../scss/pyoes/_oe-elements.scss */
 h4.header-img-panel {
   text-transform: uppercase;
   font-size: 1em;
   padding: 20px 0;
 }
 
-/* line 38, ../scss/pyoes/_oe-elements.scss */
+/* line 39, ../scss/pyoes/_oe-elements.scss */
 .color-cube {
   height: 120px;
   width: 160px;
@@ -15415,13 +15415,13 @@ h4.header-img-panel {
   padding: 5px;
 }
 
-/* line 42, ../scss/pyoes/_oe-elements.scss */
+/* line 43, ../scss/pyoes/_oe-elements.scss */
 dt, b, strong {
   font-family: "Flanders Art Sans Bold", Arial, sans-serif;
   font-weight: 700;
 }
 
-/* line 43, ../scss/pyoes/_oe-elements.scss */
+/* line 44, ../scss/pyoes/_oe-elements.scss */
 h4 > em {
   padding: 5px 0 10px 0;
   display: block;
@@ -15429,35 +15429,35 @@ h4 > em {
   line-height: 1.3em;
 }
 
-/* line 44, ../scss/pyoes/_oe-elements.scss */
+/* line 45, ../scss/pyoes/_oe-elements.scss */
 article > h1 {
   padding-bottom: 18px;
 }
 
-/* line 45, ../scss/pyoes/_oe-elements.scss */
+/* line 46, ../scss/pyoes/_oe-elements.scss */
 article a, .panel p a {
   color: #0075db;
   text-decoration: underline;
 }
 
-/* line 46, ../scss/pyoes/_oe-elements.scss */
+/* line 47, ../scss/pyoes/_oe-elements.scss */
 article a:hover, .panel p a:hover {
   color: #0075db;
   text-decoration: none;
 }
 
-/* line 48, ../scss/pyoes/_oe-elements.scss */
+/* line 49, ../scss/pyoes/_oe-elements.scss */
 .panel article h3, .panel article h4, .panel article h5 {
   line-height: 1.3em;
 }
 
-/* line 49, ../scss/pyoes/_oe-elements.scss */
+/* line 50, ../scss/pyoes/_oe-elements.scss */
 .body-bg-error {
   background: #753f7f;
 }
 
 /* Placeholder fields */
-/* line 4, ../scss/pyoes/_oe-forms.scss */
+/* line 5, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container {
   -webkit-appearance: none;
   -webkit-border-radius: 0px;
@@ -15477,7 +15477,7 @@ article a:hover, .panel p a:hover {
   margin: 1px 0 16px 0;
 }
 
-/* line 6, ../scss/pyoes/_oe-forms.scss */
+/* line 7, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container label {
   display: table-cell;
   padding-left: 10px;
@@ -15488,7 +15488,7 @@ article a:hover, .panel p a:hover {
   background-color: transparent;
 }
 
-/* line 7, ../scss/pyoes/_oe-forms.scss */
+/* line 8, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container input[type="text"] {
   border: none !important;
   box-shadow: none;
@@ -15498,7 +15498,7 @@ article a:hover, .panel p a:hover {
   color: #3f3840;
 }
 
-/* line 8, ../scss/pyoes/_oe-forms.scss */
+/* line 9, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container select {
   border: none;
   box-shadow: none;
@@ -15510,12 +15510,12 @@ article a:hover, .panel p a:hover {
   font-size: 0.9em;
 }
 
-/* line 9, ../scss/pyoes/_oe-forms.scss */
+/* line 10, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container > .combo-dropdown {
   border: 0 !important;
 }
 
-/* line 10, ../scss/pyoes/_oe-forms.scss */
+/* line 11, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container textarea {
   border: none !important;
   box-shadow: none;
@@ -15525,12 +15525,12 @@ article a:hover, .panel p a:hover {
   resize: vertical;
 }
 
-/* line 11, ../scss/pyoes/_oe-forms.scss */
+/* line 12, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container.error {
   border: 1px solid #FF0000 !important;
 }
 
-/* line 12, ../scss/pyoes/_oe-forms.scss */
+/* line 13, ../scss/pyoes/_oe-forms.scss */
 .placeholder-input {
   border: none !important;
   box-shadow: none;
@@ -15541,23 +15541,23 @@ article a:hover, .panel p a:hover {
   padding-left: 8px;
 }
 
-/* line 13, ../scss/pyoes/_oe-forms.scss */
+/* line 14, ../scss/pyoes/_oe-forms.scss */
 .placeholder-input-border {
   border-left: 1px dotted #d3d3d3 !important;
 }
 
-/* line 14, ../scss/pyoes/_oe-forms.scss */
+/* line 15, ../scss/pyoes/_oe-forms.scss */
 .placeholder-disabled {
   background-color: #DDDDDD;
 }
 
-/* line 15, ../scss/pyoes/_oe-forms.scss */
+/* line 16, ../scss/pyoes/_oe-forms.scss */
 .placeholder-textarea label {
   vertical-align: top;
   padding-top: 8px;
 }
 
-/* line 17, ../scss/pyoes/_oe-forms.scss */
+/* line 18, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"], .placeholder-checkbox-label {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -15565,19 +15565,19 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 18, ../scss/pyoes/_oe-forms.scss */
+/* line 19, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox label {
   position: relative;
   width: 100%;
 }
 
-/* line 19, ../scss/pyoes/_oe-forms.scss */
+/* line 20, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
-/* line 20, ../scss/pyoes/_oe-forms.scss */
+/* line 21, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"] + .placeholder-checkbox-label:after {
   content: '';
   background: #2da3ce;
@@ -15591,7 +15591,7 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 21, ../scss/pyoes/_oe-forms.scss */
+/* line 22, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"]:checked + .placeholder-checkbox-label:after {
   content: '\2714';
   background: #2da3ce;
@@ -15599,7 +15599,7 @@ article a:hover, .panel p a:hover {
 }
 
 /*small*/
-/* line 25, ../scss/pyoes/_oe-forms.scss */
+/* line 26, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"], .placeholder-checkbox-label-sm {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -15607,19 +15607,19 @@ article a:hover, .panel p a:hover {
   font-size: 0.7em;
 }
 
-/* line 26, ../scss/pyoes/_oe-forms.scss */
+/* line 27, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm label {
   position: relative;
   width: 100%;
 }
 
-/* line 27, ../scss/pyoes/_oe-forms.scss */
+/* line 28, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
-/* line 28, ../scss/pyoes/_oe-forms.scss */
+/* line 29, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"] + .placeholder-checkbox-label-sm:before {
   content: '';
   background: #2da3ce;
@@ -15633,21 +15633,21 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 29, ../scss/pyoes/_oe-forms.scss */
+/* line 30, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"]:checked + .placeholder-checkbox-label-sm:before {
   content: '\2714';
   background: #2da3ce;
   color: #fff;
 }
 
-/* line 34, ../scss/pyoes/_oe-forms.scss */
+/* line 35, ../scss/pyoes/_oe-forms.scss */
 .plus-icon {
   padding-top: 12px;
   padding-left: 8px;
   color: #3f3840;
 }
 
-/* line 35, ../scss/pyoes/_oe-forms.scss */
+/* line 36, ../scss/pyoes/_oe-forms.scss */
 .plus-icon-link {
   display: table-cell;
   border-left: 1px dotted #d3d3d3;
@@ -15657,13 +15657,13 @@ article a:hover, .panel p a:hover {
 }
 
 /* Checkbox custom */
-/* line 39, ../scss/pyoes/_oe-forms.scss */
+/* line 40, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom, .radio-custom {
   opacity: 0;
   position: absolute;
 }
 
-/* line 40, ../scss/pyoes/_oe-forms.scss */
+/* line 41, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
   display: inline-block;
   vertical-align: middle;
@@ -15672,12 +15672,12 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 41, ../scss/pyoes/_oe-forms.scss */
+/* line 42, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom-label, .radio-custom-label {
   position: relative;
 }
 
-/* line 42, ../scss/pyoes/_oe-forms.scss */
+/* line 43, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
   content: '';
   background: #2da3ce;
@@ -15691,143 +15691,143 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 43, ../scss/pyoes/_oe-forms.scss */
+/* line 44, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom:checked + .checkbox-custom-label:before {
   content: '\2714';
   background: #2da3ce;
   color: #fff;
 }
 
-/* line 44, ../scss/pyoes/_oe-forms.scss */
+/* line 45, ../scss/pyoes/_oe-forms.scss */
 .radio-custom + .radio-custom-label:before {
   border-radius: 50%;
 }
 
-/* line 45, ../scss/pyoes/_oe-forms.scss */
+/* line 46, ../scss/pyoes/_oe-forms.scss */
 .radio-custom:checked + .radio-custom-label:before {
   content: '\2714';
   color: #bbb;
 }
 
 /* Form custom */
-/* line 50, ../scss/pyoes/_oe-forms.scss */
+/* line 51, ../scss/pyoes/_oe-forms.scss */
 .button {
   text-transform: uppercase;
 }
 
-/* line 52, ../scss/pyoes/_oe-forms.scss */
+/* line 53, ../scss/pyoes/_oe-forms.scss */
 legend {
   text-transform: uppercase;
   font-size: 0.8em;
 }
 
-/* line 54, ../scss/pyoes/_oe-forms.scss */
+/* line 55, ../scss/pyoes/_oe-forms.scss */
 .error {
   background: none !important;
 }
 
-/* line 55, ../scss/pyoes/_oe-forms.scss */
+/* line 56, ../scss/pyoes/_oe-forms.scss */
 input.error {
   border: 1px solid #FF0000;
 }
 
-/* line 57, ../scss/pyoes/_oe-forms.scss */
+/* line 58, ../scss/pyoes/_oe-forms.scss */
 select {
   height: 42px;
 }
 
-/* line 58, ../scss/pyoes/_oe-forms.scss */
+/* line 59, ../scss/pyoes/_oe-forms.scss */
 select:focus {
   outline: none;
 }
 
-/* line 60, ../scss/pyoes/_oe-forms.scss */
+/* line 61, ../scss/pyoes/_oe-forms.scss */
 select {
   -moz-appearance: none !important;
 }
 
-/* line 63, ../scss/pyoes/_oe-forms.scss */
+/* line 64, ../scss/pyoes/_oe-forms.scss */
 input::-webkit-input-placeholder {
   color: #989898;
   text-overflow: ellipsis;
 }
 
-/* line 67, ../scss/pyoes/_oe-forms.scss */
+/* line 68, ../scss/pyoes/_oe-forms.scss */
 input:-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
-/* line 71, ../scss/pyoes/_oe-forms.scss */
+/* line 72, ../scss/pyoes/_oe-forms.scss */
 input::-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
 /* for the future */
-/* line 75, ../scss/pyoes/_oe-forms.scss */
+/* line 76, ../scss/pyoes/_oe-forms.scss */
 input:-ms-input-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 5, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 6, ../scss/pyoes/_oe-mediaqueries.scss */
   .bgimage, #service-navigation, .temp-embed {
     display: none;
   }
 
-  /* line 6, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 7, ../scss/pyoes/_oe-mediaqueries.scss */
   .bb-imagelarge {
     margin: 0 0 30px 0;
     padding: 0;
   }
 
-  /* line 7, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 8, ../scss/pyoes/_oe-mediaqueries.scss */
   .bb-imagelarge img {
     width: 100%;
   }
 
-  /* line 8, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 9, ../scss/pyoes/_oe-mediaqueries.scss */
   .bb-vertical-large img {
     width: 100%;
     height: 400px;
   }
 
-  /* line 9, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 10, ../scss/pyoes/_oe-mediaqueries.scss */
   .result figure {
     float: none !important;
     background: none;
     width: 100%;
   }
 
-  /* line 10, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 11, ../scss/pyoes/_oe-mediaqueries.scss */
   .result img {
     float: none !important;
     height: 100% !important;
   }
 }
 /* inventaris article margin */
-/* line 15, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 16, ../scss/pyoes/_oe-mediaqueries.scss */
 .articlemargin {
   width: 70%;
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 17, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 18, ../scss/pyoes/_oe-mediaqueries.scss */
   .articlemargin {
     width: 100%;
   }
 }
-/* line 21, ../scss/pyoes/_oe-mediaqueries.scss */
+/* line 22, ../scss/pyoes/_oe-mediaqueries.scss */
 .postreg-navbar {
   margin: 0 auto;
   width: 600px;
 }
 
 @media only screen and (max-width: 578px) {
-  /* line 23, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 24, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -15835,7 +15835,7 @@ input:-ms-input-placeholder {
   }
 }
 @media only screen and (min-width: 578px) and (max-width: 800px) {
-  /* line 25, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 26, ../scss/pyoes/_oe-mediaqueries.scss */
   .postreg-navbar {
     margin: 0 auto;
     width: 600px;
@@ -15843,97 +15843,97 @@ input:-ms-input-placeholder {
   }
 }
 @media (max-width: 391px) {
-  /* line 30, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 31, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 100px;
   }
 
-  /* line 31, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 32, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 120px;
     height: 100px;
   }
 
-  /* line 32, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 33, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 27px;
   }
 
-  /* line 33, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 18px;
     padding: 35px 0 0 0;
   }
 
-  /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 
-  /* line 35, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 36, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 55px;
     padding: 25px 0 0 0;
   }
 }
 @media (max-width: 320px) {
-  /* line 39, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 70px;
   }
 
-  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 41, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 105px;
     height: 70px;
   }
 
-  /* line 41, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 42, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 45px;
     padding: 18px 0 0 0;
   }
 
-  /* line 42, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 20px;
   }
 
-  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 16px;
     padding: 28px 0 0 0;
   }
 
-  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 45, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 }
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 51, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 53, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 58, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -15944,7 +15944,7 @@ input:-ms-input-placeholder {
     margin: 0;
   }
 
-  /* line 58, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 59, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -15959,38 +15959,38 @@ input:-ms-input-placeholder {
     position: relative;
   }
 
-  /* line 59, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 60, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 60, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 63, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
 }
-/* line 2, ../scss/pyoes/_oe-components.scss */
+/* line 3, ../scss/pyoes/_oe-components.scss */
 .expander-container {
   width: 100%;
   height: 100%;
   display: inline-block;
 }
 
-/* line 8, ../scss/pyoes/_oe-components.scss */
+/* line 9, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander {
   border-bottom: 1px solid #ededed;
   display: inline-block;
@@ -15998,19 +15998,19 @@ input:-ms-input-placeholder {
   padding: 10px 20px 10px 20px;
 }
 
-/* line 15, ../scss/pyoes/_oe-components.scss */
+/* line 16, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander .expander-content {
   display: none;
 }
 
-/* line 19, ../scss/pyoes/_oe-components.scss */
+/* line 20, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander .expander-header {
   cursor: pointer;
   min-height: 45px;
   padding-top: 10px;
 }
 
-/* line 25, ../scss/pyoes/_oe-components.scss */
+/* line 26, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander.expander-expanded .expander-content {
   display: block;
   width: 100%;
@@ -16018,13 +16018,13 @@ input:-ms-input-placeholder {
   padding-top: 10px;
 }
 
-/* line 32, ../scss/pyoes/_oe-components.scss */
+/* line 33, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander-icon {
   float: right;
   margin-top: -30px;
 }
 
-/* line 36, ../scss/pyoes/_oe-components.scss */
+/* line 37, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander .expander-icon:after {
   content: '\f078';
   font-family: FontAwesome;
@@ -16033,7 +16033,7 @@ input:-ms-input-placeholder {
   text-decoration: inherit;
 }
 
-/* line 44, ../scss/pyoes/_oe-components.scss */
+/* line 45, ../scss/pyoes/_oe-components.scss */
 .expander-container .expander.expander-expanded .expander-icon:after {
   content: '\f077';
   font-family: FontAwesome;
