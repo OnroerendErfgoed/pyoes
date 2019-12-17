@@ -15732,40 +15732,35 @@ input.error {
 }
 
 /* line 58, ../scss/pyoes/_oe-forms.scss */
-select {
-  height: 42px;
-}
-
-/* line 59, ../scss/pyoes/_oe-forms.scss */
 select:focus {
   outline: none;
 }
 
-/* line 61, ../scss/pyoes/_oe-forms.scss */
+/* line 60, ../scss/pyoes/_oe-forms.scss */
 select {
   -moz-appearance: none !important;
 }
 
-/* line 64, ../scss/pyoes/_oe-forms.scss */
+/* line 63, ../scss/pyoes/_oe-forms.scss */
 input::-webkit-input-placeholder {
   color: #989898;
   text-overflow: ellipsis;
 }
 
-/* line 68, ../scss/pyoes/_oe-forms.scss */
+/* line 67, ../scss/pyoes/_oe-forms.scss */
 input:-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
-/* line 72, ../scss/pyoes/_oe-forms.scss */
+/* line 71, ../scss/pyoes/_oe-forms.scss */
 input::-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
 /* for the future */
-/* line 76, ../scss/pyoes/_oe-forms.scss */
+/* line 75, ../scss/pyoes/_oe-forms.scss */
 input:-ms-input-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
