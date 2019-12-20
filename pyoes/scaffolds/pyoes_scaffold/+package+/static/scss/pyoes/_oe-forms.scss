@@ -55,7 +55,6 @@ legend {text-transform:uppercase;font-size:0.8em}
 .error {background: none !important}
 input.error {border: 1px solid $alert-color}
 // select optionform beeldbank
-select {height:42px}
 select:focus {outline:none}
 // fix for dropdown arrow in firefox
 select { -moz-appearance: none !important; }
