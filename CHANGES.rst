@@ -1,3 +1,9 @@
+0.10.0 (14-01-2010)
+===================
+- height van selects weghalen (#148)
+- input[type="email"] zelfde stijl als input[type="text"] maken (#153)
+- updates dependencies via dependabot
+
 0.9.2 (05-11-2019)
 ==================
 - Compile errors door unrecognized characters (#149)
