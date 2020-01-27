@@ -1,4 +1,8 @@
-0.10.0 (14-01-2010)
+0.11.0 (27-01-2020)
+===================
+- Update van Vlaanderen header en footer (#162)
+
+0.10.0 (14-01-2020)
 ===================
 - height van selects weghalen (#148)
 - input[type="email"] zelfde stijl als input[type="text"] maken (#153)
