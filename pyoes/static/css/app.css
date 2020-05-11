@@ -13883,27 +13883,32 @@ nav#main-navigation .main-navigation-inner {
   max-width: 1142px;
 }
 
-/* line 123, ../scss/pyoes/_oe-header.scss */
+/* line 122, ../scss/pyoes/_oe-header.scss */
+.header-text {
+  display: grid;
+}
+
+/* line 126, ../scss/pyoes/_oe-header.scss */
 .iw2-wrapper.iw2-custom-margin {
   padding: 0 21px !important;
 }
 
-/* line 124, ../scss/pyoes/_oe-header.scss */
+/* line 127, ../scss/pyoes/_oe-header.scss */
 .iw2-layout.iw2-custom-breakpoint {
   min-width: 73.25rem !important;
 }
 
-/* line 127, ../scss/pyoes/_oe-header.scss */
+/* line 130, ../scss/pyoes/_oe-header.scss */
 nav.top-bar {
   transition: max-height .3s ease-in-out;
   max-height: 2.8125rem;
   height: auto;
 }
-/* line 131, ../scss/pyoes/_oe-header.scss */
+/* line 134, ../scss/pyoes/_oe-header.scss */
 nav.top-bar.expanded {
   max-height: 666px;
 }
-/* line 135, ../scss/pyoes/_oe-header.scss */
+/* line 138, ../scss/pyoes/_oe-header.scss */
 nav.top-bar.expanded .toggle-topbar a span::after {
   content: "\2715";
   box-shadow: none;
@@ -15489,7 +15494,7 @@ article a:hover, .panel p a:hover {
 }
 
 /* line 8, ../scss/pyoes/_oe-forms.scss */
-.placeholder-container input[type="text"] {
+.placeholder-container input {
   border: none !important;
   box-shadow: none;
   margin: 0;
@@ -15499,16 +15504,6 @@ article a:hover, .panel p a:hover {
 }
 
 /* line 9, ../scss/pyoes/_oe-forms.scss */
-.placeholder-container input[type="email"] {
-  border: none !important;
-  box-shadow: none;
-  margin: 0;
-  display: table-cell;
-  background-color: transparent !important;
-  color: #3f3840;
-}
-
-/* line 10, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container select {
   border: none;
   box-shadow: none;
@@ -15520,12 +15515,12 @@ article a:hover, .panel p a:hover {
   font-size: 0.9em;
 }
 
-/* line 11, ../scss/pyoes/_oe-forms.scss */
+/* line 10, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container > .combo-dropdown {
   border: 0 !important;
 }
 
-/* line 12, ../scss/pyoes/_oe-forms.scss */
+/* line 11, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container textarea {
   border: none !important;
   box-shadow: none;
@@ -15535,12 +15530,12 @@ article a:hover, .panel p a:hover {
   resize: vertical;
 }
 
-/* line 13, ../scss/pyoes/_oe-forms.scss */
+/* line 12, ../scss/pyoes/_oe-forms.scss */
 .placeholder-container.error {
   border: 1px solid #FF0000 !important;
 }
 
-/* line 14, ../scss/pyoes/_oe-forms.scss */
+/* line 13, ../scss/pyoes/_oe-forms.scss */
 .placeholder-input {
   border: none !important;
   box-shadow: none;
@@ -15551,23 +15546,23 @@ article a:hover, .panel p a:hover {
   padding-left: 8px;
 }
 
-/* line 15, ../scss/pyoes/_oe-forms.scss */
+/* line 14, ../scss/pyoes/_oe-forms.scss */
 .placeholder-input-border {
   border-left: 1px dotted #d3d3d3 !important;
 }
 
-/* line 16, ../scss/pyoes/_oe-forms.scss */
+/* line 15, ../scss/pyoes/_oe-forms.scss */
 .placeholder-disabled {
   background-color: #DDDDDD;
 }
 
-/* line 17, ../scss/pyoes/_oe-forms.scss */
+/* line 16, ../scss/pyoes/_oe-forms.scss */
 .placeholder-textarea label {
   vertical-align: top;
   padding-top: 8px;
 }
 
-/* line 19, ../scss/pyoes/_oe-forms.scss */
+/* line 18, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"], .placeholder-checkbox-label {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -15575,19 +15570,19 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 20, ../scss/pyoes/_oe-forms.scss */
+/* line 19, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox label {
   position: relative;
   width: 100%;
 }
 
-/* line 21, ../scss/pyoes/_oe-forms.scss */
+/* line 20, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
-/* line 22, ../scss/pyoes/_oe-forms.scss */
+/* line 21, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"] + .placeholder-checkbox-label:after {
   content: '';
   background: #2da3ce;
@@ -15601,7 +15596,7 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 23, ../scss/pyoes/_oe-forms.scss */
+/* line 22, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox input[type="checkbox"]:checked + .placeholder-checkbox-label:after {
   content: '\2714';
   background: #2da3ce;
@@ -15609,7 +15604,7 @@ article a:hover, .panel p a:hover {
 }
 
 /*small*/
-/* line 27, ../scss/pyoes/_oe-forms.scss */
+/* line 26, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"], .placeholder-checkbox-label-sm {
   display: table-cell !important;
   vertical-align: middle !important;
@@ -15617,19 +15612,19 @@ article a:hover, .panel p a:hover {
   font-size: 0.7em;
 }
 
-/* line 28, ../scss/pyoes/_oe-forms.scss */
+/* line 27, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm label {
   position: relative;
   width: 100%;
 }
 
-/* line 29, ../scss/pyoes/_oe-forms.scss */
+/* line 28, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
-/* line 30, ../scss/pyoes/_oe-forms.scss */
+/* line 29, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"] + .placeholder-checkbox-label-sm:before {
   content: '';
   background: #2da3ce;
@@ -15643,21 +15638,21 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 31, ../scss/pyoes/_oe-forms.scss */
+/* line 30, ../scss/pyoes/_oe-forms.scss */
 .placeholder-checkbox-sm input[type="checkbox"]:checked + .placeholder-checkbox-label-sm:before {
   content: '\2714';
   background: #2da3ce;
   color: #fff;
 }
 
-/* line 36, ../scss/pyoes/_oe-forms.scss */
+/* line 35, ../scss/pyoes/_oe-forms.scss */
 .plus-icon {
   padding-top: 12px;
   padding-left: 8px;
   color: #3f3840;
 }
 
-/* line 37, ../scss/pyoes/_oe-forms.scss */
+/* line 36, ../scss/pyoes/_oe-forms.scss */
 .plus-icon-link {
   display: table-cell;
   border-left: 1px dotted #d3d3d3;
@@ -15667,13 +15662,13 @@ article a:hover, .panel p a:hover {
 }
 
 /* Checkbox custom */
-/* line 41, ../scss/pyoes/_oe-forms.scss */
+/* line 40, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom, .radio-custom {
   opacity: 0;
   position: absolute;
 }
 
-/* line 42, ../scss/pyoes/_oe-forms.scss */
+/* line 41, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
   display: inline-block;
   vertical-align: middle;
@@ -15682,12 +15677,12 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 43, ../scss/pyoes/_oe-forms.scss */
+/* line 42, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom-label, .radio-custom-label {
   position: relative;
 }
 
-/* line 44, ../scss/pyoes/_oe-forms.scss */
+/* line 43, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
   content: '';
   background: #2da3ce;
@@ -15701,81 +15696,76 @@ article a:hover, .panel p a:hover {
   font-size: 0.8em;
 }
 
-/* line 45, ../scss/pyoes/_oe-forms.scss */
+/* line 44, ../scss/pyoes/_oe-forms.scss */
 .checkbox-custom:checked + .checkbox-custom-label:before {
   content: '\2714';
   background: #2da3ce;
   color: #fff;
 }
 
-/* line 46, ../scss/pyoes/_oe-forms.scss */
+/* line 45, ../scss/pyoes/_oe-forms.scss */
 .radio-custom + .radio-custom-label:before {
   border-radius: 50%;
 }
 
-/* line 47, ../scss/pyoes/_oe-forms.scss */
+/* line 46, ../scss/pyoes/_oe-forms.scss */
 .radio-custom:checked + .radio-custom-label:before {
   content: '\2714';
   color: #bbb;
 }
 
 /* Form custom */
-/* line 52, ../scss/pyoes/_oe-forms.scss */
+/* line 51, ../scss/pyoes/_oe-forms.scss */
 .button {
   text-transform: uppercase;
 }
 
-/* line 54, ../scss/pyoes/_oe-forms.scss */
+/* line 53, ../scss/pyoes/_oe-forms.scss */
 legend {
   text-transform: uppercase;
   font-size: 0.8em;
 }
 
-/* line 56, ../scss/pyoes/_oe-forms.scss */
+/* line 55, ../scss/pyoes/_oe-forms.scss */
 .error {
   background: none !important;
 }
 
-/* line 57, ../scss/pyoes/_oe-forms.scss */
+/* line 56, ../scss/pyoes/_oe-forms.scss */
 input.error {
   border: 1px solid #FF0000;
 }
 
-/* line 59, ../scss/pyoes/_oe-forms.scss */
-select {
-  height: 42px;
-}
-
-/* line 60, ../scss/pyoes/_oe-forms.scss */
+/* line 58, ../scss/pyoes/_oe-forms.scss */
 select:focus {
   outline: none;
 }
 
-/* line 62, ../scss/pyoes/_oe-forms.scss */
+/* line 60, ../scss/pyoes/_oe-forms.scss */
 select {
   -moz-appearance: none !important;
 }
 
-/* line 65, ../scss/pyoes/_oe-forms.scss */
+/* line 63, ../scss/pyoes/_oe-forms.scss */
 input::-webkit-input-placeholder {
   color: #989898;
   text-overflow: ellipsis;
 }
 
-/* line 69, ../scss/pyoes/_oe-forms.scss */
+/* line 67, ../scss/pyoes/_oe-forms.scss */
 input:-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
-/* line 73, ../scss/pyoes/_oe-forms.scss */
+/* line 71, ../scss/pyoes/_oe-forms.scss */
 input::-moz-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
 }
 
 /* for the future */
-/* line 77, ../scss/pyoes/_oe-forms.scss */
+/* line 75, ../scss/pyoes/_oe-forms.scss */
 input:-ms-input-placeholder {
   color: #989898 !important;
   text-overflow: ellipsis;
