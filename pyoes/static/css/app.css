@@ -13559,7 +13559,7 @@ th.hide-for-touch {
 
 /* line 16, ../scss/pyoes/_oe-header.scss */
 .logo-block {
-  width: 410px;
+  width: 400px;
   background: url(../img/pyoes/header-logo-bg.png) no-repeat;
   height: 135px;
   position: relative;
@@ -13605,7 +13605,6 @@ th.hide-for-touch {
   float: left;
   padding: 40px 0px 0 5px;
   vertical-align: bottom;
-  width: 65px;
 }
 
 /* line 22, ../scss/pyoes/_oe-header.scss */
