@@ -1,3 +1,7 @@
+0.11.1 (14-05-2020)
+===================
+- Header herbekijken ikv mobile layout (#169)
+
 0.11.0 (27-01-2020)
 ===================
 - Update van Vlaanderen header en footer (#162)

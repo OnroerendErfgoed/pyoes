@@ -18,7 +18,7 @@
 .logo-block h1 { padding-top:45px; font-size:34px; color:$dark-purple; float:$default-float; }
 .logo-block h2 { font-size:23px; color:$dark-purple !important; float:$default-float; padding:51px 0 0 0;margin:0 }
 .logo-block h4 { font-size:12px; color:$dark-purple !important; float:$default-float; padding-left:3px; margin:0 }
-.logo-block img { float:$default-float; padding:40px 0px 0 5px; vertical-align:bottom; width: 65px; }
+.logo-block svg { float:$default-float; margin-top:30px; padding-top:10px; vertical-align:bottom; }
 .bgimage { background:url(../img/pyoes/header-img.jpg) no-repeat right; width: 80%; height:135px; position:absolute; right:0; z-index:0 }
 @media (min-width: 1900px) {
   .bgimage { background:url(../img/pyoes/header-img-white.jpg) no-repeat right; width: 75%;}
