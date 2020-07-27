@@ -76,7 +76,7 @@
             {% if id == 'home' %}
               <a href="{{ href }}"><i class="fa fa-home"></i></a>
             {% else %}
-              <a href="{{ href }}">{{ caption }}</a>
+              <a href="{{ href }}">{{ caption|safe }}</a>
             {% endif %}
           </li>
         {% endfor %}
