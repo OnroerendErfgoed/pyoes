@@ -1,3 +1,8 @@
+0.11.2 (28-07-2020)
+===================
+- Responsive header aanpassen (#177)
+- Icons toelaten in main navigatie (#176)
+
 0.11.1 (14-05-2020)
 ===================
 - Header herbekijken ikv mobile layout (#169)

@@ -15853,6 +15853,7 @@ input:-ms-input-placeholder {
   /* line 33, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h1 {
     padding-top: 27px;
+    font-size: 28px;
   }
 
   /* line 34, ../scss/pyoes/_oe-mediaqueries.scss */
@@ -15871,64 +15872,86 @@ input:-ms-input-placeholder {
     width: 55px;
     padding: 25px 0 0 0;
   }
+
+  /* line 37, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block svg {
+    float: left;
+    margin-top: 15px;
+    padding: 7px 10px 0 20px;
+    vertical-align: bottom;
+  }
+
+  /* line 38, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block {
+    padding: 0;
+  }
 }
 @media (max-width: 320px) {
-  /* line 40, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block {
     width: inherit;
     height: 70px;
   }
 
-  /* line 41, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block .logo-block-title {
     width: 105px;
     height: 70px;
   }
 
-  /* line 42, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 45, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block img {
     width: 45px;
     padding: 18px 0 0 0;
   }
 
-  /* line 43, ../scss/pyoes/_oe-mediaqueries.scss */
-  .logo-block h1 {
-    padding-top: 20px;
+  /* line 46, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block svg {
+    float: left;
+    margin-top: 15px;
+    padding: 0 10px 0 20px;
+    vertical-align: bottom;
   }
 
-  /* line 44, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 47, ../scss/pyoes/_oe-mediaqueries.scss */
+  .logo-block h1 {
+    padding-top: 20px;
+    font-size: 28px;
+  }
+
+  /* line 48, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h2 {
     font-size: 16px;
     padding: 28px 0 0 0;
   }
 
-  /* line 45, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 49, ../scss/pyoes/_oe-mediaqueries.scss */
   .logo-block h4 {
     font-size: 8px;
   }
 }
 /* 2 col */
 @media only screen and (max-width: 888px) {
-  /* line 52, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 56, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 33.33%;
   }
 
-  /* line 53, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > article {
     display: none;
   }
 }
 /* 1 col */
 @media only screen and (max-width: 578px) {
-  /* line 57, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul {
     width: 100%;
     float: none;
     margin-top: 0;
   }
 
-  /* line 58, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li {
     float: none;
     width: 100%;
@@ -15939,7 +15962,7 @@ input:-ms-input-placeholder {
     margin: 0;
   }
 
-  /* line 59, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 63, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a {
     padding: 0;
     width: auto;
@@ -15954,26 +15977,26 @@ input:-ms-input-placeholder {
     position: relative;
   }
 
-  /* line 60, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 64, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover {
     background-color: #f2f2f2;
     padding-left: 30px;
   }
 
-  /* line 61, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 65, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:before {
     position: absolute;
     content: "> ";
     left: 4px;
   }
 
-  /* line 62, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 66, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li.active-trail > a {
     background: none;
     color: #b4ac11;
   }
 
-  /* line 63, ../scss/pyoes/_oe-mediaqueries.scss */
+  /* line 67, ../scss/pyoes/_oe-mediaqueries.scss */
   footer#footer-bottom .inner nav > ul li > a:hover:before {
     left: 10px;
   }
