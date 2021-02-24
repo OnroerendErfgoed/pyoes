@@ -96,6 +96,56 @@
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
+{% if request.registry.settings['pyoes.banner'] %}
+<script type="text/javascript">
+  function handleHeader() {
+    const headerdiv = document.getElementsByClassName('iwgh2-navigation');
+    var el = document.createElement('div');
+    el.className = 'message-banner';
+    var content = '<span>{{ request.registry.settings['pyoes.banner'] }}</span>';
+    {% if request.registry.settings['pyoes.banner.detail'] %}
+      content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
+    {% endif %}
+    el.innerHTML = content;
+    headerdiv[0].parentNode.insertBefore(el, headerdiv.nextSibling);
+  }
+
+  function showPopup() {
+    document.getElementById('onderhoud-popup').style.display = 'flex';
+  }
+
+  function hidePopup() {
+    document.getElementById('onderhoud-popup').style.display = 'none';
+  }
+
+  // set up the mutation observer
+  var observer = new MutationObserver(function (mutations, me) {
+    var header = document.getElementsByClassName('iwgh2-navigation');
+    if (header[0]) {
+      handleHeader();
+      me.disconnect(); // stop observing
+      return;
+    }
+  });
+
+  // start observing
+  observer.observe(document, {
+    childList: true,
+    subtree: true
+  });
+</script>
+<div id="onderhoud-popup">
+  <div class="row onderhoud-banner-header">
+    <h2>{{ request.registry.settings['pyoes.banner'] }}</h2>
+  </div>
+  <div class="row onderhoud-banner-detail">
+    <p>{{ request.registry.settings['pyoes.banner.detail'] }}</p>
+  </div>
+  <div class="row">
+    <a><span id="popup-sluiten" onclick="hidePopup()" aria-hidden="true">Sluiten...</span></a>
+  </div>
+</div>
+{% endif %}
 
 </body>
 </html>
