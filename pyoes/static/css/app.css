@@ -13976,6 +13976,7 @@ nav.top-bar.expanded .toggle-topbar a span::after {
   /* line 199, ../scss/pyoes/_oe-header.scss */
   #onderhoud-popup {
     height: 100%;
+    width: 75%;
   }
 }
 /* line 3, ../scss/pyoes/_oe-footer.scss */
