@@ -13919,6 +13919,66 @@ nav.top-bar.expanded .toggle-topbar a span::after {
   width: 0;
 }
 
+/* line 152, ../scss/pyoes/_oe-header.scss */
+.message-banner {
+  color: #FF0000 !important;
+  font-weight: bold !important;
+  padding-top: 10px !important;
+  width: 40% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+/* line 161, ../scss/pyoes/_oe-header.scss */
+#onderhoud-popup {
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  display: none;
+  background: white;
+  border-style: solid;
+  max-height: 50%;
+  z-index: 1000;
+  height: 50%;
+  flex-flow: column;
+}
+
+/* line 176, ../scss/pyoes/_oe-header.scss */
+#popup-sluiten {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  flex: 0 1 40px;
+}
+
+/* line 184, ../scss/pyoes/_oe-header.scss */
+.onderhoud-banner-header {
+  flex: 0 1 auto;
+}
+
+/* line 188, ../scss/pyoes/_oe-header.scss */
+.onderhoud-banner-detail {
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-device-width: 480px) {
+  /* line 194, ../scss/pyoes/_oe-header.scss */
+  .message-banner {
+    width: 100% !important;
+    padding-bottom: 10px !important;
+  }
+
+  /* line 199, ../scss/pyoes/_oe-header.scss */
+  #onderhoud-popup {
+    height: 100%;
+    width: 75%;
+  }
+}
 /* line 3, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
