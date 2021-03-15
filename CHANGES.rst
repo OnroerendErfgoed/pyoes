@@ -1,3 +1,7 @@
+0.11.3 (23-10-2020)
+===================
+- Font size en color bij select in leesmodus aanpassen + Placeholder text lichter grijs maken (#182)
+
 0.11.2 (28-07-2020)
 ===================
 - Responsive header aanpassen (#177)
