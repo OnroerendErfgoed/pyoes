@@ -13601,7 +13601,7 @@ th.hide-for-touch {
 }
 
 /* line 21, ../scss/pyoes/_oe-header.scss */
-.logo-block svg {
+.logo-block a div svg {
   float: left;
   margin-top: 30px;
   padding-top: 10px;
