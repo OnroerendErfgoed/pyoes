@@ -53,7 +53,8 @@
     {% block javascript scoped -%}
       {% set default_js_files = [
 			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js'),
-      request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js')
+      request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js'),
+      request.static_path(app_package + ':static/js/cookieconsentConfig.js')
 		] -%}
       {% set js_files = js_files|default(default_js_files) -%}
       {% for js in js_files -%}
@@ -99,7 +100,8 @@
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
-<script src="{{request.static_path(app_package + ':static/js/cookieconsentConfig.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/js/cookieconsentConfig.js') }}"></script>
 
 {% if request.registry.settings['pyoes.banner'] %}
 <script type="text/javascript">
