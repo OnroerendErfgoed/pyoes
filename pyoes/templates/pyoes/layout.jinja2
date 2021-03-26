@@ -34,8 +34,8 @@
 
     <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
 
-    {# <link rel="stylesheet"
-          href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/> #}
+    <link rel="stylesheet"
+          href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
 
 
     <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
