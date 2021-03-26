@@ -38,10 +38,11 @@
           href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
 
     <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
-    <link rel="stylesheet" href="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.css') }}"/>
     
     {% block css -%}
-      {% set default_css_files = []-%}
+      {% set default_css_files = [
+        request.static_path(app_package + '::static/bower_components/cookieconsent/build/cookieconsent.min.css')
+      ]-%}
 
       {% set css_files = css_files|default(default_css_files) -%}
       {% for css in css_files -%}
