@@ -52,9 +52,7 @@
 
     {% block javascript scoped -%}
       {% set default_js_files = [
-			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js'),
-      request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js'),
-      request.static_path(app_package + ':static/js/cookieconsentConfig.js')
+			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js')
 		] -%}
       {% set js_files = js_files|default(default_js_files) -%}
       {% for js in js_files -%}
