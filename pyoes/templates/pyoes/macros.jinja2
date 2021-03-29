@@ -1,10 +1,3 @@
-{% macro ga_tracker(ga_key) %}
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-    
-    </script>
-    <!-- End Google Analytics -->
-{% endmacro %}
 
 {% macro generate_uri(request, settingsURI, id) %}
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
