@@ -72,6 +72,7 @@
       },
       revokable: true,
       onStatusChange: function (status) {
+        this.hasConsented() ? {{'consent!'}} : {{'geen consent'}}
           console.log(this.hasConsented() ?
               'enable cookies' : 'disable cookies');
       },
