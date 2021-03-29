@@ -19,6 +19,7 @@
 
 
 {% macro cookie_banner(request, app_package) %} 
+  <link rel="stylesheet" href="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.css') }}" />
   <script type="text/javascript" src="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js') }}"></script>
   <script type="text/javascript">
     window.cookieconsent.initialise({
