@@ -45,6 +45,7 @@
     }
   </style>
   <script type="text/javascript">
+    var ga_key = {{ga_key}};
     window.cookieconsent.initialise({
       container: document.getElementById("content"),
       palette: {
@@ -72,12 +73,12 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', {{ga_key}}, 'auto');
+          ga('create', ga_key, 'auto');
           ga('set', 'anonymizeIp', true);
           ga('send', 'pageview');
         } else {
           if (navigator.doNotTrack && navigator.doNotTrack === 1) {
-            window['ga-disable-' + {{ga_key}}] = true;
+            window['ga-disable-' + ga_key] = true;
           }
         }
       },
