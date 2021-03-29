@@ -92,14 +92,15 @@
   {% block vlaanderen_footer scoped %}
     <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
   {% endblock %}
-  {% block cookiebanner %}
+</div>
+<script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
+<script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
+
+{% block cookiebanner %}
     {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
     {% from 'macros.jinja2' import cookie_banner %}
     {{ cookie_banner(request, app_package, ga_key) }}
   {% endblock %}
-</div>
-<script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
-<script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
 
 {% if request.registry.settings['pyoes.banner'] %}
 <script type="text/javascript">
