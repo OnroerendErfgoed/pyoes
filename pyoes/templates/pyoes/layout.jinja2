@@ -58,6 +58,12 @@
       {% endfor -%}
     {% endblock -%}
 
+  {% block cookiebanner %}
+    {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
+    {% from 'macros.jinja2' import cookie_banner %}
+    {{ cookie_banner(request, app_package, ga_key) }}
+  {% endblock %}
+
     {# {% block ga %}
       {% from 'macros.jinja2' import ga_tracker %}
       {% if ga_key %}
@@ -96,11 +102,6 @@
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
 
-{% block cookiebanner %}
-    {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
-    {% from 'macros.jinja2' import cookie_banner %}
-    {{ cookie_banner(request, app_package, ga_key) }}
-  {% endblock %}
 
 {% if request.registry.settings['pyoes.banner'] %}
 <script type="text/javascript">
