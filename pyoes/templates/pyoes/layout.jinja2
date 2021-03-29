@@ -58,18 +58,12 @@
       {% endfor -%}
     {% endblock -%}
 
-    {% block cookiebanner %}
-      {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
-      {% from 'macros.jinja2' import cookie_banner %}
-      {{ cookie_banner(request, app_package, ga_key) }}
-    {% endblock %}
-
-    {% block ga %}
+    {# {% block ga %}
       {% from 'macros.jinja2' import ga_tracker %}
       {% if ga_key %}
         {{ ga_tracker(ga_key) }}
       {% endif %}
-    {% endblock %}
+    {% endblock %} #}
   {% endblock %}
 
 </head>
@@ -97,6 +91,11 @@
 
   {% block vlaanderen_footer scoped %}
     <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
+  {% endblock %}
+  {% block cookiebanner %}
+    {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
+    {% from 'macros.jinja2' import cookie_banner %}
+    {{ cookie_banner(request, app_package, ga_key) }}
   {% endblock %}
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
