@@ -63,7 +63,7 @@
 
     {% block cookiebanner%}
       {% from 'macros.jinja2' import cookie_banner %}
-      {{cookie_banner()}}
+      {{cookie_banner(request, app_package)}}
     {% endblock %}
 
     {% block ga %}
