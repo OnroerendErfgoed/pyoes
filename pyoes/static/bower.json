@@ -1,5 +1,5 @@
 {
-  "name": "pyoes",  
+  "name": "pyoes",
   "private": true,
   "dependencies": {
     "foundation": "~5.5.3",
