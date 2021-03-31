@@ -38,7 +38,7 @@
           href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
 
     <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
-    
+
     {% block css -%}
       {% set default_css_files = [] -%}
 
