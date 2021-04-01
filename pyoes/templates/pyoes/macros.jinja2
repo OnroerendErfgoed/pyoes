@@ -1,3 +1,4 @@
+
 {% macro ga_tracker(ga_key) %}
     <!-- Google Analytics -->
     <script type="text/javascript">
@@ -5,7 +6,6 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
     ga('create', '{{ ga_key }}', 'auto');
     ga('set', 'anonymizeIp', true);
     ga('send', 'pageview');
@@ -17,3 +17,84 @@
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
 
+
+{% macro cookie_banner(request, app_package, ga_key) %} 
+  <link rel="stylesheet" href="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.css') }}" />
+  <script type="text/javascript" src="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js') }}"></script>
+  <style type="text/css">
+    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 {
+      flex-wrap: wrap;
+      padding-right: 20%;
+      padding-left: 20%;
+      justify-content: center;
+      border-top: solid 2px #914f9a;
+      box-shadow: 0 -2px 2px 0px rgba(2,23,16,0.1);
+      font-size: 15px;
+    }
+
+
+    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a {
+      text-decoration: underline;
+      color: #0075DB;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a:hover {
+      text-decoration: none;
+    }
+
+    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a.cc-btn.cc-allow {
+      text-decoration: none !important;
+      color: #fff !important;
+      margin-left: 1rem;
+    }
+
+    span#cookieconsent:desc {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+  <script type="text/javascript">
+    var ga_key = "{{ga_key}}";
+    window.cookieconsent.initialise({
+      container: document.getElementById("content"),
+      palette: {
+          popup: {
+              background: "#fff"
+          },
+          button: {
+              background: "#aa6ab2",
+              text: "#fff"
+          }
+      },
+      theme: "classic",
+      type: "opt-out",
+      content: {
+          message: "Het agentschap Onroerend Erfgoed gebruikt cookies om de goede werking van onze website te verzekeren en jouw surfervaring te verbeteren. Meer informatie over de cookies die we gebruiken lees je in <a href=https://www.onroerenderfgoed.be/cookiebeleid>ons cookiebeleid</a>. Voor het gebruik van sociale media cookies hebben wij jouw toestemming nodig. Deze cookies gebruiken we om sociale media, zoals Facebook, Twitter of YouTube, te linken aan onze website. Zo kan je bijvoorbeeld artikels delen op sociale media of bepaalde inhoud van die sites op deze website bekijken. Wil je hiervan kunnen genieten?",
+          deny: "Nee, ga verder naar de website",
+          allow: "Ja, ik geef toestemming"
+      },
+      revokable: true,
+      onStatusChange: function () {
+        if (this.hasConsented()) {
+          // Google Analytics
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', ga_key, 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+        } else {
+          window['ga-disable-' + ga_key] = true;
+        }
+      },
+      law: {
+          regionalLaw: false,
+      },
+      location: true,
+      showLink: false
+    });
+  </script>
+{% endmacro %}
