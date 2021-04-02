@@ -60,10 +60,15 @@
       
     {% block plausible %}
       {% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) %}
-      {% set plausible_omgeving = plausible_omgeving|default('dev-') %}
+      {% set plausible_omgeving = plausible_omgeving|default('dev') %}
+      {% if plausible_omgeving in ('dev', 'test') %}
+        {% set omgeving = plausible_omgeving + '-' %}
+      {% else %}
+        {% set omgeving = '' %}
+      {% endif %}
       {% from 'macros.jinja2' import plausible_trackerga_tracker %}
       {% if plausible_data_domain %}
-        {{ plausible_trackerga_tracker(plausible_data_domain, plausible_omgeving) }}
+        {{ plausible_trackerga_tracker(plausible_data_domain, omgeving) }}
       {% endif %}
     {% endblock %}
   {% endblock %}
