@@ -66,9 +66,9 @@
       {% else %}
         {% set omgeving = '' %}
       {% endif %}
-      {% from 'macros.jinja2' import plausible_trackerga_tracker %}
+      {% from 'macros.jinja2' import plausible_tracker %}
       {% if plausible_data_domain %}
-        {{ plausible_trackerga_tracker(plausible_data_domain, omgeving) }}
+        {{ plausible_tracker(plausible_data_domain, omgeving) }}
       {% endif %}
     {% endblock %}
   {% endblock %}
