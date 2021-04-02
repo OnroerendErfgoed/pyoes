@@ -58,6 +58,21 @@
       {% endfor -%}
     {% endblock -%}
 
+    {% block ga %}
+      {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
+      {% from 'macros.jinja2' import ga_tracker %}
+      {% if ga_key %}
+        {{ ga_tracker(ga_key) }}
+      {% endif %}
+    {% endblock %}
+    {% block plausible %}
+      {% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) %}
+      {% set plausible_omgeving = plausible_omgeving|default('dev-') %}
+      {% from 'macros.jinja2' import plausible_trackerga_tracker %}
+      {% if plausible_data_domain %}
+        {{ plausible_trackerga_tracker(plausible_data_domain, plausible_omgeving) }}
+      {% endif %}
+    {% endblock %}
   {% endblock %}
 
 </head>
