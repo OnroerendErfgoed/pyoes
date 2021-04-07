@@ -13,6 +13,12 @@
     <!-- End Google Analytics -->
 {% endmacro %}
 
+{% macro plausible_tracker(plausible_data_domain, omgeving) %}
+    <!-- Plausible Analytics -->
+    <script async defer data-domain="{{ plausible_data_domain }}" src="https://{{ omgeving }}webstats.onroerenderfgoed.be/js/plausible.js"></script>
+    <!-- End Plausible Analytics -->
+{% endmacro %}
+
 {% macro generate_uri(request, settingsURI, id) %}
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
