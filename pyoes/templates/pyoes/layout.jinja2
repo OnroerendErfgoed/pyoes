@@ -40,7 +40,7 @@
     <script src="{{ request.static_path(app_package + ':static/bower_components/modernizr/modernizr.js') }}"></script>
 
     {% block css -%}
-      {% set default_css_files = []-%}
+      {% set default_css_files = [] -%}
 
       {% set css_files = css_files|default(default_css_files) -%}
       {% for css in css_files -%}
@@ -50,19 +50,25 @@
 
     {% block javascript scoped -%}
       {% set default_js_files = [
-			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js'),
+			request.static_path(app_package + ':static/bower_components/jquery/dist/jquery.min.js')
 		] -%}
       {% set js_files = js_files|default(default_js_files) -%}
       {% for js in js_files -%}
         <script type="text/javascript" src="{{ js }}"></script>
       {% endfor -%}
     {% endblock -%}
-
-    {% block ga %}
-      {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
-      {% from 'macros.jinja2' import ga_tracker %}
-      {% if ga_key %}
-        {{ ga_tracker(ga_key) }}
+      
+    {% block plausible %}
+      {% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) %}
+      {% set plausible_omgeving = plausible_omgeving|default('dev') %}
+      {% if plausible_omgeving in ('dev', 'test') %}
+        {% set omgeving = plausible_omgeving + '-' %}
+      {% else %}
+        {% set omgeving = '' %}
+      {% endif %}
+      {% if plausible_data_domain %}
+      	{% from 'macros.jinja2' import plausible_tracker %}
+        {{ plausible_tracker(plausible_data_domain, omgeving) }}
       {% endif %}
     {% endblock %}
   {% endblock %}
@@ -93,9 +99,23 @@
   {% block vlaanderen_footer scoped %}
     <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
   {% endblock %}
+  {% block cookiebanner %}
+    {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
+    {% set show_cookie_banner = show_cookie_banner|default(request.registry.settings["cookie_banner"]) %}
+
+    {% if show_cookie_banner == 'true' %}
+      {% from 'macros.jinja2' import cookie_banner %}
+      {{ cookie_banner(request, app_package, ga_key) }}
+    {% else %}
+      {% from 'macros.jinja2' import ga_tracker %}
+      {{ ga_tracker(ga_key) }}
+    {% endif %}
+  {% endblock %}
 </div>
 <script src="{{ request.static_path(app_package + ':static/bower_components/foundation/js/foundation.min.js') }}"></script>
 <script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
+
+
 {% if request.registry.settings['pyoes.banner'] %}
 <script type="text/javascript">
   function handleHeader() {
