@@ -1,3 +1,24 @@
+0.12.3 (05-05-2021)
+===================
+
+- Tekst cookiebanner aanpassen (#207)
+
+0.12.2 (05-04-2021)
+===================
+
+- Cookiebanner toevoegen (#190)
+- Plausible toevoegen (#201)
+
+0.12.1 (22-03-2021)
+===================
+
+- Versprongen SVG oplossen (#197)
+
+0.12.0 (15-03-2021)
+===================
+
+- Tijdelijke boodschap tonen (#167)
+
 0.11.3 (23-10-2020)
 ===================
 - Font size en color bij select in leesmodus aanpassen + Placeholder text lichter grijs maken (#182)
