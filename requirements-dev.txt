@@ -10,7 +10,7 @@ sphinx==1.7.4
 
 # Testing
 pytest==3.5.1
-py==1.5.3
+py==1.10.0
 pytest-cov==2.5.1
 coveralls==1.5.0
 
