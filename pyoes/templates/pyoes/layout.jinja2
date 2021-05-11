@@ -103,7 +103,7 @@
     {% set ga_key = ga_key|default(request.registry.settings["ga.tracker_key"]) %}
     {% set show_cookie_banner = show_cookie_banner|default(request.registry.settings["cookie_banner"]) %}
 
-    {% if show_cookie_banner == 'true' %}
+    {% if show_cookie_banner == 'True' %}
       {% from 'macros.jinja2' import cookie_banner %}
       {{ cookie_banner(request, app_package, ga_key) }}
     {% else %}
