@@ -18,6 +18,7 @@
 @import "pyoes/oe-mediaqueries";
 @import "pyoes/oe-components";
 @import "pyoes/oe-media";
+@import "pyoes/oe-cookie-banner";
 
 @import "{{package}}";
 

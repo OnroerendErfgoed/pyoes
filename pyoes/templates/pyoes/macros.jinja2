@@ -26,40 +26,9 @@
 
 {% macro cookie_banner(request, app_package, ga_key) %} 
   <link rel="stylesheet" href="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.css') }}" />
+  <link rel="stylesheet" href="{{ request.static_path(app_package + ':static/css/app.css') }}" />
   <script type="text/javascript" src="{{ request.static_path(app_package + ':static/bower_components/cookieconsent/build/cookieconsent.min.js') }}"></script>
-  <style type="text/css">
-    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 {
-      flex-wrap: wrap;
-      padding-right: 20%;
-      padding-left: 20%;
-      justify-content: center;
-      border-top: solid 2px #914f9a;
-      box-shadow: 0 -2px 2px 0px rgba(2,23,16,0.1);
-      font-size: 15px;
-    }
 
-
-    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a {
-      text-decoration: underline;
-      color: #0075DB;
-      font-weight: 400;
-      font-size: 15px;
-    }
-
-    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a:hover {
-      text-decoration: none;
-    }
-
-    .cc-window.cc-banner.cc-type-opt-out.cc-theme-classic.cc-bottom.cc-color-override-1025685691 a.cc-btn.cc-allow {
-      text-decoration: none !important;
-      color: #fff !important;
-      margin-left: 1rem;
-    }
-
-    span#cookieconsent:desc {
-      margin-bottom: 0.5rem;
-    }
-  </style>
   <script type="text/javascript">
     var ga_key = "{{ga_key}}";
     window.cookieconsent.initialise({
