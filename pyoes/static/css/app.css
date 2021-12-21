@@ -13982,7 +13982,7 @@ nav.top-bar.expanded .toggle-topbar a span::after {
 @media (min-width: 1900px) {
   /* line 207, ../scss/pyoes/_oe-header.scss */
   .wrapper.clearfix {
-    padding-left: 25%;
+    padding-left: 25% !important;
     background-color: white;
   }
 }
