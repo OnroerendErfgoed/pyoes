@@ -13988,11 +13988,10 @@ nav.top-bar.expanded .toggle-topbar a span::after {
 }
 /* line 213, ../scss/pyoes/_oe-header.scss */
 .wrapper.clearfix {
-  padding-left: 20%;
   background-color: white;
 }
 
-/* line 218, ../scss/pyoes/_oe-header.scss */
+/* line 217, ../scss/pyoes/_oe-header.scss */
 .wrapper-content {
   float: left;
 }
