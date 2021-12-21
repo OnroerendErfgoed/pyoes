@@ -8,15 +8,15 @@
 
 <!-- wrapper & responsive navigation -->
 <div class="wrapper clearfix">
-  <div class="main-navigation-inner clearfix inner">
+  <div class="row wrapper-content">
 
     {% set home_link = home_link|default('/') -%}
     <!-- logo -->
-    <div class="medium-8 small-12 columns row">
-      <div class="logo-block">
+    <div class="large-4 medium-4 small-6 columns">
+      <div class="logo-block row">
         <a href="{{ home_link }}">
           {% set active_title= active_title|default('Erfgoedstijl') -%}
-          <div class="small-6 logo-block-title"><h1>{{active_title}}</h1></div>
+          <div class="small-6 logo-block-title columns"><h1>{{active_title}}</h1></div>
           <div class="small-6 columns">
             <svg class="vlaanderen-header-logo" width="159" height="70" role="img" aria-labelledby="LogoTitle" aria-describedby="LogoDesc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196.3 83.2" preserveAspectRatio="xMidYMin meet">
               <g>
@@ -36,7 +36,7 @@
         </a>
       </div>
     </div>
-    <div class="medium-4 columns text-right header-links show-for-medium-up">
+    <div class="large-8 medium-8 small-6 columns text-right header-links show-for-medium-up">
       <nav>
         <ul>
           <li><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>

@@ -13979,6 +13979,24 @@ nav.top-bar.expanded .toggle-topbar a span::after {
     width: 75%;
   }
 }
+@media (min-width: 1900px) {
+  /* line 207, ../scss/pyoes/_oe-header.scss */
+  .wrapper.clearfix {
+    padding-left: 25%;
+    background-color: white;
+  }
+}
+/* line 213, ../scss/pyoes/_oe-header.scss */
+.wrapper.clearfix {
+  padding-left: 20%;
+  background-color: white;
+}
+
+/* line 218, ../scss/pyoes/_oe-header.scss */
+.wrapper-content {
+  float: left;
+}
+
 /* line 3, ../scss/pyoes/_oe-footer.scss */
 .container {
   min-height: 100%;
