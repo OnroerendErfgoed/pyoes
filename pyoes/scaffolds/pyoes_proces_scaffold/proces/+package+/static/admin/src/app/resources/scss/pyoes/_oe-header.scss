@@ -203,14 +203,14 @@ nav.top-bar {
 }
 
 // Fix wrapper width when making screen bigger/smaller.
-@media (min-width: 1900px) {
+@media (min-width: 1800px) {
   .wrapper.clearfix {
-    padding-left: 25% !important;
-    background-color: white;
+    padding-left: 20% !important;
   }
 }
 
 .wrapper.clearfix {
+  padding-left: initial;
   background-color: white;
 }
 
