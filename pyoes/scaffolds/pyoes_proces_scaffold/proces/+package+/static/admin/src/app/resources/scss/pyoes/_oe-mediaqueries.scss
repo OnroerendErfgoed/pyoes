@@ -29,7 +29,6 @@
 // Header queries
 @media (max-width: 391px) {
   .logo-block { width: inherit; height: 100px; }
-  .logo-block .logo-block-title { width: 120px; height: 100px; }
   .logo-block h1 { padding-top:27px; font-size:28px; }
   .logo-block h2 { font-size:18px; padding:35px 0 0 0; }
   .logo-block h4 { font-size:8px; }
@@ -41,7 +40,6 @@
 
 @media (max-width: 320px) {
   .logo-block { width: inherit; height: 70px; }
-  .logo-block .logo-block-title { width: 105px; height: 70px; }
   .logo-block img { width: 45px; padding:18px 0 0 0; }
   .logo-block svg { float:$default-float; margin-top:15px; padding:0 10px 0 20px; vertical-align:bottom; }
   .logo-block h1 { padding-top:20px; font-size:28px; }
