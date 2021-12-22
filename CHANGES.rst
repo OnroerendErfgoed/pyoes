@@ -1,3 +1,8 @@
+0.12.7 (22-12-2021)
+===================
+
+- Aanpassingen zodat de wrapper mee scaled als een scherm groter/kleiner wordt. (#224)
+
 0.12.6 (04-11-2021)
 ===================
 
