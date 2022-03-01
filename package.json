@@ -1,0 +1,6 @@
+{
+  "version": "0.1.0",
+  "name": "pyoes-npm-packages",
+  "workspaces": ["npm-packages/*"],
+  "private": "true"
+}

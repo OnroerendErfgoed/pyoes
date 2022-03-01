@@ -1,0 +1,216 @@
+@charset "UTF-8";
+.wrapper {background:$white;}
+.wrapper-short {background:$mid-purple}
+// main logo site
+
+.logo-block-site { width:410px; background: url('#{$oe-img-path}/header-logo-bg.png') no-repeat; height:135px; position:relative; z-index:40; padding:0 25px 0 13px; }
+.logo-block-site h1 { padding-top:45px; font-size:45px; color:$dark-purple; float:$default-float; }
+.logo-block-site h1 span { font-family: 'Flanders Art Sans Light', sans-serif }
+.logo-block-site img { float:$default-float; padding:36px 0px 0 5px; vertical-align:bottom; width: 70px; }
+.bgimage-site { /*background:url('#{$oe-img-path}/header-img.jpg') no-repeat right;*/ width: 80%; height:135px;position:absolute; right:0; z-index:0 }
+
+
+
+// logo sub company  ex.inventaris 
+.logo-block { width:410px; background: url('#{$oe-img-path}/header-logo-bg.png') no-repeat; height:135px; position:relative; z-index:40; padding:0 25px 0 13px; }
+.logo-block h1 { padding-top:45px; font-size:34px; color:$dark-purple; float:$default-float; }
+.logo-block h2 { font-size:23px; color:$dark-purple !important; float:$default-float; padding:51px 0 0 0;margin:0 }
+.logo-block h4 { font-size:12px; color:$dark-purple !important; float:$default-float; padding-left:3px; margin:0 }
+.vlaanderen-header-logo { float:$default-float; margin-top:30px; padding-top:10px; vertical-align:bottom; }
+.bgimage { background:url('#{$oe-img-path}/header-img.jpg') no-repeat right; width: 80%; height:135px; position:absolute; right:0; z-index:0 }
+@media (min-width: 1900px) {
+  .bgimage { background:url('#{$oe-img-path}/header-img-white.jpg') no-repeat right; width: 75%;}
+}
+.bgimage-bouwkunde { background:url('#{$oe-img-path}/dibe_1.jpg') no-repeat right; width: 80%; height:135px; position:absolute; right:0; z-index:0 }
+
+.header-links {
+  height: 135px;
+  overflow: hidden;
+  position: relative;
+
+  nav {
+    background-color: rgba($white, 0.6);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      color: $white;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        background-color: #d1d8df;
+        -webkit-transform: rotate(-18deg);
+        -ms-transform: rotate(-18deg);
+        transform: rotate(-18deg);
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+  a {
+    color: $link-color;
+    text-decoration: none;
+    outline: 0;
+    margin: 0 16px;
+    border-bottom: solid 1px transparent;
+    -webkit-transform: scaleX(0);
+    -webkit-transition: border-bottom-color .3s ease-out;
+       -moz-transition: border-bottom-color .3s ease-out;
+        -ms-transition: border-bottom-color .3s ease-out;
+         -o-transition: border-bottom-color .3s ease-out;
+            transition: border-bottom-color .3s ease-out;
+
+    &:hover {
+      border-bottom: solid 1px $link-color;
+    }
+  }
+}
+
+// logo small header for apps like geoportal
+.logo-block-short { width:380px; background: url('#{$oe-img-path}/header-logo-bg.png') no-repeat; height:60px; position:relative; z-index:40; padding:0 25px 0 13px;}
+.logo-block-short h1 { padding:8px 10px 0 0; font-size:29px; color:$dark-purple; float:$default-float; }
+.logo-block-short h2 { font-size:23px; color:$dark-purple !important; float:$default-float; padding:6px 0 0 0;margin:0 }
+.logo-block-short h4 { font-size:12px; color:$dark-purple !important; float:$default-float; padding-left:3px; margin:0; }
+.logo-block-short img { float:$default-float; padding:7px 0 0 8px; vertical-align:bottom; width: 50px; }
+
+.nav-short-item {text-align:center }
+ul.nav-short-item  {list-style-type:none;margin-top:5px }
+.nav-short-item li  {float:$default-float;width:70px;font-size:0.6rem;border-right:1px solid $light-purple;display:block }
+.nav-short-item li:last-child {border-right:0px }
+.nav-short-item li i {font-size:1.4rem;margin:8px 0 5px 0 }
+.nav-short-item a {color:$white }
+
+
+
+nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
+
+/* service nav */
+#service-navigation	  {float:$opposite-direction;padding:0;}
+#service-navigation > li {margin-top:0.4em;float:$default-float;list-style-type:none}
+#service-navigation > li a {font-size:0.75em;color:$black;line-height:1.8em;}
+#service-navigation > li > a {border-left:1px solid $mid-gray;padding:0 1em;}
+#service-navigation > li:first-child > a {border-left:0;}
+#service-navigation > li a:hover {color:$dark-purple;}
+#service-navigation > li ul {display:none;background-color:$white;padding:0;position:absolute;}
+#service-navigation > li:hover i{color:$mid-purple;}
+#service-navigation > li:hover ul{display:block;}
+#service-navigation > li ul li a{border-top:1px solid $mid-gray;margin:0 1em;display:block;text-align: center;line-height:2.5em;padding:0 4px;}
+#service-navigation > li ul li:first-child a{border:none;}
+#service-navigation { position:relative;z-index:100;background-color:white; filter:alpha(opacity=90); opacity:.6;padding:3px 0 8px 0;margin-top:10px}
+
+.inner{ margin: 0 auto; max-width: 1142px; padding: 0;}
+.inner-nav{ margin: 0 auto; max-width: 1142px}
+
+
+.iw2-wrapper.iw2-custom-margin { padding:0 21px !important; }
+.iw2-layout.iw2-custom-breakpoint { min-width: 73.25rem !important; }
+
+// transition op de mobile menu drop down
+nav.top-bar {
+  transition: max-height .3s ease-in-out;
+  max-height: $topbar-height;
+  height: auto;
+  &.expanded {
+    max-height: 666px;
+
+    // verander menu icoon in 'X' als het menu open is
+    .toggle-topbar a span::after {
+      content: "\2715";
+      box-shadow: none;
+      font-size: 1.8em;
+      font-weight: 100;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+      display: inline-block;
+      position: relative;
+      top: 4px;
+      right: -7px;
+      width: 0;
+    }
+  }
+}
+
+.message-banner {
+  color: $alert-color !important;
+  font-weight: bold !important;
+  padding-top: 10px !important;
+  width: 40% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+#onderhoud-popup {
+  padding: 25px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  display: none;
+  background: $white;
+  border-style: solid;
+  max-height: 50%;
+  z-index: 1000;
+  height: 50%;
+  flex-flow: column;
+}
+#popup-sluiten {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  flex: 0 1 40px;
+}
+
+.onderhoud-banner-header {
+  flex: 0 1 auto;
+}
+
+.onderhoud-banner-detail {
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .message-banner {
+    width: 100% !important;
+    padding-bottom: 10px !important;
+  }
+
+  #onderhoud-popup {
+    height: 100%;
+    width: 75%;
+  }
+}
+
+// Fix wrapper width when making screen bigger/smaller.
+@media (min-width: 1800px) {
+  .wrapper.clearfix {
+    padding-left: 20% !important;
+  }
+}
+
+.wrapper.clearfix {
+  padding-left: initial;
+  background-color: white;
+}
+
+.wrapper-content {
+  float: left;
+}
