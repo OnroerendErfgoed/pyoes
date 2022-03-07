@@ -1,0 +1,21 @@
+{
+  "name": "pyoes",
+  "description": "Pyoes",
+  "version": "0.12.7",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OnroerendErfgoed/pyoes.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cookieconsent": "3.1.1",
+    "pyoes": "file:../../npm-packages/pyoes"
+  },
+  "devDependencies": {
+    "sass": "^1.49.9"
+  },
+  "scripts": {
+    "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps"
+  }
+}

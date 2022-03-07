@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+
+@font-face {
+  font-family: "Flanders Art Sans Light";
+  src: url("#{$oe-font-path}/FlandersArtSans-Light.eot");
+  src: url("#{$oe-font-path}/FlandersArtSans-Light.eot?#iefix") format("embedded-opentype"),
+  url("#{$oe-font-path}/FlandersArtSans-Light.woff") format("woff"),
+  url("#{$oe-font-path}/FlandersArtSans-Light.ttf")  format("truetype"); 
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: "Flanders Art Sans";
+  src: url("#{$oe-font-path}/FlandersArtSans-Regular.eot");
+  src: url("#{$oe-font-path}/FlandersArtSans-Regular.eot?#iefix") format("embedded-opentype"),
+  url("#{$oe-font-path}/FlandersArtSans-Regular.woff") format("woff"),
+  url("#{$oe-font-path}/FlandersArtSans-Regular.ttf")  format("truetype");
+      
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: "Flanders Art Sans Medium";
+  src: url("#{$oe-font-path}/FlandersArtSans-Medium.eot");
+  src: url("#{$oe-font-path}/FlandersArtSans-Medium.eot?#iefix") format("embedded-opentype"),
+  url("#{$oe-font-path}/FlandersArtSans-Medium.woff") format("woff"),
+  url("#{$oe-font-path}/FlandersArtSans-Medium.ttf")  format("truetype");
+      
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: "Flanders Art Sans Bold";
+  src: url("#{$oe-font-path}/FlandersArtSans-Bold.eot");
+  src: url("#{$oe-font-path}/FlandersArtSans-Bold.eot?#iefix") format("embedded-opentype"),
+  url("#{$oe-font-path}/FlandersArtSans-Bold.woff") format("woff"),
+  url("#{$oe-font-path}/FlandersArtSans-Bold.ttf")  format("truetype");
+
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+.demo-light{font-family: "Flanders Art Sans Light";}
+.demo-regular{font-family: "Flanders Art Sans";}
+.demo-medium{font-family: "Flanders Art Sans Medium";}
+.demo-bold{font-family: "Flanders Art Sans Bold";}

@@ -1,0 +1,13 @@
+{
+  "name": "{{package}}",
+  "private": true,
+  "contributors": [
+    "Flanders Heritage Agency <ict@onroerenderfgoed.be>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cookieconsent": "3.1.1",
+    "pyoes": "OnroerendErfgoed/pyoes#head=npm_styles&workspace=pyoes"
+  },
+  "packageManager": "yarn@3.2.0",
+}
