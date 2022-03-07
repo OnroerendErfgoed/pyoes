@@ -10,5 +10,7 @@ env:
 install:
  - pip install -r requirements-dev.txt
  - python setup.py develop
-script: py.test --cov pyoes --cov-report term-missing
+script:
+ - ./check_versions.sh
+ - py.test --cov pyoes --cov-report term-missing
 after_success: coveralls
