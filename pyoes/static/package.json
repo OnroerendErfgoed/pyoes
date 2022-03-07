@@ -1,11 +1,11 @@
 {
-  "name": "proces_toelatingen_archeologie",
-  "description": "Proces toelatingen archeologie beheer",
+  "name": "pyoes",
+  "description": "Pyoes",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/OnroerendErfgoed/proces_toelatingen_archeologie.git"
+    "url": "https://github.com/OnroerendErfgoed/pyoes.git"
   },
   "license": "MIT",
   "dependencies": {
