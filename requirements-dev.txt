@@ -7,8 +7,6 @@ pyramid_debugtoolbar==4.5
 
 #Sphinx
 sphinx==1.7.4
-#Readthedocs
-markupsafe==2.0.1
 
 # Testing
 pytest==3.5.1
