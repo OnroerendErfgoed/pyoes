@@ -20,7 +20,7 @@ be build using `Sphinx <http://sphinx-doc.org>`_.
 
 .. code-block:: bash
 
-    # activate your virtual environment
+    # activate your virtual env
     $ pip install -r requirements-dev.txt
     $ cd docs
     $ make html
