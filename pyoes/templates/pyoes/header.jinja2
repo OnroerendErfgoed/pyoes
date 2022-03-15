@@ -126,15 +126,13 @@
         {% else %}
           <ul class="right">
             <li class="has-dropdown">
+              <a href="#">
               {% if request.user.actor and request.user.actor.omschrijving %}
-                <a href="#">{{ request.user.actor.omschrijving }}</a>
+                {{ request.user.actor.omschrijving }}
               {% else %}
-                {% if request.user.attributes.displayname is iterable %}
-                  <a href="#">{{ request.user.attributes.displayname[0] }}</a>
-                {% else %}
-                  <a href="#">{{ request.user.attributes.displayname }}</a>
-                {% endif %}
+                {{ request.user.persoonsgegevens.omschrijving }}
               {% endif %}
+              </a>
               <ul class="dropdown">
                 {% for caption, href in login_sub_nav %}
                   <li><a href="{{ href }}">{{ caption }}</a></li>
