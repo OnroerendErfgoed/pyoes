@@ -1,9 +1,0 @@
-{
-  "name": "{{package}}",
-  "private": true,
-  "dependencies": {
-    "foundation": "~5.5.3",
-    "font-awesome": "~4.7.0",
-    "cookieconsent": "3.1.1"
-  }
-}

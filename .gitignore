@@ -54,3 +54,8 @@ bower_components/*
 #IDE
 .idea
 !.idea/runConfigurations
+
+# Dependencies
+*node_modules
+*.yarn
+*yarn-error.log
