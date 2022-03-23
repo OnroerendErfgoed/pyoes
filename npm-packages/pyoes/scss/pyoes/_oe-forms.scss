@@ -53,14 +53,14 @@
   margin-right: 10px;
   text-align: center;
   font-size: 0.8em;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
 }
 .checkbox-custom:checked + .checkbox-custom-label:before { background: $fresh-blue;}
 .radio-custom + .radio-custom-label:before { border-radius: 50%; }
 
 .radio-custom:checked + .radio-custom-label:before, .checkbox-custom:checked + .checkbox-custom-label:before {
   color: white;
-  content: "\f00c";
+  content: '\f00c';
   font-size: 14px;
   padding: 0;
   line-height: 20px;
