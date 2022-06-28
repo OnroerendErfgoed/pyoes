@@ -129,7 +129,7 @@
               <a href="#">
               {% if request.user.actor and request.user.actor.omschrijving %}
                 {{ request.user.actor.omschrijving }}
-              {% else %}
+              {% elif request.user.persoonsgegevens and request.user.persoonsgegevens.omschrijving %}
                 {{ request.user.persoonsgegevens.omschrijving }}
               {% endif %}
               </a>
