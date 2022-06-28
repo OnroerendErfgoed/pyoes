@@ -1,3 +1,8 @@
+0.14.1 (27-06-2022)
+===================
+
+- Check inbouwen of persoonsgegevens bestaat voor het attribuut wordt gebruikt (#241)
+
 0.14.0 (27-04-2022)
 ===================
 
