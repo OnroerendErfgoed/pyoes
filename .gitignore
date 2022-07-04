@@ -49,6 +49,7 @@ nosetests.xml
 
 #public front end
 *.sass-cache
+/pyoes/static/css/
 bower_components/*
 
 #IDE
