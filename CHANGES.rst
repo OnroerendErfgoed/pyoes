@@ -1,3 +1,10 @@
+0.15.0 (21-11-2022)
+===================
+
+- Update pyoes header (#250)
+- Fix bgimage, bgimage-bouwkunde image url (#252)
+
+
 0.14.2 (04-07-2022)
 ===================
 
