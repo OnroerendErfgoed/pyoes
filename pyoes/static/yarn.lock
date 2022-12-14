@@ -37,11 +37,6 @@ braces@~3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-cookieconsent@3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/cookieconsent/-/cookieconsent-3.1.1.tgz#f90bfadcaeef7d2bdcdd8278257f7264cb5d6819"
-  integrity sha512-v8JWLJcI7Zs9NWrs8hiVldVtm3EBF70TJI231vxn6YToBGj0c9dvdnYwltydkAnrbBMOM/qX1xLFrnTfm5wTag==
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -111,7 +106,7 @@ picomatch@^2.0.4, picomatch@^2.2.1:
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
 "pyoes@file:../../npm-packages/pyoes":
-  version "0.0.2"
+  version "0.15.0"
   dependencies:
     font-awesome "^4.7.0"
     foundation-sites "^5.5.3"
