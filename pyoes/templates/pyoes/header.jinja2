@@ -70,22 +70,28 @@
       {% set default_login_sub_nav = [('Profiel', '/'), ('Afmelden', '/')] %}
 
       {% set main_nav = main_nav|default(default_main_nav) -%}
-
+      
       {# MAIN NAV #}
       <ul class="left">
-        {% for id, caption, href in main_nav %}
-          <li{% if id == active_main_nav %} class="active"{% endif %}>
-            {% if id == 'home' %}
-              <a href="{{ href }}"><i class="fa fa-home"></i></a>
-            {% else %}
-              <a href="{{ href }}">{{ caption|safe }}</a>
-            {% endif %}
-          </li>
+        {% for item in main_nav %}
+          {% if item|length == 3 %}
+            {% set id, caption, href = item %}
+            {% set class = None %}
+          {% else %}
+            {% set id, caption, href, class = item %}
+          {% endif %}
+        <li{% if id==active_main_nav %} class="active" {% endif %}{% if class %} class="{{ class }}" {% endif %}>
+          {% if id == 'home' %}
+            <a href="{{ href }}"><i class="fa fa-home"></i></a>
+          {% else %}
+            <a href="{{ href }}">{{ caption|safe }}</a>
+          {% endif %}
+        </li>
         {% endfor %}
-        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
-        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
+          <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
+          <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
       </ul>
-
+      
       {% set dropdown_main_nav = dropdown_main_nav|default(default_dropdown_main_nav) -%}
 
       {# DROPDOWN NAV #}
