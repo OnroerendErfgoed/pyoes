@@ -80,7 +80,7 @@
           {% else %}
             {% set id, caption, href, class = item %}
           {% endif %}
-        <li{% if id==active_main_nav %} class="active" {% endif %}{% if class %} class="{{ class }}" {% endif %}>
+          <li class="{{ 'active' if id == active_main_nav else '' }} {{class or ''}}">
           {% if id == 'home' %}
             <a href="{{ href }}"><i class="fa fa-home"></i></a>
           {% else %}
