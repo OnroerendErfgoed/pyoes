@@ -7,3 +7,47 @@
 {% macro generate_uri(request, settingsURI, id) %}
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
+
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid) %}
+  {% if omgeving in ('local', 'dev', 'test') %}
+    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
+    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
+    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/{{ burgerprofiel_header_id }}/embed"></script>
+  {% else %}
+    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
+    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
+    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/{{ burgerprofiel_header_id }}/embed"></script>
+  {% endif %}
+  <script>
+    // Capture any widget that is present or will be present on the webpage.
+    vl.widget.client.capture(function (widget) {
+      // Only process the widget if widget is a global header.
+      if (widget.getPluginTypeId() === 'global_header') {
+        // Get the Citizen Profile Session extension from the global header widget.
+        widget.getExtension('citizen_profile.session').then(function (session) {
+          var websiteHasAuthenticatedSession = false;
+          {% if authenticated_userid  %}
+            websiteHasAuthenticatedSession = true;
+          {% endif %}
+          // Inform the session extension about the current session state of the website.
+          session.configure({
+            active: websiteHasAuthenticatedSession,
+            endpoints: {
+              loginUrl: '/aanmelden',
+              loginRedirectUrl: '/',
+              logoutUrl: '/afmelden'
+            }
+          });
+        });
+      }
+    });
+  </script>
+{% endmacro %}
+
+{% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id) %}
+  {% if omgeving in ('local', 'dev', 'test') %}
+    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+  {% else %}
+    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+  {% endif %}
+{% endmacro %}
