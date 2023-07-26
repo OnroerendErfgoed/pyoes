@@ -1,3 +1,9 @@
+0.17.0 (26-07-2023)
+===================
+
+- Verwijder pyoes cookiebanner scss (#261)
+- Nieuwe vlaanderen header & footer (#268)
+
 0.16.1 (24-02-2023)
 ===================
 
