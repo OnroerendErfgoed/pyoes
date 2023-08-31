@@ -1,3 +1,8 @@
+0.18.0 (31-08-2023)
+===================
+
+- decouple common css variables from foundation logic (#273)
+
 0.17.0 (26-07-2023)
 ===================
 
