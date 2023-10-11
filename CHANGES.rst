@@ -1,3 +1,8 @@
+0.19.0 (11-10-2023)
+===================
+
+- mismatch tussen static_views benodigde files en MANIFEST (#278)
+
 0.18.0 (31-08-2023)
 ===================
 
