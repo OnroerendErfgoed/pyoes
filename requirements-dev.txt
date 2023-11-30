@@ -2,17 +2,20 @@
 --requirement requirements.txt
 
 # Development server
-waitress==1.4.3
-pyramid_debugtoolbar==4.5
+waitress==2.1.2
+pyramid-debugtoolbar==4.9
 
-#Sphinx
-sphinx==1.7.4
+# Sphinx
+Sphinx==5.1.1
+sphinxcontrib-httpdomain==1.8.0
+sphinx-rtd-theme==1.0.0
+sphinxcontrib-plantuml==0.24
+oe-sphinx-theme==0.2.0
 
 # Testing
-pytest==3.5.1
-py==1.10.0
-pytest-cov==2.5.1
-coveralls==1.5.0
+pytest==7.1.2
+pytest-cov==3.0.0
+coveralls==3.3.1
 
 # Linting
 pep8==1.7.1

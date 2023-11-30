@@ -1,6 +1,7 @@
-pyramid==1.10.4
+# pyramid
+pyramid==2.0.2
+pyramid-jinja2==2.10
+MarkupSafe==2.1.1
+Jinja2==3.1.2
 
-pyramid_jinja2==2.8
-jinja2==2.11.3
-
-python-dateutil==2.8.0
+python-dateutil==2.8.2
