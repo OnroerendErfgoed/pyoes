@@ -1,21 +1,17 @@
 {% extends "layout.jinja2" %}
 
-{% block header scoped %}
-    {% include "pyoes/header.jinja2" %}
-{% endblock %}
+{% set burgerprofiel_header_id = "305cb64e-aa12-4c3a-9cb9-a8a3686c1f59" -%}
+{% set burgerprofiel_footer_id = "c98ebf58-109a-4ea9-966e-1accf1256515" -%}
+
 
 {% block content scoped %}
 <!-- content -->
 <div class="row">
   <div class="large-12 columns">
     <div class="panel">
- # content
+      test met burgerprofiel header&footer
     </div>
   </div>
 </div>
 <!-- end content -->
-{% endblock %}
-
-{% block footer scoped %}
-    {% include "pyoes/footer.jinja2" %}
 {% endblock %}
