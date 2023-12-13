@@ -15,13 +15,13 @@
 
 {% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid) %}
   {% if omgeving in ('local', 'dev', 'test') %}
-    {% set baseUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
+    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
-    {% set baseUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
+    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
   {% endif %}
-  <script src="{{ baseUrl }}/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
-  <script src="{{ baseUrl }}/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
-  <script src="{{ baseUrl }}/widget/{{ burgerprofiel_header_id }}/embed"></script>
+  <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
+  <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
+  <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_header_id }}/embed"></script>
   <script>
     // Capture any widget that is present or will be present on the webpage.
     vl.widget.client.capture(function (widget) {
@@ -50,11 +50,11 @@
 
 {% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id) %}
   {% if omgeving in ('local', 'dev', 'test') %}
-    {% set baseUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
+    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
-    {% set baseUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
+    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
   {% endif %}
-  <script src="{{ baseUrl }}/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+  <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_footer_id }}/embed"></script>
 {% endmacro %}
 
 {% macro render_info_banner(banner, detail)  %}
