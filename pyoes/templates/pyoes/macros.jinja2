@@ -1,4 +1,9 @@
-{% macro plausible_tracker(plausible_data_domain, omgeving) %}
+{% macro plausible_tracker(plausible_data_domain, plausible_omgeving) %}
+    {% if plausible_omgeving in ('dev', 'test') %}
+      {% set omgeving = plausible_omgeving + '-' %}
+    {% else %}
+      {% set omgeving = '' %}
+    {% endif %}
     <!-- Plausible Analytics -->
     <script async defer data-domain="{{ plausible_data_domain }}" src="https://{{ omgeving }}webstats.onroerenderfgoed.be/js/plausible.js"></script>
     <!-- End Plausible Analytics -->
@@ -10,14 +15,13 @@
 
 {% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid) %}
   {% if omgeving in ('local', 'dev', 'test') %}
-    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
-    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
-    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/{{ burgerprofiel_header_id }}/embed"></script>
+    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
-    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
-    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
-    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/{{ burgerprofiel_header_id }}/embed"></script>
+    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
   {% endif %}
+  <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
+  <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
+  <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_header_id }}/embed"></script>
   <script>
     // Capture any widget that is present or will be present on the webpage.
     vl.widget.client.capture(function (widget) {
@@ -46,8 +50,60 @@
 
 {% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id) %}
   {% if omgeving in ('local', 'dev', 'test') %}
-    <script src="https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
-    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
   {% endif %}
+  <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_footer_id }}/embed"></script>
+{% endmacro %}
+
+{% macro render_info_banner(banner, detail)  %}
+  <script type="text/javascript">
+    function handleHeader() {
+      const headerdiv = document.getElementsByClassName('iwgh2-navigation');
+      var el = document.createElement('div');
+      el.className = 'message-banner';
+      var content = '<span>{{ banner }}</span>';
+      {% if detail %}
+        content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
+      {% endif %}
+      el.innerHTML = content;
+      headerdiv[0].parentNode.insertBefore(el, headerdiv.nextSibling);
+    }
+
+    function showPopup() {
+      document.getElementById('onderhoud-popup').style.display = 'flex';
+    }
+
+    function hidePopup() {
+      document.getElementById('onderhoud-popup').style.display = 'none';
+    }
+
+    // set up the mutation observer
+    var observer = new MutationObserver(function (mutations, me) {
+      var header = document.getElementsByClassName('iwgh2-navigation');
+      if (header[0]) {
+        handleHeader();
+        me.disconnect(); // stop observing
+        return;
+      }
+    });
+
+    // start observing
+    observer.observe(document, {
+      childList: true,
+      subtree: true
+    });
+  </script>
+  <div id="onderhoud-popup">
+    <div class="row onderhoud-banner-header">
+      <h2>{{ banner }}</h2>
+    </div>
+    <div class="row onderhoud-banner-detail">
+      <p>{{ detail }}</p>
+    </div>
+    <div class="row">
+      <a><span id="popup-sluiten" onclick="hidePopup()" aria-hidden="true">Sluiten...</span></a>
+    </div>
+  </div>
 {% endmacro %}
