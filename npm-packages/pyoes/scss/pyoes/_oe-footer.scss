@@ -1,8 +1,13 @@
 @charset "UTF-8";
 // fix for sticky footer
-.container { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -131px; }
-#footerContainer { height: 86px;}
-.push { height: 131px; }
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#footerContainer {
+  margin-top: auto;
+}
 
 footer#footer-bottom {clear: both;overflow: hidden;background:$white;border-top:5px solid $dark-purple;}
 footer#footer-bottom .inner nav ul{margin:1em 0;padding-left:1.4em}

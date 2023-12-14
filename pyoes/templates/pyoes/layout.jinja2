@@ -1,3 +1,5 @@
+{% from "pyoes/macros.jinja2" import render_vlaanderen_header, render_vlaanderen_footer %}
+
 <!doctype html>
 <html class="no-js" lang="nl">
 
@@ -10,74 +12,65 @@
 {% set active_main_nav = active_main_nav -%}
 {% set login_nav = login_nav -%}
 {% set login_sub_nav = login_sub_nav -%}
-{% set service_nav = service_nav -%}
 {% set home_link = home_link -%}
-{% set footer_nav = footer_nav -%}
 {% set mailto_error = mailto_error -%}
-
-{% set default_footer_nav = [
-	('Toegankelijkheid', 'https://www.onroerenderfgoed.be/toegankelijkheid'),
-	('Juridische Informatie', 'https://www.onroerenderfgoed.be/nl/juridisch'),
-	('Privacybeleid', 'https://www.onroerenderfgoed.be/nl/over-ons/privacybeleid/')
-]
--%}
-
-{% set footer_nav = footer_nav|default(default_footer_nav) -%}
-
-{% set datum_copyright = datum_copyright|default('2017') -%}
+{% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) -%}
+{% set plausible_omgeving = plausible_omgeving|default("dev") -%}
+{% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
+{% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
+{% set datum_copyright = datum_copyright|default('2023') -%}
 
 <head>
   {% block html_header scoped %}
+    <!-- head -->
     <meta charset="utf-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
 
-    <link rel="stylesheet"
-          href="{% block app_css %}{{ request.static_path(app_package + ':static/css/app.css') }}{% endblock %}"/>
-
-    <script src="{{ request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/modernizr.js') }}"></script>
-
-    {% block css -%}
-      {% set default_css_files = [] -%}
-
+    {% block css scoped -%}
+      <!-- css -->
+      {% set default_css_files = [
+        request.static_path(app_package + ':static/css/app.css')
+      ] -%}
       {% set css_files = css_files|default(default_css_files) -%}
       {% for css in css_files -%}
         <link rel="stylesheet" href="{{ css }}"/>
-      {% endfor %}
+      {% endfor -%}
     {% endblock -%}
 
     {% block javascript scoped -%}
+      <!-- javascript -->
       {% set default_js_files = [
-			request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/jquery.js')
-		] -%}
+        request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/modernizr.js'),
+        request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/jquery.js'),
+        request.static_path(app_package + ':static/node_modules/foundation-sites/js/foundation.min.js'),
+        request.static_path(app_package + ':static/js/app.js')
+		  ] -%}
       {% set js_files = js_files|default(default_js_files) -%}
       {% for js in js_files -%}
-        <script type="text/javascript" src="{{ js }}"></script>
+        <script src="{{ js }}"></script>
       {% endfor -%}
     {% endblock -%}
-      
-    {% block plausible %}
-      {% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) %}
-      {% set plausible_omgeving = plausible_omgeving|default('dev') %}
-      {% if plausible_omgeving in ('dev', 'test') %}
-        {% set omgeving = plausible_omgeving + '-' %}
-      {% else %}
-        {% set omgeving = '' %}
-      {% endif %}
-      {% if plausible_data_domain %}
-      	{% from 'macros.jinja2' import plausible_tracker %}
-        {{ plausible_tracker(plausible_data_domain, omgeving) }}
-      {% endif %}
-    {% endblock %}
   {% endblock %}
 
+  {% block plausible -%}
+    {% if plausible_data_domain %}
+      {% from 'macros.jinja2' import plausible_tracker %}
+      {{ plausible_tracker(plausible_data_domain, plausible_omgeving) }}
+    {% endif %}
+  {% endblock %}
 </head>
 <body>
 <div class="container">
   {% block vlaanderen_header scoped %}
-    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
+    {% if burgerprofiel_header_id %}
+      <div class="vlaanderen-header-container">
+      	{% from 'macros.jinja2' import render_vlaanderen_header %}
+        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, request.authenticated_userid) }}
+      </div>
+    {% else %}
+      <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
+    {% endif %}
   {% endblock %}
 
   {% block header scoped %}
@@ -89,70 +82,28 @@
 
   {% block content scoped %}
   {% endblock %}
+
   <div class="push"></div>
-</div>
-<div id="footerContainer">
-  {% block footer scoped %}
-    {% include "pyoes/footer.jinja2" %}
-  {% endblock %}
 
-  {% block vlaanderen_footer scoped %}
-    <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
-  {% endblock %}
-</div>
-<script src="{{ request.static_path(app_package + ':static/node_modules/foundation-sites/js/foundation.min.js') }}"></script>
-<script src="{{ request.static_path(app_package + ':static/js/app.js') }}"></script>
+  <div id="footerContainer">
+    {% block vlaanderen_footer scoped %}
+      {% if burgerprofiel_header_id %}
+          {% from 'macros.jinja2' import render_vlaanderen_footer %}
+          {{ render_vlaanderen_footer(plausible_omgeving, burgerprofiel_footer_id) }}
+      {% else %}
+        <script src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
+      {% endif %}
+    {% endblock %}
 
+    {% block footer scoped %}
+      <!-- Backwards compatible -->
+    {% endblock %}
+  </div>
+</div>
 
 {% if request.registry.settings['pyoes.banner'] %}
-<script type="text/javascript">
-  function handleHeader() {
-    const headerdiv = document.getElementsByClassName('iwgh2-navigation');
-    var el = document.createElement('div');
-    el.className = 'message-banner';
-    var content = '<span>{{ request.registry.settings['pyoes.banner'] }}</span>';
-    {% if request.registry.settings['pyoes.banner.detail'] %}
-      content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
-    {% endif %}
-    el.innerHTML = content;
-    headerdiv[0].parentNode.insertBefore(el, headerdiv.nextSibling);
-  }
-
-  function showPopup() {
-    document.getElementById('onderhoud-popup').style.display = 'flex';
-  }
-
-  function hidePopup() {
-    document.getElementById('onderhoud-popup').style.display = 'none';
-  }
-
-  // set up the mutation observer
-  var observer = new MutationObserver(function (mutations, me) {
-    var header = document.getElementsByClassName('iwgh2-navigation');
-    if (header[0]) {
-      handleHeader();
-      me.disconnect(); // stop observing
-      return;
-    }
-  });
-
-  // start observing
-  observer.observe(document, {
-    childList: true,
-    subtree: true
-  });
-</script>
-<div id="onderhoud-popup">
-  <div class="row onderhoud-banner-header">
-    <h2>{{ request.registry.settings['pyoes.banner'] }}</h2>
-  </div>
-  <div class="row onderhoud-banner-detail">
-    <p>{{ request.registry.settings['pyoes.banner.detail'] }}</p>
-  </div>
-  <div class="row">
-    <a><span id="popup-sluiten" onclick="hidePopup()" aria-hidden="true">Sluiten...</span></a>
-  </div>
-</div>
+  {% from 'macros.jinja2' import render_info_banner %}
+  {{ render_vlaanderen_footer(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
 {% endif %}
 
 </body>

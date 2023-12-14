@@ -5,8 +5,8 @@
 {% set datum_copyright = '2013-2014' %}
 
 {% set main_nav = [
-	('home', 'Home', '#'), 
-	('zoeken', 'Zoeken', '#'),
+	('home', 'Home', '/'),
+	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
 	('vinden', 'Vinden', '#'),
 	('pinpoints', 'Pinpoints', 'pinpoints'),
 	('icons', 'Icons', 'icons')
@@ -15,16 +15,10 @@
 
 {% set dropdown_main_nav = [
 	('home', 'Home', [
-	('zoeken', 'Zoeken', '#'),
+	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
 	('vinden', 'Vinden', '#'),
 	('pinpoints', 'Pinpoints', 'pinpoints'),
 	('icons', 'Icons', 'icons')])
-]-%}
-
-
-{% set css_files =
-[
-
 ]-%}
 
 {% set login_nav = [('Aanmelden', '#')] -%}

@@ -1,10 +1,8 @@
+os: linux
+dist: focal
 language: python
 python:
- - "2.7"
- - "3.5"
-notifications:
- email:
-    - vanderhaegen.cedrik@vlaanderen.be
+  - "3.8"
 env:
  - LC_ALL=en_US.utf-8
 install:

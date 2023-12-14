@@ -1,3 +1,8 @@
+0.20.0 (14-12-2023)
+===================
+
+- Pas jinja's aan voor nieuwe vlaanderen header & footer (#282)
+
 0.19.0 (11-10-2023)
 ===================
 

@@ -15,13 +15,12 @@ requires = [
     ]
 
 setup(name='pyoes',
-      version='0.19.0',
+      version='0.20.0',
       description='Algemene onroerenderfgoed stijl (gebaseerd op de Vlaamse huisstijl) voor pyramid',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: JavaScript",
         "Development Status :: 3 - Alpha",
         "Environment :: Web Environment",
