@@ -7,6 +7,7 @@
 ===================
 
 - Pas jinja's aan voor nieuwe vlaanderen header & footer (#282)
+- Upgrade naar Pyramid 2.0 & alle requirements update (#215)
 
 0.19.0 (11-10-2023)
 ===================
