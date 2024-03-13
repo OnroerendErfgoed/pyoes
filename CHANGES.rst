@@ -4,10 +4,16 @@
 - Plausible file download tracking (#289)
 - PackageManager verwijderen (#288)
 
+0.20.1 (14-12-2023)
+===================
+
+- bump versie voor verkeerde pypi release
+
 0.20.0 (14-12-2023)
 ===================
 
 - Pas jinja's aan voor nieuwe vlaanderen header & footer (#282)
+- Upgrade naar Pyramid 2.0 & alle requirements update (#215)
 
 0.19.0 (11-10-2023)
 ===================
