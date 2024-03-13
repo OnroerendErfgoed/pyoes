@@ -1,3 +1,9 @@
+0.21.0 (13-03-2024)
+===================
+
+- Plausible file download tracking (#289)
+- PackageManager verwijderen (#288)
+
 0.20.0 (14-12-2023)
 ===================
 
