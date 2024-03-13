@@ -14,5 +14,4 @@
   "scripts": {
     "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps"
   },
-  "packageManager": "yarn@3.2.0",
 }
