@@ -9,5 +9,4 @@
   "dependencies": {
     "pyoes": "OnroerendErfgoed/pyoes#head=npm_styles&workspace=pyoes"
   },
-  "packageManager": "yarn@3.2.0",
 }
