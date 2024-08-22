@@ -4,7 +4,6 @@
   <div class="row inner">
 
     {% set home_link = home_link|default('/') -%}
-    {% set default_header_links = [] -%}
 
     <!-- logo -->
     <div class="logo-block-wrapper medium-7 small-12 columns">
@@ -33,7 +32,7 @@
     </div>
     {% block header_links scoped %}
       <!-- Links in header -->
-      {% set header_links = header_links|default(default_header_links) -%}
+      {% set header_links = header_links|default([]) -%}
       {% if header_links|length > 0 %}
         <div class="medium-5 columns text-right header-links show-for-medium-up">
           <nav>
