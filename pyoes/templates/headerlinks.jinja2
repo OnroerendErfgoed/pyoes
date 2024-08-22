@@ -1,0 +1,16 @@
+{% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'headerlinks' %}
+{% set header_links = [
+  ('Contact', 'https://www.onroerenderfgoed.be/contact', 'Contacteer ons'),
+  ('Over ons', 'https://www.onroerenderfgoed.be/over-ons', 'Meer informatie over ons'),
+  ('Geoportaal', 'https://geo.onroerenderfgoed.be', 'Bezoek het geoportaal'),
+] -%}
+
+{% block content %}
+<div class="content">
+	<div class="row">
+		<h1>Custom header links</h1>
+  </div>
+</div>
+{% endblock %}

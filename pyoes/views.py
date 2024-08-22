@@ -11,6 +11,11 @@ def header_footer(request):
   return {}
 
 
+@view_config(route_name='headerlinks', renderer='templates/headerlinks.jinja2')
+def headerlinks(request):
+  return {}
+
+
 @view_config(route_name='grids', renderer='templates/grids.jinja2')
 def grids(request):
   return {}

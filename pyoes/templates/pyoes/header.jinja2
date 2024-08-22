@@ -4,6 +4,8 @@
   <div class="row inner">
 
     {% set home_link = home_link|default('/') -%}
+    {% set default_header_links = [] -%}
+
     <!-- logo -->
     <div class="logo-block-wrapper medium-7 small-12 columns">
       <div class="logo-block">
@@ -29,20 +31,25 @@
         </a>
       </div>
     </div>
-    {% if burgerprofiel_header_id %}
-    <div class="medium-5 columns">
-      <!-- contact info is in burgerprofiel header -->
-    </div>
-    {% else %}
-    <div class="medium-5 columns text-right header-links show-for-medium-up">
-      <nav>
-        <ul>
-          <li><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
-          <li><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
-        </ul>
-      </nav>
-    </div>
-    {% endif %}
+    {% block header_links scoped %}
+      <!-- Links in header -->
+      {% set header_links = header_links|default(default_header_links) -%}
+      {% if header_links|length > 0 %}
+        <div class="medium-5 columns text-right header-links show-for-medium-up">
+          <nav>
+            <ul>
+              {% for text, href, title in header_links %}
+                <li><a href="{{ href }}" target="_blank" title="{{ title }}">{{ text }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      {% else %}
+        <div class="medium-5 columns">
+          <!-- empty placeholder -->
+        </div>
+      {% endif %}
+    {% endblock %}
   </div>
 </div>
 
@@ -86,8 +93,11 @@
             {% endif %}
           </li>
         {% endfor %}
-        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/contact" target="_blank" title="Contacteer ons">Contact</a></li>
-        <li class="show-for-small-only"><a href="https://www.onroerenderfgoed.be/over-ons" target="_blank" title="Meer informatie over ons">Over ons</a></li>
+        {% if header_links|length > 0 %}
+          {% for text, href, title in header_links %}
+            <li class="show-for-small-only"><a href="{{ href }}" target="_blank" title="{{ title }}">{{ text }}</a></li>
+          {% endfor %}
+        {% endif %}
       </ul>
 
       {% set dropdown_main_nav = dropdown_main_nav|default(default_dropdown_main_nav) -%}
