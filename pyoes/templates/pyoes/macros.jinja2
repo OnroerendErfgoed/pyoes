@@ -17,7 +17,7 @@
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
 
-{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid) %}
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid, baseUrl) %}
   {% if omgeving in ('local', 'dev', 'test') %}
     {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
@@ -41,10 +41,31 @@
           session.configure({
             active: websiteHasAuthenticatedSession,
             endpoints: {
-              loginUrl: '/aanmelden',
-              loginRedirectUrl: '/',
-              logoutUrl: '/afmelden'
+              loginUrl: '{{ baseUrl }}aanmelden',
+              loginRedirectUrl: '{{ baseUrl }}',
+              logoutUrl: '{{ baseUrl }}afmelden'
             }
+          });
+        });
+
+        //Extra contact config
+        widget.getExtension('contact').then(contact => {
+          console.log(contact);
+          contact.setServicePoints({
+            "displayMode": "grouped",
+            "groupLabel": "Heb je een vraag of opmerking over een beeld in de beeldbank?",
+            "contextual": [
+              {
+                "type": "link",
+                "href": "{{ baseUrl }}contact",
+                "label": "Contact"
+              }
+            ],
+            "defaults": [{
+              "type": "contactOption",
+              "contactGroupId": "vlaanderen",
+              "label": "Algemene contactopties van de Vlaamse overheid"
+            }]
           });
         });
       }
