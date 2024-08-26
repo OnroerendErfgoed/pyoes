@@ -11,6 +11,7 @@ def main(global_config, **settings): # pragma: no cover
     config.add_static_view('static', 'static', cache_max_age=3600)
     config.add_route('home', '/')
     config.add_route('burgerprofiel', '/burgerprofiel')
+    config.add_route('burgerprofiel2', '/burgerprofiel2')
     config.add_route('headerlinks', '/headerlinks')
     config.add_route('grids', '/grids')
     config.add_route('beeldbank', '/beeldbank')

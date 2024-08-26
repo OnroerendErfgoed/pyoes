@@ -11,6 +11,11 @@ def header_footer(request):
   return {}
 
 
+@view_config(route_name='burgerprofiel2', renderer='templates/burgerprofiel2.jinja2')
+def header_footer2(request):
+  return {}
+
+
 @view_config(route_name='headerlinks', renderer='templates/headerlinks.jinja2')
 def headerlinks(request):
   return {}
