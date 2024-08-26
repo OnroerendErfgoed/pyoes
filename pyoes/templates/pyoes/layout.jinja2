@@ -52,7 +52,7 @@
     {% if burgerprofiel_header_id %}
       <div class="vlaanderen-header-container">
       	{% from 'macros.jinja2' import render_vlaanderen_header %}
-        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, request.authenticated_userid, request.route_url('home')) }}
+        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, request.authenticated_userid, home_route) }}
       </div>
     {% else %}
       <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
