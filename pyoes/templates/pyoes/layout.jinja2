@@ -1,5 +1,3 @@
-{% from "pyoes/macros.jinja2" import render_vlaanderen_header, render_vlaanderen_footer %}
-
 <!doctype html>
 <html class="no-js" lang="nl">
 
@@ -59,6 +57,8 @@
     {% else %}
       <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
     {% endif %}
+    {% block constom_contact_info scoped %}
+    {% endblock %}
   {% endblock %}
 
   {% block header scoped %}
@@ -107,7 +107,7 @@
 
 {% if request.registry.settings['pyoes.banner'] %}
   {% from 'macros.jinja2' import render_info_banner %}
-  {{ render_vlaanderen_footer(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
+  {{ render_info_banner(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
 {% endif %}
 
 </body>
