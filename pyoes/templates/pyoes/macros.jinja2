@@ -17,7 +17,7 @@
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
 
-{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid) %}
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid, baseUrl) %}
   {% if omgeving in ('local', 'dev', 'test') %}
     {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
@@ -41,14 +41,31 @@
           session.configure({
             active: websiteHasAuthenticatedSession,
             endpoints: {
-              loginUrl: '/aanmelden',
-              loginRedirectUrl: '/',
-              logoutUrl: '/afmelden'
+              loginUrl: '{{ baseUrl }}aanmelden',
+              loginRedirectUrl: '{{ baseUrl }}',
+              logoutUrl: '{{ baseUrl }}afmelden'
             }
           });
         });
       }
     });
+  </script>
+{% endmacro %}
+
+{% macro render_custom_burgerprofiel_contact() %}
+  <script>
+    function render_contact(config) {
+      // Capture any widget that is present or will be present on the webpage.
+      vl.widget.client.capture(function (widget) {
+        // Only process the widget if widget is a global header.
+        if (widget.getPluginTypeId() === 'global_header') {
+          //Extra contact config
+          widget.getExtension('contact').then(contact => {
+            contact.setServicePoints(config);
+          });
+        }
+      });
+    }
   </script>
 {% endmacro %}
 

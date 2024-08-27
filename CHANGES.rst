@@ -1,3 +1,9 @@
+0.22.0 (27-08-2024)
+===================
+
+- Links in header terug mogelijk maken (#300)
+- Burgerprofiel - "Hulp nodig" menu configureerbaar maken (#301)
+
 0.21.1 (08-04-2024)
 ===================
 

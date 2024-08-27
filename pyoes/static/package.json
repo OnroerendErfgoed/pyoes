@@ -1,7 +1,7 @@
 {
   "name": "pyoes",
   "description": "Pyoes",
-  "version": "0.21.1",
+  "version": "0.22.0",
   "private": true,
   "repository": {
     "type": "git",
