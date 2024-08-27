@@ -1,13 +1,18 @@
 from pyramid.view import view_config
 
 
-@view_config(route_name='index', renderer='templates/index.jinja2')
+@view_config(route_name='home', renderer='templates/index.jinja2')
 def home(request):
   return {}
 
 
 @view_config(route_name='burgerprofiel', renderer='templates/burgerprofiel.jinja2')
 def header_footer(request):
+  return {}
+
+
+@view_config(route_name='burgerprofiel2', renderer='templates/burgerprofiel2.jinja2')
+def header_footer2(request):
   return {}
 
 
