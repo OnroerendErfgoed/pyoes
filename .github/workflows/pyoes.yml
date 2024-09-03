@@ -1,0 +1,42 @@
+name: pyoes
+
+on: [push, pull_request]
+
+env:
+  PYTHON_VERSION: "3.11"
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      env:
+          HATCH_BUILD_NO_HOOKS: true
+      run: |
+        pip install pip-tools
+        pip-sync requirements-ci.txt
+        pip install -e .
+
+    - name: Run checks and tests
+      run: |
+        ./check_versions.sh
+        py.test --cov pyoes --cov-report term-missing
+
+    - name: Upload coverage to Coveralls
+      run: coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
