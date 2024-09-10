@@ -27,13 +27,17 @@ jobs:
       env:
           HATCH_BUILD_NO_HOOKS: true
       run: |
+        python3 -m venv venv
+        source venv/bin/activate
         pip install pip-tools
         pip-sync requirements-ci.txt
         pip install -e .
 
     - name: Run checks and tests
+      working-directory: ./
       run: |
         ./check_versions.sh
+        source venv/bin/activate
         py.test --cov pyoes --cov-report term-missing
 
     - name: Upload coverage to Coveralls

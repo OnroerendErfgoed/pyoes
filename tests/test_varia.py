@@ -4,9 +4,8 @@ from __future__ import unicode_literals
 
 from pyramid import testing
 
-from pyoes import (
-    includeme
-)
+from pyoes import includeme
+
 
 class TestIncludeMe:
 
