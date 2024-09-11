@@ -1,6 +1,6 @@
 #!/bin/bash
 
-release_version=`grep version setup.py | cut -d\' -f2`
+release_version=`grep 'version' pyproject.toml | grep -oE '[0-9]+\.[0-9]+\.[0-9]+'`
 versions=(
 `node -p -e "require('./npm-packages/pyoes/package.json').version"`
 `node -p -e "require('./pyoes/static/package.json').version"`
