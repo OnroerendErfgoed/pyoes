@@ -1,0 +1,17 @@
+[flake8]
+application_import_names = pyoes, tests
+exclude =
+    .venv,
+    venv,
+    __pycache__,
+    npm-packages,
+    node_modules,
+    static,
+    docs,
+    alembic,
+    dist,
+import-order-style = pycharm
+max-line-length = 90
+extend-select = B950
+ignore = W503, E203, E402, E266, E203, E501, E701
+per-file-ignores =

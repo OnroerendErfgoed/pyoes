@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+version = "0.22.0"
+name = "pyoes"
+readme = "README.md"
+authors = [
+    { name = "Flanders Heritage Agency", email = "ict@onroerenderfgoed.be" },
+]
+description = "pyoes"
+requires-python = ">=3.10,<3.12"
+keywords = ["pyramid", "sass", "compass", "style", "css", "jinja2", "templates"]
+classifiers = [
+    "Programming Language :: Python",
+    "Framework :: Pyramid",
+]
+dependencies = [
+    "Jinja2==3.1.4",
+    "MarkupSafe==2.1.3",
+    "python-dateutil==2.8.2",
+    "pyramid==2.0.2",
+    "pyramid-jinja2==2.10"
+]
+
+[project.optional-dependencies]
+
+dev = [
+    "coveralls==3.3.1",
+    "oe-sphinx-theme==0.4.0",
+    "pep8==1.7.1",
+    "pytest==7.4.3",
+    "pytest-cov==4.1.0",
+    "Sphinx==7.1.2",
+    "sphinxcontrib-httpdomain==1.8.1",
+    "sphinx-rtd-theme==2.0.0",
+    "sphinxcontrib-plantuml==0.27",
+    "waitress==2.1.2"
+]
+
+[tool.hatch.build.targets.wheel]
+# In the wheel we want to have toelatingen_archeologie in the root as a python module.
+packages = [
+    "/pyoes",
+]
+
+[project.entry-points."paste.app_factory"]
+main = "pyoes:main"
+
+[project.entry-points."pyramid.scaffold"]
+pyoes = "pyoes.scaffolds:PyoesTemplate"
+pyoesAdmin = "pyoes.scaffolds:PyoesAdminTemplate"
+pyoesProces = "pyoes.scaffolds:PyoesProcesTemplate"
+
+[tool.hatch.metadata]
+# This allows us to use github links as dependencies
+allow-direct-references = true

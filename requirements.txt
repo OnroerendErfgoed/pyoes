@@ -1,7 +1,39 @@
-# pyramid
+hupper==1.12.1
+    # via pyramid
+jinja2==3.1.4
+    # via pyramid-jinja2
+markupsafe==2.1.3
+    # via
+    #   jinja2
+    #   pyramid-jinja2
+pastedeploy==3.1.0
+    # via plaster-pastedeploy
+plaster==1.1.2
+    # via
+    #   plaster-pastedeploy
+    #   pyramid
+plaster-pastedeploy==1.0.1
+    # via pyramid
 pyramid==2.0.2
+    # via pyramid-jinja2
 pyramid-jinja2==2.10
-MarkupSafe==2.1.3
-Jinja2==3.1.4
-
 python-dateutil==2.8.2
+setuptools==74.1.0
+    # via
+    #   pyramid
+    #   zope-deprecation
+    #   zope-interface
+six==1.16.0
+    # via python-dateutil
+translationstring==1.4
+    # via pyramid
+venusian==3.1.0
+    # via pyramid
+webob==1.8.8
+    # via pyramid
+zope-deprecation==5.0
+    # via
+    #   pyramid
+    #   pyramid-jinja2
+zope-interface==7.0.3
+    # via pyramid
