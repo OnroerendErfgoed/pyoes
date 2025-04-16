@@ -17,7 +17,7 @@
 {% set plausible_omgeving = plausible_omgeving|default("dev") -%}
 {% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
 {% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
-{% set datum_copyright = datum_copyright|default('2023') -%}
+{% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = request.route_path('home') -%}
 
 <head>
@@ -26,7 +26,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block html_title %}Onroerend Erfgoed{% endblock %}</title>
-
+    {% if plausible_omgeving in ('dev', 'test') %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
+    
     {% block css scoped -%}
       <!-- css -->
       {% set default_css_files = [
