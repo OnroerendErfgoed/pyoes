@@ -1,3 +1,9 @@
+0.24.0 (22-04-2025)
+===================
+
+- Plausible: vervang script src door https://plausible.io/js/script.js (#315)
+- noindex toevoegen aan header op dev en test (#317)
+
 0.23.0 (11-09-2024)
 ===================
 
