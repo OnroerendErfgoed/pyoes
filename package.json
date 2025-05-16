@@ -1,5 +1,5 @@
 {
-  "version": "0.24.1",
+  "version": "0.24.2",
   "name": "pyoes-npm-packages",
   "workspaces": ["npm-packages/*"],
   "private": true
