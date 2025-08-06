@@ -62,7 +62,7 @@ requests==2.32.3
     # via
     #   coveralls
     #   sphinx
-setuptools==74.1.0
+setuptools==78.1.1
     # via
     #   pyramid
     #   zope-deprecation
