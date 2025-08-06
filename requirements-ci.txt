@@ -99,7 +99,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 translationstring==1.4
     # via pyramid
-urllib3==2.2.2
+urllib3==2.5.0
     # via requests
 venusian==3.1.0
     # via pyramid
