@@ -48,7 +48,7 @@
             }
           });
           const pyoes_banner = JSON.parse('{{ pyoes_banner | tojson }}');
-          if (pyoes_banner.banner) {
+          if (pyoes_banner && pyoes_banner.banner) {
             render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
           }
           });
