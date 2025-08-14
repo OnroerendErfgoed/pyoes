@@ -53,9 +53,17 @@
 <div class="container">
   {% block vlaanderen_header scoped %}
     {% if burgerprofiel_header_id %}
+      {% if request.registry.settings['pyoes.banner'] %}
+        {% from 'macros.jinja2' import render_info_banner %}
+        {{ render_info_banner(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
+      {% endif %}
       <div class="vlaanderen-header-container">
       	{% from 'macros.jinja2' import render_vlaanderen_header %}
-        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, request.authenticated_userid, home_route) }}
+        {% set pyoes_banner = {
+          'banner': request.registry.settings.get('pyoes.banner'),
+          'detail': request.registry.settings.get('pyoes.banner.detail')
+        } %}
+        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, pyoes_banner, request.authenticated_userid, home_route) }}
       </div>
     {% else %}
       <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
@@ -107,11 +115,6 @@
     <script src="{{ js }}"></script>
   {% endfor -%}
 {% endblock -%}
-
-{% if request.registry.settings['pyoes.banner'] %}
-  {% from 'macros.jinja2' import render_info_banner %}
-  {{ render_info_banner(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
-{% endif %}
 
 </body>
 </html>
