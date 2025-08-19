@@ -18,7 +18,7 @@
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
 
-{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, authenticated_userid, baseUrl) %}
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) %}
   {% if omgeving in ('local', 'dev', 'test') %}
     {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
   {% else %}
@@ -47,7 +47,11 @@
               logoutUrl: '{{ baseUrl }}afmelden'
             }
           });
-        });
+          const pyoes_banner = JSON.parse('{{ pyoes_banner | tojson }}');
+          if (pyoes_banner && pyoes_banner.banner) {
+            render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
+          }
+          });
       }
     });
   </script>
@@ -81,41 +85,28 @@
 
 {% macro render_info_banner(banner, detail)  %}
   <script type="text/javascript">
-    function handleHeader() {
-      const headerdiv = document.getElementsByClassName('iwgh2-navigation');
-      var el = document.createElement('div');
-      el.className = 'message-banner';
-      var content = '<span>{{ banner }}</span>';
-      {% if detail %}
-        content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
-      {% endif %}
-      el.innerHTML = content;
-      headerdiv[0].parentNode.insertBefore(el, headerdiv.nextSibling);
+   function render_info_banner() {
+    const headerdiv = document.getElementsByClassName('vlw__primary-bar__plugins');
+    var el = document.createElement('div');
+    el.className = 'message-banner';
+    var content = '<span>{{ banner }}</span>';
+    {% if detail %}
+      content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
+    {% endif %}
+    el.innerHTML = content;
+
+    if (headerdiv.length > 0 && headerdiv[0].parentNode) {
+      headerdiv[0].parentNode.insertBefore(el, headerdiv[0]);
     }
+   }
 
-    function showPopup() {
-      document.getElementById('onderhoud-popup').style.display = 'flex';
-    }
+   function showPopup() {
+     document.getElementById('onderhoud-popup').style.display = 'flex';
+   }
 
-    function hidePopup() {
-      document.getElementById('onderhoud-popup').style.display = 'none';
-    }
-
-    // set up the mutation observer
-    var observer = new MutationObserver(function (mutations, me) {
-      var header = document.getElementsByClassName('iwgh2-navigation');
-      if (header[0]) {
-        handleHeader();
-        me.disconnect(); // stop observing
-        return;
-      }
-    });
-
-    // start observing
-    observer.observe(document, {
-      childList: true,
-      subtree: true
-    });
+   function hidePopup() {
+     document.getElementById('onderhoud-popup').style.display = 'none';
+   }
   </script>
   <div id="onderhoud-popup">
     <div class="row onderhoud-banner-header">
