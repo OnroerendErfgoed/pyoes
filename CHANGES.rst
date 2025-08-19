@@ -1,7 +1,7 @@
 0.25.0 (19-08-2025)
 ===================
 
-- update placeholder css (#337)
+- placeholder kleur vast leggen voor alle UI's (#336)
 
 0.24.3 (06-08-2025)
 ===================
