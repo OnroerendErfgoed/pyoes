@@ -1,0 +1,49 @@
+name: Manual Pre-Release Package Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Alpha version to set in package.json'
+        required: true
+        default: 'x.x.x-alpha.x'
+
+jobs:
+  publish-gpr:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: develop # Always checkout the develop branch
+      - uses: actions/setup-node@v4
+        with:
+          always-auth: true
+          node-version: 22
+          registry-url: https://npm.pkg.github.com/
+      - name: Update version in package.json
+        working-directory: npm-packages/pyoes
+        run: |
+          jq ".version = \"${{ inputs.version }}\"" package.json > package.json.tmp && mv package.json.tmp package.json
+      - name: Commit updated package.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add npm-packages/pyoes/package.json
+          git commit -m "Update version to ${{ inputs.version }}"
+          git push origin develop # Always push to the develop branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Display folder structure
+        working-directory: npm-packages/pyoes
+        run: ls -R
+      - name: Publish package
+        working-directory: npm-packages/pyoes
+        run: |
+          echo @OnroerendErfgoed:registry=https://npm.pkg.github.com/ > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          npm publish --tag alpha
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
