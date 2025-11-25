@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-version = "0.25.0"
+version = "0.25.1"
 name = "pyoes"
 readme = "README.md"
 authors = [
@@ -17,11 +17,11 @@ classifiers = [
     "Framework :: Pyramid",
 ]
 dependencies = [
-    "Jinja2==3.1.4",
-    "MarkupSafe==2.1.3",
-    "python-dateutil==2.8.2",
-    "pyramid==2.0.2",
-    "pyramid-jinja2==2.10"
+    "Jinja2>=3.1.4",
+    "MarkupSafe>=2.1.3",
+    "python-dateutil>=2.8.2",
+    "pyramid>=2.0.2",
+    "pyramid-jinja2>=2.10"
 ]
 
 [project.optional-dependencies]

@@ -1,8 +1,11 @@
 {
-  "name": "pyoes",
-  "version": "0.25.0",
+  "name": "@OnroerendErfgoed/pyoes",
+  "version": "0.25.1",
   "description": "Pyoes styles package",
-  "repository": "git+https://github.com/OnroerendErfgoed/pyoes.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OnroerendErfgoed/pyoes.git"
+  },
   "keywords": [
     "oe",
     "onroerend",
@@ -11,6 +14,9 @@
     "style",
     "css"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Flanders Heritage Agency <ict@onroerenderfgoed.be>",
   "license": "MIT",
   "bugs": {

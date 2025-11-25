@@ -1,3 +1,9 @@
+0.25.1 (25-11-2025)
+===================
+
+- Requirements nakijken en versies niet zo strict vastpinnen (#325)
+- Nieuwe flow voor npm package (#345)
+
 0.25.0 (19-08-2025)
 ===================
 
