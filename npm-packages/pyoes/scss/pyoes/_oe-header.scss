@@ -1,5 +1,5 @@
 @charset "UTF-8";
-$large-width: 1142px;
+$large-width: 73.25em;
 
 .wrapper { background-color: $white }
 .wrapper-short {background:$mid-purple}
@@ -112,7 +112,7 @@ nav#main-navigation .main-navigation-inner {padding:0;position:relative;}
   overflow: hidden;
 }
 
-.inner-nav{ margin: 0 auto; max-width: $large-width}
+.inner-nav{ margin: 0 auto; max-width: $large-width }
 
 .iw2-wrapper.iw2-custom-margin { padding:0 21px !important; }
 .iw2-layout.iw2-custom-breakpoint { min-width: 73.25rem !important; }
