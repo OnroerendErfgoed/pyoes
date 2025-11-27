@@ -1,4 +1,4 @@
-{% macro plausible_tracker(plausible_domain_hash, plausible_omgeving) %}
+{% macro plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init=None) %}
   {% if plausible_omgeving in ('dev', 'test') %}
     {% set omgeving = plausible_omgeving + '-' %}
     {% set src = "https://" ~ omgeving ~ "webstats.onroerenderfgoed.be/js/" %}
@@ -9,7 +9,7 @@
   <script async src="{{ src }}{{ plausible_domain_hash }}.js"></script>
   <script>
     window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
+    plausible.init(plausible_custom_init)
   </script>
 {% endmacro %}
 
