@@ -1,7 +1,6 @@
 {% macro plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init=None) %}
   {% if plausible_omgeving in ('dev', 'test') %}
-    {% set omgeving = plausible_omgeving + '-' %}
-    {% set src = "https://" ~ omgeving ~ "webstats.onroerenderfgoed.be/js/" %}
+    {% set src = "https://" ~ plausible_omgeving ~ "-webstats.onroerenderfgoed.be/js/" %}
   {% else %}
     {% set src = "https://plausible.io/js/" %}
   {% endif %}
