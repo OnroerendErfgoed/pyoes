@@ -45,7 +45,7 @@
   {% block plausible -%}
     {% if plausible_data_domain %}
       {% from 'macros.jinja2' import plausible_tracker %}
-      {{ plausible_tracker(plausible_data_domain, plausible_omgeving) }}
+      {{ plausible_tracker(plausible_domain_hash, plausible_omgeving) }}
     {% endif %}
   {% endblock %}
 </head>
