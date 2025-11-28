@@ -1,17 +1,15 @@
-{% macro plausible_tracker(plausible_data_domain, plausible_omgeving, extended=False) %}
+{% macro plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init=None) %}
   {% if plausible_omgeving in ('dev', 'test') %}
-    {% set omgeving = plausible_omgeving + '-' %}
-    {% set src = "https://" ~ omgeving ~ "webstats.onroerenderfgoed.be/js/" %}
+    {% set src = "https://" ~ plausible_omgeving ~ "-webstats.onroerenderfgoed.be/js/" %}
   {% else %}
     {% set src = "https://plausible.io/js/" %}
   {% endif %}
-  <!-- Plausible Analytics -->
-  {% if not extended %}
-  <script async defer data-domain="{{ plausible_data_domain }}" src="{{ src }}script.js"></script>
-  {% else %}
-  <script async defer data-domain="{{ plausible_data_domain }}" src="{{ src }}script.file-downloads.js"></script>
-  {% endif %}
-  <!-- End Plausible Analytics -->
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="{{ src }}{{ plausible_domain_hash }}.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init(plausible_custom_init)
+  </script>
 {% endmacro %}
 
 {% macro generate_uri(request, settingsURI, id) %}

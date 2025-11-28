@@ -13,8 +13,9 @@
 {% set home_link = home_link -%}
 {% set header_links = header_links -%}
 {% set mailto_error = mailto_error -%}
-{% set plausible_data_domain = plausible_data_domain|default(request.registry.settings["plausible.data_domain"]) -%}
+{% set plausible_domain_hash = plausible_domain_hash|default(request.registry.settings["plausible.domain_hash"]) -%}
 {% set plausible_omgeving = plausible_omgeving|default("dev") -%}
+{% set plausible_custom_init = plausible_custom_init|default(None) -%}
 {% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
 {% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
 {% set datum_copyright = datum_copyright|default('2025') -%}
@@ -43,9 +44,9 @@
   {% endblock %}
 
   {% block plausible -%}
-    {% if plausible_data_domain %}
+    {% if plausible_domain_hash %}
       {% from 'macros.jinja2' import plausible_tracker %}
-      {{ plausible_tracker(plausible_data_domain, plausible_omgeving) }}
+      {{ plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init) }}
     {% endif %}
   {% endblock %}
 </head>
