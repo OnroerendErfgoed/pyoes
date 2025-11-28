@@ -52,7 +52,19 @@
           if (pyoes_banner && pyoes_banner.banner) {
             render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
           }
+        });
+        {% if authenticated_userid  %}
+        widget.getExtension('citizen_profile')
+        .then((extension) => {
+          extension.getMenu().getGroup('application').add({
+            type: 'link',
+            label: 'Bekijk jouw profiel',
+            href: '{{ baseUrl }}user',
+            icon: 'e-desk-lock',
+            target: '_self'
           });
+        });
+        {% endif %}
       }
     });
   </script>
