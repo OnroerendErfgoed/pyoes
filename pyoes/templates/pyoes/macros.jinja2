@@ -44,7 +44,8 @@
             endpoints: {
               loginUrl: '{{ baseUrl }}aanmelden',
               loginRedirectUrl: '{{ baseUrl }}',
-              logoutUrl: '{{ baseUrl }}afmelden'
+              logoutUrl: '{{ baseUrl }}afmelden',
+              switchCapacityUrl: '{{ baseUrl }}wisselen?goto={{ baseUrl }}aanmelden'
             }
           });
           const pyoes_banner = JSON.parse('{{ pyoes_banner | tojson }}');
