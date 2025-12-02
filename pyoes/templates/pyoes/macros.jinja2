@@ -51,9 +51,9 @@
             render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
           }
         });
+        // Add custom profile button
         {% if authenticated_userid %}
-        widget.getExtension('citizen_profile')
-        .then((extension) => {
+        widget.getExtension('citizen_profile').then((extension) => {
           extension.getMenu().getGroup('application').add({
             type: 'link',
             label: 'Bekijk jouw profiel',
@@ -63,6 +63,11 @@
           });
         });
         {% endif %}
+        // Register for session extend event.
+        widget.on('citizen_profile.session.extend', function (event) {
+          // Perform custom website specific session extend logic.
+          console.debug('Received session extend request', event);
+        });
       }
     });
   </script>
