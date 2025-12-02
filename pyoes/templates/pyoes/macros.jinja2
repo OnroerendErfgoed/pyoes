@@ -33,7 +33,7 @@
         // Get the Citizen Profile Session extension from the global header widget.
         widget.getExtension('citizen_profile.session').then(function (session) {
           var websiteHasAuthenticatedSession = false;
-          {% if authenticated_userid  %}
+          {% if authenticated_userid %}
             websiteHasAuthenticatedSession = true;
           {% endif %}
           // Inform the session extension about the current session state of the website.
@@ -50,7 +50,19 @@
           if (pyoes_banner && pyoes_banner.banner) {
             render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
           }
+        });
+        {% if authenticated_userid %}
+        widget.getExtension('citizen_profile')
+        .then((extension) => {
+          extension.getMenu().getGroup('application').add({
+            type: 'link',
+            label: 'Bekijk jouw profiel',
+            href: '{{ baseUrl }}user',
+            icon: 'e-desk-lock',
+            target: '_self'
           });
+        });
+        {% endif %}
       }
     });
   </script>
