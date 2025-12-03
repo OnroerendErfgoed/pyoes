@@ -68,6 +68,25 @@
           // Perform custom website specific session extend logic.
           console.debug('Received session extend request', event);
         });
+        // Get the Citizen Profile Session extension from the global header widget.
+        widget.on('citizen_profile.session.logout.request', function (logoutRequest) {
+          // Acknowledge the logout request to prevent the session extension from performing default
+          // action due to response timeout (5 seconds).
+          logoutRequest.acknowledge();
+          // Evaluate the type of logout request.
+          switch (logoutRequest.getRequest().getReason()) {
+            case 'inactivity':
+              // Reject the request for website logout.
+              console.debug('Rejecting logout request due to inactivity');
+              logoutRequest.reject();
+              break;
+            default:
+              // Accept the request for website logout.
+              console.debug('Accept logout request for ', logoutRequest.getRequest().getReason());
+              logoutRequest.accept();
+              break;
+          }
+        })
       }
     });
   </script>
