@@ -1,3 +1,14 @@
+0.26.0 (03-12-2025)
+===================
+
+- Burgerprofiel updates:
+  - 'profiel' knop toevoegen (#355)
+  - 'wisselen' knop toevoegen (#344)
+  - gebruik loket id's voor test pagina's pyoes (4e493d5bb90eea8982f2ba606ca4d3b002cc8b0d)
+ - Maak navbar iets breder om de knoppen te alignen (#343)
+ - Plausible snippet updaten (#348)
+
+
 0.25.1 (25-11-2025)
 ===================
 
