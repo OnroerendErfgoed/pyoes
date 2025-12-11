@@ -130,7 +130,7 @@
               <ul class="dropdown">
             {% endif %}
             {% for caption, href in login_nav %}
-              <li><a href="{{ href }}">{{ caption }}</a></li>
+              <li><a href="{{ href }}" rel="nofollow">{{ caption }}</a></li>
             {% endfor %}
             {% if request.authenticated_userid != None %}
               </ul></li>
