@@ -1,3 +1,8 @@
+0.26.1 (11-12-2025)
+===================
+
+- Toevoegen nofollow attribuut bij de aanmelden knop (#359)
+
 0.26.0 (03-12-2025)
 ===================
 
