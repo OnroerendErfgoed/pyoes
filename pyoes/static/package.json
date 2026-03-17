@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "pyoes": "file:../../npm-packages/pyoes"
+    "@OnroerendErfgoed/pyoes": "file:../../npm-packages/pyoes"
   },
   "devDependencies": {
     "sass": "^1.49.9"
