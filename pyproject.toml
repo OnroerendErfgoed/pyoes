@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-version = "0.26.1"
+version = "0.26.2"
 name = "pyoes"
 readme = "README.md"
 authors = [
