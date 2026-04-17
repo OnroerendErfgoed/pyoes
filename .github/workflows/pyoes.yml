@@ -38,7 +38,16 @@ jobs:
       run: |
         ./check_versions.sh
         source venv/bin/activate
-        py.test --cov pyoes --cov-report term-missing
+        py.test --cov pyoes --cov-report term-missing --cov-report xml
+
+    - name: Code Coverage Report
+      uses: orgoro/coverage@v3.2
+      with:
+        coverageFile: coverage.xml
+        token: ${{ secrets.GITHUB_TOKEN }}
+        thresholdAll: 0.9
+        thresholdNew: 0.9
+        thresholdModified: 0.9
 
     - name: Upload coverage to Coveralls
       working-directory: ./
