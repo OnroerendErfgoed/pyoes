@@ -1,0 +1,145 @@
+# mise configuration for pyoes
+# https://mise.jdx.dev/
+#
+# pyoes is a style/template library that also ships a small runnable demo app,
+# so the local setup needs no service containers (no database, elasticsearch,
+# redis or minio) and no secrets (development.ini is committed).
+#
+# Quick start (after cloning):
+#   mise trust       # trust this config (depends on your mise settings)
+#   mise install     # install all tools below (python, uv, node, yarn, ...)
+#   mise run setup   # set up backend + frontend for local development
+#   mise run test    # run the backend test suite
+#   mise run server  # start the demo server on http://local.onroerenderfgoed.be:6543
+
+[tools]
+python = "3.11"
+uv = "latest"
+node = "22"
+yarn = "1.22.22"
+pre-commit = "latest"
+
+[env]
+# Auto-create and activate the project virtualenv (.venv) whenever you are in
+# this directory. With mise activated in your shell (see README) this means the
+# venv is active automatically - no `source .venv/bin/activate` needed - and it
+# is also active inside `mise run` / `mise exec`.
+_.python.venv = { path = ".venv", create = true }
+
+# ===========================================================================
+#  Elementary tasks
+# ===========================================================================
+[tasks.setup]
+description = "Set up the complete local development environment"
+depends = ["setup:backend", "setup:frontend"]
+
+[tasks.test]
+description = "Run the backend test suite"
+run = [
+    # first-run guard: on a fresh clone .venv/bin/pytest does not exist yet
+    "test -x .venv/bin/pytest || mise run setup",
+    ".venv/bin/pytest",
+]
+
+[tasks.server]
+description = "Run the pyoes demo server on http://local.onroerenderfgoed.be:6543"
+run = [
+    # Run setup first if it hasn't been done yet (no venv, or no compiled css).
+    # development.ini is committed, so it is not part of this guard - a
+    # hand-edited development.ini is never overwritten.
+    "test -x .venv/bin/pserve && test -f pyoes/static/css/app.css || mise run setup",
+    "echo '➜ pyoes demo server: http://local.onroerenderfgoed.be:6543  (Ctrl-C to stop)'",
+    ".venv/bin/pserve development.ini --reload",
+]
+
+[tasks."check-versions"]
+description = "Check that the pyproject and both package.json versions match (same check as CI)"
+run = "bash check_versions.sh"
+
+[tasks."pip-compile"]
+description = "Recompile the requirements*.txt files from pyproject.toml"
+run = "bash scripts/pip_compile.sh"
+
+# ===========================================================================
+#  Build (wheel / sdist)
+# ===========================================================================
+# uv build resolves the build backend (hatchling) itself, so no build tooling
+# has to be installed in the virtualenv.
+[tasks.build]
+description = "Build both the wheel and the sdist (into dist/)"
+run = "uv build"
+
+[tasks."build:wheel"]
+description = "Build the wheel (into dist/)"
+run = "uv build --wheel"
+
+[tasks."build:sdist"]
+description = "Build the source distribution (into dist/)"
+run = "uv build --sdist"
+
+# ===========================================================================
+#  Backend setup (#370)
+# ===========================================================================
+[tasks."setup:backend"]
+description = "Set up the backend (Python) development environment"
+depends = [
+    "setup:backend:dependencies",
+    "setup:backend:package",
+    "setup:backend:pre-commit",
+]
+alias = "sb"
+
+[tasks."setup:backend:dependencies"]
+# mise auto-creates and activates .venv (see the [env] block above), so uv
+# installs straight into it. `uv pip sync` prunes everything not in the file
+# (including pip itself), so we re-add pip/setuptools afterwards - that way a
+# plain `pip list` / `pip install` in the activated venv works as expected.
+description = "Install the python dependencies into the virtualenv"
+run = [
+    "uv pip sync requirements-dev.txt",
+    "uv pip install pip setuptools",
+]
+hide = true
+
+[tasks."setup:backend:package"]
+# Installs pyoes editable, plus any core dependencies that are not pinned in
+# requirements-dev.txt - same as CI's `pip install -e .` step.
+# HATCH_BUILD_NO_HOOKS matches CI (pyoes has no build hooks today, but the flag
+# keeps the editable install independent of any hook added later).
+description = "Install the pyoes package itself (editable)"
+env = { HATCH_BUILD_NO_HOOKS = "true" }
+run = "uv pip install -e ."
+depends = ["setup:backend:dependencies"]
+hide = true
+
+[tasks."setup:backend:pre-commit"]
+description = "Install the pre-commit git hooks"
+run = "pre-commit install"
+hide = true
+
+# ===========================================================================
+#  Frontend setup (#371)
+# ===========================================================================
+# npm-packages/pyoes (the published sass package) is pulled in as a `file:`
+# dependency; yarn 1 copies it into pyoes/static/node_modules and hoists its own
+# dependencies (font-awesome, foundation-sites) there too, so a single
+# `yarn install` in pyoes/static is enough. `yarn compile-css` then builds
+# pyoes/static/css/app.css (git-ignored) with sass.
+[tasks."setup:frontend"]
+description = "Install frontend dependencies and compile the static assets"
+dir = "pyoes/static"
+run = ["yarn install", "yarn compile-css"]
+alias = "sf"
+
+# ===========================================================================
+#  Cleanup
+# ===========================================================================
+[tasks.cleanup]
+description = "Remove everything created by the setup task"
+run = """
+rm -rf .venv
+rm -rf pyoes/static/node_modules
+rm -rf pyoes/static/css
+rm -rf npm-packages/pyoes/node_modules
+rm -rf dist
+"""
