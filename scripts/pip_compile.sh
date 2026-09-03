@@ -31,10 +31,13 @@ COMMON=(--no-header --quiet)
 compile() {
     local out="$1"; shift
     "${UV[@]}" pip compile "${COMMON[@]}" "$@" -o "${out}" pyproject.toml
-    # Strip the "# The following packages are considered to be unsafe ..." footer.
-    sed -i '/^# The following packages are considered to be unsafe/,$d' "${out}"
-    # Drop a possible trailing blank line left behind.
-    sed -i -e :a -e '/^\n*$/{$d;N;ba}' "${out}"
+    # Strip the "# The following packages are considered to be unsafe ..." footer
+    # and any trailing blank lines.
+    # (piped through a temp file rather than `sed -i`, since BSD sed on macOS
+    # requires an explicit backup-extension argument)
+    sed '/^# The following packages are considered to be unsafe/,$d' "${out}" \
+        | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}' > "${out}.tmp"
+    mv "${out}.tmp" "${out}"
     echo "  -> ${out}"
 }
 
