@@ -25,6 +25,7 @@
   "homepage": "https://github.com/OnroerendErfgoed/pyoes#readme",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "foundation-sites": "^5.5.3"
+    "foundation-sites": "^5.5.3",
+    "@govflanders/vl-ui-design-system-vue3": "^8.2.1"
   }
 }

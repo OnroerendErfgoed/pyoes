@@ -12,7 +12,7 @@
     "@OnroerendErfgoed/pyoes": "file:../../npm-packages/pyoes"
   },
   "devDependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.79.0"
   },
   "scripts": {
     "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps"
