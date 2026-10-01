@@ -8,8 +8,10 @@
     {% set home_link = home_link|default('/') -%}
 
     <div class="vl-application-header__content">
-          {% set active_title= active_title|default('Erfgoedstijl') -%}
-          <h1 class="vl-title vl-title--h1 vl-title--no-space-bottom vl-application-header__title"><a class="vl-link" href="{{ home_link }}"><span>{{active_title}}</span></a></h1>
+      {% set active_title= active_title|default('Erfgoedstijl') -%}
+      <h1 class="vl-title vl-title--h2 vl-application-header__title">
+        <a class="vl-link" href="{{ home_link }}">{{active_title}}</a>
+      </h1>
     </div>
     {% block header_links scoped %}
       <!-- Links in header -->
@@ -40,9 +42,6 @@
         ]
         -%}
       {% set default_dropdown_main_nav = [] %}
-
-      {% set default_login_nav = [('Aanmelden', '/')] %}
-      {% set default_login_sub_nav = [('Profiel', '/'), ('Afmelden', '/')] %}
 
       {% set main_nav = main_nav|default(default_main_nav) -%}
 
@@ -88,45 +87,18 @@
       </ul>
       </div>
 
-      {% set login_nav = login_nav|default(default_login_nav) -%}
-      {% set login_sub_nav = login_sub_nav|default(default_login_sub_nav) -%}
-
-      {# USER MENU #}
-      {% if login_nav|length > 0 %}
-        <div class="vl-application-header__sub-row oe-navigation__account">
-        {% if not request.user %}
-            {% if request.authenticated_userid != None %}
-              <details>
-              <summary><span class="vl-link">{{ request.authenticated_userid }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
-            {% endif %}
-            <ul class="vl-link-list{{ ' vl-link-list--small' if request.authenticated_userid != None else ' vl-application-header__sub__actions' }}">
-            {% for caption, href in login_nav %}
-              <li class="{{ 'vl-link-list__item' if request.authenticated_userid != None else 'vl-application-header__sub__action' }}"><a class="vl-link" href="{{ href }}" rel="nofollow">{{ caption }}</a></li>
-            {% endfor %}
+      {% block nav_actions scoped %}
+        {% set nav_actions = nav_actions|default([]) -%}
+        {% if nav_actions|length > 0 %}
+          <div class="vl-application-header__sub-row oe-navigation__actions">
+            <ul class="vl-application-header__sub__actions">
+              {% for caption, href in nav_actions %}
+                <li class="vl-application-header__sub__action"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
+              {% endfor %}
             </ul>
-            {% if request.authenticated_userid != None %}
-              </details>
-            {% endif %}
-        {% else %}
-              <details>
-              <summary><span class="vl-link">
-                {% if request.user.actor and request.user.actor.omschrijving %}
-                  {{ request.user.actor.omschrijving }}
-                {% elif request.user.persoonsgegevens and request.user.persoonsgegevens.omschrijving %}
-                  {{ request.user.persoonsgegevens.omschrijving }}
-                {% else %}
-                  {{ request.authenticated_userid or 'Profiel' }}
-                {% endif %}
-              </span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
-              <ul class="vl-link-list vl-link-list--small">
-                {% for caption, href in login_sub_nav %}
-                  <li class="vl-link-list__item"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
-                {% endfor %}
-              </ul>
-              </details>
+          </div>
         {% endif %}
-        </div>
-      {% endif %}
+      {% endblock %}
 
     </div>
     </div>

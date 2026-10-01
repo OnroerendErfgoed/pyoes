@@ -1,20 +1,26 @@
 .vl-application-header__row {
   margin-bottom: 0;
 }
+.vl-application-header .vl-title {
+  @extend .vl-title--h2;
+  @extend .vl-u-spacer-bottom--xxsmall;
 
-.oe-navigation {
-  --oe-header-purple: #{$topbar-bg-color};
-  --oe-header-active: #{$topbar-link-bg-active};
-
-  > .vl-layout {
-    min-width: 0;
+  a {
+    color: inherit;
   }
 }
 
 .oe-navigation {
+  --oe-header-purple: #{$mid-purple};
+  --oe-header-active: #{$very-dark-purple};
+
   position: relative;
   z-index: 40;
   background: var(--oe-header-purple);
+
+  > .vl-layout {
+    min-width: 0;
+  }
 
   .vl-application-header__sub::before,
   .vl-application-header__sub-row::before,
@@ -38,7 +44,7 @@
   .vl-link,
   summary {
     display: block;
-    padding: rem-calc(12) $vl-spacing-small;
+    padding: 1.2rem $vl-spacing-small;
     color: $white;
     line-height: 1.5;
     text-decoration: none;
@@ -95,12 +101,8 @@
     }
   }
 
-  &__account {
+  &__actions {
     margin-left: auto;
-
-    details > .vl-link-list {
-      right: 0;
-    }
   }
 }
 
@@ -111,7 +113,7 @@
       width: auto;
     }
 
-    &__account {
+    &__actions {
       margin-left: 0;
     }
   }
