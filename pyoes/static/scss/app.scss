@@ -1,4 +1,10 @@
 /*@import "@OnroerendErfgoed/pyoes/scss/pyoes-settings";
 @import "@OnroerendErfgoed/pyoes/scss/pyoes-jinja";*/
 
+$vl-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/flanders/";
+$vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/iconfont/";
+
+$rem-base: 10px;
+
+@import "@OnroerendErfgoed/pyoes/scss/pyoes-settings";
 @import "../../../npm-packages/pyoes/scss/pyoes-wu";

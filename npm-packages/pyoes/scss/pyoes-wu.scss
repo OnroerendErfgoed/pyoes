@@ -1,4 +1,5 @@
-$vl-font-location: "../fonts/flanders/";
-$vl-icon-font-location: "../fonts/iconfont/";
+$vl-font-location: "../fonts/flanders/" !default;
+$vl-icon-font-location: "../fonts/iconfont/" !default;
 
 @import "@govflanders/vl-ui-design-system-style/build/scss/index";
+@import "pyoes/oe-wu-header";

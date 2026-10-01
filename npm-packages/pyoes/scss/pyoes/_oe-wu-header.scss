@@ -1,0 +1,118 @@
+.vl-application-header__row {
+  margin-bottom: 0;
+}
+
+.oe-navigation {
+  --oe-header-purple: #{$topbar-bg-color};
+  --oe-header-active: #{$topbar-link-bg-active};
+
+  > .vl-layout {
+    min-width: 0;
+  }
+}
+
+.oe-navigation {
+  position: relative;
+  z-index: 40;
+  background: var(--oe-header-purple);
+
+  .vl-application-header__sub::before,
+  .vl-application-header__sub-row::before,
+  .vl-application-header__sub__action::before {
+    display: none;
+  }
+
+  .vl-application-header__sub-row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .vl-application-header__sub__actions {
+    flex-wrap: wrap;
+  }
+
+  .vl-link-list {
+    margin: 0;
+  }
+
+  .vl-link,
+  summary {
+    display: block;
+    padding: rem-calc(12) $vl-spacing-small;
+    color: $white;
+    line-height: 1.5;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+  }
+
+  .vl-link:hover,
+  .vl-link:focus-visible,
+  .vl-link[aria-current="page"],
+  summary:hover,
+  summary:focus-visible,
+  details[open] > summary {
+    background: var(--oe-header-active);
+    color: $white;
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: $vl-spacing-xsmall;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    > .vl-vi {
+      font-size: 0.8em;
+      opacity: 0.6;
+    }
+
+    .vl-link {
+      display: inline;
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  details {
+    position: relative;
+
+    &[open] > summary > .vl-vi {
+      transform: rotate(180deg);
+    }
+
+    > .vl-link-list {
+      position: absolute;
+      z-index: 1;
+      min-width: 100%;
+      width: max-content;
+      max-width: min(32rem, calc(100vw - #{2 * $vl-spacing-small}));
+      background: var(--oe-header-purple);
+    }
+  }
+
+  &__account {
+    margin-left: auto;
+
+    details > .vl-link-list {
+      right: 0;
+    }
+  }
+}
+
+@include respond-to(small) {
+  .oe-navigation {
+    details > .vl-link-list {
+      position: static;
+      width: auto;
+    }
+
+    &__account {
+      margin-left: 0;
+    }
+  }
+}
