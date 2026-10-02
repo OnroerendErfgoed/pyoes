@@ -3,9 +3,22 @@
 @import "base-variables";
 
 /**
-  This file is used to override @govflanders/vl-ui-design-system-style (Webuniversum styling)
-  Make sure to define the variables you want to overwrite BEFORE importing the scss files
-  Make sure to define the specific styles you want to overwrite AFTER importing the scss files
+  This file loads @govflanders/vl-ui-design-system-style (Webuniversum styling)
+  with the Onroerend Erfgoed theme on top. It is the base of pyoes-wu.scss and
+  deliberately mirrors vue_component_library/src/scss/_override-variables.scss,
+  so a Vue bundle that ships its own copy of Webuniversum renders identically.
+
+  Make sure to define the variables you want to overwrite BEFORE importing this
+  file (all variables below use !default where that makes sense), and the
+  specific styles you want to overwrite AFTER importing it.
+
+  Fonts: Webuniversum declares "Flanders Art Sans" (300/400/500/700 + italic)
+  and the "vlaanderen-icon" icon font itself. The default locations below are
+  relative to the compiled css (static/css/app.css) and assume node_modules is
+  served next to it (static/node_modules), as in every OE pyramid app. Do NOT
+  add extra @font-face declarations for "Flanders Art Sans" in your app: a
+  later declaration replaces an earlier one and a broken url leaves you with
+  the fallback font.
 **/
 
 /**

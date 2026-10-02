@@ -1,34 +1,32 @@
 {% extends "layout.jinja2" %}
 {% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Profiel | {{app_package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}Profiel | {{ app_package }} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="large-12 columns">
-        <div class="panel">
-            <h3>Uw profiel</h3>
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Uw profiel</h1>
 
-            {% if not request.user and not request.user.userid %}
-              <div class="alert">
-              U bent niet aangemeld.
-              </div>
-            {% else %}
-              {% if request.user.actor %}
-                <p>U bent aangemeld als <strong>{{ request.user.actor.omschrijving }}</strong>.</p>
-              {% else %}
-                <p>U bent aangemeld als <strong>{{ request.user.userid }}</strong>.</p>
-              {% endif %}
-              <p>U beschikt over volgende rollen:</p>
-              <ul>
-              {% if request.user.groups %}
-                {% for rol in request.user.groups %}
-                    <li><em>{{ rol }}</em></li>
-                {% endfor %}
-              {% endif %}
-              </ul>
-            {% endif %}
-        </div>
+  {% if not request.user and not request.user.userid %}
+    <div class="vl-alert vl-alert--warning" role="alert">
+      <div class="vl-alert__content">
+        <div class="vl-alert__message"><p>U bent niet aangemeld.</p></div>
+      </div>
     </div>
+  {% else %}
+    {% if request.user.actor %}
+      <p>U bent aangemeld als <strong>{{ request.user.actor.omschrijving }}</strong>.</p>
+    {% else %}
+      <p>U bent aangemeld als <strong>{{ request.user.userid }}</strong>.</p>
+    {% endif %}
+    <p>U beschikt over volgende rollen:</p>
+    <ul>
+    {% if request.user.groups %}
+      {% for rol in request.user.groups %}
+        <li><em>{{ rol }}</em></li>
+      {% endfor %}
+    {% endif %}
+    </ul>
+  {% endif %}
 </div>
 {% endblock %}

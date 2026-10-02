@@ -1,96 +1,61 @@
 {% extends "layout.jinja2" %}
 
+{% set active_main_nav = 'home' %}
+
 {% block content %}
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Erfgoedstijl op basis van Webuniversum</h1>
+  <p class="vl-introduction">
+    pyoes levert de gedeelde shell (header, navigatie, burgerprofiel en footer)
+    en het Onroerend Erfgoed-thema bovenop het
+    <a class="vl-link" href="https://overheid.vlaanderen.be/webuniversum" target="_blank" rel="noopener">Webuniversum</a>.
+    Alle componenten van Webuniversum zijn beschikbaar in jinja2-pagina's én in
+    Vue-onderdelen, zonder conflicten met Foundation.
+  </p>
 
-<br>
+  <h2 class="vl-title vl-title--h2">Demopagina's</h2>
+  <ul class="vl-link-list">
+    <li class="vl-link-list__item"><a class="vl-link" href="burgerprofiel">Burgerprofiel header en footer</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="burgerprofiel2">Burgerprofiel met aangepaste contactinfo</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="headerlinks">Extra links in de header</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="navigation">Navigatie configureren</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="401">Foutpagina 401</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="403">Foutpagina 403</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="404">Foutpagina 404</a></li>
+    <li class="vl-link-list__item"><a class="vl-link" href="500">Foutpagina 500</a></li>
+  </ul>
 
+  <h2 class="vl-title vl-title--h2">Gebruik in je toepassing</h2>
+  <p>Laad de stijlen in je <code>app.scss</code>:</p>
+  <pre><code>@import "@OnroerendErfgoed/pyoes/scss/pyoes-wu";
+@import "mijn_toepassing";</code></pre>
+  <p>En erf in je eigen <code>layout.jinja2</code> van de pyoes-layout:</p>
+  <pre><code>{{ '{% extends "pyoes/layout.jinja2" %}' }}
+{{ '{% set app_package = "mijn_toepassing" %}' }}
+{{ '{% set active_title = "Mijn toepassing" %}' }}
+{{ '{% set main_nav = [("home", "Home", "/"), ("zoeken", "Zoeken", "/zoeken")] %}' }}</code></pre>
 
-    <div class="vl-grid">
-
-      <div class="vl-col--1-1">
-
-
-   <div class="panel">
-
-    <ul>
-      <li><a class="vl-link" href="grids">Grids</a></li>
-      <li><a class="vl-link" href="blokken">Blokken</a></li>
-      <li><a class="vl-link" href="typo">Typo / Headings / Iconlist</a></li>
-      <li><a class="vl-link" href="navigation">Navigatie types</a></li>
-      <li><a class="vl-link" href="colors">Colors</a></li>
-      <li><a class="vl-link" href="elements">Elementen</a></li>
-      <li><a class="vl-link" href="images">Images</a></li>
-      <li>Media</li>
-    </ul>
-
-    <hr>
-
-      <ul>
-      <li><a class="vl-link" href="article">Basic article page 8/4</a></li>
-      <li><a class="vl-link" href="article9-3">Basic article page 9/3</a></li>
-      </ul>
-
-    <hr>
-
-    <ul>
-      <li><a class="vl-link" href="beeldbank">Theme Beeldbank</a></li>
-      <li><a class="vl-link" href="beeldbank-zoeken">Theme Beeldbank uitgebreid zoeken</a></li>
-      <li><a class="vl-link" href="beeldbank-detail">Theme Beeldbank detail</a></li>
-    </ul>
-
-    <hr>
-    <ul>
-      <li><a class="vl-link" href="inventaris">Theme Inventaris</a></li>
-      <li><a class="vl-link" href="inventaris-article">Theme Inventaris base article <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleID">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDv2">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfull">Theme Inventaris article ID full width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfullv2">Theme Inventaris article ID full v2 width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfullv3">Theme Inventaris article ID full v3 width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-zoekoverzicht">Theme Inventaris zoekoverzicht 2 col <small>(schets)</small></a></li>
-      <li>Theme Inventaris print article</li>
-    </ul>
-
-   <!   <hr>
-
-    <ul>
-      <li><a class="vl-link" href="geoportaal">Theme Geoportaal</a></li>
-    </ul>
-
-      <hr>
-
-    <ul>
-      <li><a class="vl-link" href="beheersplannen">Theme Beheersplannen</a></li>
-    </ul>
-
- <hr>
-
-    <ul>
-      <li><a class="vl-link" href="actorenzoek">Zoekactoren</a></li>
-    </ul>
-
-
-    <ul>
-      <li><a class="vl-link" href="actorenfront">Zoekactoren front-end</a></li>
-    </ul>
-
-    <hr>
- <ul>
-      <li><a class="vl-link" href="beheersplannen">Beheersplannen</a></li>
-    </ul>
-    <hr>
- <ul>
-      <li><a class="vl-link" href="postregistratie">Postregistratie</a></li>
-    </ul>
-<hr>
-<ul>
-      <li><a class="vl-link" href="besluitendatabank">Besluiten</a></li>
-    </ul>
-
-
-
-       </div>
-   </div>
+  <h2 class="vl-title vl-title--h2">Componenten</h2>
+  <p>Enkele Webuniversum-componenten in het OE-thema:</p>
+  <div class="vl-action-group vl-u-spacer-bottom">
+    <button type="button" class="vl-button">Primaire knop</button>
+    <button type="button" class="vl-button vl-button--secondary">Secundaire knop</button>
+    <button type="button" class="vl-button vl-button--tertiary">Tertiaire knop</button>
+    <a class="vl-link" href="#">Een link</a>
+  </div>
+  <div class="vl-alert vl-alert--info vl-u-spacer-bottom" role="alert">
+    <div class="vl-alert__content">
+      <p class="vl-alert__title">Informatie</p>
+      <div class="vl-alert__message"><p>Een informatieve melding in het OE-thema.</p></div>
     </div>
-
+  </div>
+  <div class="vl-form-grid vl-form-grid--is-stacked">
+    <div class="vl-form-col--4-12 vl-form-col--12-12--s">
+      <label class="vl-form__label" for="demo-input">Invoerveld</label>
+    </div>
+    <div class="vl-form-col--8-12 vl-form-col--12-12--s">
+      <input class="vl-input-field vl-input-field--block" type="text" id="demo-input" placeholder="Typ iets...">
+    </div>
+  </div>
+</div>
 {% endblock %}

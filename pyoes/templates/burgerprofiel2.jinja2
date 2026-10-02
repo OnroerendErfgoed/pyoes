@@ -1,6 +1,7 @@
 {% extends "layout.jinja2" %}
 
 {% set active_main_nav = 'burgerprofiel2' %}
+
 {% block custom_contact_info %}
   {% from 'pyoes/macros.jinja2' import render_custom_burgerprofiel_contact %}
   {{ render_custom_burgerprofiel_contact() }}
@@ -26,13 +27,12 @@
 {% endblock %}
 
 {% block content %}
-  <!-- content -->
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="panel">
-        test met burgerprofiel met aangepaste contact info blok
-      </div>
-    </div>
-  </div>
-  <!-- end content -->
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Burgerprofiel met aangepaste contactinfo</h1>
+  <p>
+    Via het block <code>custom_contact_info</code> en de macro
+    <code>render_custom_burgerprofiel_contact</code> kan een toepassing het
+    contactblok van de burgerprofiel-header aanpassen.
+  </p>
+</div>
 {% endblock %}

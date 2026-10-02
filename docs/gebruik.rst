@@ -2,139 +2,207 @@
 Gebruik
 =======
 
-CSS bewerken
-============
+Opbouw
+======
 
-Als je aan css werkt is het best om compass je files te laten monitoren zodat 
-deze wanneer nodig kan hercompileren.
+:mod:`pyoes` bestaat uit twee delen die samen gebruikt worden:
+
+* het npm-package ``@OnroerendErfgoed/pyoes`` (map :file:`npm-packages/pyoes`)
+  met de scss en de fonts;
+* het python-package ``pyoes`` met de jinja2-templates van de gedeelde shell
+  (header, navigatie, burgerprofiel, footer) en enkele macro's.
+
+Sinds 0.27.0 is het `Webuniversum <https://overheid.vlaanderen.be/webuniversum>`_
+(``@govflanders/vl-ui-design-system-style``) de basis van pyoes. Foundation en
+font-awesome worden niet meer geladen, waardoor Webuniversum-componenten (ook in
+Vue-onderdelen op dezelfde pagina) zonder conflicten werken.
+
+CSS
+===
+
+Importeer in de :file:`app.scss` van je toepassing de entry ``pyoes-wu`` en
+daarna je eigen stijlen:
+
+.. code-block:: scss
+
+    // optioneel: variabelen overschrijven VOOR de import, bv.
+    // $primary-color: #944EA1;
+    @import "@OnroerendErfgoed/pyoes/scss/pyoes-wu";
+    @import "<package_name>";
+
+Maak je eigen scss aan in :file:`/<package_name>/static/scss/_<package_name>.scss`.
+De underscore zorgt ervoor dat dit bestand als partial gezien wordt en niet
+afzonderlijk gecompileerd wordt.
+
+Compileren gebeurt met `sass <https://sass-lang.com/dart-sass/>`_ (zie het
+``compile-css`` script in de :file:`package.json` van de scaffold):
 
 .. code-block:: bash
-    
-    $ cd static
-    $ compass watch .
-    # je kunt ook gewoon eenmalig compileren
-    $ compass compile
 
-Maak je eigen .scss file aan in :file:`/<package_name>/static/sacss/_<package_name>.scss`. 
-De underscore aan het begint zorgt er voor dat dit bestand als een plugin
-gezien wordt en niet afzonderlijk gecompileerd wordt.
+    $ cd <package_name>/static
+    $ pnpm install
+    $ pnpm run compile-css
 
-Als je met compass watch werkt, dan zal telkens je een bestand wijzigt je 
-:file:`app.css` bestand opnieuw worden aangemaakt. Alhoewel we deze compilatie
-ook bij het deployen zouden kunnen uitvoeren, zou dit weer tot extra build-time
-dependencies leiden. Vergeet daarom zeker niet om telkens je :file:`app.css` 
-bestand in te checken.
+Vergeet niet om :file:`app.css` in te checken (of ze in je build te genereren).
+
+``pyoes-wu`` bevat:
+
+* ``wu-settings``: de OE-variabelen (:file:`base-variables.scss`), het volledige
+  Webuniversum en de OE-overrides (paars thema);
+* ``pyoes-wu/oe-page``, ``oe-header`` en ``oe-banner``: de styling van de shell.
+
+Enkele aandachtspunten bij de overstap van foundation naar Webuniversum:
+
+* De root font-size is 62.5% (``1rem = 10px``), zoals in alle
+  Webuniversum- en Vue-toepassingen. Rem-waarden in oude scss moeten herbekeken
+  worden.
+* De fonts worden door Webuniversum gedeclareerd ("Flanders Art Sans" met
+  ``font-weight`` 300, 400, 500 en 700, plus italic). Gebruik dus
+  ``font-weight: 500`` in plaats van de aparte families
+  "Flanders Art Sans Medium" en dergelijke, en declareer zelf geen extra
+  ``@font-face`` voor "Flanders Art Sans". De locatie van de fonts staat in
+  ``$vl-font-location`` en ``$vl-icon-font-location`` en is standaard relatief
+  aan :file:`static/css/app.css` (``../node_modules/@govflanders/...``).
+* Het foundation-grid (``row``, ``columns``, ``panel``) bestaat niet meer;
+  gebruik het Webuniversum-grid (``vl-grid``, ``vl-col--6-12``, ...) en de
+  Webuniversum-componenten.
+* Er wordt bewust geen css ``@layer`` gebruikt: Vue-bundels
+  (vue_component_library) leveren Webuniversum ongelaagd mee en zouden anders
+  altijd winnen van de shell.
+
+De oude entries ``pyoes-settings``, ``pyoes-jinja`` en ``pyoes-apps`` (foundation)
+blijven voorlopig beschikbaar voor toepassingen die nog niet gemigreerd zijn,
+maar worden niet verder ontwikkeld.
 
 Jinja2 templates
 ================
 
-:mod:`pyoes` levert een een globale layout :file:`pyoes/layout.jinja2` die 
-vooral een algemene header en footer levert. In deze layout zijn er een aantal
-blocks gedefinieerd die in andere templates kunnen overschreven worden.
+:mod:`pyoes` levert een globale layout :file:`pyoes/layout.jinja2` die de
+header, de navigatie en de burgerprofiel-header en -footer levert. De pagina
+volgt de Webuniversum-structuur:
 
-De scaffold maakt voor je een eigen :file:`layout.jinja2` aan waarin je een aantal 
-zaken instelt die voor de ganse site van tel zijn. 
+.. code-block:: text
+
+    .vl-page
+      [burgerprofiel-header]              block vlaanderen_header
+      header.vl-application-header        block header (pyoes/header.jinja2)
+      main.vl-main-content                block main
+        .vl-region > .vl-layout
+          block messages
+          block content
+      #footerContainer                    block vlaanderen_footer, block footer
+    block javascript
+
+Maak in je toepassing een eigen :file:`layout.jinja2` aan waarin je de zaken
+instelt die voor de ganse site van tel zijn:
 
 .. code-block:: jinja
 
     {% extends "pyoes/layout.jinja2" %}
 
-    {% set app_package = 'pyoes' %}
+    {% set app_package = '<package_name>' %}
+    {% set active_title = 'Mijn toepassing' %}
 
-    {% set ga_key = request.registry.settings["ga.tracker_key"] %}
+    {% set main_nav = [
+        ('home', 'Home', request.route_path('home')),
+        ('zoeken', 'Zoeken', request.route_path('zoeken')),
+    ] -%}
 
-    {% set top_nav = [
-        ('Over deze site', request.route_path('home')),
-        ('Contact', request.route_path('contact'))
-    ]
-    -%}
-
-    {% set footer_nav = [
-        ('Toegankelijkheid', 'https://www.onroerenderfgoed.be/toegankelijkheid'), 
-        ('Juridische Informatie', 'https://www.onroerenderfgoed.be/juridische-informatie'),
-    ]
-    -%}
-
-    {% set zoeken_action = request.route_path('zoeken') %}
-    {% set zoeken_placeholder = 'Zoek iets op deze sites...' %}
-
-    {% block app_css %}{{request.static_path('<package_name>:static/css/app.css')}}{% endblock %}
-
-In je individuele templates kun je dan weer erven van je eigen layout zodat
-je indien nodig wijzigingen kunt aanbrengen die over de ganse site werken.
-
-Rechts uitgelijnde navigatieacties worden ingesteld met ``nav_actions``.
-Deze lijst bevat paren van een label en een URL en is standaard leeg:
-
-.. code-block:: jinja
+    {% set dropdown_main_nav = [
+        ('beheer', 'Beheer', [
+            ('gebruikers', 'Gebruikers', request.route_path('gebruikers')),
+            ('instellingen', 'Instellingen', request.route_path('instellingen')),
+        ])
+    ] -%}
 
     {% set nav_actions = [
         ('Contact', request.route_path('contact')),
-        ('Help', request.route_path('help'))
     ] -%}
 
-``login_nav`` en ``login_sub_nav`` worden niet meer gebruikt. De navigatie
-toont geen aanmeldlinks of accountmenu op basis van de aangemelde gebruiker.
+    {% set header_links = [
+        ('Over ons', 'https://www.onroerenderfgoed.be/over-ons', 'Meer informatie over ons'),
+    ] -%}
+
+De beschikbare variabelen:
+
+``app_package``
+    Het package dat :file:`static/css/app.css` levert (standaard ``pyoes``).
+``css_files``, ``js_files``
+    Lijsten met te laden stylesheets en scripts. Standaard wordt enkel
+    :file:`app.css` geladen en geen javascript: de shell heeft er geen nodig.
+``active_title``, ``home_link``
+    De titel in de header en de link erachter.
+``header_links``
+    Lijst van ``(tekst, href, title)``; extra links rechtsboven in de header.
+``main_nav``
+    Lijst van ``(id, caption, href)`` of ``(id, caption, href, class)``; het
+    item met id ``home`` wordt als huisje getoond.
+``dropdown_main_nav``
+    Lijst van ``(id, caption, submenu)`` met submenu een lijst van
+    ``(id, caption, href)``; wordt een uitklapmenu zonder javascript.
+``active_main_nav``
+    Het id van het actieve navigatie-item (krijgt ``aria-current="page"``).
+``nav_actions``
+    Lijst van ``(caption, href)``; acties rechts in de navigatiebalk.
+``plausible_domain_hash``, ``plausible_omgeving``, ``burgerprofiel_header_id``,
+``burgerprofiel_footer_id``
+    Standaard uit de ini-settings; zie :file:`development.ini`.
+
+``login_nav``, ``login_sub_nav``
+    Accountmenu rechts in de navigatiebalk (standaard leeg). Zonder aangemelde
+    gebruiker worden de ``(caption, href)`` van ``login_nav`` getoond, met een
+    aangemelde gebruiker (``request.user``) een uitklapmenu met de naam van de
+    gebruiker en de ``login_sub_nav``-links.
+
+In je individuele templates erf je van je eigen layout en vul je ``content``
+in met Webuniversum-markup:
 
 .. code-block:: jinja
 
     {% extends "layout.jinja2" %}
 
+    {% set active_main_nav = 'zoeken' %}
+
     {% block content %}
-
-    <section class="inhoud">
-        <div class="row">
-            <div class="large-3 columns">
-                <nav>
-                    <h2>Een submenu of zo</h2>
-                    ...
-                </nav>
-            </div>
-
-            <div class="large-9 columns">
-
-                <h1>Over deze site</h1>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit condimentum sollicitudin. Curabitur molestie, dui vel ultricies facilisis, eros nulla bibendum erat, ut viverra elit ligula eget lectus. Donec et nibh eget ipsum porta dapibus. Curabitur placerat dapibus lacus sed gravida. Nulla tempor fermentum nibh ut porttitor. Pellentesque malesuada faucibus ante a eleifend. Donec feugiat felis ullamcorper enim aliquet laoreet. Praesent sodales gravida fermentum. Praesent condimentum sollicitudin libero, ac malesuada ligula cursus non. Nullam nisi neque, fermentum sit amet pretium condimentum, bibendum ac augue. Vivamus ornare tristique dolor sit amet suscipit. Aliquam aliquam arcu vel neque sollicitudin blandit. Praesent vitae urna sit amet ligula rutrum adipiscing sed quis erat. Suspendisse potenti. Nam erat sem, tincidunt id scelerisque ut, dignissim id mi.</p>
-
-                <p>Nullam ultricies consectetur quam nec sagittis. Aenean ultricies vulputate nunc hendrerit pharetra. Nam in lacus leo, ut sodales metus. Nulla nisl dolor, condimentum vel pulvinar vel, lobortis ut enim. Sed laoreet rutrum ligula quis dictum. Vivamus at sem at metus ullamcorper porta. Ut orci orci, sollicitudin ac fringilla et, tempus vel velit. Curabitur non quam sit amet tellus placerat consectetur. Duis congue consectetur faucibus. Maecenas tempor feugiat consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent consequat sapien sit amet est pellentesque laoreet. Cras ullamcorper nisl et ipsum iaculis vel rutrum urna consectetur. Fusce mauris leo, tempus non rutrum eget, faucibus ac lorem. Aliquam eget erat tincidunt enim feugiat facilisis. Donec id sapien at mi molestie semper.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mauris nibh, egestas in vehicula vitae, dignissim a dui. Nam at augue mauris, eu vulputate lectus. Vivamus vulputate viverra dolor, ornare pharetra purus vehicula ut. Fusce lobortis, est feugiat pretium adipiscing, tortor orci porta orci, vel malesuada leo ligula nec ante. Vestibulum urna leo, varius vel adipiscing luctus, porta sit amet mi. Vivamus quis urna vitae nisi mollis feugiat vel in libero.</p>
-            </div>
+    <div class="vl-grid">
+        <div class="vl-col--3-12 vl-col--12-12--s">
+            <nav>
+                <h2 class="vl-title vl-title--h3">Een submenu</h2>
+                ...
+            </nav>
         </div>
-    </section>
+        <div class="vl-col--9-12 vl-col--12-12--s vl-typography">
+            <h1 class="vl-title vl-title--h1">Over deze site</h1>
+            <p>Lorem ipsum dolor sit amet, ...</p>
+        </div>
+    </div>
     {% endblock %}
 
-demonstratie
+Wil je de inhoud niet in een ``vl-region`` / ``vl-layout``, overschrijf dan het
+block ``main`` in plaats van ``content``.
+
+Onderhoudsbanner
+----------------
+
+Met de settings ``pyoes.banner`` en ``pyoes.banner.detail`` verschijnt een
+boodschap in de burgerprofiel-header, met een popup voor de details.
+
+Demonstratie
 ============
 
-Als je gewoon eens de nieuwe stijl wenst te bekijken en een overzicht van de 
-mogelijkheden wil krijgen, kun je best de demo toepassing installeren.
-
-.. warning::
-
-   De demo toepassing zit in de pyoes repository, maar wordt niet verdeeld
-   in de pyoes package.
+Als je gewoon eens de stijl wenst te bekijken, draai dan de demo-toepassing.
+Ze zit in de pyoes repository, maar wordt niet verdeeld in de pyoes package.
 
 .. code-block:: bash
 
     $ git clone https://github.com/OnroerendErfgoed/pyoes pyoes_demo
     $ cd pyoes_demo
-    $ mkvirtualenv pyoes_demo
-    $ python setup.py develop
-    $ pip install -r requirements-dev.txt
+    $ mise install
+    $ mise run server
 
-Om het makkelijk te maken om de demo-toepassing te draaien naast een toepassing
-die je aan het ontwikkelen bent, draait deze op poort `6555` en niet op poort 
-`6543`.
+Zie de :file:`README.md` voor de details van de lokale ontwikkelomgeving.
 
-.. code-block:: bash
-
-    $ pserve development.ini
-
-Deze toepassing heeft een aantal eigen templates en stylesheets die als 
-inspiratie kunnen dienen. De templates kun je vinden in :file:`pyoes/templates`, 
-dit in tegenstelling tot de algemene pyoes templates die door een andere 
-applicatie worden overgenomen. Deze kun je vinden in :file:`pyoes/templates/pyoes`.
-
-De :file:`pyoes/static` folder bevat de scss bestanden van deze demo toepassing.
+De templates van de demo vind je in :file:`pyoes/templates`, de algemene pyoes
+templates die door andere toepassingen worden overgenomen in
+:file:`pyoes/templates/pyoes`. De :file:`pyoes/static` folder bevat de scss van
+de demo-toepassing.

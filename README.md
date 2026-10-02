@@ -41,28 +41,28 @@ naar `127.0.0.1` wijzen).
 dependencies uit `requirements-dev.txt`, pyoes zelf editable geïnstalleerd, de
 pre-commit hooks, en de frontend in `pyoes/static` (`pnpm install` +
 `pnpm run compile-css`, wat `pyoes/static/css/app.css` genereert - die is
-git-ignored). `npm-packages/pyoes` wordt als `file:`-dependency mee
-geïnstalleerd; een aparte `pnpm install` is daar niet nodig. De lokale
-`.npmrc` gebruikt `node-linker=hoisted`, zodat Sass ook dependencies van
-het styles-package via `node_modules` kan vinden.
+git-ignored). `npm-packages/pyoes` wordt als `link:`-dependency (symlink)
+meegenomen, zodat scss-wijzigingen meteen in de volgende `compile-css` zitten;
+een aparte `pnpm install` is daar niet nodig. Omdat pnpm de
+dependencies van zo'n gelinkt package niet mee installeert, staat Webuniversum
+(`@govflanders/vl-ui-design-system-style`) ook als devDependency in
+`pyoes/static/package.json`, net zoals in elke toepassing die pyoes gebruikt.
+De lokale `.npmrc` gebruikt `node-linker=hoisted`, zodat Sass alles via één
+`node_modules` kan vinden.
 
 ### Vanaf een bestaande clone
 
-Bij de overstap van Yarn naar pnpm: importeer eerst de bestaande lockfile,
-verwijder de oude installatie en bouw de frontend opnieuw:
+Kom je van een clone die nog met Yarn werkte (vóór 0.27.0), verwijder dan de
+oude installatie en bouw de frontend opnieuw op met pnpm:
 
 ```sh
 mise install
 cd pyoes/static
-pnpm import
 rm -rf node_modules
 pnpm install
 pnpm run compile-css
 cd ../..
 ```
-
-Commit daarna `pyoes/static/pnpm-lock.yaml` en verwijder de oude
-`pyoes/static/yarn.lock` en de ongebruikte `yarn.lock` in de repo-root.
 
 Is alles al opgezet, dan heb je enkel nog dit nodig:
 

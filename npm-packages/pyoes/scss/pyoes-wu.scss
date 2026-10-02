@@ -1,11 +1,28 @@
-@layer wu, pyoes;
-
-@layer wu {
-  @import "wu-settings";
-
-  @at-root (without: all) {
-    @layer pyoes {
-      @import "pyoes-wu/oe-header";
-    }
-  }
-}
+// pyoes op basis van Webuniversum (@govflanders/vl-ui-design-system-style).
+//
+// Dit is de standaard entry voor toepassingen die de pyoes jinja2-templates
+// (pyoes/layout.jinja2) gebruiken. Ze bevat:
+//
+//   1. wu-settings: de OE-variabelen, het volledige Webuniversum en de
+//      OE-overrides (paars thema) op Webuniversum;
+//   2. pyoes-wu/*: de styling van de pyoes-shell (pagina, header, navigatie,
+//      onderhoudsbanner) bovenop Webuniversum.
+//
+// Gebruik in de app.scss van je toepassing:
+//
+//   // optioneel: OE-variabelen overschrijven (zie base-variables.scss) of
+//   // $vl-font-location / $vl-icon-font-location aanpassen (zie wu-settings)
+//   @import "@OnroerendErfgoed/pyoes/scss/pyoes-wu";
+//   @import "mijn_toepassing";
+//
+// Foundation en font-awesome worden hier NIET meer ingeladen. Fonts komen uit
+// Webuniversum ("Flanders Art Sans" met font-weight 300/400/500/700), de
+// root font-size is 62.5% (1rem = 10px) zoals in alle Webuniversum/Vue-apps.
+//
+// Er wordt bewust geen @layer gebruikt: Webuniversum wordt in Vue-bundels
+// (vue_component_library) ook ongelaagd meegeleverd en ongelaagde css wint
+// altijd van gelaagde css, waardoor de overrides van de shell verloren gaan.
+@import "wu-settings";
+@import "pyoes-wu/oe-page";
+@import "pyoes-wu/oe-header";
+@import "pyoes-wu/oe-banner";

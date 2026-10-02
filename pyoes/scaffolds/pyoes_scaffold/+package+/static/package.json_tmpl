@@ -6,12 +6,12 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "pyoes": "OnroerendErfgoed/pyoes#head=npm_styles&workspace=pyoes"
+    "@OnroerendErfgoed/pyoes": "^0.27.0"
   },
   "devDependencies": {
-    "sass": "^1.49.9"
+    "sass": "^1.79.0"
   },
   "scripts": {
-    "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps"
-  },
+    "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps --silence-deprecation=import"
+  }
 }

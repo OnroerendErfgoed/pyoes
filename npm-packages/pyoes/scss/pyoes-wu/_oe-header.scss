@@ -1,70 +1,246 @@
-.vl-application-header__row {
-  margin-bottom: 0;
-}
-.vl-application-header .vl-title {
-  @extend .vl-title--h2;
-  @extend .vl-u-spacer-bottom--xxsmall;
+// OE header en hoofdnavigatie bovenop Webuniversum's vl-application-header.
+//
+// Markup: zie pyoes/templates/pyoes/header.jinja2.
+//
+//   header.vl-application-header.oe-header
+//     .vl-layout > .vl-application-header__row
+//       .vl-application-header__content > .vl-application-header__title
+//       nav.vl-application-header__actions > ul > li.vl-application-header__action
+//     nav.oe-navigation > .vl-layout > .vl-application-header__sub
+//       .vl-application-header__sub-row > ul.vl-application-header__sub__actions
+//         li.vl-application-header__sub__action > a.vl-link | details > summary
 
-  a {
-    color: inherit;
+$oe-navigation-bg: $mid-purple !default;
+$oe-navigation-active-bg: $very-dark-purple !default;
+$oe-navigation-color: $white !default;
+$oe-navigation-link-padding: 1.2rem $vl-spacing-small !default;
+
+// --------------------------------------------------------------------------
+// Titelbalk: grote titel met het "Vlaanderen is erfgoed"-logo, rechts de
+// header_links met schuine scheidingslijnen (zoals de vroegere OE-header).
+// --------------------------------------------------------------------------
+$oe-header-height: 11rem !default;
+$oe-header-title-size: 3.4rem !default;
+$oe-header-divider-color: #d1d8df !default;
+
+// LET OP: elke override van een Webuniversum-regel heeft hier bewust een
+// hogere specificiteit dan die regel. Een Vue-bundel (vue_component_library)
+// laadt Webuniversum nogmaals ná deze css; bij gelijke specificiteit zou die
+// kopie winnen.
+.vl-application-header.oe-header {
+  background-color: $white;
+}
+
+.oe-header {
+  .vl-application-header__row {
+    min-height: $oe-header-height;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .vl-application-header__content {
+    gap: $vl-spacing-small;
+    margin: 0;
+  }
+
+  .vl-title.vl-application-header__title {
+    margin: 0;
+    font-size: $oe-header-title-size;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $dark-purple;
+
+    .vl-link,
+    .vl-link:visited {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    width: 15.9rem;
+    height: 7rem;
+  }
+
+  // Header-links rechtsboven: gewone links i.p.v. het grijze WU-kader.
+  .vl-application-header__actions {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+
+    > ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .vl-application-header__action {
+    position: relative;
+    float: none;
+    padding: 0 1.6rem;
+    font-size: 1.6rem;
+
+    // schuine scheidingslijn tussen de links
+    + .vl-application-header__action::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $oe-header-divider-color;
+      transform: rotate(-18deg);
+    }
+
+    .vl-link,
+    .vl-link:visited {
+      color: $link-color;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom-color 0.3s ease-out;
+
+      &:hover,
+      &:focus {
+        border-bottom-color: $link-color;
+      }
+    }
   }
 }
 
-.oe-navigation {
-  --oe-header-purple: #{$mid-purple};
-  --oe-header-active: #{$very-dark-purple};
+@include respond-to(small) {
+  .oe-header {
+    .vl-application-header__row {
+      min-height: 0;
+      flex-wrap: wrap;
+      padding: $vl-spacing-xsmall;
+    }
 
+    .vl-title.vl-application-header__title {
+      font-size: 2.4rem;
+    }
+
+    &__logo {
+      width: 11rem;
+      height: 5rem;
+    }
+
+    .vl-application-header__action {
+      padding: 0 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// Hoofdnavigatie (paarse balk)
+// --------------------------------------------------------------------------
+.oe-navigation {
   position: relative;
   z-index: 40;
-  background: var(--oe-header-purple);
+  background: $oe-navigation-bg;
+  color: $oe-navigation-color;
 
   > .vl-layout {
     min-width: 0;
   }
 
+  // Webuniversum tekent scheidingslijnen tussen de acties; die willen we niet.
   .vl-application-header__sub::before,
   .vl-application-header__sub-row::before,
-  .vl-application-header__sub__action::before {
+  .vl-application-header__sub-row:not(:first-child)::before,
+  .vl-application-header__sub__action::before,
+  .vl-application-header__sub__action + .vl-application-header__sub__action::before {
     display: none;
   }
 
+  .vl-application-header__sub {
+    padding: 0;
+  }
+
   .vl-application-header__sub-row {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 
   .vl-application-header__sub__actions {
     flex-wrap: wrap;
-  }
-
-  .vl-link-list {
+    align-items: stretch;
     margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
-  .vl-link,
-  summary {
+  .vl-application-header__sub__action {
+    display: flex;
+    align-items: stretch;
+    font-size: 1.4rem;
+  }
+
+  // Specificiteit bewust hoger dan Webuniversum's .vl-link:visited (0,2,0):
+  // een Vue-bundel die Webuniversum nogmaals (later) laadt mag de witte
+  // navigatielinks niet overschrijven.
+  .vl-application-header__sub__action .vl-link,
+  .vl-application-header__sub__action .vl-link:visited,
+  .vl-application-header__sub__action summary {
     display: block;
-    padding: 1.2rem $vl-spacing-small;
-    color: $white;
+    box-sizing: border-box;
+    min-height: 4.5rem; // 2 x 1.2rem padding + 2.1rem regelhoogte
+    padding: $oe-navigation-link-padding;
+    color: $oe-navigation-color;
     line-height: 1.5;
     text-decoration: none;
     overflow-wrap: anywhere;
     cursor: pointer;
   }
 
-  .vl-link:hover,
-  .vl-link:focus-visible,
-  .vl-link[aria-current="page"],
-  summary:hover,
-  summary:focus-visible,
-  details[open] > summary {
-    background: var(--oe-header-active);
-    color: $white;
+  .vl-application-header__sub__action .vl-link:hover,
+  .vl-application-header__sub__action .vl-link:focus-visible,
+  .vl-application-header__sub__action .vl-link[aria-current="page"],
+  .vl-application-header__sub__action summary:hover,
+  .vl-application-header__sub__action summary:focus-visible,
+  .vl-application-header__sub__action details[open] > summary {
+    background: $oe-navigation-active-bg;
+    color: $oe-navigation-color;
   }
 
-  summary {
+  .vl-link--bold {
+    font-weight: 500;
+  }
+
+  .vl-vi {
+    vertical-align: middle;
+  }
+
+  // huisje voor het home-item: zelfde regelhoogte als de tekstlinks (1.5 x
+  // 1.4rem), zodat het actieve vlak even hoog is als bij de andere items.
+  .vl-application-header__sub__action .vl-link > .vl-vi-places-home {
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    vertical-align: top;
+  }
+
+  // Uitklapmenu op basis van <details>, werkt zonder javascript.
+  // Zelfde specificiteit als de linkregels hierboven, anders winnen die.
+  .vl-application-header__sub__action summary {
     display: flex;
+    flex: 1 0 auto;
     align-items: center;
+    height: 100%;
     gap: $vl-spacing-xsmall;
     list-style: none;
 
@@ -72,22 +248,46 @@
       display: none;
     }
 
+    // Iconen in dezelfde regelhoogte als de tekst (1.5 x 1.4rem), anders
+    // wordt het accountmenu hoger dan de links en komt er paars rond het
+    // actieve item.
     > .vl-vi {
+      display: inline-block;
+      height: 2.1rem;
+      line-height: 2.1rem;
       font-size: 0.8em;
       opacity: 0.6;
+      transition: transform 0.15s ease-in-out;
+
+      &::before {
+        line-height: inherit;
+        vertical-align: top;
+      }
     }
 
-    .vl-link {
+    > .vl-vi-user {
+      font-size: 1.4em;
+      opacity: 1;
+    }
+
+    // De span in de summary is een flex-item en mag dus niet de min-height
+    // van een navigatielink krijgen.
+    .vl-link,
+    .vl-link:visited {
       display: inline;
+      min-height: 0;
       padding: 0;
+      line-height: 2.1rem;
       background: transparent;
     }
   }
 
-  details {
+  .vl-application-header__sub__action details {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
-    &[open] > summary > .vl-vi {
+    &[open] > summary > .vl-vi-nav-down {
       transform: rotate(180deg);
     }
 
@@ -97,23 +297,39 @@
       min-width: 100%;
       width: max-content;
       max-width: min(32rem, calc(100vw - #{2 * $vl-spacing-small}));
-      background: var(--oe-header-purple);
+      margin: 0;
+      padding: 0;
+      background: $oe-navigation-bg;
+      box-shadow: 0 0.4rem 0.8rem rgba($black, 0.2);
+    }
+
+    > .vl-link-list .vl-link-list__item {
+      margin: 0;
+      padding: 0;
     }
   }
 
-  &__actions {
+  // Acties en accountmenu rechts in de navigatiebalk
+  .vl-application-header__sub-row.oe-navigation__actions {
     margin-left: auto;
   }
 }
 
 @include respond-to(small) {
   .oe-navigation {
-    details > .vl-link-list {
-      position: static;
-      width: auto;
+    .vl-application-header__sub {
+      flex-direction: column;
+      align-items: stretch;
     }
 
-    &__actions {
+    .vl-application-header__sub__action details > .vl-link-list {
+      position: static;
+      width: auto;
+      max-width: none;
+      box-shadow: none;
+    }
+
+    .vl-application-header__sub-row.oe-navigation__actions {
       margin-left: 0;
     }
   }

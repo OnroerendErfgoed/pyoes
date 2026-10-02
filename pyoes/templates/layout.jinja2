@@ -1,29 +1,30 @@
 {% extends "pyoes/layout.jinja2" %}
 
-{% set app_package = 'pyoes' %}
+{#
+  Layout van de demo-toepassing: toont hoe een toepassing de pyoes-shell
+  configureert. Zie pyoes/templates/pyoes/layout.jinja2 voor alle variabelen.
+#}
 
-{% set datum_copyright = '2013-2014' %}
+{% set app_package = 'pyoes' %}
+{% set active_title = 'Erfgoedstijl' %}
 
 {% set main_nav = [
-	('home', 'Home', '/'),
-	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
-	('burgerprofiel2', 'Burgerprofiel aangepast', 'burgerprofiel2'),
-	('headerlinks', 'Header links', 'headerlinks'),
-	('vinden', 'Vinden', '#'),
-	('pinpoints', 'Pinpoints', 'pinpoints'),
-	('icons', 'Icons', 'icons')
-]-%}
-
+  ('home', 'Home', '/'),
+  ('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
+  ('burgerprofiel2', 'Burgerprofiel aangepast', 'burgerprofiel2'),
+  ('headerlinks', 'Header links', 'headerlinks'),
+  ('navigation', 'Navigatie', 'navigation'),
+] -%}
 
 {% set dropdown_main_nav = [
-	('home', 'Home', [
-	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
-	('burgerprofiel2', 'Burgerprofiel aangepast', 'burgerprofiel2'),
-	('headerlinks', 'Header links', 'headerlinks'),
-	('vinden', 'Vinden', '#'),
-	('pinpoints', 'Pinpoints', 'pinpoints'),
-	('icons', 'Icons', 'icons')])
-]-%}
+  ('fouten', 'Foutpagina\'s', [
+    ('401', '401 - Niet aangemeld', '401'),
+    ('403', '403 - Geen toegang', '403'),
+    ('404', '404 - Niet gevonden', '404'),
+    ('500', '500 - Technisch probleem', '500'),
+  ])
+] -%}
 
 {% set nav_actions = [('Contact', 'https://www.onroerenderfgoed.be/contact')] -%}
-
+{% set login_nav = [('Aanmelden', '#')] -%}
+{% set login_sub_nav = [('Afmelden', '#')] -%}

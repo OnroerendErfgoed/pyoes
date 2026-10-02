@@ -3,13 +3,14 @@
 {% set active_main_nav = 'burgerprofiel' %}
 
 {% block content scoped %}
-<!-- content -->
-<div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      test met burgerprofiel header&footer
-    </div>
-  </div>
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Burgerprofiel header en footer</h1>
+  <p>
+    Deze pagina toont de standaard burgerprofiel-header en -footer van de
+    Vlaamse overheid, geconfigureerd via <code>burgerprofiel.header_id</code>
+    en <code>burgerprofiel.footer_id</code> in de ini-file. Is er een
+    <code>pyoes.banner</code> ingesteld, dan verschijnt de onderhoudsboodschap
+    in de header.
+  </p>
 </div>
-<!-- end content -->
 {% endblock %}

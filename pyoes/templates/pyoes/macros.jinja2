@@ -119,15 +119,15 @@
      document.getElementById('onderhoud-popup').style.display = 'none';
    }
   </script>
-  <div id="onderhoud-popup">
-    <div class="row onderhoud-banner-header">
-      <h2>{{ banner }}</h2>
+  <div id="onderhoud-popup" role="dialog" aria-labelledby="onderhoud-popup-title">
+    <div class="onderhoud-banner-header">
+      <h2 id="onderhoud-popup-title" class="vl-title vl-title--h3">{{ banner }}</h2>
     </div>
-    <div class="row onderhoud-banner-detail">
-      <p>{{ detail }}</p>
+    <div class="onderhoud-banner-detail">
+      <p class="vl-typography">{{ detail }}</p>
     </div>
-    <div class="row">
-      <a><span id="popup-sluiten" onclick="hidePopup()" aria-hidden="true">Sluiten...</span></a>
+    <div>
+      <button type="button" id="popup-sluiten" class="vl-button vl-button--naked" onclick="hidePopup()">Sluiten...</button>
     </div>
   </div>
 {% endmacro %}

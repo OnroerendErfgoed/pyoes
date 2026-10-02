@@ -1,23 +1,44 @@
 <!doctype html>
 <html class="no-js" lang="nl">
+{#
+  Algemene pyoes layout op basis van Webuniversum.
 
+  Structuur:
+    .vl-page
+      [burgerprofiel-header]                 block vlaanderen_header
+      header.vl-application-header           block header (pyoes/header.jinja2)
+      main.vl-main-content                   block main
+        .vl-region > .vl-layout
+          block messages
+          block content
+      #footerContainer                       block vlaanderen_footer, block footer
+    block javascript
+
+  Instelbare variabelen (zet ze in je eigen layout.jinja2):
+    app_package           pakket dat static/css/app.css levert (default 'pyoes')
+    css_files, js_files   lijsten met te laden css/js (default: enkel app.css, geen js)
+    active_title          titel in de header
+    home_link             link achter de titel
+    header_links          lijst van (tekst, href, title) rechtsboven in de header
+    main_nav              lijst van (id, caption, href[, class]) in de hoofdnavigatie
+    dropdown_main_nav     lijst van (id, caption, [(id, caption, href), ...])
+    active_main_nav       id van het actieve navigatie-item
+    nav_actions           lijst van (caption, href) rechts in de hoofdnavigatie
+#}
 {% set app_package = app_package|default('pyoes', true) -%}
 {% set active_title = active_title -%}
 
-{% set service_nav = service_nav -%}
 {% set main_nav = main_nav -%}
 {% set dropdown_main_nav = dropdown_main_nav -%}
 {% set active_main_nav = active_main_nav -%}
 {% set nav_actions = nav_actions -%}
 {% set home_link = home_link -%}
 {% set header_links = header_links -%}
-{% set mailto_error = mailto_error -%}
 {% set plausible_domain_hash = plausible_domain_hash|default(request.registry.settings["plausible.domain_hash"]) -%}
 {% set plausible_omgeving = plausible_omgeving|default("dev") -%}
 {% set plausible_custom_init = plausible_custom_init|default(None) -%}
 {% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
 {% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
-{% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = request.route_path('home') -%}
 
 <head>
@@ -29,7 +50,7 @@
     {% if plausible_omgeving in ('dev', 'test') %}
     <meta name="robots" content="noindex" />
     {% endif %}
-    
+
     {% block css scoped -%}
       <!-- css -->
       {% set default_css_files = [
@@ -44,7 +65,7 @@
 
   {% block plausible -%}
     {% if plausible_domain_hash %}
-      {% from 'macros.jinja2' import plausible_tracker %}
+      {% from 'pyoes/macros.jinja2' import plausible_tracker %}
       {{ plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init) }}
     {% endif %}
   {% endblock %}
@@ -54,11 +75,11 @@
   {% block vlaanderen_header scoped %}
     {% if burgerprofiel_header_id %}
       {% if request.registry.settings['pyoes.banner'] %}
-        {% from 'macros.jinja2' import render_info_banner %}
+        {% from 'pyoes/macros.jinja2' import render_info_banner %}
         {{ render_info_banner(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
       {% endif %}
       <div class="vlaanderen-header-container">
-      	{% from 'macros.jinja2' import render_vlaanderen_header %}
+        {% from 'pyoes/macros.jinja2' import render_vlaanderen_header %}
         {% set pyoes_banner = {
           'banner': request.registry.settings.get('pyoes.banner'),
           'detail': request.registry.settings.get('pyoes.banner.detail')
@@ -76,20 +97,24 @@
     {% include "pyoes/header.jinja2" %}
   {% endblock %}
 
-  <div class="vl-layout">
-  {% block messages scoped %}
-  {% endblock %}
+  <main class="vl-main-content" id="main">
+    {% block main scoped %}
+      <section class="vl-region">
+        <div class="vl-layout">
+          {% block messages scoped %}
+          {% endblock %}
 
-  {% block content scoped %}
-  {% endblock %}
-  </div>
-
-  <div class="push"></div>
+          {% block content scoped %}
+          {% endblock %}
+        </div>
+      </section>
+    {% endblock %}
+  </main>
 
   <div id="footerContainer">
     {% block vlaanderen_footer scoped %}
-      {% if burgerprofiel_header_id %}
-          {% from 'macros.jinja2' import render_vlaanderen_footer %}
+      {% if burgerprofiel_footer_id %}
+          {% from 'pyoes/macros.jinja2' import render_vlaanderen_footer %}
           {{ render_vlaanderen_footer(plausible_omgeving, burgerprofiel_footer_id) }}
       {% else %}
         <script src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
@@ -97,26 +122,18 @@
     {% endblock %}
 
     {% block footer scoped %}
-      <!-- Backwards compatible -->
     {% endblock %}
   </div>
 </div>
 
-
 {% block javascript scoped -%}
   <!-- javascript -->
-  <!-- deze moet moet onderaan de pagina zitten om foundation goed te laten werken -->
-  {% set default_js_files = [
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/modernizr.js'),
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/jquery.js'),
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/foundation.min.js'),
-    request.static_path(app_package + ':static/js/app.js')
-  ] -%}
-  {% set js_files = js_files|default(default_js_files) -%}
+  {# De shell heeft geen javascript nodig (het uitklapmenu werkt met <details>).
+     Zet js_files in je eigen layout om scripts onderaan de pagina te laden. #}
+  {% set js_files = js_files|default([]) -%}
   {% for js in js_files -%}
     <script src="{{ js }}"></script>
   {% endfor -%}
 {% endblock -%}
-
 </body>
 </html>

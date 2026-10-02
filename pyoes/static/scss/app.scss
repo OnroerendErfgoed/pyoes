@@ -1,4 +1,5 @@
-/*@import "@OnroerendErfgoed/pyoes/scss/pyoes-settings";
-@import "@OnroerendErfgoed/pyoes/scss/pyoes-jinja";*/
-
-@import "../../../npm-packages/pyoes/scss/pyoes-wu";
+// Stylesheet van de pyoes demo-toepassing.
+//
+// Toepassingen importeren exact hetzelfde pad: @OnroerendErfgoed/pyoes komt
+// hier als file:-dependency uit npm-packages/pyoes (zie package.json).
+@import "@OnroerendErfgoed/pyoes/scss/pyoes-wu";

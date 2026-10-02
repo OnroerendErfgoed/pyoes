@@ -1,53 +1,52 @@
 {% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'navigation' %}
+
 {% block content %}
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Navigatie configureren</h1>
+  <p>
+    De hoofdnavigatie wordt volledig gestuurd door variabelen in je
+    <code>layout.jinja2</code>. Het uitklapmenu werkt zonder javascript
+    (<code>&lt;details&gt;</code>), het actieve item krijgt
+    <code>aria-current="page"</code>.
+  </p>
 
+  <h2 class="vl-title vl-title--h2">Hoofdnavigatie</h2>
+  <p>
+    <code>main_nav</code> is een lijst van <code>(id, caption, href)</code> of
+    <code>(id, caption, href, class)</code>. Het item met id <code>home</code>
+    wordt als huisje getoond. <code>active_main_nav</code> bevat het id van de
+    actieve pagina.
+  </p>
+  <pre><code>{{ "{% set main_nav = [
+  ('home', 'Home', '/'),
+  ('zoeken', 'Zoeken', request.route_path('zoeken')),
+  ('beheer', 'Beheer', request.route_path('beheer'), 'oe-navigation__beheer'),
+] %}
+{% set active_main_nav = 'zoeken' %}" }}</code></pre>
 
-<br>
-<h1 class="text-center">Navigation</h1>
-<div class="row">
-<div class="large-12 columns">
+  <h2 class="vl-title vl-title--h2">Uitklapmenu</h2>
+  <p>
+    <code>dropdown_main_nav</code> is een lijst van <code>(id, caption, submenu)</code>
+    waarbij submenu een lijst van <code>(id, caption, href)</code> is.
+  </p>
+  <pre><code>{{ "{% set dropdown_main_nav = [
+  ('fouten', 'Foutpagina\\'s', [
+    ('401', '401 - Niet aangemeld', '401'),
+    ('404', '404 - Niet gevonden', '404'),
+  ])
+] %}" }}</code></pre>
 
-
-<!-- navigation type 1-->
-<p class="text-center">type 1</p>
-{% include "includes/navigation/navtype-1.jinja2" %}
-
-
-<!-- navigation type 2-->
-<p class="text-center">type 2</p>
-{% include "includes/navigation/navtype-2.jinja2" %}
-
-
-<!-- navigation type 2-->
-<p class="text-center">type 3</p>
-{% include "includes/navigation/navtype-3.jinja2" %}
-
-
-<!-- sub navigation -->
-<p class="text-center">subnavigation type 1</p>
-{% include "includes/navigation/subnavtype-1.jinja2" %}
-
-
-<!-- breadcrumbs -->
-<p class="text-center">subnavigation type 2 breadcrumbs</p>
-{% include "includes/navigation/subnavtype-2.jinja2" %}
-
-
-<!-- page navigation 1 -->
-<p class="text-center">subnavigation type 3 page navigation</p>
-{% include "includes/navigation/subnavtype-3.jinja2" %}
-
-
-<!-- page navigation 2 -->
-<p class="text-center">subnavigation type 4 page navigation numbers</p>
-{% include "includes/navigation/subnavtype-4.jinja2" %}
-
-<!-- tab navigation  -->
-<p class="text-center">subnavigation type 5 tab navigation</p>
-{% include "includes/navigation/subnavtype-5.jinja2" %}
-
-
+  <h2 class="vl-title vl-title--h2">Acties en accountmenu rechts</h2>
+  <p>
+    <code>nav_actions</code> is een lijst van <code>(caption, href)</code> en
+    verschijnt rechts in de navigatiebalk. <code>login_nav</code> toont de
+    aanmeldlinks voor een anonieme bezoeker, <code>login_sub_nav</code> het
+    uitklapmenu voor een aangemelde gebruiker (<code>request.user</code>).
+  </p>
+  <pre><code>{{ "{% set nav_actions = [('Contact', request.route_path('contact'))] %}
+{% set login_nav = [('Aanmelden', request.route_path('aanmelden'))] %}
+{% set login_sub_nav = [('Profiel', request.route_path('profiel')), ('Afmelden', request.route_path('afmelden'))] %}" }}</code></pre>
 </div>
-</div>
-
 {% endblock %}

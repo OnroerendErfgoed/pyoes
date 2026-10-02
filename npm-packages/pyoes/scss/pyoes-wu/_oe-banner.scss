@@ -1,0 +1,68 @@
+// Onderhoudsbanner en bijhorende popup (pyoes.banner / pyoes.banner.detail).
+//
+// Markup en javascript: macro render_info_banner in pyoes/templates/pyoes/macros.jinja2.
+// De banner zelf wordt door javascript in de burgerprofiel-header geplaatst.
+
+.message-banner {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  color: $alert-color;
+  font-weight: 700;
+
+  a {
+    margin-left: $vl-spacing-xsmall;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+#onderhoud-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 50%;
+  height: 50%;
+  max-height: 50%;
+  padding: $vl-spacing-normal;
+  transform: translate(-50%, -50%);
+  flex-flow: column;
+  background: $white;
+  border: 1px solid $vl-border-color;
+  box-shadow: 0 0.4rem 1.6rem rgba($black, 0.2);
+  color: $vl-text-color;
+}
+
+.onderhoud-banner-header {
+  flex: 0 1 auto;
+}
+
+.onderhoud-banner-detail {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+#popup-sluiten {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: $vl-spacing-xxsmall $vl-spacing-xsmall;
+  color: $link-color;
+  cursor: pointer;
+}
+
+@include respond-to(small) {
+  .message-banner {
+    width: 100%;
+    padding-bottom: $vl-spacing-xsmall;
+  }
+
+  #onderhoud-popup {
+    width: 90%;
+    height: auto;
+    max-height: 90%;
+  }
+}

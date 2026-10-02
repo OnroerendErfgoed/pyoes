@@ -8,9 +8,15 @@
 ] -%}
 
 {% block content %}
-  <div class="content">
-    <div class="row">
-      <h1>Custom header links</h1>
-    </div>
-  </div>
+<div class="vl-typography">
+  <h1 class="vl-title vl-title--h1">Extra links in de header</h1>
+  <p>
+    Met <code>header_links</code> (een lijst van <code>(tekst, href, title)</code>)
+    verschijnen rechtsboven in de header extra links die in een nieuw venster openen.
+  </p>
+  <pre><code>{{ "{% set header_links = [
+  ('Contact', 'https://www.onroerenderfgoed.be/contact', 'Contacteer ons'),
+  ('Over ons', 'https://www.onroerenderfgoed.be/over-ons', 'Meer informatie over ons'),
+] %}" }}</code></pre>
+</div>
 {% endblock %}

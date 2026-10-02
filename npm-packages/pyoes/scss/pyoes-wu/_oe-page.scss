@@ -1,0 +1,23 @@
+// Algemene pagina-opbouw van de pyoes-shell (pyoes/layout.jinja2).
+//
+// De pagina volgt de Webuniversum-structuur:
+//   .vl-page > [burgerprofiel-header] > header.oe-header > main.vl-main-content
+//   > .vl-region > .vl-layout > inhoud, gevolgd door de burgerprofiel-footer.
+
+// De burgerprofiel-header (Vlaanderen-widget) wordt asynchroon ingeladen.
+// Reserveer alvast de hoogte zodat de pagina niet verspringt.
+.vlaanderen-header-container {
+  min-height: 43px;
+}
+
+// Sticky footer: de pagina vult minstens het scherm, de inhoud neemt de
+// resterende ruimte in zodat de footer onderaan blijft staan.
+.vl-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > .vl-main-content {
+    flex: 1 0 auto;
+  }
+}

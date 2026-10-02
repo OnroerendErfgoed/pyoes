@@ -1,3 +1,32 @@
+0.27.0 (unreleased)
+===================
+
+- Webuniversum als basis van pyoes (#376). Dit is een breaking change voor
+  toepassingen die de pyoes jinja2 templates gebruiken:
+
+  - Nieuwe scss entry ``@OnroerendErfgoed/pyoes/scss/pyoes-wu`` laadt
+    Webuniversum (``@govflanders/vl-ui-design-system-style``) met het OE-thema
+    en de styling van de shell. Foundation en font-awesome zitten daar niet
+    meer in; de fonts komen uit Webuniversum ("Flanders Art Sans" met
+    font-weight 300/400/500/700) en de root font-size is 62.5% (1rem = 10px).
+  - ``pyoes/layout.jinja2`` en ``pyoes/header.jinja2`` gebruiken
+    Webuniversum-markup (``vl-page``, ``vl-application-header``,
+    ``vl-layout``). Naast ``login_nav``/``login_sub_nav`` (accountmenu, nu
+    standaard leeg) is er ``nav_actions`` voor extra acties rechts in de
+    navigatie. De inhoud staat in een nieuw block ``main`` (``vl-region`` >
+    ``vl-layout``).
+  - ``js_files`` is standaard leeg: foundation, jQuery en modernizr worden niet
+    meer geladen.
+  - ``pyoes/footer.jinja2`` en de onderhoudsbanner gebruiken Webuniversum-markup.
+  - De oude entries ``pyoes-settings``/``pyoes-jinja``/``pyoes-apps`` blijven
+    beschikbaar (deprecated) voor toepassingen die nog op foundation draaien.
+
+- De demo-toepassing is herleid tot de pagina's die de shell demonstreren; de
+  foundation-mockups (thema's beeldbank, inventaris, actoren, ...) zijn
+  verwijderd.
+- Scaffold ``pyoes`` genereert een toepassing op basis van ``pyoes-wu``.
+- Overstap van yarn naar pnpm voor de frontend (#376).
+
 0.26.2 (17-03-2026)
 ===================
 

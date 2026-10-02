@@ -1,111 +1,142 @@
 <!-- header -->
-<!-- wrapper & responsive navigation -->
+{#
+  OE header op basis van Webuniversum's vl-application-header:
+    - titelbalk met de naam van de toepassing, het "Vlaanderen is erfgoed"-logo
+      en optionele header_links;
+    - paarse hoofdnavigatie (main_nav, dropdown_main_nav) met rechts
+      nav_actions en het accountmenu (login_nav / login_sub_nav).
+  Styling: npm-packages/pyoes/scss/pyoes-wu/_oe-header.scss
+#}
 {% set header_links = header_links|default([]) -%}
-<header class="vl-application-header{{ ' vl-application-header--has-actions' if header_links|length > 0 else '' }}">
+{% set home_link = home_link|default('/') -%}
+{% set active_title = active_title|default('Erfgoedstijl') -%}
+<header class="vl-application-header oe-header{{ ' vl-application-header--has-actions' if header_links|length > 0 else '' }}">
   <div class="vl-layout">
-  <div class="vl-application-header__row">
-
-    {% set home_link = home_link|default('/') -%}
-
-    <div class="vl-application-header__content">
-      {% set active_title= active_title|default('Erfgoedstijl') -%}
-      <h1 class="vl-title vl-title--h2 vl-application-header__title">
-        <a class="vl-link" href="{{ home_link }}">{{active_title}}</a>
-      </h1>
-    </div>
-    {% block header_links scoped %}
-      <!-- Links in header -->
-      {% set header_links = header_links|default([]) -%}
-      {% if header_links|length > 0 %}
+    <div class="vl-application-header__row">
+      <div class="vl-application-header__content">
+        <h1 class="vl-title vl-title--h2 vl-application-header__title">
+          <a class="vl-link" href="{{ home_link }}">{{ active_title }}</a>
+        </h1>
+        {% block header_logo scoped %}
+          {% include "pyoes/logo.jinja2" %}
+        {% endblock %}
+      </div>
+      {% block header_links scoped %}
+        <!-- Links in header -->
+        {% if header_links|length > 0 %}
           <nav class="vl-application-header__actions" aria-label="Extra links">
-            <ul class="vl-link-list">
+            <ul>
               {% for text, href, title in header_links %}
                 <li class="vl-application-header__action"><a class="vl-link" href="{{ href }}" target="_blank" rel="noopener" title="{{ title }}">{{ text }}</a></li>
               {% endfor %}
             </ul>
           </nav>
-      {% endif %}
-    {% endblock %}
+        {% endif %}
+      {% endblock %}
+    </div>
   </div>
-  </div>
 
-<!-- navigation -->
-{% block main_nav %}
-  <nav class="oe-navigation" aria-label="Hoofdnavigatie">
-    <div class="vl-layout">
-    <div class="vl-application-header__sub">
-      {% set active_main_nav = active_main_nav|default('home') -%}
-      {% set default_main_nav = [
-        ('home', 'Home', '/'),
-        ('zoeken', 'Zoeken', '/'),
-        ('vinden', 'Vinden', '/')
-        ]
-        -%}
-      {% set default_dropdown_main_nav = [] %}
+  <!-- navigation -->
+  {% block main_nav scoped %}
+    {% set active_main_nav = active_main_nav|default('home') -%}
+    {% set default_main_nav = [
+      ('home', 'Home', '/'),
+      ('zoeken', 'Zoeken', '/'),
+      ('vinden', 'Vinden', '/')
+    ] -%}
+    {% set main_nav = main_nav|default(default_main_nav) -%}
+    {% set dropdown_main_nav = dropdown_main_nav|default([]) -%}
+    <nav class="oe-navigation" aria-label="Hoofdnavigatie">
+      <div class="vl-layout">
+        <div class="vl-application-header__sub">
 
-      {% set main_nav = main_nav|default(default_main_nav) -%}
-
-      {# MAIN NAV #}
-      <div class="vl-application-header__sub-row vl-application-header__sub-actions">
-      <ul class="vl-application-header__sub__actions">
-        {% for item in main_nav %}
-          {% if item|length == 3 %}
-            {% set id, caption, href = item %}
-            {% set class = None %}
-          {% else %}
-            {% set id, caption, href, class = item %}
-          {% endif %}
-          <li class="vl-application-header__sub__action {{class or ''}}">
-            <a class="vl-link{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}{% if id == 'home' %} title="{{ caption|striptags }}"{% endif %}>
-              {% if id == 'home' %}
-                <span class="vl-vi vl-vi-places-home" aria-hidden="true"></span>
-                <span class="vl-u-visually-hidden">{{ caption|striptags }}</span>
-              {% else %}
-                {{ caption|safe }}
-              {% endif %}
-            </a>
-          </li>
-        {% endfor %}
-
-      {% set dropdown_main_nav = dropdown_main_nav|default(default_dropdown_main_nav) -%}
-
-      {# DROPDOWN NAV #}
-      {% if dropdown_main_nav|length > 0 %}
-          {% for id, caption, submenu in dropdown_main_nav %}
-            <li class="vl-application-header__sub__action">
-              <details>
-              <summary><span class="vl-link">{{ caption }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
-              <ul class="vl-link-list vl-link-list--small">
-                {% for id, subCaption, href in submenu %}
-                  <li class="vl-link-list__item"><a class="vl-link{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}>{{ subCaption }}</a></li>
-                {% endfor %}
-              </ul>
-              </details>
-            </li>
-          {% endfor %}
-      {% endif %}
-      </ul>
-      </div>
-
-      {% block nav_actions scoped %}
-        {% set nav_actions = nav_actions|default([]) -%}
-        {% if nav_actions|length > 0 %}
-          <div class="vl-application-header__sub-row oe-navigation__actions">
+          {# MAIN NAV #}
+          <div class="vl-application-header__sub-row">
             <ul class="vl-application-header__sub__actions">
-              {% for caption, href in nav_actions %}
-                <li class="vl-application-header__sub__action"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
+              {% for item in main_nav %}
+                {% if item|length == 3 %}
+                  {% set id, caption, href = item %}
+                  {% set class = None %}
+                {% else %}
+                  {% set id, caption, href, class = item %}
+                {% endif %}
+                <li class="vl-application-header__sub__action{{ ' ' + class if class else '' }}">
+                  <a class="vl-link{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}{% if id == 'home' %} title="{{ caption|striptags }}"{% endif %}>
+                    {% if id == 'home' %}
+                      <span class="vl-vi vl-vi-places-home" aria-hidden="true"></span>
+                      <span class="vl-u-visually-hidden">{{ caption|striptags }}</span>
+                    {% else %}
+                      {{ caption|safe }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+
+              {# DROPDOWN NAV #}
+              {% for id, caption, submenu in dropdown_main_nav %}
+                {% set ns = namespace(active=false) %}
+                {% for sub_id, sub_caption, href in submenu %}
+                  {% if sub_id == active_main_nav %}{% set ns.active = true %}{% endif %}
+                {% endfor %}
+                <li class="vl-application-header__sub__action">
+                  <details>
+                    <summary{% if ns.active %} aria-current="true"{% endif %}><span class="vl-link{{ ' vl-link--bold' if ns.active else '' }}">{{ caption }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
+                    <ul class="vl-link-list vl-link-list--small">
+                      {% for sub_id, sub_caption, href in submenu %}
+                        <li class="vl-link-list__item"><a class="vl-link{{ ' vl-link--bold' if sub_id == active_main_nav else '' }}" href="{{ href }}"{% if sub_id == active_main_nav %} aria-current="page"{% endif %}>{{ sub_caption }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </li>
               {% endfor %}
             </ul>
           </div>
-        {% endif %}
-      {% endblock %}
 
-    </div>
-    </div>
-  </nav>
-{% endblock %}
+          {# NAV ACTIONS + ACCOUNTMENU (rechts) #}
+          {% block nav_actions scoped %}
+            {% set nav_actions = nav_actions|default([]) -%}
+            {% set login_nav = login_nav|default([]) -%}
+            {% set login_sub_nav = login_sub_nav|default([]) -%}
+            {% set user = request.user if request is defined and request.user is defined else None -%}
+            {% set authenticated_userid = request.authenticated_userid if request is defined and request.authenticated_userid is defined else None -%}
+            {% if nav_actions|length > 0 or (login_nav|length > 0 and not user) or (login_sub_nav|length > 0 and user) %}
+              <div class="vl-application-header__sub-row oe-navigation__actions">
+                <ul class="vl-application-header__sub__actions">
+                  {% for caption, href in nav_actions %}
+                    <li class="vl-application-header__sub__action"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
+                  {% endfor %}
+
+                  {% if user %}
+                    {# aangemeld: naam van de gebruiker met uitklapmenu #}
+                    {% if login_sub_nav|length > 0 %}
+                      {% set user_name = user.actor.omschrijving if user.actor is defined and user.actor and user.actor.omschrijving is defined and user.actor.omschrijving
+                                         else (user.persoonsgegevens.omschrijving if user.persoonsgegevens is defined and user.persoonsgegevens and user.persoonsgegevens.omschrijving is defined and user.persoonsgegevens.omschrijving
+                                         else authenticated_userid) %}
+                      <li class="vl-application-header__sub__action oe-navigation__user">
+                        <details>
+                          <summary><span class="vl-vi vl-vi-user" aria-hidden="true"></span><span class="vl-link">{{ user_name }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
+                          <ul class="vl-link-list vl-link-list--small">
+                            {% for caption, href in login_sub_nav %}
+                              <li class="vl-link-list__item"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        </details>
+                      </li>
+                    {% endif %}
+                  {% elif login_nav|length > 0 %}
+                    {# anoniem: aanmeldlinks #}
+                    {% for caption, href in login_nav %}
+                      <li class="vl-application-header__sub__action"><a class="vl-link" href="{{ href }}" rel="nofollow">{{ caption }}</a></li>
+                    {% endfor %}
+                  {% endif %}
+                </ul>
+              </div>
+            {% endif %}
+          {% endblock %}
+
+        </div>
+      </div>
+    </nav>
+  {% endblock %}
 </header>
-
 <!-- end header -->
-
-

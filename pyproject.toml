@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-version = "0.26.2"
+version = "0.27.0"
 name = "pyoes"
 readme = "README.md"
 authors = [
@@ -11,7 +11,7 @@ authors = [
 ]
 description = "pyoes"
 requires-python = ">=3.10,<=3.13"
-keywords = ["pyramid", "sass", "compass", "style", "css", "jinja2", "templates"]
+keywords = ["pyramid", "sass", "webuniversum", "style", "css", "jinja2", "templates"]
 classifiers = [
     "Programming Language :: Python",
     "Framework :: Pyramid",
