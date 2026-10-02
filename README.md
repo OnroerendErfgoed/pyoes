@@ -43,7 +43,7 @@ pre-commit hooks, en de frontend in `pyoes/static` (`pnpm install` +
 `pnpm run compile-css`, wat `pyoes/static/css/app.css` genereert - die is
 git-ignored). `npm-packages/pyoes` wordt als `file:`-dependency mee
 geïnstalleerd; een aparte `pnpm install` is daar niet nodig. De lokale
-`.npmrc` gebruikt `node-linker=hoisted`, zodat Sass ook dependencies van
+`pnpm-workspace.yaml` gebruikt `nodeLinker: hoisted`, zodat Sass ook dependencies van
 het styles-package via `node_modules` kan vinden.
 
 ### Vanaf een bestaande clone
