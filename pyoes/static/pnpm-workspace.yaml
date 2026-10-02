@@ -1,4 +1,4 @@
-nodeLinker: hoisted
+shamefullyHoist: true
 
 allowBuilds:
   "@parcel/watcher": true

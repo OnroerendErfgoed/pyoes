@@ -55,10 +55,6 @@ $vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/
   --vl-theme-primary-color-rgba-20: #{rgba($primary-color, 0.2)};
   --vl-theme-primary-color-rgba-10: #{rgba($primary-color, 0.1)};
 
-  --vl-theme-fg-color: #{$vl-mine-shaft};
-  --vl-theme-fg-color-60: #{color.mix($vl-mine-shaft, $white, 60%)};
-  --vl-theme-fg-color-70: #{color.mix($vl-mine-shaft, $white, 70%)};
-
   --vl-theme-focus-outline-color: #{color.mix($primary-color, $white, 65%)};
 
   --ms-line-height: 1.375;
