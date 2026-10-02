@@ -65,7 +65,8 @@ $vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/
 }
 
 // vl-button
-.vl-button {
+.vl-button,
+button.vl-link {
   cursor: pointer;
 }
 
