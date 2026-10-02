@@ -63,6 +63,19 @@ zaken instelt die voor de ganse site van tel zijn.
 In je individuele templates kun je dan weer erven van je eigen layout zodat
 je indien nodig wijzigingen kunt aanbrengen die over de ganse site werken.
 
+Rechts uitgelijnde navigatieacties worden ingesteld met ``nav_actions``.
+Deze lijst bevat paren van een label en een URL en is standaard leeg:
+
+.. code-block:: jinja
+
+    {% set nav_actions = [
+        ('Contact', request.route_path('contact')),
+        ('Help', request.route_path('help'))
+    ] -%}
+
+``login_nav`` en ``login_sub_nav`` worden niet meer gebruikt. De navigatie
+toont geen aanmeldlinks of accountmenu op basis van de aangemelde gebruiker.
+
 .. code-block:: jinja
 
     {% extends "layout.jinja2" %}

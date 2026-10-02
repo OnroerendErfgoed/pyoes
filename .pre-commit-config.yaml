@@ -1,25 +1,26 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-    -   id: check-yaml
-    -   id: end-of-file-fixer
+      - id: check-yaml
+      - id: end-of-file-fixer
         types: [python]
-    -   id: trailing-whitespace
+      - id: trailing-whitespace
         types: [python]
--   repo: https://github.com/psf/black-pre-commit-mirror
+  - repo: https://github.com/psf/black-pre-commit-mirror
     rev: 24.3.0
     hooks:
-    -   id: black
+      - id: black
         types: [python]
         args: [--preview]
         exclude: docs, tests
--   repo: https://github.com/PyCQA/flake8
+  - repo: https://github.com/PyCQA/flake8
     rev: 7.0.0
     hooks:
-    -   id: flake8
+      - id: flake8
         additional_dependencies:
-            - flake8-import-order==0.18.2
-            - flake8-bugbear==24.2.6
+          - flake8-import-order==0.18.2
+          - flake8-bugbear==24.2.6
+          - setuptools==74.1.0
         types: [python]
         exclude: docs

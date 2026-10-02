@@ -28,7 +28,7 @@ Drie commando's:
 
 ```sh
 mise trust       # vertrouw deze config (afhankelijk van je settings)
-mise install     # installeert alle tools (python, uv, node, yarn, pre-commit)
+mise install     # installeert alle tools (python, uv, node, pnpm, pre-commit)
 mise run server  # setup (1e keer) + start de demo server
 ```
 
@@ -39,12 +39,30 @@ naar `127.0.0.1` wijzen).
 
 `mise run setup` zet de volledige backend + frontend op: de virtualenv met de
 dependencies uit `requirements-dev.txt`, pyoes zelf editable geïnstalleerd, de
-pre-commit hooks, en de frontend in `pyoes/static` (`yarn install` +
-`yarn compile-css`, wat `pyoes/static/css/app.css` genereert - die is
+pre-commit hooks, en de frontend in `pyoes/static` (`pnpm install` +
+`pnpm run compile-css`, wat `pyoes/static/css/app.css` genereert - die is
 git-ignored). `npm-packages/pyoes` wordt als `file:`-dependency mee
-geïnstalleerd; een aparte `yarn install` is daar niet nodig.
+geïnstalleerd; een aparte `pnpm install` is daar niet nodig. De lokale
+`pnpm-workspace.yaml` gebruikt `nodeLinker: hoisted`, zodat Sass ook dependencies van
+het styles-package via `node_modules` kan vinden.
 
 ### Vanaf een bestaande clone
+
+Bij de overstap van Yarn naar pnpm: importeer eerst de bestaande lockfile,
+verwijder de oude installatie en bouw de frontend opnieuw:
+
+```sh
+mise install
+cd pyoes/static
+pnpm import
+rm -rf node_modules
+pnpm install
+pnpm run compile-css
+cd ../..
+```
+
+Commit daarna `pyoes/static/pnpm-lock.yaml` en verwijder de oude
+`pyoes/static/yarn.lock` en de ongebruikte `yarn.lock` in de repo-root.
 
 Is alles al opgezet, dan heb je enkel nog dit nodig:
 

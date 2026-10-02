@@ -8,8 +8,7 @@
 {% set main_nav = main_nav -%}
 {% set dropdown_main_nav = dropdown_main_nav -%}
 {% set active_main_nav = active_main_nav -%}
-{% set login_nav = login_nav -%}
-{% set login_sub_nav = login_sub_nav -%}
+{% set nav_actions = nav_actions -%}
 {% set home_link = home_link -%}
 {% set header_links = header_links -%}
 {% set mailto_error = mailto_error -%}
@@ -51,7 +50,7 @@
   {% endblock %}
 </head>
 <body>
-<div class="container">
+<div class="vl-page">
   {% block vlaanderen_header scoped %}
     {% if burgerprofiel_header_id %}
       {% if request.registry.settings['pyoes.banner'] %}
@@ -77,11 +76,13 @@
     {% include "pyoes/header.jinja2" %}
   {% endblock %}
 
+  <div class="vl-layout">
   {% block messages scoped %}
   {% endblock %}
 
   {% block content scoped %}
   {% endblock %}
+  </div>
 
   <div class="push"></div>
 
