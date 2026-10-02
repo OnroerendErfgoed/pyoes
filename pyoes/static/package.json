@@ -15,6 +15,6 @@
     "sass": "^1.79.0"
   },
   "scripts": {
-    "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps"
+    "compile-css": "sass scss/app.scss css/app.css -I node_modules --quiet-deps --silence-deprecation=import"
   }
 }

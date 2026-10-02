@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "base-variables";
 
 /**
@@ -15,7 +17,11 @@
 // Colors
 $vl-action-color: $primary-color;
 $vl-action-hover-color: $dark-purple;
-$vl-action-active-color: darken($primary-color, 10);
+$vl-action-active-color: color.adjust(
+  $primary-color,
+  $lightness: -10%,
+  $space: hsl
+);
 
 $vl-input-hover-background-color: rgba($primary-color, 0.1) !default;
 $vl-input-hover-border-color: rgba($primary-color, 0.65) !default;
@@ -23,8 +29,8 @@ $vl-input-hover-border-color: rgba($primary-color, 0.65) !default;
 $vl-error-color: $alert-color;
 
 // Fonts
-$vl-font-location: "@govflanders/vl-ui-design-system-style/build/assets/font/flanders/" !default;
-$vl-icon-font-location: "@govflanders/vl-ui-design-system-style/build/assets/font/iconfont/" !default;
+$vl-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/flanders/" !default;
+$vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/iconfont/" !default;
 
 /**
 ----------------------------
@@ -43,17 +49,17 @@ $vl-icon-font-location: "@govflanders/vl-ui-design-system-style/build/assets/fon
 // Override CSS custom properties
 :root {
   --vl-theme-primary-color: #{$primary-color};
-  --vl-theme-primary-color-60: #{mix($primary-color, $white, 60%)};
-  --vl-theme-primary-color-70: #{mix($primary-color, $white, 70%)};
+  --vl-theme-primary-color-60: #{color.mix($primary-color, $white, 60%)};
+  --vl-theme-primary-color-70: #{color.mix($primary-color, $white, 70%)};
   --vl-theme-primary-color-rgba-30: #{rgba($primary-color, 0.3)};
   --vl-theme-primary-color-rgba-20: #{rgba($primary-color, 0.2)};
   --vl-theme-primary-color-rgba-10: #{rgba($primary-color, 0.1)};
 
   --vl-theme-fg-color: #{$vl-mine-shaft};
-  --vl-theme-fg-color-60: #{mix($vl-mine-shaft, $white, 60%)};
-  --vl-theme-fg-color-70: #{mix($vl-mine-shaft, $white, 70%)};
+  --vl-theme-fg-color-60: #{color.mix($vl-mine-shaft, $white, 60%)};
+  --vl-theme-fg-color-70: #{color.mix($vl-mine-shaft, $white, 70%)};
 
-  --vl-theme-focus-outline-color: #{mix($primary-color, $white, 65%)};
+  --vl-theme-focus-outline-color: #{color.mix($primary-color, $white, 65%)};
 
   --ms-line-height: 1.375;
 }
