@@ -102,7 +102,7 @@
     el.className = 'message-banner';
     var content = '<span>{{ banner }}</span>';
     {% if detail %}
-      content = content.concat('<a onclick="showPopup()">   Meer info...</a>');
+      content = content.concat('<button type="button" class="vl-link" onclick="showPopup()" aria-haspopup="dialog" aria-controls="onderhoud-popup">Meer info...</button>');
     {% endif %}
     el.innerHTML = content;
 
@@ -112,22 +112,28 @@
    }
 
    function showPopup() {
-     document.getElementById('onderhoud-popup').style.display = 'flex';
+     document.getElementById('onderhoud-popup').showModal();
    }
 
    function hidePopup() {
-     document.getElementById('onderhoud-popup').style.display = 'none';
+     document.getElementById('onderhoud-popup').close();
    }
   </script>
-  <div id="onderhoud-popup">
-    <div class="row onderhoud-banner-header">
-      <h2>{{ banner }}</h2>
-    </div>
-    <div class="row onderhoud-banner-detail">
-      <p>{{ detail }}</p>
-    </div>
-    <div class="row">
-      <a><span id="popup-sluiten" onclick="hidePopup()" aria-hidden="true">Sluiten...</span></a>
-    </div>
+  <div class="vl-modal">
+    <dialog id="onderhoud-popup" class="vl-modal-dialog" aria-labelledby="onderhoud-popup-title">
+      <div class="vl-modal-dialog__wrapper">
+        <div class="vl-modal-dialog__header-wrapper">
+          <h2 id="onderhoud-popup-title" class="vl-title vl-title--h2 vl-modal-dialog__title">{{ banner }}</h2>
+        </div>
+        <div class="vl-modal-dialog__content">
+          <p>{{ detail }}</p>
+        </div>
+        <div class="vl-modal-dialog__footer">
+          <div class="vl-action-group">
+            <button type="button" class="vl-button" onclick="hidePopup()">Sluiten</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
   </div>
 {% endmacro %}

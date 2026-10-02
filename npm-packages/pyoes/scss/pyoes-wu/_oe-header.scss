@@ -113,38 +113,6 @@
   flex: 1;
   align-items: center;
 }
-#onderhoud-popup {
-  padding: 25px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  display: none;
-  background: $white;
-  border-style: solid;
-  max-height: 50%;
-  z-index: 1000;
-  height: 50%;
-  flex-flow: column;
-}
-#popup-sluiten {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 5px;
-  flex: 0 1 40px;
-}
-
-.onderhoud-banner-header {
-  flex: 0 1 auto;
-}
-
-.onderhoud-banner-detail {
-  overflow-y: auto;
-  flex: 1 1 auto;
-}
-
 @include respond-to(small) {
   .oe-navigation {
     details > .vl-link-list {
@@ -158,13 +126,9 @@
   }
 }
 
-@media only screen and (max-device-width: 480px) {
+@include respond-to(xsmall) {
   .message-banner {
     width: 100% !important;
     padding-bottom: 10px !important;
-  }
-  #onderhoud-popup {
-    height: 100%;
-    width: 75%;
   }
 }
