@@ -31,10 +31,6 @@
     &::details-content {
       content-visibility: visible;
     }
-
-    > .vl-application-header__sub {
-      display: flex;
-    }
   }
 
   .vl-application-header__sub::before,
@@ -64,6 +60,10 @@
     text-decoration: none;
     overflow-wrap: anywhere;
     cursor: pointer;
+  }
+
+  .vl-link > .vl-vi::before {
+    vertical-align: top;
   }
 
   .vl-link:hover,
@@ -186,6 +186,6 @@
 @include respond-to(xsmall) {
   .message-banner {
     width: 100% !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 1rem !important;
   }
 }
