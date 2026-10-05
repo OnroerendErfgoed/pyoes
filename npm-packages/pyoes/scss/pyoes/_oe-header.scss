@@ -11,12 +11,9 @@
 }
 
 .oe-navigation {
-  --oe-header-purple: #{$mid-purple};
-  --oe-header-active: #{$very-dark-purple};
-
   position: relative;
   z-index: 40;
-  background: var(--oe-header-purple);
+  background: $mid-purple;
 
   > .vl-layout {
     min-width: 0;
@@ -61,7 +58,6 @@
 
   .vl-link,
   summary {
-    display: block;
     padding: 1.2rem $vl-spacing-small;
     color: $white;
     line-height: 1.5;
@@ -73,10 +69,10 @@
   .vl-link:hover,
   .vl-link:focus-visible,
   .vl-link[aria-current="page"],
-  summary:hover,
-  summary:focus-visible,
-  details[open] > summary {
-    background: var(--oe-header-active);
+  summary:not(.oe-navigation__toggle):hover,
+  summary:not(.oe-navigation__toggle):focus-visible,
+  details[open]:not(.oe-navigation__menu) > summary {
+    background: $very-dark-purple;
     color: $white;
   }
 
@@ -94,12 +90,6 @@
       font-size: 0.8em;
       opacity: 0.6;
     }
-
-    .vl-link {
-      display: inline;
-      padding: 0;
-      background: transparent;
-    }
   }
 
   details {
@@ -115,7 +105,7 @@
       min-width: 100%;
       width: max-content;
       max-width: min(32rem, calc(100vw - #{2 * $vl-spacing-small}));
-      background: var(--oe-header-purple);
+      background: $mid-purple;
     }
   }
 
@@ -167,9 +157,21 @@
       display: block;
     }
 
+    .vl-application-header__sub__action > .vl-link,
+    .vl-application-header__sub__action > details {
+      width: 100%;
+    }
+
     details > .vl-link-list {
       position: static;
       width: auto;
+      max-width: none;
+
+      > .vl-link-list__item {
+        padding-left: $vl-spacing-small;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
     }
 
     &__actions {

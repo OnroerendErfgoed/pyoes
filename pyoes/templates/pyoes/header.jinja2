@@ -61,7 +61,7 @@
             {% set id, caption, href, class = item %}
           {% endif %}
           <li class="vl-application-header__sub__action {{class or ''}}">
-            <a class="vl-link{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}{% if id == 'home' %} title="{{ caption|striptags }}"{% endif %}>
+            <a class="vl-link vl-link--block{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}{% if id == 'home' %} title="{{ caption|striptags }}"{% endif %}>
               {% if id == 'home' %}
                 <span class="vl-vi vl-vi-places-home" aria-hidden="true"></span>
                 <span class="vl-u-visually-hidden">{{ caption|striptags }}</span>
@@ -74,7 +74,7 @@
 
         {% for text, href, title in header_links %}
           <li class="vl-application-header__sub__action oe-navigation__header-link">
-            <a class="vl-link" href="{{ href }}" target="_blank" rel="noopener" title="{{ title }}">{{ text }}</a>
+            <a class="vl-link vl-link--block" href="{{ href }}" target="_blank" rel="noopener" title="{{ title }}">{{ text }}</a>
           </li>
         {% endfor %}
 
@@ -85,10 +85,10 @@
           {% for id, caption, submenu in dropdown_main_nav %}
             <li class="vl-application-header__sub__action">
               <details>
-              <summary><span class="vl-link">{{ caption }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
+              <summary><span>{{ caption }}</span><span class="vl-vi vl-vi-nav-down" aria-hidden="true"></span></summary>
               <ul class="vl-link-list vl-link-list--small">
                 {% for id, subCaption, href in submenu %}
-                  <li class="vl-link-list__item"><a class="vl-link{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}>{{ subCaption }}</a></li>
+                  <li class="vl-link-list__item"><a class="vl-link vl-link--block{{ ' vl-link--bold' if id == active_main_nav else '' }}" href="{{ href }}"{% if id == active_main_nav %} aria-current="page"{% endif %}>{{ subCaption }}</a></li>
                 {% endfor %}
               </ul>
               </details>
@@ -104,7 +104,7 @@
           <div class="vl-application-header__sub-row oe-navigation__actions">
             <ul class="vl-application-header__sub__actions">
               {% for caption, href in nav_actions %}
-                <li class="vl-application-header__sub__action"><a class="vl-link" href="{{ href }}">{{ caption }}</a></li>
+                <li class="vl-application-header__sub__action"><a class="vl-link vl-link--block" href="{{ href }}">{{ caption }}</a></li>
               {% endfor %}
             </ul>
           </div>
