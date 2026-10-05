@@ -33,10 +33,12 @@
     }
   }
 
-  .vl-application-header__sub::before,
-  .vl-application-header__sub-row::before,
-  .vl-application-header__sub__action::before {
-    display: none;
+  .vl-application-header__sub,
+  .vl-application-header__sub-row,
+  .vl-application-header__sub__action {
+    &::before {
+      display: none;
+    }
   }
 
   .vl-application-header__sub-row {
@@ -162,9 +164,11 @@
       display: block;
     }
 
-    .vl-application-header__sub__action > .vl-link,
-    .vl-application-header__sub__action > details {
-      width: 100%;
+    .vl-application-header__sub__action {
+      > .vl-link,
+      > details {
+        width: 100%;
+      }
     }
 
     details > .vl-link-list {
