@@ -79,3 +79,17 @@ class TestHeaderNavActions:
             "{% block nav_actions %}<button>Help</button>{% endblock %}"
         )
         assert "<button>Help</button>" in template.render()
+
+    def test_mobile_menu(self, environment):
+        html = environment.get_template("pyoes/header.jinja2").render(
+            header_links=[("External", "/external", "External site")],
+            dropdown_main_nav=[("more", "More", [("help", "Help", "/help")])],
+            nav_actions=[("Contact", "/contact")],
+        )
+        assert '<details class="oe-navigation__menu">' in html
+        assert '<summary class="oe-navigation__toggle">' in html
+        assert 'vl-vi-menu" aria-hidden="true"' in html
+        assert "oe-navigation__header-link" in html
+        assert html.count('href="/external"') == 2
+        assert 'href="/help"' in html
+        assert 'href="/contact"' in html

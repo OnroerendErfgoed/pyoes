@@ -33,6 +33,11 @@
 {% block main_nav %}
   <nav class="oe-navigation" aria-label="Hoofdnavigatie">
     <div class="vl-layout">
+    <details class="oe-navigation__menu">
+    <summary class="oe-navigation__toggle">
+      <span>Menu</span>
+      <span class="vl-vi vl-vi-menu" aria-hidden="true"></span>
+    </summary>
     <div class="vl-application-header__sub">
       {% set active_main_nav = active_main_nav|default('home') -%}
       {% set default_main_nav = [
@@ -64,6 +69,12 @@
                 {{ caption|safe }}
               {% endif %}
             </a>
+          </li>
+        {% endfor %}
+
+        {% for text, href, title in header_links %}
+          <li class="vl-application-header__sub__action oe-navigation__header-link">
+            <a class="vl-link" href="{{ href }}" target="_blank" rel="noopener" title="{{ title }}">{{ text }}</a>
           </li>
         {% endfor %}
 
@@ -101,6 +112,7 @@
       {% endblock %}
 
     </div>
+    </details>
     </div>
   </nav>
 {% endblock %}
