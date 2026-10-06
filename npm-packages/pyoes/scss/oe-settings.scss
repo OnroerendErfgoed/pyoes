@@ -1,0 +1,104 @@
+@use "sass:color";
+
+@import "base-variables";
+
+/**
+  This file is used to override @govflanders/vl-ui-design-system-style (Webuniversum styling)
+  Make sure to define the variables you want to overwrite BEFORE importing the scss files
+  Make sure to define the specific styles you want to overwrite AFTER importing the scss files
+**/
+
+/**
+------------------------------
+ Start override sass variables
+------------------------------
+**/
+
+// Colors
+$vl-action-color: $primary-color;
+$vl-action-hover-color: $dark-purple;
+$vl-action-active-color: color.adjust(
+  $primary-color,
+  $lightness: -10%,
+  $space: hsl
+);
+
+$vl-input-hover-background-color: rgba($primary-color, 0.1) !default;
+$vl-input-hover-border-color: rgba($primary-color, 0.65) !default;
+
+$vl-error-color: $alert-color;
+
+// Fonts
+$vl-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/flanders/" !default;
+$vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/iconfont/" !default;
+
+/**
+----------------------------
+ End override sass variables
+----------------------------
+**/
+
+@import "@govflanders/vl-ui-design-system-style/build/scss/index";
+
+/**
+-------------------------------
+ Start override specific styles
+-------------------------------
+**/
+
+// Override CSS custom properties
+:root {
+  --vl-theme-primary-color: #{$primary-color};
+  --vl-theme-primary-color-60: #{color.mix($primary-color, $white, 60%)};
+  --vl-theme-primary-color-70: #{color.mix($primary-color, $white, 70%)};
+  --vl-theme-primary-color-rgba-30: #{rgba($primary-color, 0.3)};
+  --vl-theme-primary-color-rgba-20: #{rgba($primary-color, 0.2)};
+  --vl-theme-primary-color-rgba-10: #{rgba($primary-color, 0.1)};
+
+  --vl-theme-focus-outline-color: #{color.mix($primary-color, $white, 65%)};
+
+  --ms-line-height: 1.375;
+}
+
+// vl-button
+.vl-button,
+button.vl-link {
+  cursor: pointer;
+}
+
+.vl-button--naked {
+  color: $primary-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--vl-theme-action-hover-color, $vl-action-hover-color);
+  }
+}
+
+//vl-pill
+.vl-pill {
+  cursor: pointer;
+  color: $primary-color;
+}
+
+// vl-link
+.vl-link {
+  color: $link-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-color;
+  }
+}
+
+.vl-title {
+  color: $primary-color;
+}
+
+/**
+-------------------------------
+ End override specific styles
+-------------------------------
+**/

@@ -7,7 +7,7 @@
 #
 # Quick start (after cloning):
 #   mise trust       # trust this config (depends on your mise settings)
-#   mise install     # install all tools below (python, uv, node, yarn, ...)
+#   mise install     # install all tools below (python, uv, node, pnpm, ...)
 #   mise run setup   # set up backend + frontend for local development
 #   mise run test    # run the backend test suite
 #   mise run server  # start the demo server on http://local.onroerenderfgoed.be:6543
@@ -16,7 +16,7 @@
 python = "3.11"
 uv = "latest"
 node = "22"
-yarn = "1.22.22"
+pnpm = "11.8.0"
 pre-commit = "latest"
 
 [env]
@@ -121,14 +121,14 @@ hide = true
 #  Frontend setup (#371)
 # ===========================================================================
 # npm-packages/pyoes (the published sass package) is pulled in as a `file:`
-# dependency; yarn 1 copies it into pyoes/static/node_modules and hoists its own
-# dependencies (font-awesome, foundation-sites) there too, so a single
-# `yarn install` in pyoes/static is enough. `yarn compile-css` then builds
+# dependency; pyoes/static/pnpm-workspace.yaml enables hoisting so Sass can resolve its
+# dependencies from node_modules. A single `pnpm install` in pyoes/static is
+# enough. `pnpm run compile-css` then builds
 # pyoes/static/css/app.css (git-ignored) with sass.
 [tasks."setup:frontend"]
 description = "Install frontend dependencies and compile the static assets"
 dir = "pyoes/static"
-run = ["yarn install", "yarn compile-css"]
+run = ["pnpm install", "pnpm run compile-css"]
 alias = "sf"
 
 # ===========================================================================

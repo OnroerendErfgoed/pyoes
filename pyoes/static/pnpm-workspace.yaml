@@ -1,0 +1,4 @@
+shamefullyHoist: true
+
+allowBuilds:
+  "@parcel/watcher": true
