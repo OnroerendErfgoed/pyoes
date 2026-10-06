@@ -1,7 +1,7 @@
 @layer wu, pyoes;
 
 @layer wu {
-  @import "wu-settings";
+  @import "oe-settings";
 
   @at-root (without: all) {
     @layer pyoes {

@@ -104,13 +104,7 @@
 
 
 {% block javascript scoped -%}
-  <!-- javascript -->
-  <!-- deze moet moet onderaan de pagina zitten om foundation goed te laten werken -->
   {% set default_js_files = [
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/modernizr.js'),
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/vendor/jquery.js'),
-    request.static_path(app_package + ':static/node_modules/foundation-sites/js/foundation.min.js'),
-    request.static_path(app_package + ':static/js/app.js')
   ] -%}
   {% set js_files = js_files|default(default_js_files) -%}
   {% for js in js_files -%}

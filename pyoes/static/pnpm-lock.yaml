@@ -120,9 +120,6 @@ packages:
     resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
     engines: {node: '>=0.10.3'}
 
-  foundation-sites@5.5.3:
-    resolution: {integrity: sha512-z0NZl6Orkmeu0yhgjl3a8Ecd3frjEichn9IqocQX2jHMv9Ecd6UOPWS85f1YJXdCF6bHqnekGkrcWQ37ciR0Pw==}
-
   immutable@5.1.9:
     resolution: {integrity: sha512-m8nVez3rwrgmWxtLMt1ZYXB2Lv7OKYn/disyxAlSDYAlKSlFoPPfIAmAM/M5xqL4m4C/wAPw7S2/CNaUii1Hxg==}
 
@@ -172,7 +169,6 @@ snapshots:
     dependencies:
       '@govflanders/vl-ui-design-system-style': 3.5.10(postcss@8.5.28)
       font-awesome: 4.7.0
-      foundation-sites: 5.5.3
     transitivePeerDependencies:
       - postcss
 
@@ -245,8 +241,6 @@ snapshots:
     optional: true
 
   font-awesome@4.7.0: {}
-
-  foundation-sites@5.5.3: {}
 
   immutable@5.1.9: {}
 
