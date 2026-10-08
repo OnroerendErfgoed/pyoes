@@ -1,8 +1,9 @@
 {% extends "layout.jinja2" %}
 {% block content %}
 
-<main class="vl-grid">
-  <article class="panel vl-col--8-12" itemscope itemtype="http://schema.org/Article">
+<main class="vl-grid vl-u-spacer-top">
+  <div class="vl-col--8-12">
+    <article class="panel" itemscope itemtype="http://schema.org/Article">
     <h1 class="vl-title vl-title--h1">Erkende intergemeentelijke onroerenderfgoeddiensten</h1>
 
     <section class="vl-typography" itemprop="articleBody">
@@ -113,7 +114,8 @@
         </li>
       </ul>
     </section>
-  </article>
+    </article>
+  </div>
 
   <aside class="vl-col--4-12">
     {% include "includes/blokken/search-1.jinja2" %}
