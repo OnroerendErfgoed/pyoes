@@ -1,0 +1,15 @@
+.panel {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  color: #333;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
