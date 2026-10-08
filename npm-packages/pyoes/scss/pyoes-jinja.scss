@@ -8,6 +8,14 @@
       @import "pyoes/oe-header";
       @import "pyoes/oe-footer";
       @import "pyoes/oe-panel";
+
+      .article-page-grid {
+        margin-left: 0;
+
+        > .vl-col--8-12 {
+          padding-left: 0;
+        }
+      }
     }
   }
 }

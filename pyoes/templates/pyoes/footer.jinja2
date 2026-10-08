@@ -1,28 +1,26 @@
-<!-- footer -->
-<footer id="footer-bottom" role="contentinfo">
-  <div class="footer-bottom-inner inner">
-    <nav class="footer-doormat clearfix">
-      <div class="large-4 columns">
+<footer class="vl-typography" role="contentinfo">
+  <nav aria-label="Voettekst">
+    <div class="vl-grid">
+      <div class="vl-col--4-12">
         {% block footer scoped %}
-          <ul style="padding: 0">
+          <ul class="vl-link-list">
             {% for caption, href in footer_nav %}
-              <li><a target="_blank" href="{{ href }}">-&nbsp;{{ caption }}</a></li>
+              <li class="vl-link-list__item"><a class="vl-link" target="_blank" rel="noopener" href="{{ href }}">-&nbsp;{{ caption }}</a></li>
             {% endfor %}
           </ul>
         {% endblock %}
       </div>
-      <div class="large-5 columns">
-        <a class="mailtolink" href="mailto:ict@onroerenderfgoed.be">Technische vraag? Mail ons via ict@onroerenderfgoed.be</a>
+      <div class="vl-col--5-12">
+        <a class="vl-link" href="mailto:ict@onroerenderfgoed.be">Technische vraag? Mail ons via ict@onroerenderfgoed.be</a>
       </div>
-      <div class="large-3 columns right">
-        <ul class="soclogolist right">
-          <li><span class="facebook"><a href="https://www.facebook.com/onroerenderfgoed" target="_blank"><i class="fa fa-facebook-square"></i></a></span></li>
-          <li><span class="twitter"><a href="https://twitter.com/vioe" target="_blank"><i class="fa fa-twitter"></i></a></span></li>
-          <li><span class="linkedin"><a href="https://www.linkedin.com/company/onroerend-erfgoed-flanders-heritage-" target="_blank"><i class="fa fa-linkedin"></i></a></span></li>
-          <li><span class="slideshare"><a href="http://www.slideshare.net/VIOE" target="_blank"><i class="fa fa-slideshare"></i></a></span></li>
+      <div class="vl-col--3-12">
+        <ul class="vl-link-list vl-link-list--inline">
+          <li class="vl-link-list__item"><a class="vl-link" href="https://www.facebook.com/onroerenderfgoed" target="_blank" rel="noopener" aria-label="Facebook"><span class="vl-vi vl-vi-facebook" aria-hidden="true"></span></a></li>
+          <li class="vl-link-list__item"><a class="vl-link" href="https://twitter.com/vioe" target="_blank" rel="noopener" aria-label="Twitter"><span class="vl-vi vl-vi-twitter" aria-hidden="true"></span></a></li>
+          <li class="vl-link-list__item"><a class="vl-link" href="https://www.linkedin.com/company/onroerend-erfgoed-flanders-heritage-" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="vl-vi vl-vi-linkedin" aria-hidden="true"></span></a></li>
+          <li class="vl-link-list__item"><a class="vl-link" href="http://www.slideshare.net/VIOE" target="_blank" rel="noopener">SlideShare</a></li>
         </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </footer>
-<!-- end footer -->

@@ -1,27 +1,30 @@
+<section aria-labelledby="search-title">
+  <header class="vl-sidebar-header">
+    <h2 id="search-title" class="vl-title vl-title--h3 vl-sidebar-header__title">Zoeken</h2>
+  </header>
+  <div class="vl-sidebar-content">
+  <form action="#" method="post" class="vl-form">
+    <label class="vl-form__label vl-form__label--block vl-u-visually-hidden" for="search-query">Zoekterm</label>
+    <input class="vl-input-field" id="search-query" type="text" placeholder="zoek">
+    <button class="vl-button vl-u-spacer-top--xsmall" type="submit">ZOEKEN</button>
 
-
-<!-- search 1 -->
-
-<div class="large-12 ">
-    <div class="panel fl-block-search">
-
-<form name="" action="#" method="post" class="clearfix">
-
-  <input type='text' placeholder='zoek' />
-  <a href="#" class="button [tiny small large] right">ZOEKEN</a>
-
-  <fieldset class="fl-block-search_fieldset">
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">zoek binnen deze website</label><br>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">zoek binnen Vlaanderen.be</label>
-  </fieldset>
-
-</form>
-
-    </div>
-</div>
-
-<!-- end search 1-->
-
-
-
-
+    <fieldset class="vl-u-spacer-top--xsmall">
+      <legend class="vl-form__label">Zoek binnen</legend>
+      <div class="vl-checkbox vl-u-spacer-bottom--xsmall">
+        <input class="vl-checkbox__toggle" id="search-site" type="checkbox">
+        <label class="vl-checkbox__label" for="search-site">
+          <span class="vl-checkbox__box" aria-hidden="true"></span>
+          zoek binnen deze website
+        </label>
+      </div>
+      <div class="vl-checkbox">
+        <input class="vl-checkbox__toggle" id="search-flanders" type="checkbox">
+        <label class="vl-checkbox__label" for="search-flanders">
+          <span class="vl-checkbox__box" aria-hidden="true"></span>
+          zoek binnen Vlaanderen.be
+        </label>
+      </div>
+    </fieldset>
+  </form>
+  </div>
+</section>
