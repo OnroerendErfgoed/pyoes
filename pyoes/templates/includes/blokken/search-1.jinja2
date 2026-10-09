@@ -4,9 +4,12 @@
   </header>
   <div class="vl-sidebar-content">
   <form action="#" method="post" class="vl-form">
-    <label class="vl-form__label vl-form__label--block vl-u-visually-hidden" for="search-query">Zoekterm</label>
-    <input class="vl-input-field" id="search-query" type="text" placeholder="zoek">
-    <button class="vl-button vl-u-spacer-top--xsmall" type="submit">ZOEKEN</button>
+    <div class="vl-search vl-search--alt">
+      <div class="vl-search__input-wrapper">
+        <input class="vl-input-field vl-search__input" id="search-query" type="search" placeholder="zoek" aria-label="Zoekterm" style="margin: 0;">
+        <button class="vl-button vl-search__submit" type="submit">ZOEKEN</button>
+      </div>
+    </div>
 
     <fieldset class="vl-u-spacer-top--xsmall">
       <legend class="vl-form__label">Zoek binnen</legend>
