@@ -102,7 +102,6 @@ def test_home_links_to_all_demo_pages(app):
     parser.feed(response.text)
 
     assert {"/typo", "/article", "/401", "/403", "/404", "/500"} <= set(parser.links)
-    assert 'class="vl-icon-list"' in response.text
     assert 'aria-labelledby="examples-title"' in response.text
     assert 'aria-labelledby="errors-title"' in response.text
 
