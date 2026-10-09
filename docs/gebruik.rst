@@ -108,6 +108,17 @@ toont geen aanmeldlinks of accountmenu op basis van de aangemelde gebruiker.
 demonstratie
 ============
 
+De demo bevat de startpagina (``/``), typografie (``/typo``), een
+artikelpagina (``/article``) en foutpagina's (``/401``, ``/403``, ``/404``,
+``/500``). De startpagina linkt naar alle voorbeelden. De foutpagina's zijn
+demo's en worden met HTTP-status 200 weergegeven. Alleen de bijbehorende templates en hun
+afhankelijkheden blijven beschikbaar; de overige demopagina's zijn verwijderd.
+De scaffold-templates voor nieuwe applicaties blijven behouden.
+
+De hoofdnavigatie van de demo markeert de huidige pagina op basis van de
+routenaam. Op foutpagina's is geen navigatie-item actief. Met
+``active_main_nav`` kun je het actieve item expliciet instellen.
+
 Als je gewoon eens de nieuwe stijl wenst te bekijken en een overzicht van de 
 mogelijkheden wil krijgen, kun je best de demo toepassing installeren.
 

@@ -1,96 +1,47 @@
 {% extends "layout.jinja2" %}
 
 {% block content %}
-
-<br>
-
-
-    <div class="vl-grid">
-
-      <div class="vl-col--1-1">
-
-
-   <div class="panel">
-
-    <ul>
-      <li><a class="vl-link" href="grids">Grids</a></li>
-      <li><a class="vl-link" href="blokken">Blokken</a></li>
-      <li><a class="vl-link" href="typo">Typo / Headings / Iconlist</a></li>
-      <li><a class="vl-link" href="navigation">Navigatie types</a></li>
-      <li><a class="vl-link" href="colors">Colors</a></li>
-      <li><a class="vl-link" href="elements">Elementen</a></li>
-      <li><a class="vl-link" href="images">Images</a></li>
-      <li>Media</li>
-    </ul>
-
-    <hr>
-
-      <ul>
-      <li><a class="vl-link" href="article">Basic article page 8/4</a></li>
-      <li><a class="vl-link" href="article9-3">Basic article page 9/3</a></li>
-      </ul>
-
-    <hr>
-
-    <ul>
-      <li><a class="vl-link" href="beeldbank">Theme Beeldbank</a></li>
-      <li><a class="vl-link" href="beeldbank-zoeken">Theme Beeldbank uitgebreid zoeken</a></li>
-      <li><a class="vl-link" href="beeldbank-detail">Theme Beeldbank detail</a></li>
-    </ul>
-
-    <hr>
-    <ul>
-      <li><a class="vl-link" href="inventaris">Theme Inventaris</a></li>
-      <li><a class="vl-link" href="inventaris-article">Theme Inventaris base article <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleID">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDv2">Theme Inventaris article ID 2 col 9/3 <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfull">Theme Inventaris article ID full width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfullv2">Theme Inventaris article ID full v2 width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-articleIDfullv3">Theme Inventaris article ID full v3 width <small>(schets)</small></a></li>
-      <li><a class="vl-link" href="inventaris-zoekoverzicht">Theme Inventaris zoekoverzicht 2 col <small>(schets)</small></a></li>
-      <li>Theme Inventaris print article</li>
-    </ul>
-
-   <!   <hr>
-
-    <ul>
-      <li><a class="vl-link" href="geoportaal">Theme Geoportaal</a></li>
-    </ul>
-
-      <hr>
-
-    <ul>
-      <li><a class="vl-link" href="beheersplannen">Theme Beheersplannen</a></li>
-    </ul>
-
- <hr>
-
-    <ul>
-      <li><a class="vl-link" href="actorenzoek">Zoekactoren</a></li>
-    </ul>
-
-
-    <ul>
-      <li><a class="vl-link" href="actorenfront">Zoekactoren front-end</a></li>
-    </ul>
-
-    <hr>
- <ul>
-      <li><a class="vl-link" href="beheersplannen">Beheersplannen</a></li>
-    </ul>
-    <hr>
- <ul>
-      <li><a class="vl-link" href="postregistratie">Postregistratie</a></li>
-    </ul>
-<hr>
-<ul>
-      <li><a class="vl-link" href="besluitendatabank">Besluiten</a></li>
-    </ul>
-
-
-
-       </div>
-   </div>
+  <main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">
+    <div class="vl-col--1-1">
+      <p class="vl-intro vl-u-spacer-bottom">
+        Ontdek de typografie, paginaopbouw en foutmeldingen van pyoes.
+      </p>
     </div>
 
+    <div class="vl-col--6-12 vl-col--1-1--s">
+      <section class="panel vl-typography" aria-labelledby="examples-title">
+        <h2 id="examples-title" class="vl-title vl-title--h2">Voorbeeldpagina's</h2>
+        <p>Bekijk de bouwstenen voor een website in de erfgoedstijl.</p>
+        <ul>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('typo') }}">Typografie en iconen</a>
+          </li>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('article') }}">Artikelpagina met 8/4-indeling</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="vl-col--6-12 vl-col--1-1--s">
+      <section class="panel vl-typography" aria-labelledby="errors-title">
+        <h2 id="errors-title" class="vl-title vl-title--h2">Foutpagina's</h2>
+        <p>Bekijk hoe we bezoekers informeren als er iets misloopt.</p>
+        <ul>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('401') }}">401 - Aanmelden vereist</a>
+          </li>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('403') }}">403 - Geen toegang</a>
+          </li>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('404') }}">404 - Pagina niet gevonden</a>
+          </li>
+          <li>
+            <a class="vl-link" href="{{ request.route_path('500') }}">500 - Technisch probleem</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </main>
 {% endblock %}

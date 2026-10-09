@@ -6,37 +6,31 @@
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-  <div class="large-12 columns" style="height:100%">
-    <div class="text-center" style="padding:20px 0; color: #753F7F;">
-      <h1 style="font-size:60px;">
-        <i class="fa fa-warning"></i>
-        <span>404</span><br>
-      </h1>
-      <h3><span>De pagina werd niet gevonden.</span></h3>
-      <h4><strong><span style="color:#753F7F">De pagina die je hebt opgevraagd, bestaat niet (meer) of ze is verplaatst.</span></strong></h4>
-    </div>
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <div class="text-center">
-            <div class="small-10 small-centered columns" style="padding:20px 0">
-              <h5 class="text-left">Wat kan je zelf doen?</h5>
-              <ul class="disk text-left">
-                <li><strong>Controleer de schrijfwijze van de URL.</strong>
-                  De oorsprong van dit probleem kan een eenvoudige tikfout zijn.
-                </li>
-                <li><strong>Ben je foutief doorgelinkt?</strong>
-                  Meld het ons via <a href="mailto:{{ mailto_notfound }}">{{ mailto_notfound }}</a>.
-                </li>
-                <li><strong>Werd de pagina gewist of verplaatst?</strong>
-                  Dan kan je een nieuwe zoekopdracht starten op de
-                  <a href="/">homepagina.</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">
+    <div class="vl-col--1-1">
+      <div class="vl-u-align-center vl-u-spacer-bottom">
+        <h1 class="vl-title vl-title--h1">
+          <span class="vl-vi vl-vi-warning" aria-hidden="true"></span>
+          <span>404</span>
+        </h1>
+        <h2 class="vl-title vl-title--h3">De pagina werd niet gevonden.</h2>
+        <p class="vl-title vl-title--h4"><strong>De pagina die je hebt opgevraagd, bestaat niet (meer) of ze is verplaatst.</strong></p>
       </div>
+      <section class="vl-info-tile vl-typography">
+        <h2 class="vl-title vl-title--h5">Wat kan je zelf doen?</h2>
+        <ul>
+          <li><strong>Controleer de schrijfwijze van de URL.</strong>
+            De oorsprong van dit probleem kan een eenvoudige tikfout zijn.
+          </li>
+          <li><strong>Ben je foutief doorgelinkt?</strong>
+            Meld het ons via <a class="vl-link" href="mailto:{{ mailto_notfound }}">{{ mailto_notfound }}</a>.
+          </li>
+          <li><strong>Werd de pagina gewist of verplaatst?</strong>
+            Dan kan je een nieuwe zoekopdracht starten op de
+            <a class="vl-link" href="/">homepagina.</a>
+          </li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </main>
 {% endblock %}

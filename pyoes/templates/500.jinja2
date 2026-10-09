@@ -6,32 +6,26 @@
 {% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-  <div class="large-12 columns" style="height:100%">
-    <div class="text-center" style="padding:20px 0; color: #753F7F;">
-      <h1 style="font-size:60px;">
-        <i class="fa fa-warning" style=""></i>
-        <span style="">500</span><br>
-      </h1>
-      <h3><span>Er is een technisch probleem.</span></h3>
-      <h4><strong><span style="color:#753F7F">Sorry! Onze website heeft een technisch probleem. Hierdoor kan je deze pagina niet raadplegen. </span></strong></h4>
-    </div>
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <div class="text-center">
-            <div class="small-10 small-centered columns" style="padding:20px 0">
-              <h5 class="text-left" style="">Wat kan je zelf doen?</h5>
-              <ul class="disk text-left" style="margin-bottom:10px;">
-                <li><strong>Vernieuw de browserpagina <small>(CTRL+F5 of CMD+R)</small></strong></li>
-                <li><strong>Wis de browsergeschiedenis en geef de URL opnieuw in.</strong></li>
-                <li><strong>Meld ons het technisch probleem via <a href="mailto:{{ mailto_error }}">{{ mailto_error }}</a>.</strong></br>
-                  Vergeet niet te vermelden welke pagina je zocht, welk besturingsysteem (Windows, MacOS, ... ) en welke browser ( Chrome, ... ).</li>
-                <li><strong>Je kan een nieuwe zoekopdracht starten op de <a href="/">homepagina.</a></strong></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">
+    <div class="vl-col--1-1">
+      <div class="vl-u-align-center vl-u-spacer-bottom">
+        <h1 class="vl-title vl-title--h1">
+          <span class="vl-vi vl-vi-warning" aria-hidden="true"></span>
+          <span>500</span>
+        </h1>
+        <h2 class="vl-title vl-title--h3">Er is een technisch probleem.</h2>
+        <p class="vl-title vl-title--h4"><strong>Sorry! Onze website heeft een technisch probleem. Hierdoor kan je deze pagina niet raadplegen.</strong></p>
       </div>
+      <section class="vl-info-tile vl-typography">
+        <h2 class="vl-title vl-title--h5">Wat kan je zelf doen?</h2>
+        <ul>
+          <li><strong>Vernieuw de browserpagina <small>(CTRL+F5 of CMD+R)</small></strong></li>
+          <li><strong>Wis de browsergeschiedenis en geef de URL opnieuw in.</strong></li>
+          <li><strong>Meld ons het technisch probleem via <a class="vl-link" href="mailto:{{ mailto_error }}">{{ mailto_error }}</a>.</strong><br>
+            Vergeet niet te vermelden welke pagina je zocht, welk besturingsysteem (Windows, MacOS, ... ) en welke browser ( Chrome, ... ).</li>
+          <li><strong>Je kan een nieuwe zoekopdracht starten op de <a class="vl-link" href="/">homepagina.</a></strong></li>
+        </ul>
+      </section>
     </div>
-  </div>
+  </main>
 {% endblock %}

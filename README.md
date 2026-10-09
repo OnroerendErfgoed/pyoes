@@ -37,6 +37,13 @@ nog geen virtualenv of gecompileerde css is) en start daarna de server op
 http://local.onroerenderfgoed.be:6543 (die hostname moet in je `/etc/hosts`
 naar `127.0.0.1` wijzen).
 
+De demo bevat de startpagina (`/`), typografie (`/typo`), de artikelpagina
+(`/article`) en voorbeelden van foutpagina's (`/401`, `/403`, `/404`, `/500`).
+De startpagina linkt naar alle voorbeelden. De foutpagina's zijn demo's en
+worden met HTTP-status 200 weergegeven. Alleen deze templates en hun gedeelde layouts, macro's en
+includes blijven in `pyoes/templates`; de overige demopagina's zijn verwijderd.
+De scaffold-templates voor nieuwe applicaties blijven beschikbaar.
+
 `mise run setup` zet de volledige backend + frontend op: de virtualenv met de
 dependencies uit `requirements-dev.txt`, pyoes zelf editable geïnstalleerd, de
 pre-commit hooks, en de frontend in `pyoes/static` (`pnpm install` +

@@ -1,3 +1,8 @@
+Unreleased
+==========
+
+- Gebruik Webuniversum classes in de 401, 403, 404 en 500 foutpagina's.
+
 0.26.2 (17-03-2026)
 ===================
 

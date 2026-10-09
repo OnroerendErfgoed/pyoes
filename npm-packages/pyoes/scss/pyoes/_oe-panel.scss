@@ -1,0 +1,15 @@
+.panel {
+  margin-bottom: $vl-spacing-normal;
+  padding: $vl-spacing-normal;
+  border: 0.1rem solid $vl-input-border-color-alt;
+  background-color: $white;
+  color: $jet;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
