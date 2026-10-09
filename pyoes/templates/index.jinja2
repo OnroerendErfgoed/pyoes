@@ -3,7 +3,6 @@
 {% block content %}
   <main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">
     <div class="vl-col--1-1">
-      <h1 class="vl-title vl-title--h1">Erfgoedstijl</h1>
       <p class="vl-intro vl-u-spacer-bottom">
         Ontdek de typografie, paginaopbouw en foutmeldingen van pyoes.
       </p>
@@ -13,13 +12,11 @@
       <section class="panel vl-typography" aria-labelledby="examples-title">
         <h2 id="examples-title" class="vl-title vl-title--h2">Voorbeeldpagina's</h2>
         <p>Bekijk de bouwstenen voor een website in de erfgoedstijl.</p>
-        <ul class="vl-icon-list">
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+        <ul>
+          <li>
             <a class="vl-link" href="{{ request.route_path('typo') }}">Typografie en iconen</a>
           </li>
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+          <li>
             <a class="vl-link" href="{{ request.route_path('article') }}">Artikelpagina met 8/4-indeling</a>
           </li>
         </ul>
@@ -30,21 +27,17 @@
       <section class="panel vl-typography" aria-labelledby="errors-title">
         <h2 id="errors-title" class="vl-title vl-title--h2">Foutpagina's</h2>
         <p>Bekijk hoe we bezoekers informeren als er iets misloopt.</p>
-        <ul class="vl-icon-list">
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+        <ul>
+          <li>
             <a class="vl-link" href="{{ request.route_path('401') }}">401 - Aanmelden vereist</a>
           </li>
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+          <li>
             <a class="vl-link" href="{{ request.route_path('403') }}">403 - Geen toegang</a>
           </li>
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+          <li>
             <a class="vl-link" href="{{ request.route_path('404') }}">404 - Pagina niet gevonden</a>
           </li>
-          <li class="vl-icon-list__item">
-            <span class="vl-vi vl-vi-arrow-right" aria-hidden="true"></span>
+          <li>
             <a class="vl-link" href="{{ request.route_path('500') }}">500 - Technisch probleem</a>
           </li>
         </ul>
