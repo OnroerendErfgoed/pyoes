@@ -12,8 +12,8 @@
   </script>
 {% endmacro %}
 
-{% macro generate_uri(request, settingsURI, id) %}
-  {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
+{% macro generate_uri(uri_template, id) %}
+  {{ uri_template|replace('{0}', id) }}
 {% endmacro %}
 
 {% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) %}
@@ -40,13 +40,13 @@
           session.configure({
             active: websiteHasAuthenticatedSession,
             endpoints: {
-              loginUrl: '{{ baseUrl }}aanmelden',
-              loginRedirectUrl: '{{ baseUrl }}',
-              logoutUrl: '{{ baseUrl }}afmelden',
-              switchCapacityUrl: '{{ baseUrl }}wisselen?goto={{ baseUrl }}aanmelden'
+              loginUrl: {{ (baseUrl ~ 'aanmelden')|tojson }},
+              loginRedirectUrl: {{ baseUrl|tojson }},
+              logoutUrl: {{ (baseUrl ~ 'afmelden')|tojson }},
+              switchCapacityUrl: {{ (baseUrl ~ 'wisselen?goto=' ~ baseUrl ~ 'aanmelden')|tojson }}
             }
           });
-          const pyoes_banner = JSON.parse('{{ pyoes_banner | tojson }}');
+          const pyoes_banner = {{ pyoes_banner|tojson }};
           if (pyoes_banner && pyoes_banner.banner) {
             render_info_banner(pyoes_banner.banner, pyoes_banner.detail || '');
           }
@@ -57,7 +57,7 @@
           extension.getMenu().getGroup('application').add({
             type: 'link',
             label: 'Bekijk jouw profiel',
-            href: '{{ baseUrl }}user',
+            href: {{ (baseUrl ~ 'user')|tojson }},
             icon: 'e-desk-lock',
             target: '_self'
           });
