@@ -1,6 +1,7 @@
 Unreleased
 ==========
 
+- Verwijder de ongebruikte public-, admin- en processcaffolds en hun registratie.
 - Toon het aanhalingsteken van citaten in wit op de paarse achtergrond.
 - Gebruik Webuniversum classes in de 401, 403, 404 en 500 foutpagina's.
 - Toon reacties op de artikelpagina compacter met Webuniversum tekst- en spacingclasses.

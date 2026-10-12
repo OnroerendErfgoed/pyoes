@@ -11,7 +11,7 @@ authors = [
 ]
 description = "pyoes"
 requires-python = ">=3.10,<=3.13"
-keywords = ["pyramid", "sass", "compass", "style", "css", "jinja2", "templates"]
+keywords = ["pyramid", "sass", "style", "css", "jinja2", "templates"]
 classifiers = [
     "Programming Language :: Python",
     "Framework :: Pyramid",
@@ -47,11 +47,6 @@ packages = [
 
 [project.entry-points."paste.app_factory"]
 main = "pyoes:main"
-
-[project.entry-points."pyramid.scaffold"]
-pyoes = "pyoes.scaffolds:PyoesTemplate"
-pyoesAdmin = "pyoes.scaffolds:PyoesAdminTemplate"
-pyoesProces = "pyoes.scaffolds:PyoesProcesTemplate"
 
 [tool.hatch.metadata]
 # This allows us to use github links as dependencies

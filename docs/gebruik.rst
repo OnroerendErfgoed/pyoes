@@ -5,25 +5,20 @@ Gebruik
 CSS bewerken
 ============
 
-Als je aan css werkt is het best om compass je files te laten monitoren zodat 
-deze wanneer nodig kan hercompileren.
+De lokale demo compileert Sass met pnpm. Na ``mise run setup`` kun je
+de stylesheets opnieuw compileren:
 
 .. code-block:: bash
     
-    $ cd static
-    $ compass watch .
-    # je kunt ook gewoon eenmalig compileren
-    $ compass compile
+    $ cd pyoes/static
+    $ pnpm run compile-css
 
-Maak je eigen .scss file aan in :file:`/<package_name>/static/sacss/_<package_name>.scss`. 
-De underscore aan het begint zorgt er voor dat dit bestand als een plugin
-gezien wordt en niet afzonderlijk gecompileerd wordt.
+De invoer staat in :file:`pyoes/static/scss/app.scss`; de gegenereerde
+:file:`pyoes/static/css/app.css` wordt niet ingecheckt. De gedeelde Sass-code
+staat in :file:`npm-packages/pyoes/scss`.
 
-Als je met compass watch werkt, dan zal telkens je een bestand wijzigt je 
-:file:`app.css` bestand opnieuw worden aangemaakt. Alhoewel we deze compilatie
-ook bij het deployen zouden kunnen uitvoeren, zou dit weer tot extra build-time
-dependencies leiden. Vergeet daarom zeker niet om telkens je :file:`app.css` 
-bestand in te checken.
+Beheer in andere applicaties zelf de Sass-invoer, de frontend-dependencies
+en het compileercommando.
 
 Jinja2 templates
 ================
@@ -32,8 +27,8 @@ Jinja2 templates
 vooral een algemene header en footer levert. In deze layout zijn er een aantal
 blocks gedefinieerd die in andere templates kunnen overschreven worden.
 
-De scaffold maakt voor je een eigen :file:`layout.jinja2` aan waarin je een aantal 
-zaken instelt die voor de ganse site van tel zijn. 
+Maak in je applicatie zelf een :file:`templates/layout.jinja2` aan waarin
+je de instellingen voor de hele site vastlegt.
 
 .. code-block:: jinja
 
@@ -113,7 +108,6 @@ artikelpagina (``/article``) en foutpagina's (``/401``, ``/403``, ``/404``,
 ``/500``). De startpagina linkt naar alle voorbeelden. De foutpagina's zijn
 demo's en worden met HTTP-status 200 weergegeven. Alleen de bijbehorende templates en hun
 afhankelijkheden blijven beschikbaar; de overige demopagina's zijn verwijderd.
-De scaffold-templates voor nieuwe applicaties blijven behouden.
 
 De hoofdnavigatie van de demo markeert de huidige pagina op basis van de
 routenaam. Op foutpagina's is geen navigatie-item actief. Met

@@ -1,5 +1,4 @@
 [report]
 omit = 
 	pyoes/scripts/*
-    pyoes/scaffolds/*
 	pyoes/views.py
