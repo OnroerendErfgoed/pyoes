@@ -9,10 +9,8 @@ from pyramid.events import BeforeRender
 
 class PyramidContext:
     """
-    Pyramid flavour of :class:`pyoes.context.PyoesContext`.
-
-    Reads from the request lazily, since it is added to every render
-    (json included) and request.user can be expensive.
+    Lazy :class:`pyoes.context.PyoesContext` for pyramid; it is added to every
+    render (json included) and ``request.user`` can be expensive.
     """
 
     def __init__(self, request):

@@ -9,7 +9,7 @@
         <div class="panel">
             <h3>Uw profiel</h3>
 
-            {% if not pyoes.user and not pyoes.user.userid %}
+            {% if not pyoes.user or not pyoes.user.userid %}
               <div class="alert">
               U bent niet aangemeld.
               </div>

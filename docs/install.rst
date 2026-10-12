@@ -128,6 +128,7 @@ pyramid ``request``. Daar bouw je de ``pyoes`` template context zelf op met
 
 .. code-block:: python
 
+    from fastapi.staticfiles import StaticFiles
     from fastapi.templating import Jinja2Templates
     from jinja2 import ChoiceLoader, Environment, FileSystemLoader, PackageLoader
 
@@ -141,13 +142,13 @@ pyramid ``request``. Daar bouw je de ``pyoes`` template context zelf op met
             FileSystemLoader("myapp/templates"),
             PackageLoader("pyoes", "templates"),
         ]),
-        autoescape=True,  # de starlette default slaat .jinja2 bestanden over
+        autoescape=True,  # jinja2 staat standaard autoescape uit
     ))
 
     def render(request, name, context=None, user=None):
         pyoes_context = pyoes.fastapi.context(
             request, settings=get_settings(), user=user,
-            authenticated_userid=user.id if user else None,
+            authenticated_userid=user.userid if user else None,
         )
         return templates.TemplateResponse(
             request, name, {"pyoes": pyoes_context, **(context or {})}

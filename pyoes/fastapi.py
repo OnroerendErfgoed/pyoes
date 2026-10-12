@@ -1,27 +1,4 @@
-"""
-FastAPI / Starlette integration.
-
-Usage::
-
-    from jinja2 import ChoiceLoader, Environment, FileSystemLoader, PackageLoader
-    from fastapi.templating import Jinja2Templates
-    import pyoes.fastapi
-
-    pyoes.fastapi.mount_static(app)
-    templates = Jinja2Templates(env=Environment(
-        loader=ChoiceLoader([
-            FileSystemLoader("myapp/templates"),
-            PackageLoader("pyoes", "templates"),
-        ]),
-        autoescape=True,
-    ))
-
-    def render(request, name, context, user=None):
-        return templates.TemplateResponse(request, name, {
-            "pyoes": pyoes.fastapi.context(request, settings=get_settings(), user=user),
-            **context,
-        })
-"""
+"""FastAPI / Starlette integration, see docs/install.rst."""
 
 from collections.abc import Mapping
 from pathlib import Path
@@ -69,9 +46,6 @@ def context(
     """
     Build the ``pyoes`` template context for a starlette request.
 
-    :param settings: object or mapping with the optional settings
-        ``plausible_domain_hash``, ``burgerprofiel_header_id``,
-        ``burgerprofiel_footer_id``, ``pyoes_banner`` and ``pyoes_banner_detail``.
     :param static_mount: name of the app's own static mount, used for asset
         specs like ``"myapp:static/css/app.css"``.
     :param overrides: explicit values for any :class:`PyoesContext` field.

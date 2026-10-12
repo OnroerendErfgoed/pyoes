@@ -1,10 +1,4 @@
-"""
-Framework-agnostic template context for the pyoes templates.
-
-The pyoes templates never touch a framework ``request``; they read everything
-they need from a context object that is available in the template as ``pyoes``.
-:mod:`pyoes.pyramid` and :mod:`pyoes.fastapi` build it for their framework.
-"""
+"""Framework-agnostic template context, available in the pyoes templates as ``pyoes``."""
 
 from dataclasses import dataclass
 from typing import Any
