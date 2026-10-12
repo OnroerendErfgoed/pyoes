@@ -1,7 +1,11 @@
 Unreleased
 ==========
 
+- Toon het aanhalingsteken van citaten in wit op de paarse achtergrond.
 - Gebruik Webuniversum classes in de 401, 403, 404 en 500 foutpagina's.
+- Toon reacties op de artikelpagina compacter met Webuniversum tekst- en spacingclasses.
+- Maak de invoervelden van het reactieformulier paginabreed met Webuniversum block-modifiers.
+- Toon artikel en zijbalk op medium en kleinere schermen over de volledige breedte.
 
 0.26.2 (17-03-2026)
 ===================

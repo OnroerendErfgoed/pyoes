@@ -97,6 +97,10 @@ button.vl-link {
   color: $primary-color;
 }
 
+.vl-typography blockquote::before {
+  --vl-theme-fg-color: #{$white};
+}
+
 /**
 -------------------------------
  End override specific styles

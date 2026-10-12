@@ -2,7 +2,7 @@
 {% block content %}
 
 <main class="vl-grid vl-u-spacer-top">
-  <div class="vl-col--8-12">
+  <div class="vl-col--8-12 vl-col--12-12--m">
     <article class="panel" itemscope itemtype="http://schema.org/Article">
     <h1 class="vl-title vl-title--h1">Erkende intergemeentelijke onroerenderfgoeddiensten</h1>
 
@@ -97,31 +97,38 @@
     <hr>
     {% include "includes/blokken/social-2.jinja2" %}
     <hr>
-    {% include "includes/elements/form-2.jinja2" %}
+    {% include "includes/elements/form-1.jinja2" %}
 
-    <section class="vl-typography" aria-labelledby="reactions-title">
-      <h2 id="reactions-title" class="vl-title vl-title--h2">280 reacties</h2>
-      <ul>
-        <li>
-          <cite>naam</cite>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada ut nisl iaculis interdum. Integer in mauris eu velit consequat pulvinar in et lectus.</blockquote>
-          <span>12/01/15 14u34</span>
+    <section aria-labelledby="reactions-title">
+      <ul role="list">
+        <li class="vl-u-spacer-bottom--small">
+          <p class="vl-u-spacer-bottom--xxsmall">
+            <strong class="vl-u-text--bold">naam</strong>
+            <time class="vl-u-text--small" datetime="2015-01-12T14:34">12/01/15 14u34</time>
+          </p>
+          <div class="vl-typography">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada ut nisl iaculis interdum. Integer in mauris eu velit consequat pulvinar in et lectus.</p>
+          </div>
         </li>
         <li>
-          <cite>naam</cite>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada ut nisl iaculis interdum. Integer in mauris eu velit consequat pulvinar in et lectus.</blockquote>
-          <span>12/01/15 14u33</span>
+          <p class="vl-u-spacer-bottom--xxsmall">
+            <strong class="vl-u-text--bold">naam</strong>
+            <time class="vl-u-text--small" datetime="2015-01-12T14:33">12/01/15 14u33</time>
+          </p>
+          <div class="vl-typography">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada ut nisl iaculis interdum. Integer in mauris eu velit consequat pulvinar in et lectus.</p>
+          </div>
         </li>
       </ul>
     </section>
     </article>
   </div>
 
-  <aside class="vl-col--4-12">
+  <aside class="vl-col--4-12 vl-col--12-12--m">
     {% include "includes/blokken/search-1.jinja2" %}
-    {% include "includes/blokken/nieuws-2.jinja2" %}
+    {% include "includes/blokken/nieuws-1.jinja2" %}
     {% include "includes/blokken/downloads-1.jinja2" %}
-    {% include "includes/blokken/nieuws-3.jinja2" %}
+    {% include "includes/blokken/nieuws-2.jinja2" %}
     {% include "includes/blokken/social-1.jinja2" %}
   </aside>
 </main>
