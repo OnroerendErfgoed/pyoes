@@ -1,9 +1,16 @@
 alabaster==0.7.16
     # via sphinx
+anyio==4.15.1
+    # via
+    #   httpx
+    #   starlette
 babel==2.16.0
     # via sphinx
 certifi==2024.8.30
-    # via requests
+    # via
+    #   httpcore
+    #   httpx
+    #   requests
 charset-normalizer==3.3.2
     # via requests
 coverage==6.5.0
@@ -18,10 +25,19 @@ docutils==0.20.1
     # via
     #   sphinx
     #   sphinx-rtd-theme
+h11==0.16.0
+    # via httpcore
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via pyoes (pyproject.toml)
 hupper==1.12.1
     # via pyramid
 idna==3.8
-    # via requests
+    # via
+    #   anyio
+    #   httpx
+    #   requests
 imagesize==1.4.1
     # via sphinx
 iniconfig==2.0.0
@@ -113,8 +129,14 @@ sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
+starlette==1.7.0
+    # via pyoes (pyproject.toml)
 translationstring==1.4
     # via pyramid
+typing-extensions==4.16.0
+    # via
+    #   anyio
+    #   starlette
 urllib3==2.2.2
     # via requests
 venusian==3.1.0

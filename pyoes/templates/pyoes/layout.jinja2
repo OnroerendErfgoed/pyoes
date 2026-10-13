@@ -12,13 +12,13 @@
 {% set home_link = home_link -%}
 {% set header_links = header_links -%}
 {% set mailto_error = mailto_error -%}
-{% set plausible_domain_hash = plausible_domain_hash|default(request.registry.settings["plausible.domain_hash"]) -%}
+{% set plausible_domain_hash = plausible_domain_hash|default(pyoes.plausible_domain_hash) -%}
 {% set plausible_omgeving = plausible_omgeving|default("dev") -%}
 {% set plausible_custom_init = plausible_custom_init|default(None) -%}
-{% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
-{% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
+{% set burgerprofiel_header_id = burgerprofiel_header_id|default(pyoes.burgerprofiel_header_id) -%}
+{% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(pyoes.burgerprofiel_footer_id) -%}
 {% set datum_copyright = datum_copyright|default('2025') -%}
-{% set home_route = request.route_path('home') -%}
+{% set home_route = home_route if home_route is defined else pyoes.home_url -%}
 
 <head>
   {% block html_header scoped %}
@@ -32,10 +32,9 @@
     
     {% block css scoped -%}
       <!-- css -->
-      {% set default_css_files = [
-        request.static_path(app_package + ':static/css/app.css')
-      ] -%}
-      {% set css_files = css_files|default(default_css_files) -%}
+      {% if css_files is not defined -%}
+        {% set css_files = [pyoes.static_path(app_package ~ ':static/css/app.css')] -%}
+      {% endif -%}
       {% for css in css_files -%}
         <link rel="stylesheet" href="{{ css }}"/>
       {% endfor -%}
@@ -44,7 +43,7 @@
 
   {% block plausible -%}
     {% if plausible_domain_hash %}
-      {% from 'macros.jinja2' import plausible_tracker %}
+      {% from 'pyoes/macros.jinja2' import plausible_tracker %}
       {{ plausible_tracker(plausible_domain_hash, plausible_omgeving, plausible_custom_init) }}
     {% endif %}
   {% endblock %}
@@ -53,17 +52,17 @@
 <div class="vl-page">
   {% block vlaanderen_header scoped %}
     {% if burgerprofiel_header_id %}
-      {% if request.registry.settings['pyoes.banner'] %}
-        {% from 'macros.jinja2' import render_info_banner %}
-        {{ render_info_banner(request.registry.settings['pyoes.banner'], request.registry.settings['pyoes.banner.detail']) }}
+      {% if pyoes.banner %}
+        {% from 'pyoes/macros.jinja2' import render_info_banner %}
+        {{ render_info_banner(pyoes.banner, pyoes.banner_detail) }}
       {% endif %}
       <div class="vlaanderen-header-container">
-      	{% from 'macros.jinja2' import render_vlaanderen_header %}
+      	{% from 'pyoes/macros.jinja2' import render_vlaanderen_header %}
         {% set pyoes_banner = {
-          'banner': request.registry.settings.get('pyoes.banner'),
-          'detail': request.registry.settings.get('pyoes.banner.detail')
+          'banner': pyoes.banner,
+          'detail': pyoes.banner_detail
         } %}
-        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, pyoes_banner, request.authenticated_userid, home_route) }}
+        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, pyoes_banner, pyoes.authenticated_userid, home_route) }}
       </div>
     {% else %}
       <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
@@ -89,7 +88,7 @@
   <div id="footerContainer">
     {% block vlaanderen_footer scoped %}
       {% if burgerprofiel_header_id %}
-          {% from 'macros.jinja2' import render_vlaanderen_footer %}
+          {% from 'pyoes/macros.jinja2' import render_vlaanderen_footer %}
           {{ render_vlaanderen_footer(plausible_omgeving, burgerprofiel_footer_id) }}
       {% else %}
         <script src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
