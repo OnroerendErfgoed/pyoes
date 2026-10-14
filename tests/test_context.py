@@ -37,6 +37,7 @@ class TestLayout:
     def test_without_settings(self):
         html = self.render(make_context())
         assert 'href="/s/pyoes:static/css/app.css"' in html
+        assert '<div class="vl-layout vl-u-spacer-top vl-u-spacer-bottom">' in html
         assert "plausible" not in html
         assert "widgets.vlaanderen.be/widget/live" in html
 
