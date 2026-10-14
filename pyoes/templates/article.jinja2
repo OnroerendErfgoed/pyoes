@@ -1,14 +1,14 @@
 {% extends "layout.jinja2" %}
 {% block content %}
 
-<main class="vl-grid vl-u-spacer-top">
+<main class="vl-grid">
   <div class="vl-col--8-12 vl-col--12-12--m">
     <article class="panel" itemscope itemtype="http://schema.org/Article">
     <h1 class="vl-title vl-title--h1">Erkende intergemeentelijke onroerenderfgoeddiensten</h1>
 
-    <section class="vl-typography" itemprop="articleBody">
+    <section itemprop="articleBody">
       <figure>
-        <img itemprop="image" src="https://www.onroerenderfgoed.be/assets/files/made/assets/files/content/images/Oostkerke_Lettenburgstr_IMG_9062_832_370_s_c1.jpg" alt="">
+        <img itemprop="image" src="https://inventaris.onroerenderfgoed.be/afbeeldingen/180002?size=small" alt="">
         <figcaption>Maecenas ac tortor nec ligula facilisis commodo. Foto door <a class="vl-link" href="#">Richard Clark</a></figcaption>
       </figure>
 
@@ -36,11 +36,11 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo lacus, ultrices in orci id, porttitor fini bus metus. Pellentesque iaculis libero a erat tempor, id interdum lectus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo lacus, ultrices in orci id, porttitor fini bus metus. Pellentesque iaculis libero a erat tempor, id interdum lectus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
       <h5 class="vl-title vl-title--h5">Disk list item</h5>
-      <ul>
+      <ul class="ul">
         <li><a class="vl-link" href="">List item with a much longer description or more content.</a></li>
         <li><a class="vl-link" href="">List item with a much longer description or more content.</a></li>
         <li>List item
-          <ul>
+          <ul class="ul">
             <li>List item</li>
             <li>List item</li>
             <li>List item</li>
@@ -63,12 +63,12 @@
       <hr>
 
       <h5 class="vl-title vl-title--h5">Ordered list</h5>
-      <ol>
+      <ol class="ol">
         <li>List item with a much longer <a class="vl-link" href="">description</a> or more content.</li>
         <li>List item</li>
         <li>List item
-          <ol>
-            <li>Nested <a class="vl-link" hre="">List Item</a></li>
+          <ol class="ol">
+            <li>Nested <a class="vl-link" href="#">List Item</a></li>
             <li>Nested List Item</li>
             <li>Nested List Item</li>
           </ol>
@@ -80,15 +80,10 @@
 
       <h5 class="vl-title vl-title--h5">No numbers Ordered list</h5>
       <ol>
-        <li>List item with a much longer <a class="vl-link" href="">description</a> or more content.</li>
+        <li>List item with a much longer <a class="vl-link" href="#">description</a> or more content.</li>
         <li>List item</li>
         <li>List item</li>
       </ol>
-
-      <dl>
-        <dt>Definition Title</dt>
-        <dd>Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.</dd>
-      </dl>
 
       <h6 class="vl-title vl-title--h6">h6 Content</h6>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo lacus, ultrices in orci id, porttitor fini bus metus. Pellentesque iaculis libero a erat tempor, id interdum lectus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras leo lacus, ultrices in orci id, porttitor fini bus metus. Pellentesque iaculis libero a erat tempor, id interdum lectus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -99,7 +94,7 @@
     <hr>
     {% include "includes/elements/form-1.jinja2" %}
 
-    <section aria-labelledby="reactions-title">
+    <section>
       <ul role="list">
         <li class="vl-u-spacer-bottom--small">
           <p class="vl-u-spacer-bottom--xxsmall">

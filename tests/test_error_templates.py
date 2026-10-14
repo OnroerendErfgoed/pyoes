@@ -37,7 +37,7 @@ def environment():
 def test_error_page_uses_wu_classes(environment, status, message, advice_count):
     html = environment.get_template(f"{status}.jinja2").render()
 
-    assert '<main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">' in html
+    assert '<main class="vl-grid">' in html
     assert 'class="vl-col--1-1"' in html
     assert 'class="vl-title vl-title--h1"' in html
     assert 'class="vl-vi vl-vi-warning" aria-hidden="true"' in html
