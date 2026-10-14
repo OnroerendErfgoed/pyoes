@@ -20,6 +20,22 @@ staat in :file:`npm-packages/pyoes/scss`.
 Beheer in andere applicaties zelf de Sass-invoer, de frontend-dependencies
 en het compileercommando.
 
+Bij het importeren van ``pyoes-jinja`` zijn de variabelen uit
+``base-variables`` ook beschikbaar voor de eigen stylesheets:
+
+.. code-block:: scss
+
+    @import "@OnroerendErfgoed/pyoes/scss/pyoes-jinja";
+
+    .app-accent {
+      color: $primary-color;
+      background-color: $light-gray;
+    }
+
+Variabelen met ``!default``, zoals ``$primary-color``, kun je instellen
+voor deze import om de standaardwaarde te overschrijven. De gedeelde CSS
+blijft in de cascade-lagen ``wu`` en ``pyoes``.
+
 Jinja2 templates
 ================
 

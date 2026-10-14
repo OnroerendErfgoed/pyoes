@@ -29,6 +29,7 @@ $vl-input-hover-border-color: rgba($primary-color, 0.65) !default;
 $vl-error-color: $alert-color;
 
 // Fonts
+$fa-font-path: "../node_modules/font-awesome/fonts" !default;
 $vl-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/flanders/" !default;
 $vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/build/assets/font/iconfont/" !default;
 
@@ -39,6 +40,7 @@ $vl-icon-font-location: "../node_modules/@govflanders/vl-ui-design-system-style/
 **/
 
 @import "@govflanders/vl-ui-design-system-style/build/scss/index";
+@import "font-awesome/scss/font-awesome";
 
 /**
 -------------------------------
@@ -88,7 +90,8 @@ button.vl-link {
 
   &:hover,
   &:focus,
-  &:active {
+  &:active,
+  &:visited {
     color: $link-color;
   }
 }
