@@ -1,18 +1,18 @@
 {% extends "layout.jinja2" %}
 
 {% block content %}
-  <main class="vl-grid vl-u-spacer-top vl-u-spacer-bottom">
+  <main class="vl-grid">
     <div class="vl-col--1-1">
-      <p class="vl-intro vl-u-spacer-bottom">
+      <p class="vl-introduction vl-u-spacer-bottom">
         Ontdek de typografie, paginaopbouw en foutmeldingen van pyoes.
       </p>
     </div>
 
     <div class="vl-col--6-12 vl-col--1-1--s">
-      <section class="panel vl-typography" aria-labelledby="examples-title">
+      <section class="panel" aria-labelledby="examples-title">
         <h2 id="examples-title" class="vl-title vl-title--h2">Voorbeeldpagina's</h2>
         <p>Bekijk de bouwstenen voor een website in de erfgoedstijl.</p>
-        <ul>
+        <ul class="ul">
           <li>
             <a class="vl-link" href="{{ request.route_path('typo') }}">Typografie en iconen</a>
           </li>
@@ -24,10 +24,10 @@
     </div>
 
     <div class="vl-col--6-12 vl-col--1-1--s">
-      <section class="panel vl-typography" aria-labelledby="errors-title">
+      <section class="panel" aria-labelledby="errors-title">
         <h2 id="errors-title" class="vl-title vl-title--h2">Foutpagina's</h2>
         <p>Bekijk hoe we bezoekers informeren als er iets misloopt.</p>
-        <ul>
+        <ul class="ul">
           <li>
             <a class="vl-link" href="{{ request.route_path('401') }}">401 - Aanmelden vereist</a>
           </li>
