@@ -1,12 +1,15 @@
-.vl-application-header__row {
-  margin-bottom: 0;
-}
-.vl-application-header .vl-title {
-  @extend .vl-title--h2;
-  @extend .vl-u-spacer-bottom--xxsmall;
+.vl-application-header {
+  background: $white;
+  .vl-application-header__row {
+    margin-bottom: 0;
+  }
+  .vl-title {
+    @extend .vl-title--h2;
+    @extend .vl-u-spacer-bottom--xxsmall;
 
-  a {
-    color: inherit;
+    a {
+      color: inherit;
+    }
   }
 }
 

@@ -1,0 +1,7 @@
+body {
+  background: $body-bg;
+
+  > .vl-page {
+    background: inherit;
+  }
+}
