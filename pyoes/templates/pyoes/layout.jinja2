@@ -75,13 +75,17 @@
     {% include "pyoes/header.jinja2" %}
   {% endblock %}
 
-  <div class="vl-layout vl-u-spacer-top vl-u-spacer-bottom">
-  {% block messages scoped %}
-  {% endblock %}
+  <main class="vl-main">
+    <div class="vl-region">
+      <div class="vl-layout">
+        {% block messages scoped %}
+        {% endblock %}
 
-  {% block content scoped %}
-  {% endblock %}
-  </div>
+        {% block content scoped %}
+        {% endblock %}
+      </div>
+    </div>
+  </main>
 
   <div class="push"></div>
 
