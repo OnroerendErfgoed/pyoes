@@ -57,10 +57,13 @@ class LinkParser(HTMLParser):
     def __init__(self):
         super().__init__()
         self.links = []
+        self.main_classes = []
 
     def handle_starttag(self, tag, attrs):
         if tag == "a":
             self.links.extend(value for key, value in attrs if key == "href")
+        elif tag == "main":
+            self.main_classes.append(dict(attrs).get("class"))
 
 
 @pytest.mark.parametrize(
@@ -82,6 +85,7 @@ def test_demo_pages_render_with_valid_navigation(app, path, content):
 
     parser = LinkParser()
     parser.feed(response.text)
+    assert parser.main_classes == ["vl-main"]
     for href in parser.links:
         url = urlsplit(href)
         if not url.scheme and not url.netloc and url.path:
