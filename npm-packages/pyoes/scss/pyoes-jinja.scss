@@ -5,8 +5,10 @@
 
   @at-root (without: all) {
     @layer pyoes {
+      @import "pyoes/oe-general";
       @import "pyoes/oe-header";
       @import "pyoes/oe-footer";
+      @import "pyoes/oe-panel";
     }
   }
 }

@@ -2,28 +2,17 @@
 
 {% set app_package = 'pyoes' %}
 
+{% set active_main_nav = active_main_nav|default(request.matched_route.name) %}
+
 {% set datum_copyright = '2013-2014' %}
 
 {% set main_nav = [
 	('home', 'Home', '/'),
-	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
-	('burgerprofiel2', 'Burgerprofiel aangepast', 'burgerprofiel2'),
-	('headerlinks', 'Header links', 'headerlinks'),
-	('vinden', 'Vinden', '#'),
-	('pinpoints', 'Pinpoints', 'pinpoints'),
-	('icons', 'Icons', 'icons')
+	('typo', 'Typografie', '/typo'),
+	('article', 'Artikel', '/article')
 ]-%}
 
 
-{% set dropdown_main_nav = [
-	('home', 'Home', [
-	('burgerprofiel', 'Burgerprofiel', 'burgerprofiel'),
-	('burgerprofiel2', 'Burgerprofiel aangepast', 'burgerprofiel2'),
-	('headerlinks', 'Header links', 'headerlinks'),
-	('vinden', 'Vinden', '#'),
-	('pinpoints', 'Pinpoints', 'pinpoints'),
-	('icons', 'Icons', 'icons')])
-]-%}
+{% set dropdown_main_nav = [] -%}
 
 {% set nav_actions = [('Contact', 'https://www.onroerenderfgoed.be/contact')] -%}
-
