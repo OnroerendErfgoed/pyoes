@@ -26,6 +26,28 @@ def environment():
 
 
 @pytest.mark.parametrize(
+    "status, title",
+    [
+        (401, "Unauthorized"),
+        (403, "Forbidden"),
+        (404, "Page not found"),
+        (500, "Internal server error"),
+    ],
+)
+@pytest.mark.parametrize(
+    "context, app_title",
+    [
+        ({}, "Pyoes"),
+        ({"app_package": "Test & app"}, "Test &amp; app"),
+    ],
+)
+def test_error_page_html_title(environment, status, title, context, app_title):
+    html = environment.get_template(f"{status}.jinja2").render(**context)
+
+    assert f"<title>{title} | {app_title} | Onroerend Erfgoed</title>" in html
+
+
+@pytest.mark.parametrize(
     "status, message, advice_count",
     [
         (401, "De pagina is afgeschermd.", 1),
