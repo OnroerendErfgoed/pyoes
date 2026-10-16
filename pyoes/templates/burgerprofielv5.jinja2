@@ -1,0 +1,27 @@
+{% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'burgerprofielv5' %}
+
+{% block vlaanderen_header scoped %}
+    {% if burgerprofiel_header_id %}
+
+      <div class="vlaanderen-header-container">
+      	{% from 'pyoes/macros.jinja2' import render_vlaanderen_header_v5 %}
+        {{ render_vlaanderen_header_v5(plausible_omgeving, '7015c423-9cfa-40d1-b898-a1113d67a614', request.authenticated_userid, home_route) }}
+      </div>
+    {% endif %}
+    {% block custom_contact_info scoped %}
+    {% endblock %}
+  {% endblock %}
+
+{% block content %}
+  <!-- content -->
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        test met burgerprofiel v5
+      </div>
+    </div>
+  </div>
+  <!-- end content -->
+{% endblock %}

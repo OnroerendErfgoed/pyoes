@@ -68,6 +68,25 @@
   </script>
 {% endmacro %}
 
+
+{% macro render_vlaanderen_header_v5(omgeving, burgerprofiel_header_id, authenticated_userid, baseUrl) %}
+  {% if omgeving in ('local', 'dev', 'test') %}
+    {% set burgerprofielUrl = "https://widgets.tni-vlaanderen.be/api/v2/widget" %}
+  {% else %}
+    {% set burgerprofielUrl = "https://widgets.vlaanderen.be/api/v2/widget" %}
+  {% endif %}
+  <script src="{{ burgerprofielUrl }}/{{ burgerprofiel_header_id }}/embed"></script>
+      <script>
+          globalHeaderClient.accessMenu.setProfile({
+              active: true,
+              loginUrl: "/archeologie/meldingen_aanvang/aanmelden",
+              logoutUrl: "/archeologie/meldingen_aanvang/afmelden",
+              switchCapacityUrl: "/archeologie/meldingen_aanvang/wisselen",
+              idpProfileToken: "xxx-xxx-xxx"
+          })
+          </script>
+{% endmacro %}
+
 {% macro render_custom_burgerprofiel_contact() %}
   <script>
     function render_contact(config) {
