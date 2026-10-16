@@ -3,10 +3,10 @@
 {% set mailto_error = mailto_error|default('ict@onroerenderfgoed.be') -%}
 {% set app_package = app_package|default('Pyoes') %}
 
-{% block html_title %}Page not found | {{app_package}} | Onroerend Erfgoed{% endblock %}
+{% block html_title %}401 - Aanmelden vereist | {{app_package}} | Onroerend Erfgoed{% endblock %}
 
 {% block content %}
-  <main class="vl-grid">
+  <div class="vl-grid">
     <div class="vl-col--1-1">
       <div class="vl-u-align-center vl-u-spacer-bottom">
         <h1 class="vl-title vl-title--h1">
@@ -23,5 +23,5 @@
         </ul>
       </section>
     </div>
-  </main>
+  </div>
 {% endblock %}
