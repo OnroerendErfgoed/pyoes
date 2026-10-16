@@ -32,8 +32,8 @@ Jinja2 templates
 vooral een algemene header en footer levert. In deze layout zijn er een aantal
 blocks gedefinieerd die in andere templates kunnen overschreven worden.
 
-De scaffold maakt voor je een eigen :file:`layout.jinja2` aan waarin je een aantal 
-zaken instelt die voor de ganse site van tel zijn. 
+Maak zelf een :file:`layout.jinja2` aan waarin je een aantal zaken instelt die
+voor de ganse site van tel zijn.
 
 .. code-block:: jinja
 
@@ -113,7 +113,6 @@ artikelpagina (``/article``) en foutpagina's (``/401``, ``/403``, ``/404``,
 ``/500``). De startpagina linkt naar alle voorbeelden. De foutpagina's zijn
 demo's en worden met HTTP-status 200 weergegeven. Alleen de bijbehorende templates en hun
 afhankelijkheden blijven beschikbaar; de overige demopagina's zijn verwijderd.
-De scaffold-templates voor nieuwe applicaties blijven behouden.
 
 De hoofdnavigatie van de demo markeert de huidige pagina op basis van de
 routenaam. Op foutpagina's is geen navigatie-item actief. Met

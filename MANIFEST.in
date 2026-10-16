@@ -1,7 +1,6 @@
 include *.txt *.ini *.cfg *.rst
 recursive-include pyoes *.ico *.png *.css *.gif *.jpg 
 recursive-include pyoes *.jinja2 *.pt *.txt *.js *.html *.xml
-recursive-include pyoes/scaffolds *
 recursive-exclude pyoes/static *
 include pyoes/static/favicon.ico
 include pyoes/static/robots.txt

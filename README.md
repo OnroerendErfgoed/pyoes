@@ -42,7 +42,8 @@ De demo bevat de startpagina (`/`), typografie (`/typo`), de artikelpagina
 De startpagina linkt naar alle voorbeelden. De foutpagina's zijn demo's en
 worden met HTTP-status 200 weergegeven. Alleen deze templates en hun gedeelde layouts, macro's en
 includes blijven in `pyoes/templates`; de overige demopagina's zijn verwijderd.
-De scaffold-templates voor nieuwe applicaties blijven beschikbaar.
+Scaffolds worden niet meer meegeleverd. Maak voor nieuwe applicaties zelf een
+layout die `pyoes/layout.jinja2` uitbreidt; zie de documentatie in `docs/gebruik.rst`.
 
 `mise run setup` zet de volledige backend + frontend op: de virtualenv met de
 dependencies uit `requirements-dev.txt`, pyoes zelf editable geïnstalleerd, de
