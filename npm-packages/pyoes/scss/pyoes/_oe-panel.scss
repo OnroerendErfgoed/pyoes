@@ -11,4 +11,18 @@
   > :last-child {
     margin-bottom: 0;
   }
+
+  .oe-heading {
+    margin-bottom: $vl-spacing-medium;
+    &__title {
+      line-height: 1.2;
+      margin-bottom: $vl-spacing-xxsmall;
+    }
+
+    &__uri {
+      color: $light-purple;
+      margin-bottom: $vl-spacing-normal;
+      overflow-wrap: anywhere;
+    }
+  }
 }
