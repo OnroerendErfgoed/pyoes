@@ -2,17 +2,10 @@
 
 {% set active_main_nav = 'burgerprofielv5' %}
 
-{% block vlaanderen_header scoped %}
-    {% if burgerprofiel_header_id %}
-
-      <div class="vlaanderen-header-container">
-      	{% from 'pyoes/macros.jinja2' import render_vlaanderen_header_v5 %}
-        {{ render_vlaanderen_header_v5(plausible_omgeving, '7015c423-9cfa-40d1-b898-a1113d67a614', request.authenticated_userid, home_route) }}
-      </div>
-    {% endif %}
-    {% block custom_contact_info scoped %}
-    {% endblock %}
-  {% endblock %}
+{# v5 test widgets; real apps set burgerprofiel.version = 5 and the ids in their config #}
+{% set burgerprofiel_version = '5' %}
+{% set burgerprofiel_header_id = '7015c423-9cfa-40d1-b898-a1113d67a614' %}
+{% set burgerprofiel_footer_id = '804ae837-1d82-4a80-980f-7acfcdbcdf9a' %}
 
 {% block content %}
   <!-- content -->

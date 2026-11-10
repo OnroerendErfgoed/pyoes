@@ -13,6 +13,7 @@ def main(global_config, **settings):  # pragma: no cover
     config.add_route("burgerprofiel", "/burgerprofiel")
     config.add_route("burgerprofiel2", "/burgerprofiel2")
     config.add_route("burgerprofielv5", "/burgerprofielv5")
+    config.add_route("burgerprofielv5_2", "/burgerprofielv5_2")
     config.add_route("headerlinks", "/headerlinks")
     config.add_route("grids", "/grids")
     config.add_route("beeldbank", "/beeldbank")

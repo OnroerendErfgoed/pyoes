@@ -18,6 +18,8 @@
 {% set plausible_custom_init = plausible_custom_init|default(None) -%}
 {% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
 {% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
+{% set burgerprofiel_version = burgerprofiel_version|default(request.registry.settings.get("burgerprofiel.version", "1")) -%}
+{% set burgerprofiel_papi_token = burgerprofiel_papi_token|default(None) -%}
 {% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = request.route_path('home') -%}
 
@@ -64,7 +66,7 @@
           'banner': request.registry.settings.get('pyoes.banner'),
           'detail': request.registry.settings.get('pyoes.banner.detail')
         } %}
-        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, pyoes_banner, request.authenticated_userid, home_route) }}
+        {{ render_vlaanderen_header(plausible_omgeving, burgerprofiel_header_id, pyoes_banner, request.authenticated_userid, home_route, version=burgerprofiel_version, papi_token=burgerprofiel_papi_token) }}
       </div>
     {% else %}
       <script src="//widgets.vlaanderen.be/widget/live/37de485347434fbdaa70e0c03eb48d01"></script>
@@ -89,7 +91,7 @@
     {% block vlaanderen_footer scoped %}
       {% if burgerprofiel_header_id %}
           {% from 'macros.jinja2' import render_vlaanderen_footer %}
-          {{ render_vlaanderen_footer(plausible_omgeving, burgerprofiel_footer_id) }}
+          {{ render_vlaanderen_footer(plausible_omgeving, burgerprofiel_footer_id, version=burgerprofiel_version) }}
       {% else %}
         <script src="//widgets.vlaanderen.be/widget/live/d619177b83734bf7b5bb596ff7e6c41e"></script>
       {% endif %}
