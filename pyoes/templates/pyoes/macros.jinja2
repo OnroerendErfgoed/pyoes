@@ -108,20 +108,23 @@
   {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, '5') %}
   <script src="{{ burgerprofielUrl }}/{{ burgerprofiel_header_id }}/embed"></script>
   <script>
-    globalHeaderClient.accessMenu.setProfile({
-      active: {{ 'true' if authenticated_userid else 'false' }},
-      loginUrl: {{ (baseUrl ~ 'aanmelden') | tojson }},
-      logoutUrl: {{ (baseUrl ~ 'afmelden') | tojson }},
-      switchCapacityUrl: {{ (baseUrl ~ 'wisselen') | tojson }},
-      idpProfileToken: {{ (papi_token or '') | tojson }}
+    // The header must be fully loaded before we talk to it (see the v5 docs).
+    window.addEventListener('load', function () {
+      globalHeaderClient.accessMenu.setProfile({
+        active: {{ 'true' if authenticated_userid else 'false' }},
+        loginUrl: {{ (baseUrl ~ 'aanmelden') | tojson }},
+        logoutUrl: {{ (baseUrl ~ 'afmelden') | tojson }},
+        switchCapacityUrl: {{ (baseUrl ~ 'wisselen') | tojson }},
+        idpProfileToken: {{ (papi_token or '') | tojson }}
+      });
+      {% if authenticated_userid %}
+      globalHeaderClient.accessMenu.addApplicationMenuLink({
+        label: 'Bekijk jouw profiel',
+        href: {{ (baseUrl ~ 'user') | tojson }},
+        icon: 'e-desk-lock'
+      });
+      {% endif %}
     });
-    {% if authenticated_userid %}
-    globalHeaderClient.accessMenu.addApplicationMenuLink({
-      label: 'Bekijk jouw profiel',
-      href: {{ (baseUrl ~ 'user') | tojson }},
-      icon: 'e-desk-lock'
-    });
-    {% endif %}
     {% if pyoes_banner and pyoes_banner.banner %}
     document.addEventListener('DOMContentLoaded', render_info_banner);
     {% endif %}
@@ -138,7 +141,10 @@
     function render_contact(config) {
       {% if version|string == '5' %}
       // Same config structure as v1: displayMode, groupLabel, contextual, defaults.
-      globalHeaderClient.contact.setServicePoints(config);
+      // The header must be fully loaded before we talk to it (see the v5 docs).
+      window.addEventListener('load', function () {
+        globalHeaderClient.contact.setServicePoints(config);
+      });
       {% else %}
       // Capture any widget that is present or will be present on the webpage.
       vl.widget.client.capture(function (widget) {
