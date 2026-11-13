@@ -25,9 +25,6 @@
     burgerprofiel.version = 5   # new global header (api/v2, globalHeaderClient)
 
   Any other value (or no value) uses the legacy widget platform (api/v1).
-
-  Header and footer always use the same version: the distributor hands them
-  out as a pair.
 #}
 {% macro _burgerprofiel_base_url(omgeving, version) -%}
   {%- set test_env = omgeving in ('local', 'dev', 'test') -%}
@@ -43,7 +40,7 @@
   the vlaanderen_header block. The positional signature is unchanged, so
   existing calls keep rendering the v1 header.
 #}
-{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, version='1', papi_token=None) %}
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, version='4', papi_token=None) %}
   {% if version|string == '5' %}
     {{ _render_vlaanderen_header_v5(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, papi_token) }}
   {% else %}
@@ -136,7 +133,7 @@
   Call it from the custom_contact_info block and pass the version along:
     {{ render_custom_burgerprofiel_contact(burgerprofiel_version) }}
 #}
-{% macro render_custom_burgerprofiel_contact(version='1') %}
+{% macro render_custom_burgerprofiel_contact(version='4') %}
   <script>
     function render_contact(config) {
       {% if version|string == '5' %}
@@ -161,7 +158,7 @@
   </script>
 {% endmacro %}
 
-{% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id, version='1') %}
+{% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id, version='4') %}
   {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, version) %}
   {% if version|string == '5' %}
     <script src="{{ burgerprofielUrl }}/{{ burgerprofiel_footer_id }}/embed"></script>

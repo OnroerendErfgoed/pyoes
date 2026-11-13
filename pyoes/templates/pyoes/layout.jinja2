@@ -18,7 +18,7 @@
 {% set plausible_custom_init = plausible_custom_init|default(None) -%}
 {% set burgerprofiel_header_id = burgerprofiel_header_id|default(request.registry.settings["burgerprofiel.header_id"]) -%}
 {% set burgerprofiel_footer_id = burgerprofiel_footer_id|default(request.registry.settings["burgerprofiel.footer_id"]) -%}
-{% set burgerprofiel_version = burgerprofiel_version|default(request.registry.settings.get("burgerprofiel.version", "1")) -%}
+{% set burgerprofiel_version = burgerprofiel_version|default(request.registry.settings.get("burgerprofiel.version", "4")) -%}
 {% set burgerprofiel_papi_token = burgerprofiel_papi_token|default(None) -%}
 {% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = request.route_path('home') -%}
