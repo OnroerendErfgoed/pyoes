@@ -180,7 +180,7 @@
     el.innerHTML = content;
 
     if (headerdiv.length > 0 && headerdiv[0].parentNode) {
-      // burgerprofiel v1: inside the header bar
+      // old way: inside the header bar
       headerdiv[0].parentNode.insertBefore(el, headerdiv[0]);
     } else {
       // burgerprofiel v5: the header bar is a closed widget pinned to the top of
