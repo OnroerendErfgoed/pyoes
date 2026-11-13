@@ -1,3 +1,16 @@
+0.27.0 (13-11-2026)
+===================
+
+✨ Features
+
+- Add test coverage (#314)
+- Mise setup (#369)
+
+  - Mise setup (backend) (#370)
+  - Mise setup (frontend) (#371)
+
+- Burgerprofiel v5 (#382)
+
 0.26.2 (17-03-2026)
 ===================
 

@@ -1,0 +1,20 @@
+{% extends "layout.jinja2" %}
+
+{% set active_main_nav = 'burgerprofielv5' %}
+
+{# v5 test widgets; real apps set burgerprofiel.version = 5 and the ids in their config #}
+{% set burgerprofiel_version = '5' %}
+{% set burgerprofiel_header_id = '7015c423-9cfa-40d1-b898-a1113d67a614' %}
+{% set burgerprofiel_footer_id = '804ae837-1d82-4a80-980f-7acfcdbcdf9a' %}
+
+{% block content %}
+  <!-- content -->
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        test met burgerprofiel v5
+      </div>
+    </div>
+  </div>
+  <!-- end content -->
+{% endblock %}
