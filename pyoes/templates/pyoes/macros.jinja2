@@ -49,7 +49,7 @@
 {% endmacro %}
 
 {% macro _render_vlaanderen_header_v1(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) %}
-  {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, '1') %}
+  {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, '4') %}
   <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
   <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
   <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_header_id }}/embed"></script>
