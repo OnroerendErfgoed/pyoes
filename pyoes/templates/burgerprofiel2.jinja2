@@ -3,7 +3,7 @@
 {% set active_main_nav = 'burgerprofiel2' %}
 {% block custom_contact_info %}
   {% from 'pyoes/macros.jinja2' import render_custom_burgerprofiel_contact %}
-  {{ render_custom_burgerprofiel_contact() }}
+  {{ render_custom_burgerprofiel_contact(burgerprofiel_version) }}
   <script>
     render_contact({
       "displayMode": "grouped",

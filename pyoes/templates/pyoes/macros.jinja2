@@ -16,12 +16,40 @@
   {{ request.registry.settings[settingsURI]|replace('{0}', id) }}
 {% endmacro %}
 
-{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) %}
-  {% if omgeving in ('local', 'dev', 'test') %}
-    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
+{#
+  Burgerprofiel (Vlaanderen global header/footer) versions
+  ----------------------------------------------------------
+  The widget id we receive from the distributor does not tell which widget
+  platform it belongs to, so the version has to be configured explicitly:
+
+    burgerprofiel.version = 5   # new global header (api/v2, globalHeaderClient)
+
+  Any other value (or no value) uses the legacy widget platform (api/v1).
+#}
+{% macro _burgerprofiel_base_url(omgeving, version) -%}
+  {%- set test_env = omgeving in ('local', 'dev', 'test') -%}
+  {%- if version|string == '5' -%}
+    {{ "https://widgets.tni-vlaanderen.be/api/v2/widget" if test_env else "https://widgets.vlaanderen.be/api/v2/widget" }}
+  {%- else -%}
+    {{ "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" if test_env else "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" }}
+  {%- endif -%}
+{%- endmacro %}
+
+{#
+  Public entry point, used by pyoes/layout.jinja2 and by apps that override
+  the vlaanderen_header block. The positional signature is unchanged, so
+  existing calls keep rendering the v1 header.
+#}
+{% macro render_vlaanderen_header(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, version='4', papi_token=None) %}
+  {% if version|string == '5' %}
+    {{ _render_vlaanderen_header_v5(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, papi_token) }}
   {% else %}
-    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
+    {{ _render_vlaanderen_header_v1(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) }}
   {% endif %}
+{% endmacro %}
+
+{% macro _render_vlaanderen_header_v1(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl) %}
+  {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, '4') %}
   <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
   <script src="{{ burgerprofielUrl }}/node_modules/@govflanders/vl-widget-client/dist/index.js"></script>
   <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_header_id }}/embed"></script>
@@ -68,9 +96,53 @@
   </script>
 {% endmacro %}
 
-{% macro render_custom_burgerprofiel_contact() %}
+{#
+  v5 global header.
+  papi_token is optional; without it the header cannot show the profile
+  details of the logged in user.
+#}
+{% macro _render_vlaanderen_header_v5(omgeving, burgerprofiel_header_id, pyoes_banner, authenticated_userid, baseUrl, papi_token=None) %}
+  {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, '5') %}
+  <script src="{{ burgerprofielUrl }}/{{ burgerprofiel_header_id }}/embed"></script>
+  <script>
+    // The header must be fully loaded before we talk to it (see the v5 docs).
+    window.addEventListener('load', function () {
+      globalHeaderClient.accessMenu.setProfile({
+        active: {{ 'true' if authenticated_userid else 'false' }},
+        loginUrl: {{ (baseUrl ~ 'aanmelden') | tojson }},
+        logoutUrl: {{ (baseUrl ~ 'afmelden') | tojson }},
+        switchCapacityUrl: {{ (baseUrl ~ 'wisselen') | tojson }},
+        idpProfileToken: {{ (papi_token or '') | tojson }}
+      });
+      {% if authenticated_userid %}
+      globalHeaderClient.accessMenu.addApplicationMenuLink({
+        label: 'Bekijk jouw profiel',
+        href: {{ (baseUrl ~ 'user') | tojson }},
+        icon: 'e-desk-lock'
+      });
+      {% endif %}
+    });
+    {% if pyoes_banner and pyoes_banner.banner %}
+    document.addEventListener('DOMContentLoaded', render_info_banner);
+    {% endif %}
+  </script>
+{% endmacro %}
+
+{#
+  Defines render_contact(config) to set the "Hulp nodig?" contact options.
+  Call it from the custom_contact_info block and pass the version along:
+    {{ render_custom_burgerprofiel_contact(burgerprofiel_version) }}
+#}
+{% macro render_custom_burgerprofiel_contact(version='4') %}
   <script>
     function render_contact(config) {
+      {% if version|string == '5' %}
+      // Same config structure as v1: displayMode, groupLabel, contextual, defaults.
+      // The header must be fully loaded before we talk to it (see the v5 docs).
+      window.addEventListener('load', function () {
+        globalHeaderClient.contact.setServicePoints(config);
+      });
+      {% else %}
       // Capture any widget that is present or will be present on the webpage.
       vl.widget.client.capture(function (widget) {
         // Only process the widget if widget is a global header.
@@ -81,17 +153,18 @@
           });
         }
       });
+      {% endif %}
     }
   </script>
 {% endmacro %}
 
-{% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id) %}
-  {% if omgeving in ('local', 'dev', 'test') %}
-    {% set burgerprofielUrl = "https://tni.widgets.burgerprofiel.dev-vlaanderen.be/api/v1" %}
+{% macro render_vlaanderen_footer(omgeving, burgerprofiel_footer_id, version='4') %}
+  {% set burgerprofielUrl = _burgerprofiel_base_url(omgeving, version) %}
+  {% if version|string == '5' %}
+    <script src="{{ burgerprofielUrl }}/{{ burgerprofiel_footer_id }}/embed"></script>
   {% else %}
-    {% set burgerprofielUrl = "https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1" %}
+    <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_footer_id }}/embed"></script>
   {% endif %}
-  <script src="{{ burgerprofielUrl }}/widget/{{ burgerprofiel_footer_id }}/embed"></script>
 {% endmacro %}
 
 {% macro render_info_banner(banner, detail)  %}
@@ -107,7 +180,20 @@
     el.innerHTML = content;
 
     if (headerdiv.length > 0 && headerdiv[0].parentNode) {
+      // old way: inside the header bar
       headerdiv[0].parentNode.insertBefore(el, headerdiv[0]);
+    } else {
+      // burgerprofiel v5: the header bar is a closed widget pinned to the top of
+      // the window, so put the banner right below the header container.
+      // The page container is a vertical flex layout, so stop the banner from
+      // growing (.message-banner has flex: 1 for the v1 header bar).
+      const container = document.querySelector('.vlaanderen-header-container');
+      if (container) {
+        el.style.flex = 'none';
+        el.style.justifyContent = 'center';
+        el.style.padding = '8px 16px';
+        container.parentNode.insertBefore(el, container.nextSibling);
+      }
     }
    }
 
