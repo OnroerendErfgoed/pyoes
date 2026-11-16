@@ -38,6 +38,10 @@ class PyramidContext:
         return self._setting("burgerprofiel.footer_id")
 
     @property
+    def burgerprofiel_version(self):
+        return self._setting("burgerprofiel.version")
+
+    @property
     def banner(self):
         return self._setting("pyoes.banner")
 
@@ -87,6 +91,8 @@ def main(global_config, **settings):  # pragma: no cover
     config.add_route("home", "/")
     config.add_route("typo", "/typo")
     config.add_route("article", "/article")
+    config.add_route("burgerprofielv5", "/burgerprofielv5")
+    config.add_route("burgerprofielv5_2", "/burgerprofielv5_2")
     config.add_route("401", "/401")
     config.add_route("403", "/403")
     config.add_route("404", "/404")

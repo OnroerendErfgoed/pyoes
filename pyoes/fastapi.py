@@ -15,6 +15,7 @@ SETTINGS = {
     "plausible_domain_hash": "plausible_domain_hash",
     "burgerprofiel_header_id": "burgerprofiel_header_id",
     "burgerprofiel_footer_id": "burgerprofiel_footer_id",
+    "burgerprofiel_version": "burgerprofiel_version",
     "banner": "pyoes_banner",
     "banner_detail": "pyoes_banner_detail",
 }

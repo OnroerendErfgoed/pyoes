@@ -10,7 +10,6 @@ from pyramid.request import Request
 
 from pyoes import main
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -40,6 +39,8 @@ def test_only_required_templates_remain():
         "index.jinja2",
         "typo.jinja2",
         "article.jinja2",
+        "burgerprofielv5.jinja2",
+        "burgerprofielv5_2.jinja2",
         "401.jinja2",
         "403.jinja2",
         "404.jinja2",
@@ -50,7 +51,7 @@ def test_only_required_templates_remain():
     assert required == {
         path.relative_to(templates).as_posix() for path in templates.rglob("*.jinja2")
     }
-    assert len(required) == 18
+    assert len(required) == 20
 
 
 class LinkParser(HTMLParser):
@@ -72,6 +73,11 @@ class LinkParser(HTMLParser):
         ("/", "Artikelpagina met 8/4-indeling"),
         ("/typo", "Typografie en iconen"),
         ("/article", "Erkende intergemeentelijke onroerenderfgoeddiensten"),
+        ("/burgerprofielv5", "test met burgerprofiel v5"),
+        (
+            "/burgerprofielv5_2",
+            "test met burgerprofiel v5 met aangepaste contact info blok",
+        ),
         ("/401", "De pagina is afgeschermd."),
         ("/403", "De pagina is afgeschermd."),
         ("/404", "De pagina werd niet gevonden."),
@@ -93,6 +99,8 @@ def test_demo_pages_render_with_valid_navigation(app, path, content):
                 "/",
                 "/typo",
                 "/article",
+                "/burgerprofielv5",
+                "/burgerprofielv5_2",
                 "/401",
                 "/403",
                 "/404",
@@ -116,6 +124,8 @@ def test_home_links_to_all_demo_pages(app):
         ("/", "/"),
         ("/typo", "/typo"),
         ("/article", "/article"),
+        ("/burgerprofielv5", "/burgerprofielv5"),
+        ("/burgerprofielv5_2", "/burgerprofielv5_2"),
         ("/401", None),
         ("/403", None),
         ("/404", None),
@@ -153,6 +163,8 @@ def test_only_retained_demo_routes_are_registered(app):
         "home",
         "typo",
         "article",
+        "burgerprofielv5",
+        "burgerprofielv5_2",
         "401",
         "403",
         "404",

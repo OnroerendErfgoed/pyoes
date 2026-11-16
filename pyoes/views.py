@@ -6,6 +6,18 @@ def home(request):
     return {}
 
 
+@view_config(route_name="burgerprofielv5", renderer="templates/burgerprofielv5.jinja2")
+def burgerprofielv5(request):
+    return {}
+
+
+@view_config(
+    route_name="burgerprofielv5_2", renderer="templates/burgerprofielv5_2.jinja2"
+)
+def burgerprofielv5_2(request):
+    return {}
+
+
 @view_config(route_name="typo", renderer="templates/typo.jinja2")
 def typo(request):
     return {}

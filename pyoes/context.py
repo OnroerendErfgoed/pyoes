@@ -19,6 +19,7 @@ class PyoesContext:
     plausible_domain_hash: str | None = None
     burgerprofiel_header_id: str | None = None
     burgerprofiel_footer_id: str | None = None
+    burgerprofiel_version: str | None = None
     banner: str | None = None
     banner_detail: str | None = None
     authenticated_userid: Any = None
