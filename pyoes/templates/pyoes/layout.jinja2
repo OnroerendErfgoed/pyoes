@@ -22,6 +22,13 @@
 {% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = home_route if home_route is defined else pyoes.home_url -%}
 
+{% set asset_version = asset_version|default(pyoes.asset_version(app_package), true) -%}
+
+{#- cache busting: append the app (or pyoes) version to asset urls -#}
+{% macro versioned(url) -%}
+  {{ url }}{% if asset_version %}{{ '&' if '?' in url else '?' }}v={{ asset_version }}{% endif %}
+{%- endmacro %}
+
 <head>
   {% block html_header scoped %}
     <!-- head -->
@@ -38,7 +45,7 @@
         {% set css_files = [pyoes.static_path(app_package ~ ':static/css/app.css')] -%}
       {% endif -%}
       {% for css in css_files -%}
-        <link rel="stylesheet" href="{{ css }}"/>
+        <link rel="stylesheet" href="{{ versioned(css) }}"/>
       {% endfor -%}
     {% endblock -%}
   {% endblock %}
@@ -113,7 +120,7 @@
   ] -%}
   {% set js_files = js_files|default(default_js_files) -%}
   {% for js in js_files -%}
-    <script src="{{ js }}"></script>
+    <script src="{{ versioned(js) }}"></script>
   {% endfor -%}
 {% endblock -%}
 

@@ -18,6 +18,7 @@ SETTINGS = {
     "burgerprofiel_version": "burgerprofiel_version",
     "banner": "pyoes_banner",
     "banner_detail": "pyoes_banner_detail",
+    "app_version": "pyoes_app_version",
 }
 
 

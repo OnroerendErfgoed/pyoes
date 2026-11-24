@@ -6,6 +6,8 @@ and makes the ``pyoes`` template context available in every rendered template.
 from pyramid.config import Configurator
 from pyramid.events import BeforeRender
 
+from pyoes.context import asset_version
+
 
 class PyramidContext:
     """
@@ -56,6 +58,15 @@ class PyramidContext:
     @property
     def user(self):
         return getattr(self.request, "user", None)
+
+    def asset_version(self, app_package=None):
+        """
+        ``pyoes.app_version`` setting, else the version of ``app_package`` or,
+        if not set by the template, of the package that created the configurator.
+        """
+        if app_package in (None, "pyoes"):
+            app_package = self.request.registry.package_name
+        return asset_version(self._setting("pyoes.app_version"), app_package)
 
     @property
     def home_url(self):

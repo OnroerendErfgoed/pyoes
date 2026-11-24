@@ -1,6 +1,7 @@
 Unreleased
 ==========
 
+- Cache busting: de layout voegt ``?v=<versie van de applicatie>`` toe aan ``css_files`` en ``js_files`` (#395).
 - Verwijder de public-, admin- en processcaffolds en het ongebruikte script voor pinpointafbeeldingen.
 - Toon het aanhalingsteken van citaten in wit op de paarse achtergrond.
 - Gebruik Webuniversum classes in de 401, 403, 404 en 500 foutpagina's.
