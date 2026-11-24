@@ -76,6 +76,24 @@ templates halen hun instellingen (``plausible.domain_hash``,
 ``pyoes.banner.detail``) en urls daaruit, en niet meer rechtstreeks uit
 ``request``. Zonder ``config.include('pyoes')`` werken de templates dus niet.
 
+Cache busting
+-------------
+
+De layout voegt ``?v=<versie>`` toe aan de urls in ``css_files`` en
+``js_files``, zodat browsers na een release meteen de nieuwe bestanden ophalen.
+De versie is, in volgorde:
+
+- de setting ``pyoes.app_version`` (FastAPI: ``pyoes_app_version`` of
+  ``pyoes.fastapi.context(..., app_version=...)``), of de template variabele
+  ``asset_version``;
+- de versie van het geïnstalleerde ``app_package`` (in pyramid: van de package
+  die de ``Configurator`` aanmaakt als ``app_package`` niet gezet is);
+- de versie van :mod:`pyoes`.
+
+Heet de python package anders dan de distributie (bv. ``beeldbankbeheer`` in
+``beeldbank``), dan wordt de versie bij een editable install niet gevonden.
+Zet dan ``pyoes.app_version``.
+
 .. _fastapi:
 
 FastAPI

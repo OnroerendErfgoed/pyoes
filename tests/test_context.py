@@ -12,6 +12,8 @@ import pyoes.fastapi
 from pyoes import includeme
 from pyoes.context import PyoesContext
 from pyoes.context import VERSION
+from pyoes.context import asset_version
+from pyoes.context import package_version
 from pyoes.pyramid import PyramidContext
 
 
@@ -78,6 +80,46 @@ class TestLayout:
         assert "app.css" not in html
 
 
+class TestAssetVersion:
+    def test_package_version(self):
+        assert package_version("pyoes") == VERSION
+        assert package_version("pyramid") is not None
+        # python package in a distribution with another name
+        assert package_version("pkg_resources") == package_version("setuptools")
+        assert package_version("does_not_exist") is None
+        assert package_version(None) is None
+
+    def test_asset_version(self):
+        assert asset_version("1.2.3", "pyramid") == "1.2.3"
+        assert asset_version(None, "pyramid") == package_version("pyramid")
+        assert asset_version(None, "does_not_exist") == VERSION
+        assert asset_version() == VERSION
+
+    def test_layout_uses_app_version(self):
+        html = (
+            environment()
+            .get_template("pyoes/layout.jinja2")
+            .render(pyoes=make_context(app_version="1.2.3"))
+        )
+        assert 'href="/s/pyoes:static/css/app.css?v=1.2.3"' in html
+
+    def test_layout_detects_app_package_version(self):
+        html = (
+            environment()
+            .get_template("pyoes/layout.jinja2")
+            .render(pyoes=make_context(), app_package="pyramid")
+        )
+        assert f'app.css?v={package_version("pyramid")}"' in html
+
+    def test_layout_asset_version_variable(self):
+        html = (
+            environment()
+            .get_template("pyoes/layout.jinja2")
+            .render(pyoes=make_context(), asset_version="x")
+        )
+        assert 'app.css?v=x"' in html
+
+
 def test_generate_uri():
     template = environment().from_string(
         "{% from 'pyoes/macros.jinja2' import generate_uri %}"
@@ -118,7 +160,6 @@ class TestPyramid:
         assert ctx.home_url == "/"
         assert ctx.authenticated_userid is None
         assert ctx.user is None
-        assert ctx.version == VERSION
 
     def test_render_layout(self, config):
         includeme(config)
@@ -127,6 +168,16 @@ class TestPyramid:
         html = environment().get_template("pyoes/layout.jinja2").render(pyoes=ctx)
         assert "/widget/header-id/embed" in html
         assert "pyoes_static/css/app.css" in html
+
+    def test_asset_version(self, config):
+        ctx = PyramidContext(testing.DummyRequest())
+        config.registry.settings["pyoes.app_version"] = "1.2.3"
+        assert ctx.asset_version("myapp") == "1.2.3"
+        del config.registry.settings["pyoes.app_version"]
+        assert ctx.asset_version("pyramid") == package_version("pyramid")
+        config.registry.package_name = "pyramid"
+        assert ctx.asset_version() == package_version("pyramid")
+        assert ctx.asset_version("pyoes") == package_version("pyramid")
 
 
 class TestFastAPI:
@@ -140,6 +191,7 @@ class TestFastAPI:
                 settings={
                     "burgerprofiel_header_id": "header-id",
                     "pyoes_banner": "Onderhoud",
+                    "pyoes_app_version": "1.2.3",
                 },
                 user="user",
             )
@@ -149,6 +201,7 @@ class TestFastAPI:
                     "banner": c.banner,
                     "user": c.user,
                     "home": c.home_url,
+                    "asset_version": c.asset_version("pyoes"),
                     "query": c.route_path("home", _query={"a": [1, 2]}),
                     "pyoes_static": c.static_path("pyoes:static/css/app.css"),
                     "static": c.static_path("myapp:static/css/app.css"),
@@ -178,6 +231,7 @@ class TestFastAPI:
             "banner": "Onderhoud",
             "user": "user",
             "home": "/",
+            "asset_version": "1.2.3",
             "query": "/?a=1&a=2",
             "pyoes_static": "/pyoes_static/css/app.css",
             "static": "/static/css/app.css",

@@ -22,9 +22,11 @@
 {% set datum_copyright = datum_copyright|default('2025') -%}
 {% set home_route = home_route if home_route is defined else pyoes.home_url -%}
 
-{#- cache busting: append the pyoes version to asset urls -#}
+{% set asset_version = asset_version|default(pyoes.asset_version(app_package), true) -%}
+
+{#- cache busting: append the app (or pyoes) version to asset urls -#}
 {% macro versioned(url) -%}
-  {{ url }}{% if pyoes.version %}{{ '&' if '?' in url else '?' }}v={{ pyoes.version }}{% endif %}
+  {{ url }}{% if asset_version %}{{ '&' if '?' in url else '?' }}v={{ asset_version }}{% endif %}
 {%- endmacro %}
 
 <head>
