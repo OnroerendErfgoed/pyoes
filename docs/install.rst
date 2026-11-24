@@ -76,28 +76,6 @@ templates halen hun instellingen (``plausible.domain_hash``,
 ``pyoes.banner.detail``) en urls daaruit, en niet meer rechtstreeks uit
 ``request``. Zonder ``config.include('pyoes')`` werken de templates dus niet.
 
-Cache busting
--------------
-
-Urls naar de pyoes static files krijgen automatisch een ``?v=<hash>`` query
-parameter, een hash van de inhoud van het bestand. Zodra een bestand wijzigt,
-wijzigt ook de url en halen browsers meteen de nieuwe versie op. Voeg dezelfde
-cache buster toe voor de static files van je eigen applicatie (bv.
-:file:`app.css`):
-
-.. code-block:: python
-
-    from pyoes.pyramid import ContentHashCacheBuster
-
-    config.add_static_view('static', '<package_name>:static', cache_max_age=31536000)
-    config.add_cache_buster('<package_name>:static/', ContentHashCacheBuster())
-
-Dit werkt voor alle urls die met ``request.static_path``, ``request.static_url``
-of ``pyoes.static_path`` gemaakt worden, ook voor ``css_files`` en ``js_files``.
-Omdat de url wijzigt bij elke aanpassing, kan ``cache_max_age`` veilig hoog
-gezet worden. Hardgecodeerde urls en ``url()`` verwijzingen binnen css
-(fonts, afbeeldingen) vallen hier niet onder.
-
 .. _fastapi:
 
 FastAPI
@@ -143,9 +121,6 @@ Routes waarnaar de templates verwijzen moeten een naam hebben, minstens
 ``home`` (``@app.get("/", name="home")``), tenzij je ``home_route`` zelf
 instelt in je layout. Asset specs zoals ``myapp:static/css/app.css`` worden
 vertaald naar de ``static`` mount, ``pyoes:static/...`` naar ``pyoes_static``.
-Bestaat het bestand in die mount, dan krijgt de url een ``?v=<hash>`` query
-parameter voor cache busting (zie hierboven). Zet dit uit met
-``pyoes.fastapi.context(request, cache_bust=False)``.
 
 
 Update

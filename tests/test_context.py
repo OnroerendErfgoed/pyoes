@@ -10,12 +10,9 @@ from starlette.testclient import TestClient
 
 import pyoes.fastapi
 from pyoes import includeme
-from pyoes.cachebust import file_hash
 from pyoes.context import PyoesContext
-from pyoes.pyramid import ContentHashCacheBuster
+from pyoes.context import VERSION
 from pyoes.pyramid import PyramidContext
-
-ROBOTS_HASH = file_hash(str(pyoes.fastapi.STATIC_DIR / "robots.txt"))
 
 
 def environment():
@@ -40,7 +37,7 @@ class TestLayout:
 
     def test_without_settings(self):
         html = self.render(make_context())
-        assert 'href="/s/pyoes:static/css/app.css"' in html
+        assert f'href="/s/pyoes:static/css/app.css?v={VERSION}"' in html
         assert '<main class="vl-main">' in html
         assert '<div class="vl-region">' in html
         assert '<div class="vl-layout">' in html
@@ -70,11 +67,14 @@ class TestLayout:
             make_context(burgerprofiel_header_id="from-context"),
             burgerprofiel_header_id="from-template",
             home_route="/home/",
-            css_files=["/custom.css"],
+            css_files=["/custom.css", "/other.css?a=1"],
+            js_files=["/app.js"],
         )
         assert "/widget/from-template/embed" in html
         assert 'loginUrl: "/home/aanmelden"' in html
-        assert 'href="/custom.css"' in html
+        assert f'href="/custom.css?v={VERSION}"' in html
+        assert f'href="/other.css?a=1&amp;v={VERSION}"' in html
+        assert f'src="/app.js?v={VERSION}"' in html
         assert "app.css" not in html
 
 
@@ -118,6 +118,7 @@ class TestPyramid:
         assert ctx.home_url == "/"
         assert ctx.authenticated_userid is None
         assert ctx.user is None
+        assert ctx.version == VERSION
 
     def test_render_layout(self, config):
         includeme(config)
@@ -126,25 +127,6 @@ class TestPyramid:
         html = environment().get_template("pyoes/layout.jinja2").render(pyoes=ctx)
         assert "/widget/header-id/embed" in html
         assert "pyoes_static/css/app.css" in html
-
-    def test_cache_busting(self, config):
-        includeme(config)
-        config.commit()
-        request = testing.DummyRequest()
-        assert (
-            request.static_path("pyoes:static/robots.txt")
-            == f"/pyoes_static/robots.txt?v={ROBOTS_HASH}"
-        )
-        assert (
-            request.static_path("pyoes:static/robots.txt", _query=[("a", "1")])
-            == f"/pyoes_static/robots.txt?a=1&v={ROBOTS_HASH}"
-        )
-        assert request.static_path("pyoes:static/missing.css") == (
-            "/pyoes_static/missing.css"
-        )
-
-    def test_cache_buster_without_rawspec(self):
-        assert ContentHashCacheBuster()(None, "a.css", {}) == ("a.css", {})
 
 
 class TestFastAPI:
@@ -168,15 +150,8 @@ class TestFastAPI:
                     "user": c.user,
                     "home": c.home_url,
                     "query": c.route_path("home", _query={"a": [1, 2]}),
-                    "pyoes_static": c.static_path("pyoes:static/robots.txt"),
-                    "static": c.static_path("myapp:static/robots.txt"),
-                    "missing": c.static_path("myapp:static/missing.css"),
-                    "directory": c.static_path("myapp:static/img"),
-                    "no_bust": (
-                        pyoes.fastapi.context(request, cache_bust=False).static_path(
-                            "pyoes:static/robots.txt"
-                        )
-                    ),
+                    "pyoes_static": c.static_path("pyoes:static/css/app.css"),
+                    "static": c.static_path("myapp:static/css/app.css"),
                 }
             )
 
@@ -204,17 +179,14 @@ class TestFastAPI:
             "user": "user",
             "home": "/",
             "query": "/?a=1&a=2",
-            "pyoes_static": f"/pyoes_static/robots.txt?v={ROBOTS_HASH}",
-            "static": f"/static/robots.txt?v={ROBOTS_HASH}",
-            "missing": "/static/missing.css",
-            "directory": "/static/img",
-            "no_bust": "/pyoes_static/robots.txt",
+            "pyoes_static": "/pyoes_static/css/app.css",
+            "static": "/static/css/app.css",
         }
 
     def test_render_layout(self, client):
         res = client.get("/")
         assert res.status_code == 200
-        assert 'href="/pyoes_static/css/app.css' in res.text
+        assert f'href="/pyoes_static/css/app.css?v={VERSION}"' in res.text
 
     def test_static_files(self, client):
         assert client.get("/pyoes_static/robots.txt").status_code == 200

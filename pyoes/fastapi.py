@@ -4,11 +4,8 @@ from collections.abc import Mapping
 from pathlib import Path
 from urllib.parse import urlencode
 
-from starlette.routing import Mount
 from starlette.staticfiles import StaticFiles
 
-from pyoes.cachebust import PARAM
-from pyoes.cachebust import file_hash
 from pyoes.context import PyoesContext
 
 STATIC_DIR = Path(__file__).parent / "static"
@@ -29,19 +26,6 @@ def mount_static(app, path="/pyoes_static", name="pyoes_static"):
     app.mount(path, StaticFiles(directory=STATIC_DIR), name=name)
 
 
-def _asset_hash(router, mount, asset):
-    """Hash of the file the ``mount`` StaticFiles serves for ``asset``, if any."""
-    for route in getattr(router, "routes", ()):
-        if (
-            isinstance(route, Mount)
-            and route.name == mount
-            and isinstance(route.app, StaticFiles)
-        ):
-            full_path, stat = route.app.lookup_path(asset)
-            return file_hash(full_path) if stat else None
-    return None
-
-
 def _setting(settings, key):
     if settings is None:
         return None
@@ -58,7 +42,6 @@ def context(
     authenticated_userid=None,
     static_mount="static",
     pyoes_static_mount="pyoes_static",
-    cache_bust=True,
     **overrides,
 ):
     """
@@ -66,8 +49,6 @@ def context(
 
     :param static_mount: name of the app's own static mount, used for asset
         specs like ``"myapp:static/css/app.css"``.
-    :param cache_bust: add ``?v=<hash of the file contents>`` to static urls
-        so browsers fetch changed files immediately.
     :param overrides: explicit values for any :class:`PyoesContext` field.
     """
 
@@ -81,15 +62,7 @@ def context(
         package, _, asset = spec.rpartition(":")
         asset = asset.removeprefix("static/")
         mount = pyoes_static_mount if package == "pyoes" else static_mount
-        path = request.url_for(mount, path=asset).path
-        token = (
-            _asset_hash(request.scope.get("router"), mount, asset)
-            if cache_bust
-            else None
-        )
-        if token:
-            path = f"{path}?{urlencode({PARAM: token})}"
-        return path
+        return request.url_for(mount, path=asset).path
 
     values = {field: _setting(settings, key) for field, key in SETTINGS.items()}
     values.update(

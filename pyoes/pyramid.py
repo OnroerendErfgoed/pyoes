@@ -5,40 +5,8 @@ and makes the ``pyoes`` template context available in every rendered template.
 
 from pyramid.config import Configurator
 from pyramid.events import BeforeRender
-from pyramid.path import AssetResolver
 
-from pyoes.cachebust import PARAM
-from pyoes.cachebust import file_hash
-
-
-class ContentHashCacheBuster:
-    """
-    Pyramid cache buster adding ``?v=<hash of the file contents>`` to urls
-    generated with ``request.static_path`` / ``request.static_url``. Files that
-    can not be found on disk are left untouched.
-
-    .. code-block:: python
-
-        config.add_static_view("static", "myapp:static")
-        config.add_cache_buster("myapp:static/", ContentHashCacheBuster())
-    """
-
-    def __init__(self, param=PARAM):
-        self.param = param
-
-    def __call__(self, request, subpath, kw):
-        try:
-            path = AssetResolver().resolve(kw["rawspec"]).abspath()
-        except (KeyError, ValueError, ImportError):
-            return subpath, kw
-        token = file_hash(path)
-        if token is not None:
-            query = kw.setdefault("_query", {})
-            if isinstance(query, dict):
-                query[self.param] = token
-            else:
-                kw["_query"] = (*query, (self.param, token))
-        return subpath, kw
+from pyoes.context import VERSION
 
 
 class PyramidContext:
@@ -92,6 +60,10 @@ class PyramidContext:
         return getattr(self.request, "user", None)
 
     @property
+    def version(self):
+        return VERSION
+
+    @property
     def home_url(self):
         return self.route_path("home")
 
@@ -110,7 +82,6 @@ def includeme(config):
     """
 
     config.add_static_view("pyoes_static", "pyoes:static")
-    config.add_cache_buster("pyoes:static/", ContentHashCacheBuster())
     config.scan("pyoes.static_views")
     config.add_subscriber(add_pyoes_context, BeforeRender)
 

@@ -1,8 +1,15 @@
 """Framework-agnostic template context, available in the pyoes templates as ``pyoes``."""
 
 from dataclasses import dataclass
+from importlib.metadata import PackageNotFoundError
+from importlib.metadata import version
 from typing import Any
 from typing import Callable
+
+try:
+    VERSION = version("pyoes")
+except PackageNotFoundError:  # pragma: no cover
+    VERSION = None
 
 
 @dataclass(frozen=True)
@@ -24,6 +31,11 @@ class PyoesContext:
     banner_detail: str | None = None
     authenticated_userid: Any = None
     user: Any = None
+
+    @property
+    def version(self):
+        """pyoes version, appended to asset urls in the layout for cache busting."""
+        return VERSION
 
     @property
     def home_url(self):
